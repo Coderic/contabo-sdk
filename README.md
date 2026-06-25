@@ -1,8 +1,8 @@
 # Contabo SDK
 
-SDK PHP para la API de Contabo v1, construido desde el OpenAPI oficial de `contabo/cntb` y envuelto con una capa manual para OAuth2, `x-request-id` autom漷ico y uso opcional en Laravel.
+SDK PHP para la API de Contabo v1, construido desde el OpenAPI oficial de `contabo/cntb` y envuelto con una capa manual para OAuth2, `x-request-id` autom谩tico y uso opcional en Laravel.
 
-## Instalaci漬
+## Instalaci贸n
 
 ```bash
 composer require contabo/contabo-sdk
@@ -24,11 +24,11 @@ $client = ContaboClient::fromCredentials(new Credentials(
 $instances = $client->instances()->retrieveInstancesList();
 ```
 
-El wrapper agrega `Authorization: Bearer ...` y `x-request-id` autom漷icamente. Si Contabo responde `401`, el SDK solicita un token nuevo y reintenta una vez.
+El wrapper agrega `Authorization: Bearer ...` y `x-request-id` autom谩ticamente. Si Contabo responde `401`, el SDK solicita un token nuevo y reintenta una vez.
 
 ## Uso Laravel
 
-Publica la configuraci漬:
+Publica la configuraci贸n:
 
 ```bash
 php artisan vendor:publish --tag=contabo-config
@@ -60,7 +60,7 @@ El cliente generado cubre el OpenAPI oficial actual:
 - 169 operaciones HTTP
 - Compute, Object Storage, Private Networks, Users, Roles, Tags, Secrets, VIP, Domains, DNS, Firewalls y Troubleshooting
 
-La documentaci漬 p漛lica de Contabo se encuentra en [api.contabo.com](https://api.contabo.com/). La especificaci漬 vendoreada se sincroniza desde:
+La documentaci贸n p煤blica de Contabo se encuentra en [api.contabo.com](https://api.contabo.com/). La especificaci贸n vendoreada se sincroniza desde:
 
 ```text
 https://raw.githubusercontent.com/contabo/cntb/master/openapi/api/openapi.yaml
