@@ -50,4 +50,15 @@ final class ContaboServiceProviderTest extends TestCase
             config('contabo.auth_url')
         );
     }
+
+    public function test_publishes_contabo_config_tag(): void
+    {
+        $this->artisan('vendor:publish', [
+            '--provider' => ContaboServiceProvider::class,
+            '--tag' => 'contabo-config',
+            '--force' => true,
+        ])->assertExitCode(0);
+
+        self::assertFileExists(config_path('contabo.php'));
+    }
 }

@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Coderic\Contabo\Tests;
 
+use Coderic\Contabo\ApiResourceProxy;
+use Coderic\Contabo\ContaboClient;
 use PHPUnit\Framework\TestCase;
+use ReflectionClass;
 
 final class OpenApiCoverageTest extends TestCase
 {
@@ -45,5 +48,76 @@ final class OpenApiCoverageTest extends TestCase
         foreach ($expectedApis as $api) {
             self::assertFileExists(__DIR__."/../src/Generated/lib/Api/{$api}.php");
         }
+    }
+
+    public function test_contabo_client_exposes_all_public_resource_accessors(): void
+    {
+        $reflection = new ReflectionClass(ContaboClient::class);
+        $accessors = [];
+
+        foreach ($reflection->getMethods(\ReflectionMethod::IS_PUBLIC) as $method) {
+            if ($method->isStatic() || $method->getName() === 'resource') {
+                continue;
+            }
+
+            if ($method->getReturnType()?->getName() === ApiResourceProxy::class) {
+                $accessors[] = $method->getName();
+            }
+        }
+
+        sort($accessors);
+
+        self::assertSame([
+            'checkCollections',
+            'checks',
+            'dns',
+            'dnsAudits',
+            'domains',
+            'domainsAudits',
+            'firewalls',
+            'firewallsAudits',
+            'handles',
+            'handlesAudits',
+            'images',
+            'imagesAudits',
+            'instanceActions',
+            'instanceActionsAudits',
+            'instances',
+            'instancesAudits',
+            'objectStorages',
+            'objectStoragesAudits',
+            'privateNetworks',
+            'privateNetworksAudits',
+            'remedies',
+            'roles',
+            'rolesAudits',
+            'secrets',
+            'secretsAudits',
+            'snapshots',
+            'snapshotsAudits',
+            'tagAssignments',
+            'tagAssignmentsAudits',
+            'tags',
+            'tagsAudits',
+            'users',
+            'usersAudits',
+            'usersObjectStorageCredentials',
+            'vip',
+            'vipAudits',
+        ], $accessors);
+    }
+
+    public function test_generated_api_count_matches_openapi_operations(): void
+    {
+        $apiFiles = glob(__DIR__.'/../src/Generated/lib/Api/*Api.php') ?: [];
+
+        self::assertCount(48, $apiFiles);
+    }
+
+    public function test_scripts_exist_for_openapi_maintenance(): void
+    {
+        self::assertFileExists(__DIR__.'/../scripts/sync-openapi.sh');
+        self::assertFileExists(__DIR__.'/../scripts/generate-client.sh');
+        self::assertFileExists(__DIR__.'/../scripts/diff-openapi.sh');
     }
 }
