@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * HandleAuditResponse Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,9 +58,9 @@ class HandleAuditResponse implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'pagination' => '\Coderic\Contabo\Generated\Model\PaginationMeta',
-        'data' => '\Coderic\Contabo\Generated\Model\HandleAuditResponseData[]',
-        'links' => '\Coderic\Contabo\Generated\Model\Links'
+        'pagination' => '\Contabo\Generated\Model\PaginationMeta',
+        'data' => '\Contabo\Generated\Model\HandleAuditResponseData[]',
+        'links' => '\Contabo\Generated\Model\Links'
     ];
 
     /**
@@ -316,7 +316,7 @@ class HandleAuditResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets pagination
      *
-     * @return \Coderic\Contabo\Generated\Model\PaginationMeta
+     * @return \Contabo\Generated\Model\PaginationMeta
      */
     public function getPagination()
     {
@@ -326,7 +326,7 @@ class HandleAuditResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets pagination
      *
-     * @param \Coderic\Contabo\Generated\Model\PaginationMeta $pagination Data about pagination like how many results, pages, page size.
+     * @param \Contabo\Generated\Model\PaginationMeta $pagination Data about pagination like how many results, pages, page size.
      *
      * @return self
      */
@@ -343,7 +343,7 @@ class HandleAuditResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets data
      *
-     * @return \Coderic\Contabo\Generated\Model\HandleAuditResponseData[]
+     * @return \Contabo\Generated\Model\HandleAuditResponseData[]
      */
     public function getData()
     {
@@ -353,7 +353,7 @@ class HandleAuditResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets data
      *
-     * @param \Coderic\Contabo\Generated\Model\HandleAuditResponseData[] $data data
+     * @param \Contabo\Generated\Model\HandleAuditResponseData[] $data data
      *
      * @return self
      */
@@ -370,7 +370,7 @@ class HandleAuditResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets links
      *
-     * @return \Coderic\Contabo\Generated\Model\Links
+     * @return \Contabo\Generated\Model\Links
      */
     public function getLinks()
     {
@@ -380,7 +380,7 @@ class HandleAuditResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets links
      *
-     * @param \Coderic\Contabo\Generated\Model\Links $links links
+     * @param \Contabo\Generated\Model\Links $links links
      *
      * @return self
      */

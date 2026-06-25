@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Coderic\Contabo\Tests\Support;
+namespace Contabo\Tests\Support;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;

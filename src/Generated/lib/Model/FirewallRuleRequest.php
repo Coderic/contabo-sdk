@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * FirewallRuleRequest Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class FirewallRuleRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $openAPITypes = [
         'protocol' => 'string',
         'destPorts' => 'string[]',
-        'srcCidr' => '\Coderic\Contabo\Generated\Model\SrcCidr',
+        'srcCidr' => '\Contabo\Generated\Model\SrcCidr',
         'action' => 'string',
         'status' => 'string',
         'displayName' => 'string'
@@ -483,7 +483,7 @@ class FirewallRuleRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets srcCidr
      *
-     * @return \Coderic\Contabo\Generated\Model\SrcCidr
+     * @return \Contabo\Generated\Model\SrcCidr
      */
     public function getSrcCidr()
     {
@@ -493,7 +493,7 @@ class FirewallRuleRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets srcCidr
      *
-     * @param \Coderic\Contabo\Generated\Model\SrcCidr $srcCidr Source CIDR configuration. Use \"AnyIPv4\" to allow all IPv4 sources (0.0.0.0/0) or \"AnyIPv6\" to allow all IPv6 sources (::/0). Both can be combined to allow all IP sources. Regular CIDR notation is also supported.
+     * @param \Contabo\Generated\Model\SrcCidr $srcCidr Source CIDR configuration. Use \"AnyIPv4\" to allow all IPv4 sources (0.0.0.0/0) or \"AnyIPv6\" to allow all IPv6 sources (::/0). Both can be combined to allow all IP sources. Regular CIDR notation is also supported.
      *
      * @return self
      */

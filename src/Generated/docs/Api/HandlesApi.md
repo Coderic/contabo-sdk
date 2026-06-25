@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\HandlesApi
+# Contabo\Generated\HandlesApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `createHandle()`
 
 ```php
-createHandle($xRequestId, $handleCreateRequest, $xTraceId): \Coderic\Contabo\Generated\Model\HandleCreateResponse
+createHandle($xRequestId, $handleCreateRequest, $xTraceId): \Contabo\Generated\Model\HandleCreateResponse
 ```
 
 Create specific handle
@@ -30,17 +30,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\HandlesApi(
+$apiInstance = new Contabo\Generated\Api\HandlesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
-$handleCreateRequest = new \Coderic\Contabo\Generated\Model\HandleCreateRequest(); // \Coderic\Contabo\Generated\Model\HandleCreateRequest
+$handleCreateRequest = new \Contabo\Generated\Model\HandleCreateRequest(); // \Contabo\Generated\Model\HandleCreateRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -56,12 +56,12 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
-| **handleCreateRequest** | [**\Coderic\Contabo\Generated\Model\HandleCreateRequest**](../Model/HandleCreateRequest.md)|  | |
+| **handleCreateRequest** | [**\Contabo\Generated\Model\HandleCreateRequest**](../Model/HandleCreateRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\HandleCreateResponse**](../Model/HandleCreateResponse.md)
+[**\Contabo\Generated\Model\HandleCreateResponse**](../Model/HandleCreateResponse.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ try {
 ## `listHandles()`
 
 ```php
-listHandles($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $showDefaults, $search, $countries, $handleType, $firstName, $lastName): \Coderic\Contabo\Generated\Model\HandleListResponse
+listHandles($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $showDefaults, $search, $countries, $handleType, $firstName, $lastName): \Contabo\Generated\Model\HandleListResponse
 ```
 
 List all handles
@@ -94,10 +94,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\HandlesApi(
+$apiInstance = new Contabo\Generated\Api\HandlesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -143,7 +143,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\HandleListResponse**](../Model/HandleListResponse.md)
+[**\Contabo\Generated\Model\HandleListResponse**](../Model/HandleListResponse.md)
 
 ### Authorization
 
@@ -176,10 +176,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\HandlesApi(
+$apiInstance = new Contabo\Generated\Api\HandlesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -224,7 +224,7 @@ void (empty response body)
 ## `retrieveHandle()`
 
 ```php
-retrieveHandle($xRequestId, $handleId, $xTraceId): \Coderic\Contabo\Generated\Model\HandleFindResponse
+retrieveHandle($xRequestId, $handleId, $xTraceId): \Contabo\Generated\Model\HandleFindResponse
 ```
 
 Get specific handle
@@ -239,10 +239,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\HandlesApi(
+$apiInstance = new Contabo\Generated\Api\HandlesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -270,7 +270,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\HandleFindResponse**](../Model/HandleFindResponse.md)
+[**\Contabo\Generated\Model\HandleFindResponse**](../Model/HandleFindResponse.md)
 
 ### Authorization
 
@@ -288,7 +288,7 @@ try {
 ## `setDefaultHandle()`
 
 ```php
-setDefaultHandle($xRequestId, $handleId, $xTraceId): \Coderic\Contabo\Generated\Model\SetDefaultHandleResponse
+setDefaultHandle($xRequestId, $handleId, $xTraceId): \Contabo\Generated\Model\SetDefaultHandleResponse
 ```
 
 Set default handle
@@ -303,10 +303,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\HandlesApi(
+$apiInstance = new Contabo\Generated\Api\HandlesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -334,7 +334,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\SetDefaultHandleResponse**](../Model/SetDefaultHandleResponse.md)
+[**\Contabo\Generated\Model\SetDefaultHandleResponse**](../Model/SetDefaultHandleResponse.md)
 
 ### Authorization
 
@@ -352,7 +352,7 @@ try {
 ## `updateHandle()`
 
 ```php
-updateHandle($xRequestId, $handleId, $handlePatchRequest, $xTraceId): \Coderic\Contabo\Generated\Model\HandlePatchResponse
+updateHandle($xRequestId, $handleId, $handlePatchRequest, $xTraceId): \Contabo\Generated\Model\HandlePatchResponse
 ```
 
 Update specific handle
@@ -367,10 +367,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\HandlesApi(
+$apiInstance = new Contabo\Generated\Api\HandlesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -378,7 +378,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\HandlesApi(
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $handleId = CA123O1; // string | The identifier of the handle
-$handlePatchRequest = new \Coderic\Contabo\Generated\Model\HandlePatchRequest(); // \Coderic\Contabo\Generated\Model\HandlePatchRequest
+$handlePatchRequest = new \Contabo\Generated\Model\HandlePatchRequest(); // \Contabo\Generated\Model\HandlePatchRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -395,12 +395,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **handleId** | **string**| The identifier of the handle | |
-| **handlePatchRequest** | [**\Coderic\Contabo\Generated\Model\HandlePatchRequest**](../Model/HandlePatchRequest.md)|  | |
+| **handlePatchRequest** | [**\Contabo\Generated\Model\HandlePatchRequest**](../Model/HandlePatchRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\HandlePatchResponse**](../Model/HandlePatchResponse.md)
+[**\Contabo\Generated\Model\HandlePatchResponse**](../Model/HandlePatchResponse.md)
 
 ### Authorization
 

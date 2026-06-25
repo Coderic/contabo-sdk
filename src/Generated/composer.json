@@ -30,9 +30,9 @@
         "friendsofphp/php-cs-fixer": "^3.5"
     },
     "autoload": {
-        "psr-4": { "Coderic\\Contabo\\Generated\\" : "lib/" }
+        "psr-4": { "Contabo\\Generated\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "Coderic\\Contabo\\Generated\\Test\\" : "test/" }
+        "psr-4": { "Contabo\\Generated\\Test\\" : "test/" }
     }
 }

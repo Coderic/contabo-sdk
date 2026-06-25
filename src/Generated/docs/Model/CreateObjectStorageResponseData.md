@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **objectStorageId** | **string** | Your object storage id |
 **createdDate** | **\DateTime** | Creation date for object storage. |
 **cancelDate** | **\DateTime** | Cancellation date for object storage. |
-**autoScaling** | [**\Coderic\Contabo\Generated\Model\AutoScalingTypeResponse**](AutoScalingTypeResponse.md) | Autoscaling settings |
+**autoScaling** | [**\Contabo\Generated\Model\AutoScalingTypeResponse**](AutoScalingTypeResponse.md) | Autoscaling settings |
 **dataCenter** | **string** | The data center of the storage |
 **totalPurchasedSpaceTB** | **float** | Amount of purchased / requested object storage in TB. |
 **usedSpaceTB** | **float** | Currently used space in TB. |

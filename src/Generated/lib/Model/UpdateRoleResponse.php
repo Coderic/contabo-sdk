@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * UpdateRoleResponse Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class UpdateRoleResponse implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'links' => '\Coderic\Contabo\Generated\Model\SelfLinks'
+        'links' => '\Contabo\Generated\Model\SelfLinks'
     ];
 
     /**
@@ -296,7 +296,7 @@ class UpdateRoleResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets links
      *
-     * @return \Coderic\Contabo\Generated\Model\SelfLinks
+     * @return \Contabo\Generated\Model\SelfLinks
      */
     public function getLinks()
     {
@@ -306,7 +306,7 @@ class UpdateRoleResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets links
      *
-     * @param \Coderic\Contabo\Generated\Model\SelfLinks $links Links for easy navigation.
+     * @param \Contabo\Generated\Model\SelfLinks $links Links for easy navigation.
      *
      * @return self
      */

@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\ObjectStoragesApi
+# Contabo\Generated\ObjectStoragesApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -17,7 +17,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `cancelObjectStorage()`
 
 ```php
-cancelObjectStorage($xRequestId, $objectStorageId, $cancelObjectStorageRequest, $xTraceId): \Coderic\Contabo\Generated\Model\CancelObjectStorageResponse
+cancelObjectStorage($xRequestId, $objectStorageId, $cancelObjectStorageRequest, $xTraceId): \Contabo\Generated\Model\CancelObjectStorageResponse
 ```
 
 Cancels the specified object storage at the next possible date
@@ -32,10 +32,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\ObjectStoragesApi(
+$apiInstance = new Contabo\Generated\Api\ObjectStoragesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -43,7 +43,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\ObjectStoragesApi(
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $objectStorageId = 4a6f95be-2ac0-4e3c-8eed-0dc67afed640; // string | The identifier of the object storage.
-$cancelObjectStorageRequest = new \Coderic\Contabo\Generated\Model\CancelObjectStorageRequest(); // \Coderic\Contabo\Generated\Model\CancelObjectStorageRequest
+$cancelObjectStorageRequest = new \Contabo\Generated\Model\CancelObjectStorageRequest(); // \Contabo\Generated\Model\CancelObjectStorageRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -60,12 +60,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **objectStorageId** | **string**| The identifier of the object storage. | |
-| **cancelObjectStorageRequest** | [**\Coderic\Contabo\Generated\Model\CancelObjectStorageRequest**](../Model/CancelObjectStorageRequest.md)|  | |
+| **cancelObjectStorageRequest** | [**\Contabo\Generated\Model\CancelObjectStorageRequest**](../Model/CancelObjectStorageRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\CancelObjectStorageResponse**](../Model/CancelObjectStorageResponse.md)
+[**\Contabo\Generated\Model\CancelObjectStorageResponse**](../Model/CancelObjectStorageResponse.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ try {
 ## `createObjectStorage()`
 
 ```php
-createObjectStorage($xRequestId, $createObjectStorageRequest, $xTraceId): \Coderic\Contabo\Generated\Model\CreateObjectStorageResponse
+createObjectStorage($xRequestId, $createObjectStorageRequest, $xTraceId): \Contabo\Generated\Model\CreateObjectStorageResponse
 ```
 
 Create a new object storage
@@ -98,17 +98,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\ObjectStoragesApi(
+$apiInstance = new Contabo\Generated\Api\ObjectStoragesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
-$createObjectStorageRequest = new \Coderic\Contabo\Generated\Model\CreateObjectStorageRequest(); // \Coderic\Contabo\Generated\Model\CreateObjectStorageRequest
+$createObjectStorageRequest = new \Contabo\Generated\Model\CreateObjectStorageRequest(); // \Contabo\Generated\Model\CreateObjectStorageRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -124,12 +124,12 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
-| **createObjectStorageRequest** | [**\Coderic\Contabo\Generated\Model\CreateObjectStorageRequest**](../Model/CreateObjectStorageRequest.md)|  | |
+| **createObjectStorageRequest** | [**\Contabo\Generated\Model\CreateObjectStorageRequest**](../Model/CreateObjectStorageRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\CreateObjectStorageResponse**](../Model/CreateObjectStorageResponse.md)
+[**\Contabo\Generated\Model\CreateObjectStorageResponse**](../Model/CreateObjectStorageResponse.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ try {
 ## `retrieveDataCenterList()`
 
 ```php
-retrieveDataCenterList($xRequestId, $xTraceId, $page, $size, $orderBy, $slug, $name, $regionName, $regionSlug): \Coderic\Contabo\Generated\Model\ListDataCenterResponse
+retrieveDataCenterList($xRequestId, $xTraceId, $page, $size, $orderBy, $slug, $name, $regionName, $regionSlug): \Contabo\Generated\Model\ListDataCenterResponse
 ```
 
 List data centers
@@ -162,10 +162,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\ObjectStoragesApi(
+$apiInstance = new Contabo\Generated\Api\ObjectStoragesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -205,7 +205,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ListDataCenterResponse**](../Model/ListDataCenterResponse.md)
+[**\Contabo\Generated\Model\ListDataCenterResponse**](../Model/ListDataCenterResponse.md)
 
 ### Authorization
 
@@ -223,7 +223,7 @@ try {
 ## `retrieveObjectStorage()`
 
 ```php
-retrieveObjectStorage($xRequestId, $objectStorageId, $xTraceId): \Coderic\Contabo\Generated\Model\FindObjectStorageResponse
+retrieveObjectStorage($xRequestId, $objectStorageId, $xTraceId): \Contabo\Generated\Model\FindObjectStorageResponse
 ```
 
 Get specific object storage by its id
@@ -238,10 +238,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\ObjectStoragesApi(
+$apiInstance = new Contabo\Generated\Api\ObjectStoragesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -269,7 +269,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\FindObjectStorageResponse**](../Model/FindObjectStorageResponse.md)
+[**\Contabo\Generated\Model\FindObjectStorageResponse**](../Model/FindObjectStorageResponse.md)
 
 ### Authorization
 
@@ -287,7 +287,7 @@ try {
 ## `retrieveObjectStorageList()`
 
 ```php
-retrieveObjectStorageList($xRequestId, $xTraceId, $page, $size, $orderBy, $dataCenterName, $s3TenantId, $region, $displayName): \Coderic\Contabo\Generated\Model\ListObjectStorageResponse
+retrieveObjectStorageList($xRequestId, $xTraceId, $page, $size, $orderBy, $dataCenterName, $s3TenantId, $region, $displayName): \Contabo\Generated\Model\ListObjectStorageResponse
 ```
 
 List all your object storages
@@ -302,10 +302,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\ObjectStoragesApi(
+$apiInstance = new Contabo\Generated\Api\ObjectStoragesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -345,7 +345,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ListObjectStorageResponse**](../Model/ListObjectStorageResponse.md)
+[**\Contabo\Generated\Model\ListObjectStorageResponse**](../Model/ListObjectStorageResponse.md)
 
 ### Authorization
 
@@ -363,7 +363,7 @@ try {
 ## `retrieveObjectStoragesStats()`
 
 ```php
-retrieveObjectStoragesStats($xRequestId, $objectStorageId, $xTraceId): \Coderic\Contabo\Generated\Model\ObjectStoragesStatsResponse
+retrieveObjectStoragesStats($xRequestId, $objectStorageId, $xTraceId): \Contabo\Generated\Model\ObjectStoragesStatsResponse
 ```
 
 List usage statistics about the specified object storage
@@ -378,10 +378,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\ObjectStoragesApi(
+$apiInstance = new Contabo\Generated\Api\ObjectStoragesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -409,7 +409,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ObjectStoragesStatsResponse**](../Model/ObjectStoragesStatsResponse.md)
+[**\Contabo\Generated\Model\ObjectStoragesStatsResponse**](../Model/ObjectStoragesStatsResponse.md)
 
 ### Authorization
 
@@ -427,7 +427,7 @@ try {
 ## `updateObjectStorage()`
 
 ```php
-updateObjectStorage($xRequestId, $objectStorageId, $patchObjectStorageRequest, $xTraceId): \Coderic\Contabo\Generated\Model\CancelObjectStorageResponse
+updateObjectStorage($xRequestId, $objectStorageId, $patchObjectStorageRequest, $xTraceId): \Contabo\Generated\Model\CancelObjectStorageResponse
 ```
 
 Modifies the display name of object storage
@@ -442,10 +442,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\ObjectStoragesApi(
+$apiInstance = new Contabo\Generated\Api\ObjectStoragesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -453,7 +453,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\ObjectStoragesApi(
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $objectStorageId = 4a6f95be-2ac0-4e3c-8eed-0dc67afed640; // string | The identifier of the object storage.
-$patchObjectStorageRequest = new \Coderic\Contabo\Generated\Model\PatchObjectStorageRequest(); // \Coderic\Contabo\Generated\Model\PatchObjectStorageRequest
+$patchObjectStorageRequest = new \Contabo\Generated\Model\PatchObjectStorageRequest(); // \Contabo\Generated\Model\PatchObjectStorageRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -470,12 +470,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **objectStorageId** | **string**| The identifier of the object storage. | |
-| **patchObjectStorageRequest** | [**\Coderic\Contabo\Generated\Model\PatchObjectStorageRequest**](../Model/PatchObjectStorageRequest.md)|  | |
+| **patchObjectStorageRequest** | [**\Contabo\Generated\Model\PatchObjectStorageRequest**](../Model/PatchObjectStorageRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\CancelObjectStorageResponse**](../Model/CancelObjectStorageResponse.md)
+[**\Contabo\Generated\Model\CancelObjectStorageResponse**](../Model/CancelObjectStorageResponse.md)
 
 ### Authorization
 
@@ -493,7 +493,7 @@ try {
 ## `upgradeObjectStorage()`
 
 ```php
-upgradeObjectStorage($xRequestId, $objectStorageId, $upgradeObjectStorageRequest, $xTraceId): \Coderic\Contabo\Generated\Model\UpgradeObjectStorageResponse
+upgradeObjectStorage($xRequestId, $objectStorageId, $upgradeObjectStorageRequest, $xTraceId): \Contabo\Generated\Model\UpgradeObjectStorageResponse
 ```
 
 Upgrade object storage size resp. update autoscaling settings.
@@ -508,10 +508,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\ObjectStoragesApi(
+$apiInstance = new Contabo\Generated\Api\ObjectStoragesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -519,7 +519,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\ObjectStoragesApi(
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $objectStorageId = 4a6f95be-2ac0-4e3c-8eed-0dc67afed640; // string | The identifier of the object storage.
-$upgradeObjectStorageRequest = new \Coderic\Contabo\Generated\Model\UpgradeObjectStorageRequest(); // \Coderic\Contabo\Generated\Model\UpgradeObjectStorageRequest
+$upgradeObjectStorageRequest = new \Contabo\Generated\Model\UpgradeObjectStorageRequest(); // \Contabo\Generated\Model\UpgradeObjectStorageRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -536,12 +536,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **objectStorageId** | **string**| The identifier of the object storage. | |
-| **upgradeObjectStorageRequest** | [**\Coderic\Contabo\Generated\Model\UpgradeObjectStorageRequest**](../Model/UpgradeObjectStorageRequest.md)|  | |
+| **upgradeObjectStorageRequest** | [**\Contabo\Generated\Model\UpgradeObjectStorageRequest**](../Model/UpgradeObjectStorageRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\UpgradeObjectStorageResponse**](../Model/UpgradeObjectStorageResponse.md)
+[**\Contabo\Generated\Model\UpgradeObjectStorageResponse**](../Model/UpgradeObjectStorageResponse.md)
 
 ### Authorization
 

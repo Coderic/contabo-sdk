@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * InternalCheckAuditsApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -143,9 +143,9 @@ class InternalCheckAuditsApi
      * @param  float|null $checkId Check&#39;s id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveChecksAuditsList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ChecksAuditListResponse
+     * @return \Contabo\Generated\Model\ChecksAuditListResponse
      */
     public function retrieveChecksAuditsList($xRequestId, $orgIds, $xTraceId = null, $page = null, $size = null, $orderBy = null, $creationStartTime = null, $creationEndTime = null, $accountId = null, $requestId = null, $foreignChangedBy = null, $changedBy = null, $checkId = null, string $contentType = self::contentTypes['retrieveChecksAuditsList'][0])
     {
@@ -173,9 +173,9 @@ class InternalCheckAuditsApi
      * @param  float|null $checkId Check&#39;s id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveChecksAuditsList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ChecksAuditListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ChecksAuditListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveChecksAuditsListWithHttpInfo($xRequestId, $orgIds, $xTraceId = null, $page = null, $size = null, $orderBy = null, $creationStartTime = null, $creationEndTime = null, $accountId = null, $requestId = null, $foreignChangedBy = null, $changedBy = null, $checkId = null, string $contentType = self::contentTypes['retrieveChecksAuditsList'][0])
     {
@@ -206,11 +206,11 @@ class InternalCheckAuditsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ChecksAuditListResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ChecksAuditListResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ChecksAuditListResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ChecksAuditListResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -228,7 +228,7 @@ class InternalCheckAuditsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ChecksAuditListResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ChecksAuditListResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -247,7 +247,7 @@ class InternalCheckAuditsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ChecksAuditListResponse';
+            $returnType = '\Contabo\Generated\Model\ChecksAuditListResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -280,7 +280,7 @@ class InternalCheckAuditsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ChecksAuditListResponse',
+                        '\Contabo\Generated\Model\ChecksAuditListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -348,7 +348,7 @@ class InternalCheckAuditsApi
      */
     public function retrieveChecksAuditsListAsyncWithHttpInfo($xRequestId, $orgIds, $xTraceId = null, $page = null, $size = null, $orderBy = null, $creationStartTime = null, $creationEndTime = null, $accountId = null, $requestId = null, $foreignChangedBy = null, $changedBy = null, $checkId = null, string $contentType = self::contentTypes['retrieveChecksAuditsList'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ChecksAuditListResponse';
+        $returnType = '\Contabo\Generated\Model\ChecksAuditListResponse';
         $request = $this->retrieveChecksAuditsListRequest($xRequestId, $orgIds, $xTraceId, $page, $size, $orderBy, $creationStartTime, $creationEndTime, $accountId, $requestId, $foreignChangedBy, $changedBy, $checkId, $contentType);
 
         return $this->client

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * ImagesApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -144,13 +144,13 @@ class ImagesApi
      * Provide a custom image
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateCustomImageRequest $createCustomImageRequest createCustomImageRequest (required)
+     * @param  \Contabo\Generated\Model\CreateCustomImageRequest $createCustomImageRequest createCustomImageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomImage'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\CreateCustomImageResponse|\Coderic\Contabo\Generated\Model\CreateCustomImageFailResponse
+     * @return \Contabo\Generated\Model\CreateCustomImageResponse|\Contabo\Generated\Model\CreateCustomImageFailResponse
      */
     public function createCustomImage($xRequestId, $createCustomImageRequest, $xTraceId = null, string $contentType = self::contentTypes['createCustomImage'][0])
     {
@@ -164,13 +164,13 @@ class ImagesApi
      * Provide a custom image
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateCustomImageRequest $createCustomImageRequest (required)
+     * @param  \Contabo\Generated\Model\CreateCustomImageRequest $createCustomImageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomImage'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\CreateCustomImageResponse|\Coderic\Contabo\Generated\Model\CreateCustomImageFailResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\CreateCustomImageResponse|\Contabo\Generated\Model\CreateCustomImageFailResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCustomImageWithHttpInfo($xRequestId, $createCustomImageRequest, $xTraceId = null, string $contentType = self::contentTypes['createCustomImage'][0])
     {
@@ -201,11 +201,11 @@ class ImagesApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\CreateCustomImageResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\CreateCustomImageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\CreateCustomImageResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\CreateCustomImageResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -223,16 +223,16 @@ class ImagesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\CreateCustomImageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\CreateCustomImageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 415:
-                    if ('\Coderic\Contabo\Generated\Model\CreateCustomImageFailResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\CreateCustomImageFailResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\CreateCustomImageFailResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\CreateCustomImageFailResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -250,7 +250,7 @@ class ImagesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\CreateCustomImageFailResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\CreateCustomImageFailResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -269,7 +269,7 @@ class ImagesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\CreateCustomImageResponse';
+            $returnType = '\Contabo\Generated\Model\CreateCustomImageResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -302,7 +302,7 @@ class ImagesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\CreateCustomImageResponse',
+                        '\Contabo\Generated\Model\CreateCustomImageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -310,7 +310,7 @@ class ImagesApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\CreateCustomImageFailResponse',
+                        '\Contabo\Generated\Model\CreateCustomImageFailResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -326,7 +326,7 @@ class ImagesApi
      * Provide a custom image
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateCustomImageRequest $createCustomImageRequest (required)
+     * @param  \Contabo\Generated\Model\CreateCustomImageRequest $createCustomImageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomImage'] to see the possible values for this operation
      *
@@ -349,7 +349,7 @@ class ImagesApi
      * Provide a custom image
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateCustomImageRequest $createCustomImageRequest (required)
+     * @param  \Contabo\Generated\Model\CreateCustomImageRequest $createCustomImageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomImage'] to see the possible values for this operation
      *
@@ -358,7 +358,7 @@ class ImagesApi
      */
     public function createCustomImageAsyncWithHttpInfo($xRequestId, $createCustomImageRequest, $xTraceId = null, string $contentType = self::contentTypes['createCustomImage'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\CreateCustomImageResponse';
+        $returnType = '\Contabo\Generated\Model\CreateCustomImageResponse';
         $request = $this->createCustomImageRequest($xRequestId, $createCustomImageRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -401,7 +401,7 @@ class ImagesApi
      * Create request for operation 'createCustomImage'
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateCustomImageRequest $createCustomImageRequest (required)
+     * @param  \Contabo\Generated\Model\CreateCustomImageRequest $createCustomImageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomImage'] to see the possible values for this operation
      *
@@ -523,7 +523,7 @@ class ImagesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteImage'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -542,7 +542,7 @@ class ImagesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteImage'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -772,9 +772,9 @@ class ImagesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveCustomImagesStats'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\CustomImagesStatsResponse
+     * @return \Contabo\Generated\Model\CustomImagesStatsResponse
      */
     public function retrieveCustomImagesStats($xRequestId, $xTraceId = null, string $contentType = self::contentTypes['retrieveCustomImagesStats'][0])
     {
@@ -791,9 +791,9 @@ class ImagesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveCustomImagesStats'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\CustomImagesStatsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\CustomImagesStatsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveCustomImagesStatsWithHttpInfo($xRequestId, $xTraceId = null, string $contentType = self::contentTypes['retrieveCustomImagesStats'][0])
     {
@@ -824,11 +824,11 @@ class ImagesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\CustomImagesStatsResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\CustomImagesStatsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\CustomImagesStatsResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\CustomImagesStatsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -846,7 +846,7 @@ class ImagesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\CustomImagesStatsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\CustomImagesStatsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -865,7 +865,7 @@ class ImagesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\CustomImagesStatsResponse';
+            $returnType = '\Contabo\Generated\Model\CustomImagesStatsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -898,7 +898,7 @@ class ImagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\CustomImagesStatsResponse',
+                        '\Contabo\Generated\Model\CustomImagesStatsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -944,7 +944,7 @@ class ImagesApi
      */
     public function retrieveCustomImagesStatsAsyncWithHttpInfo($xRequestId, $xTraceId = null, string $contentType = self::contentTypes['retrieveCustomImagesStats'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\CustomImagesStatsResponse';
+        $returnType = '\Contabo\Generated\Model\CustomImagesStatsResponse';
         $request = $this->retrieveCustomImagesStatsRequest($xRequestId, $xTraceId, $contentType);
 
         return $this->client
@@ -1094,9 +1094,9 @@ class ImagesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveImage'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\FindImageResponse
+     * @return \Contabo\Generated\Model\FindImageResponse
      */
     public function retrieveImage($xRequestId, $imageId, $xTraceId = null, string $contentType = self::contentTypes['retrieveImage'][0])
     {
@@ -1114,9 +1114,9 @@ class ImagesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveImage'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\FindImageResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\FindImageResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveImageWithHttpInfo($xRequestId, $imageId, $xTraceId = null, string $contentType = self::contentTypes['retrieveImage'][0])
     {
@@ -1147,11 +1147,11 @@ class ImagesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\FindImageResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\FindImageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\FindImageResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\FindImageResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1169,7 +1169,7 @@ class ImagesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\FindImageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\FindImageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1188,7 +1188,7 @@ class ImagesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\FindImageResponse';
+            $returnType = '\Contabo\Generated\Model\FindImageResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1221,7 +1221,7 @@ class ImagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\FindImageResponse',
+                        '\Contabo\Generated\Model\FindImageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1269,7 +1269,7 @@ class ImagesApi
      */
     public function retrieveImageAsyncWithHttpInfo($xRequestId, $imageId, $xTraceId = null, string $contentType = self::contentTypes['retrieveImage'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\FindImageResponse';
+        $returnType = '\Contabo\Generated\Model\FindImageResponse';
         $request = $this->retrieveImageRequest($xRequestId, $imageId, $xTraceId, $contentType);
 
         return $this->client
@@ -1440,9 +1440,9 @@ class ImagesApi
      * @param  string|null $search full text search on image name or image os type (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveImageList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ListImageResponse
+     * @return \Contabo\Generated\Model\ListImageResponse
      */
     public function retrieveImageList($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $standardImage = null, $search = null, string $contentType = self::contentTypes['retrieveImageList'][0])
     {
@@ -1465,9 +1465,9 @@ class ImagesApi
      * @param  string|null $search full text search on image name or image os type (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveImageList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ListImageResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ListImageResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveImageListWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $standardImage = null, $search = null, string $contentType = self::contentTypes['retrieveImageList'][0])
     {
@@ -1498,11 +1498,11 @@ class ImagesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ListImageResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ListImageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ListImageResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ListImageResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1520,7 +1520,7 @@ class ImagesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ListImageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ListImageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1539,7 +1539,7 @@ class ImagesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ListImageResponse';
+            $returnType = '\Contabo\Generated\Model\ListImageResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1572,7 +1572,7 @@ class ImagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ListImageResponse',
+                        '\Contabo\Generated\Model\ListImageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1630,7 +1630,7 @@ class ImagesApi
      */
     public function retrieveImageListAsyncWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $standardImage = null, $search = null, string $contentType = self::contentTypes['retrieveImageList'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ListImageResponse';
+        $returnType = '\Contabo\Generated\Model\ListImageResponse';
         $request = $this->retrieveImageListRequest($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $standardImage, $search, $contentType);
 
         return $this->client
@@ -1843,13 +1843,13 @@ class ImagesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $imageId The identifier of the image (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateCustomImageRequest $updateCustomImageRequest updateCustomImageRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateCustomImageRequest $updateCustomImageRequest updateCustomImageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateImage'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\UpdateCustomImageResponse
+     * @return \Contabo\Generated\Model\UpdateCustomImageResponse
      */
     public function updateImage($xRequestId, $imageId, $updateCustomImageRequest, $xTraceId = null, string $contentType = self::contentTypes['updateImage'][0])
     {
@@ -1864,13 +1864,13 @@ class ImagesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $imageId The identifier of the image (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateCustomImageRequest $updateCustomImageRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateCustomImageRequest $updateCustomImageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateImage'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\UpdateCustomImageResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\UpdateCustomImageResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateImageWithHttpInfo($xRequestId, $imageId, $updateCustomImageRequest, $xTraceId = null, string $contentType = self::contentTypes['updateImage'][0])
     {
@@ -1901,11 +1901,11 @@ class ImagesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\UpdateCustomImageResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\UpdateCustomImageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\UpdateCustomImageResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\UpdateCustomImageResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1923,7 +1923,7 @@ class ImagesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\UpdateCustomImageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\UpdateCustomImageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1942,7 +1942,7 @@ class ImagesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\UpdateCustomImageResponse';
+            $returnType = '\Contabo\Generated\Model\UpdateCustomImageResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1975,7 +1975,7 @@ class ImagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\UpdateCustomImageResponse',
+                        '\Contabo\Generated\Model\UpdateCustomImageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1992,7 +1992,7 @@ class ImagesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $imageId The identifier of the image (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateCustomImageRequest $updateCustomImageRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateCustomImageRequest $updateCustomImageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateImage'] to see the possible values for this operation
      *
@@ -2016,7 +2016,7 @@ class ImagesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $imageId The identifier of the image (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateCustomImageRequest $updateCustomImageRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateCustomImageRequest $updateCustomImageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateImage'] to see the possible values for this operation
      *
@@ -2025,7 +2025,7 @@ class ImagesApi
      */
     public function updateImageAsyncWithHttpInfo($xRequestId, $imageId, $updateCustomImageRequest, $xTraceId = null, string $contentType = self::contentTypes['updateImage'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\UpdateCustomImageResponse';
+        $returnType = '\Contabo\Generated\Model\UpdateCustomImageResponse';
         $request = $this->updateImageRequest($xRequestId, $imageId, $updateCustomImageRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -2069,7 +2069,7 @@ class ImagesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $imageId The identifier of the image (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateCustomImageRequest $updateCustomImageRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateCustomImageRequest $updateCustomImageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateImage'] to see the possible values for this operation
      *

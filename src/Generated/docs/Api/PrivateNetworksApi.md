@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\PrivateNetworksApi
+# Contabo\Generated\PrivateNetworksApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -16,7 +16,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `assignInstancePrivateNetwork()`
 
 ```php
-assignInstancePrivateNetwork($xRequestId, $privateNetworkId, $instanceId, $xTraceId): \Coderic\Contabo\Generated\Model\AssignInstancePrivateNetworkResponse
+assignInstancePrivateNetwork($xRequestId, $privateNetworkId, $instanceId, $xTraceId): \Contabo\Generated\Model\AssignInstancePrivateNetworkResponse
 ```
 
 Add instance to a Private Network
@@ -31,10 +31,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\PrivateNetworksApi(
+$apiInstance = new Contabo\Generated\Api\PrivateNetworksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -64,7 +64,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\AssignInstancePrivateNetworkResponse**](../Model/AssignInstancePrivateNetworkResponse.md)
+[**\Contabo\Generated\Model\AssignInstancePrivateNetworkResponse**](../Model/AssignInstancePrivateNetworkResponse.md)
 
 ### Authorization
 
@@ -82,7 +82,7 @@ try {
 ## `createPrivateNetwork()`
 
 ```php
-createPrivateNetwork($xRequestId, $createPrivateNetworkRequest, $xTraceId): \Coderic\Contabo\Generated\Model\CreatePrivateNetworkResponse
+createPrivateNetwork($xRequestId, $createPrivateNetworkRequest, $xTraceId): \Contabo\Generated\Model\CreatePrivateNetworkResponse
 ```
 
 Create a new Private Network
@@ -97,17 +97,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\PrivateNetworksApi(
+$apiInstance = new Contabo\Generated\Api\PrivateNetworksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
-$createPrivateNetworkRequest = new \Coderic\Contabo\Generated\Model\CreatePrivateNetworkRequest(); // \Coderic\Contabo\Generated\Model\CreatePrivateNetworkRequest
+$createPrivateNetworkRequest = new \Contabo\Generated\Model\CreatePrivateNetworkRequest(); // \Contabo\Generated\Model\CreatePrivateNetworkRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -123,12 +123,12 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
-| **createPrivateNetworkRequest** | [**\Coderic\Contabo\Generated\Model\CreatePrivateNetworkRequest**](../Model/CreatePrivateNetworkRequest.md)|  | |
+| **createPrivateNetworkRequest** | [**\Contabo\Generated\Model\CreatePrivateNetworkRequest**](../Model/CreatePrivateNetworkRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\CreatePrivateNetworkResponse**](../Model/CreatePrivateNetworkResponse.md)
+[**\Contabo\Generated\Model\CreatePrivateNetworkResponse**](../Model/CreatePrivateNetworkResponse.md)
 
 ### Authorization
 
@@ -161,10 +161,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\PrivateNetworksApi(
+$apiInstance = new Contabo\Generated\Api\PrivateNetworksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -209,7 +209,7 @@ void (empty response body)
 ## `patchPrivateNetwork()`
 
 ```php
-patchPrivateNetwork($xRequestId, $privateNetworkId, $patchPrivateNetworkRequest, $xTraceId): \Coderic\Contabo\Generated\Model\PatchPrivateNetworkResponse
+patchPrivateNetwork($xRequestId, $privateNetworkId, $patchPrivateNetworkRequest, $xTraceId): \Contabo\Generated\Model\PatchPrivateNetworkResponse
 ```
 
 Update a Private Network by id
@@ -224,10 +224,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\PrivateNetworksApi(
+$apiInstance = new Contabo\Generated\Api\PrivateNetworksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -235,7 +235,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\PrivateNetworksApi(
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $privateNetworkId = 12345; // int | The identifier of the Private Network
-$patchPrivateNetworkRequest = new \Coderic\Contabo\Generated\Model\PatchPrivateNetworkRequest(); // \Coderic\Contabo\Generated\Model\PatchPrivateNetworkRequest
+$patchPrivateNetworkRequest = new \Contabo\Generated\Model\PatchPrivateNetworkRequest(); // \Contabo\Generated\Model\PatchPrivateNetworkRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -252,12 +252,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **privateNetworkId** | **int**| The identifier of the Private Network | |
-| **patchPrivateNetworkRequest** | [**\Coderic\Contabo\Generated\Model\PatchPrivateNetworkRequest**](../Model/PatchPrivateNetworkRequest.md)|  | |
+| **patchPrivateNetworkRequest** | [**\Contabo\Generated\Model\PatchPrivateNetworkRequest**](../Model/PatchPrivateNetworkRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\PatchPrivateNetworkResponse**](../Model/PatchPrivateNetworkResponse.md)
+[**\Contabo\Generated\Model\PatchPrivateNetworkResponse**](../Model/PatchPrivateNetworkResponse.md)
 
 ### Authorization
 
@@ -275,7 +275,7 @@ try {
 ## `retrievePrivateNetwork()`
 
 ```php
-retrievePrivateNetwork($xRequestId, $privateNetworkId, $xTraceId): \Coderic\Contabo\Generated\Model\FindPrivateNetworkResponse
+retrievePrivateNetwork($xRequestId, $privateNetworkId, $xTraceId): \Contabo\Generated\Model\FindPrivateNetworkResponse
 ```
 
 Get specific Private Network by id
@@ -290,10 +290,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\PrivateNetworksApi(
+$apiInstance = new Contabo\Generated\Api\PrivateNetworksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -321,7 +321,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\FindPrivateNetworkResponse**](../Model/FindPrivateNetworkResponse.md)
+[**\Contabo\Generated\Model\FindPrivateNetworkResponse**](../Model/FindPrivateNetworkResponse.md)
 
 ### Authorization
 
@@ -339,7 +339,7 @@ try {
 ## `retrievePrivateNetworkList()`
 
 ```php
-retrievePrivateNetworkList($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $instanceIds, $region, $dataCenter): \Coderic\Contabo\Generated\Model\ListPrivateNetworkResponse
+retrievePrivateNetworkList($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $instanceIds, $region, $dataCenter): \Contabo\Generated\Model\ListPrivateNetworkResponse
 ```
 
 List Private Networks
@@ -354,10 +354,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\PrivateNetworksApi(
+$apiInstance = new Contabo\Generated\Api\PrivateNetworksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -397,7 +397,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ListPrivateNetworkResponse**](../Model/ListPrivateNetworkResponse.md)
+[**\Contabo\Generated\Model\ListPrivateNetworkResponse**](../Model/ListPrivateNetworkResponse.md)
 
 ### Authorization
 
@@ -415,7 +415,7 @@ try {
 ## `unassignInstancePrivateNetwork()`
 
 ```php
-unassignInstancePrivateNetwork($xRequestId, $privateNetworkId, $instanceId, $xTraceId): \Coderic\Contabo\Generated\Model\UnassignInstancePrivateNetworkResponse
+unassignInstancePrivateNetwork($xRequestId, $privateNetworkId, $instanceId, $xTraceId): \Contabo\Generated\Model\UnassignInstancePrivateNetworkResponse
 ```
 
 Remove instance from a Private Network
@@ -430,10 +430,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\PrivateNetworksApi(
+$apiInstance = new Contabo\Generated\Api\PrivateNetworksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -463,7 +463,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\UnassignInstancePrivateNetworkResponse**](../Model/UnassignInstancePrivateNetworkResponse.md)
+[**\Contabo\Generated\Model\UnassignInstancePrivateNetworkResponse**](../Model/UnassignInstancePrivateNetworkResponse.md)
 
 ### Authorization
 

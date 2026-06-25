@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * PutFirewallRequest Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class PutFirewallRequest implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'rules' => '\Coderic\Contabo\Generated\Model\RulesRequest'
+        'rules' => '\Contabo\Generated\Model\RulesRequest'
     ];
 
     /**
@@ -293,7 +293,7 @@ class PutFirewallRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets rules
      *
-     * @return \Coderic\Contabo\Generated\Model\RulesRequest|null
+     * @return \Contabo\Generated\Model\RulesRequest|null
      */
     public function getRules()
     {
@@ -303,7 +303,7 @@ class PutFirewallRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets rules
      *
-     * @param \Coderic\Contabo\Generated\Model\RulesRequest|null $rules rules
+     * @param \Contabo\Generated\Model\RulesRequest|null $rules rules
      *
      * @return self
      */

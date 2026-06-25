@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * UsersApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -156,13 +156,13 @@ class UsersApi
      * Create a new user
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateUserRequest $createUserRequest createUserRequest (required)
+     * @param  \Contabo\Generated\Model\CreateUserRequest $createUserRequest createUserRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUser'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\CreateUserResponse
+     * @return \Contabo\Generated\Model\CreateUserResponse
      */
     public function createUser($xRequestId, $createUserRequest, $xTraceId = null, string $contentType = self::contentTypes['createUser'][0])
     {
@@ -176,13 +176,13 @@ class UsersApi
      * Create a new user
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateUserRequest $createUserRequest (required)
+     * @param  \Contabo\Generated\Model\CreateUserRequest $createUserRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUser'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\CreateUserResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\CreateUserResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createUserWithHttpInfo($xRequestId, $createUserRequest, $xTraceId = null, string $contentType = self::contentTypes['createUser'][0])
     {
@@ -213,11 +213,11 @@ class UsersApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\CreateUserResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\CreateUserResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\CreateUserResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\CreateUserResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -235,7 +235,7 @@ class UsersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\CreateUserResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\CreateUserResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -254,7 +254,7 @@ class UsersApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\CreateUserResponse';
+            $returnType = '\Contabo\Generated\Model\CreateUserResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -287,7 +287,7 @@ class UsersApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\CreateUserResponse',
+                        '\Contabo\Generated\Model\CreateUserResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -303,7 +303,7 @@ class UsersApi
      * Create a new user
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateUserRequest $createUserRequest (required)
+     * @param  \Contabo\Generated\Model\CreateUserRequest $createUserRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUser'] to see the possible values for this operation
      *
@@ -326,7 +326,7 @@ class UsersApi
      * Create a new user
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateUserRequest $createUserRequest (required)
+     * @param  \Contabo\Generated\Model\CreateUserRequest $createUserRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUser'] to see the possible values for this operation
      *
@@ -335,7 +335,7 @@ class UsersApi
      */
     public function createUserAsyncWithHttpInfo($xRequestId, $createUserRequest, $xTraceId = null, string $contentType = self::contentTypes['createUser'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\CreateUserResponse';
+        $returnType = '\Contabo\Generated\Model\CreateUserResponse';
         $request = $this->createUserRequest($xRequestId, $createUserRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -378,7 +378,7 @@ class UsersApi
      * Create request for operation 'createUser'
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateUserRequest $createUserRequest (required)
+     * @param  \Contabo\Generated\Model\CreateUserRequest $createUserRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUser'] to see the possible values for this operation
      *
@@ -500,7 +500,7 @@ class UsersApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteUser'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -519,7 +519,7 @@ class UsersApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteUser'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -749,9 +749,9 @@ class UsersApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateClientSecret'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\GenerateClientSecretResponse
+     * @return \Contabo\Generated\Model\GenerateClientSecretResponse
      */
     public function generateClientSecret($xRequestId, $xTraceId = null, string $contentType = self::contentTypes['generateClientSecret'][0])
     {
@@ -768,9 +768,9 @@ class UsersApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateClientSecret'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\GenerateClientSecretResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\GenerateClientSecretResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function generateClientSecretWithHttpInfo($xRequestId, $xTraceId = null, string $contentType = self::contentTypes['generateClientSecret'][0])
     {
@@ -801,11 +801,11 @@ class UsersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\GenerateClientSecretResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\GenerateClientSecretResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\GenerateClientSecretResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\GenerateClientSecretResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -823,7 +823,7 @@ class UsersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\GenerateClientSecretResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\GenerateClientSecretResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -842,7 +842,7 @@ class UsersApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\GenerateClientSecretResponse';
+            $returnType = '\Contabo\Generated\Model\GenerateClientSecretResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -875,7 +875,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\GenerateClientSecretResponse',
+                        '\Contabo\Generated\Model\GenerateClientSecretResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -921,7 +921,7 @@ class UsersApi
      */
     public function generateClientSecretAsyncWithHttpInfo($xRequestId, $xTraceId = null, string $contentType = self::contentTypes['generateClientSecret'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\GenerateClientSecretResponse';
+        $returnType = '\Contabo\Generated\Model\GenerateClientSecretResponse';
         $request = $this->generateClientSecretRequest($xRequestId, $xTraceId, $contentType);
 
         return $this->client
@@ -1072,7 +1072,7 @@ class UsersApi
      * @param  string|null $redirectUrl The redirect url used for email verification (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resendEmailVerification'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1092,7 +1092,7 @@ class UsersApi
      * @param  string|null $redirectUrl The redirect url used for email verification (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resendEmailVerification'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1337,7 +1337,7 @@ class UsersApi
      * @param  string|null $redirectUrl The redirect url used for resetting password (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resetPassword'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1357,7 +1357,7 @@ class UsersApi
      * @param  string|null $redirectUrl The redirect url used for resetting password (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resetPassword'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1601,9 +1601,9 @@ class UsersApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveUser'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\FindUserResponse
+     * @return \Contabo\Generated\Model\FindUserResponse
      */
     public function retrieveUser($xRequestId, $userId, $xTraceId = null, string $contentType = self::contentTypes['retrieveUser'][0])
     {
@@ -1621,9 +1621,9 @@ class UsersApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveUser'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\FindUserResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\FindUserResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveUserWithHttpInfo($xRequestId, $userId, $xTraceId = null, string $contentType = self::contentTypes['retrieveUser'][0])
     {
@@ -1654,11 +1654,11 @@ class UsersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\FindUserResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\FindUserResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\FindUserResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\FindUserResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1676,7 +1676,7 @@ class UsersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\FindUserResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\FindUserResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1695,7 +1695,7 @@ class UsersApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\FindUserResponse';
+            $returnType = '\Contabo\Generated\Model\FindUserResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1728,7 +1728,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\FindUserResponse',
+                        '\Contabo\Generated\Model\FindUserResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1776,7 +1776,7 @@ class UsersApi
      */
     public function retrieveUserAsyncWithHttpInfo($xRequestId, $userId, $xTraceId = null, string $contentType = self::contentTypes['retrieveUser'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\FindUserResponse';
+        $returnType = '\Contabo\Generated\Model\FindUserResponse';
         $request = $this->retrieveUserRequest($xRequestId, $userId, $xTraceId, $contentType);
 
         return $this->client
@@ -1941,9 +1941,9 @@ class UsersApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveUserClient'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\FindClientResponse
+     * @return \Contabo\Generated\Model\FindClientResponse
      */
     public function retrieveUserClient($xRequestId, $xTraceId = null, string $contentType = self::contentTypes['retrieveUserClient'][0])
     {
@@ -1960,9 +1960,9 @@ class UsersApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveUserClient'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\FindClientResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\FindClientResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveUserClientWithHttpInfo($xRequestId, $xTraceId = null, string $contentType = self::contentTypes['retrieveUserClient'][0])
     {
@@ -1993,11 +1993,11 @@ class UsersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\FindClientResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\FindClientResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\FindClientResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\FindClientResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2015,7 +2015,7 @@ class UsersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\FindClientResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\FindClientResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2034,7 +2034,7 @@ class UsersApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\FindClientResponse';
+            $returnType = '\Contabo\Generated\Model\FindClientResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2067,7 +2067,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\FindClientResponse',
+                        '\Contabo\Generated\Model\FindClientResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2113,7 +2113,7 @@ class UsersApi
      */
     public function retrieveUserClientAsyncWithHttpInfo($xRequestId, $xTraceId = null, string $contentType = self::contentTypes['retrieveUserClient'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\FindClientResponse';
+        $returnType = '\Contabo\Generated\Model\FindClientResponse';
         $request = $this->retrieveUserClientRequest($xRequestId, $xTraceId, $contentType);
 
         return $this->client
@@ -2263,9 +2263,9 @@ class UsersApi
      * @param  string|null $userId The user ID for checking if password is set for him (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveUserIsPasswordSet'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\FindUserIsPasswordSetResponse
+     * @return \Contabo\Generated\Model\FindUserIsPasswordSetResponse
      */
     public function retrieveUserIsPasswordSet($xRequestId, $xTraceId = null, $userId = null, string $contentType = self::contentTypes['retrieveUserIsPasswordSet'][0])
     {
@@ -2283,9 +2283,9 @@ class UsersApi
      * @param  string|null $userId The user ID for checking if password is set for him (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveUserIsPasswordSet'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\FindUserIsPasswordSetResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\FindUserIsPasswordSetResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveUserIsPasswordSetWithHttpInfo($xRequestId, $xTraceId = null, $userId = null, string $contentType = self::contentTypes['retrieveUserIsPasswordSet'][0])
     {
@@ -2316,11 +2316,11 @@ class UsersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\FindUserIsPasswordSetResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\FindUserIsPasswordSetResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\FindUserIsPasswordSetResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\FindUserIsPasswordSetResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2338,7 +2338,7 @@ class UsersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\FindUserIsPasswordSetResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\FindUserIsPasswordSetResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2357,7 +2357,7 @@ class UsersApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\FindUserIsPasswordSetResponse';
+            $returnType = '\Contabo\Generated\Model\FindUserIsPasswordSetResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2390,7 +2390,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\FindUserIsPasswordSetResponse',
+                        '\Contabo\Generated\Model\FindUserIsPasswordSetResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2438,7 +2438,7 @@ class UsersApi
      */
     public function retrieveUserIsPasswordSetAsyncWithHttpInfo($xRequestId, $xTraceId = null, $userId = null, string $contentType = self::contentTypes['retrieveUserIsPasswordSet'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\FindUserIsPasswordSetResponse';
+        $returnType = '\Contabo\Generated\Model\FindUserIsPasswordSetResponse';
         $request = $this->retrieveUserIsPasswordSetRequest($xRequestId, $xTraceId, $userId, $contentType);
 
         return $this->client
@@ -2604,9 +2604,9 @@ class UsersApi
      * @param  bool|null $owner Filter if user is owner or not. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveUserList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ListUserResponse
+     * @return \Contabo\Generated\Model\ListUserResponse
      */
     public function retrieveUserList($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $email = null, $enabled = null, $owner = null, string $contentType = self::contentTypes['retrieveUserList'][0])
     {
@@ -2629,9 +2629,9 @@ class UsersApi
      * @param  bool|null $owner Filter if user is owner or not. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveUserList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ListUserResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ListUserResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveUserListWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $email = null, $enabled = null, $owner = null, string $contentType = self::contentTypes['retrieveUserList'][0])
     {
@@ -2662,11 +2662,11 @@ class UsersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ListUserResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ListUserResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ListUserResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ListUserResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2684,7 +2684,7 @@ class UsersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ListUserResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ListUserResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2703,7 +2703,7 @@ class UsersApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ListUserResponse';
+            $returnType = '\Contabo\Generated\Model\ListUserResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2736,7 +2736,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ListUserResponse',
+                        '\Contabo\Generated\Model\ListUserResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2794,7 +2794,7 @@ class UsersApi
      */
     public function retrieveUserListAsyncWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $email = null, $enabled = null, $owner = null, string $contentType = self::contentTypes['retrieveUserList'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ListUserResponse';
+        $returnType = '\Contabo\Generated\Model\ListUserResponse';
         $request = $this->retrieveUserListRequest($xRequestId, $xTraceId, $page, $size, $orderBy, $email, $enabled, $owner, $contentType);
 
         return $this->client
@@ -3007,13 +3007,13 @@ class UsersApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $userId The identifier of the user. (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateUserRequest $updateUserRequest updateUserRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateUserRequest $updateUserRequest updateUserRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateUser'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\UpdateUserResponse
+     * @return \Contabo\Generated\Model\UpdateUserResponse
      */
     public function updateUser($xRequestId, $userId, $updateUserRequest, $xTraceId = null, string $contentType = self::contentTypes['updateUser'][0])
     {
@@ -3028,13 +3028,13 @@ class UsersApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $userId The identifier of the user. (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateUserRequest $updateUserRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateUserRequest $updateUserRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateUser'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\UpdateUserResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\UpdateUserResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateUserWithHttpInfo($xRequestId, $userId, $updateUserRequest, $xTraceId = null, string $contentType = self::contentTypes['updateUser'][0])
     {
@@ -3065,11 +3065,11 @@ class UsersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\UpdateUserResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\UpdateUserResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\UpdateUserResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\UpdateUserResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3087,7 +3087,7 @@ class UsersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\UpdateUserResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\UpdateUserResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3106,7 +3106,7 @@ class UsersApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\UpdateUserResponse';
+            $returnType = '\Contabo\Generated\Model\UpdateUserResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3139,7 +3139,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\UpdateUserResponse',
+                        '\Contabo\Generated\Model\UpdateUserResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3156,7 +3156,7 @@ class UsersApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $userId The identifier of the user. (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateUserRequest $updateUserRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateUserRequest $updateUserRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateUser'] to see the possible values for this operation
      *
@@ -3180,7 +3180,7 @@ class UsersApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $userId The identifier of the user. (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateUserRequest $updateUserRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateUserRequest $updateUserRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateUser'] to see the possible values for this operation
      *
@@ -3189,7 +3189,7 @@ class UsersApi
      */
     public function updateUserAsyncWithHttpInfo($xRequestId, $userId, $updateUserRequest, $xTraceId = null, string $contentType = self::contentTypes['updateUser'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\UpdateUserResponse';
+        $returnType = '\Contabo\Generated\Model\UpdateUserResponse';
         $request = $this->updateUserRequest($xRequestId, $userId, $updateUserRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -3233,7 +3233,7 @@ class UsersApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $userId The identifier of the user. (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateUserRequest $updateUserRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateUserRequest $updateUserRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateUser'] to see the possible values for this operation
      *

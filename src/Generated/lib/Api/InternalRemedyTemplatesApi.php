@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * InternalRemedyTemplatesApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -137,9 +137,9 @@ class InternalRemedyTemplatesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRemedyTemplate'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\RemedyTemplatesGetResponse
+     * @return \Contabo\Generated\Model\RemedyTemplatesGetResponse
      */
     public function getRemedyTemplate($xRequestId, $orgId, $remedyTemplateId, $xTraceId = null, string $contentType = self::contentTypes['getRemedyTemplate'][0])
     {
@@ -158,9 +158,9 @@ class InternalRemedyTemplatesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRemedyTemplate'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\RemedyTemplatesGetResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\RemedyTemplatesGetResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRemedyTemplateWithHttpInfo($xRequestId, $orgId, $remedyTemplateId, $xTraceId = null, string $contentType = self::contentTypes['getRemedyTemplate'][0])
     {
@@ -191,11 +191,11 @@ class InternalRemedyTemplatesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\RemedyTemplatesGetResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\RemedyTemplatesGetResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\RemedyTemplatesGetResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\RemedyTemplatesGetResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -213,7 +213,7 @@ class InternalRemedyTemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\RemedyTemplatesGetResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\RemedyTemplatesGetResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -232,7 +232,7 @@ class InternalRemedyTemplatesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\RemedyTemplatesGetResponse';
+            $returnType = '\Contabo\Generated\Model\RemedyTemplatesGetResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -265,7 +265,7 @@ class InternalRemedyTemplatesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\RemedyTemplatesGetResponse',
+                        '\Contabo\Generated\Model\RemedyTemplatesGetResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -315,7 +315,7 @@ class InternalRemedyTemplatesApi
      */
     public function getRemedyTemplateAsyncWithHttpInfo($xRequestId, $orgId, $remedyTemplateId, $xTraceId = null, string $contentType = self::contentTypes['getRemedyTemplate'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\RemedyTemplatesGetResponse';
+        $returnType = '\Contabo\Generated\Model\RemedyTemplatesGetResponse';
         $request = $this->getRemedyTemplateRequest($xRequestId, $orgId, $remedyTemplateId, $xTraceId, $contentType);
 
         return $this->client
@@ -509,9 +509,9 @@ class InternalRemedyTemplatesApi
      * @param  string|null $remedyClass Class used to perform the remedy (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listRemedyTemplates'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\RemedyTemplatesListResponse
+     * @return \Contabo\Generated\Model\RemedyTemplatesListResponse
      */
     public function listRemedyTemplates($xRequestId, $orgIds, $xTraceId = null, $page = null, $size = null, $orderBy = null, $creationStartTime = null, $creationEndTime = null, $modificationStartTime = null, $modificationEndTime = null, $accountId = null, $internal = null, $objectType = null, $collectorClass = null, $remedyClass = null, string $contentType = self::contentTypes['listRemedyTemplates'][0])
     {
@@ -541,9 +541,9 @@ class InternalRemedyTemplatesApi
      * @param  string|null $remedyClass Class used to perform the remedy (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listRemedyTemplates'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\RemedyTemplatesListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\RemedyTemplatesListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listRemedyTemplatesWithHttpInfo($xRequestId, $orgIds, $xTraceId = null, $page = null, $size = null, $orderBy = null, $creationStartTime = null, $creationEndTime = null, $modificationStartTime = null, $modificationEndTime = null, $accountId = null, $internal = null, $objectType = null, $collectorClass = null, $remedyClass = null, string $contentType = self::contentTypes['listRemedyTemplates'][0])
     {
@@ -574,11 +574,11 @@ class InternalRemedyTemplatesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\RemedyTemplatesListResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\RemedyTemplatesListResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\RemedyTemplatesListResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\RemedyTemplatesListResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -596,7 +596,7 @@ class InternalRemedyTemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\RemedyTemplatesListResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\RemedyTemplatesListResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -615,7 +615,7 @@ class InternalRemedyTemplatesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\RemedyTemplatesListResponse';
+            $returnType = '\Contabo\Generated\Model\RemedyTemplatesListResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -648,7 +648,7 @@ class InternalRemedyTemplatesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\RemedyTemplatesListResponse',
+                        '\Contabo\Generated\Model\RemedyTemplatesListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -720,7 +720,7 @@ class InternalRemedyTemplatesApi
      */
     public function listRemedyTemplatesAsyncWithHttpInfo($xRequestId, $orgIds, $xTraceId = null, $page = null, $size = null, $orderBy = null, $creationStartTime = null, $creationEndTime = null, $modificationStartTime = null, $modificationEndTime = null, $accountId = null, $internal = null, $objectType = null, $collectorClass = null, $remedyClass = null, string $contentType = self::contentTypes['listRemedyTemplates'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\RemedyTemplatesListResponse';
+        $returnType = '\Contabo\Generated\Model\RemedyTemplatesListResponse';
         $request = $this->listRemedyTemplatesRequest($xRequestId, $orgIds, $xTraceId, $page, $size, $orderBy, $creationStartTime, $creationEndTime, $modificationStartTime, $modificationEndTime, $accountId, $internal, $objectType, $collectorClass, $remedyClass, $contentType);
 
         return $this->client

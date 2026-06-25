@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pagination** | [**\Coderic\Contabo\Generated\Model\PaginationMeta**](PaginationMeta.md) | Data about pagination like how many results, pages, page size. |
-**data** | [**\Coderic\Contabo\Generated\Model\SecretResponse[]**](SecretResponse.md) |  |
-**links** | [**\Coderic\Contabo\Generated\Model\SelfLinks**](SelfLinks.md) |  |
+**pagination** | [**\Contabo\Generated\Model\PaginationMeta**](PaginationMeta.md) | Data about pagination like how many results, pages, page size. |
+**data** | [**\Contabo\Generated\Model\SecretResponse[]**](SecretResponse.md) |  |
+**links** | [**\Contabo\Generated\Model\SelfLinks**](SelfLinks.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -24,6 +24,6 @@ java -jar "${JAR}" generate \
   -i "${SPEC}" \
   -g php \
   -o "${OUT}" \
-  --additional-properties=invokerPackage=Coderic\\Contabo\\Generated,variableNamingConvention=camelCase,packageName=contabo-sdk
+  --additional-properties=invokerPackage=Contabo\\Generated,variableNamingConvention=camelCase,packageName=contabo-sdk
 
 echo "Cliente generado en ${OUT}"

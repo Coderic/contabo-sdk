@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\InternalCheckCollectionReplayApi
+# Contabo\Generated\InternalCheckCollectionReplayApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `replayCheckCollection()`
 
 ```php
-replayCheckCollection($xRequestId, $checkCollectionsReplayRequest, $xTraceId): \Coderic\Contabo\Generated\Model\ReplayResponse
+replayCheckCollection($xRequestId, $checkCollectionsReplayRequest, $xTraceId): \Contabo\Generated\Model\ReplayResponse
 ```
 
 Replay changes for Check
@@ -25,17 +25,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InternalCheckCollectionReplayApi(
+$apiInstance = new Contabo\Generated\Api\InternalCheckCollectionReplayApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
-$checkCollectionsReplayRequest = new \Coderic\Contabo\Generated\Model\CheckCollectionsReplayRequest(); // \Coderic\Contabo\Generated\Model\CheckCollectionsReplayRequest
+$checkCollectionsReplayRequest = new \Contabo\Generated\Model\CheckCollectionsReplayRequest(); // \Contabo\Generated\Model\CheckCollectionsReplayRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -51,12 +51,12 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
-| **checkCollectionsReplayRequest** | [**\Coderic\Contabo\Generated\Model\CheckCollectionsReplayRequest**](../Model/CheckCollectionsReplayRequest.md)|  | |
+| **checkCollectionsReplayRequest** | [**\Contabo\Generated\Model\CheckCollectionsReplayRequest**](../Model/CheckCollectionsReplayRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ReplayResponse**](../Model/ReplayResponse.md)
+[**\Contabo\Generated\Model\ReplayResponse**](../Model/ReplayResponse.md)
 
 ### Authorization
 

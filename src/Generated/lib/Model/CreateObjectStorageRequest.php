@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * CreateObjectStorageRequest Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class CreateObjectStorageRequest implements ModelInterface, ArrayAccess, \JsonSe
       */
     protected static $openAPITypes = [
         'region' => 'string',
-        'autoScaling' => '\Coderic\Contabo\Generated\Model\AutoScalingTypeRequest',
+        'autoScaling' => '\Contabo\Generated\Model\AutoScalingTypeRequest',
         'totalPurchasedSpaceTB' => 'float',
         'displayName' => 'string'
     ];
@@ -364,7 +364,7 @@ class CreateObjectStorageRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets autoScaling
      *
-     * @return \Coderic\Contabo\Generated\Model\AutoScalingTypeRequest|null
+     * @return \Contabo\Generated\Model\AutoScalingTypeRequest|null
      */
     public function getAutoScaling()
     {
@@ -374,7 +374,7 @@ class CreateObjectStorageRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets autoScaling
      *
-     * @param \Coderic\Contabo\Generated\Model\AutoScalingTypeRequest|null $autoScaling Autoscaling settings
+     * @param \Contabo\Generated\Model\AutoScalingTypeRequest|null $autoScaling Autoscaling settings
      *
      * @return self
      */

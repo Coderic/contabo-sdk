@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,15 +27,15 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+namespace Contabo\Generated\Model;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * InstanceStatus Class Doc Comment
  *
  * @category Class
  * @description Instance&#39;s status
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

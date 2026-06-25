@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\InternalRemedyAuditsApi
+# Contabo\Generated\InternalRemedyAuditsApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `retrieveRemediesAuditsList()`
 
 ```php
-retrieveRemediesAuditsList($xRequestId, $orgIds, $xTraceId, $page, $size, $orderBy, $creationStartTime, $creationEndTime, $accountId, $requestId, $foreignChangedBy, $changedBy, $remedyId): \Coderic\Contabo\Generated\Model\RemediesAuditListResponse
+retrieveRemediesAuditsList($xRequestId, $orgIds, $xTraceId, $page, $size, $orderBy, $creationStartTime, $creationEndTime, $accountId, $requestId, $foreignChangedBy, $changedBy, $remedyId): \Contabo\Generated\Model\RemediesAuditListResponse
 ```
 
 List history about your Data (audit)
@@ -25,10 +25,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InternalRemedyAuditsApi(
+$apiInstance = new Contabo\Generated\Api\InternalRemedyAuditsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -76,7 +76,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\RemediesAuditListResponse**](../Model/RemediesAuditListResponse.md)
+[**\Contabo\Generated\Model\RemediesAuditListResponse**](../Model/RemediesAuditListResponse.md)
 
 ### Authorization
 

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * DNSAuditsApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -143,9 +143,9 @@ class DNSAuditsApi
      * @param  \DateTime|null $endDate End of search time range. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveDnsAuditsList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ZoneAuditResponse
+     * @return \Contabo\Generated\Model\ZoneAuditResponse
      */
     public function retrieveDnsAuditsList($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $requestId = null, $changedBy = null, $startDate = null, $endDate = null, string $contentType = self::contentTypes['retrieveDnsAuditsList'][0])
     {
@@ -170,9 +170,9 @@ class DNSAuditsApi
      * @param  \DateTime|null $endDate End of search time range. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveDnsAuditsList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ZoneAuditResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ZoneAuditResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveDnsAuditsListWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $requestId = null, $changedBy = null, $startDate = null, $endDate = null, string $contentType = self::contentTypes['retrieveDnsAuditsList'][0])
     {
@@ -203,11 +203,11 @@ class DNSAuditsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ZoneAuditResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ZoneAuditResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ZoneAuditResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ZoneAuditResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -225,7 +225,7 @@ class DNSAuditsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ZoneAuditResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ZoneAuditResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -244,7 +244,7 @@ class DNSAuditsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ZoneAuditResponse';
+            $returnType = '\Contabo\Generated\Model\ZoneAuditResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -277,7 +277,7 @@ class DNSAuditsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ZoneAuditResponse',
+                        '\Contabo\Generated\Model\ZoneAuditResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -339,7 +339,7 @@ class DNSAuditsApi
      */
     public function retrieveDnsAuditsListAsyncWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $requestId = null, $changedBy = null, $startDate = null, $endDate = null, string $contentType = self::contentTypes['retrieveDnsAuditsList'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ZoneAuditResponse';
+        $returnType = '\Contabo\Generated\Model\ZoneAuditResponse';
         $request = $this->retrieveDnsAuditsListRequest($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $requestId, $changedBy, $startDate, $endDate, $contentType);
 
         return $this->client
@@ -584,9 +584,9 @@ class DNSAuditsApi
      * @param  \DateTime|null $endDate End of search time range. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveRecordAuditsList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\RecordAuditResponse
+     * @return \Contabo\Generated\Model\RecordAuditResponse
      */
     public function retrieveRecordAuditsList($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $recordId = null, $requestId = null, $changedBy = null, $startDate = null, $endDate = null, string $contentType = self::contentTypes['retrieveRecordAuditsList'][0])
     {
@@ -611,9 +611,9 @@ class DNSAuditsApi
      * @param  \DateTime|null $endDate End of search time range. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveRecordAuditsList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\RecordAuditResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\RecordAuditResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveRecordAuditsListWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $recordId = null, $requestId = null, $changedBy = null, $startDate = null, $endDate = null, string $contentType = self::contentTypes['retrieveRecordAuditsList'][0])
     {
@@ -644,11 +644,11 @@ class DNSAuditsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\RecordAuditResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\RecordAuditResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\RecordAuditResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\RecordAuditResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -666,7 +666,7 @@ class DNSAuditsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\RecordAuditResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\RecordAuditResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -685,7 +685,7 @@ class DNSAuditsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\RecordAuditResponse';
+            $returnType = '\Contabo\Generated\Model\RecordAuditResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -718,7 +718,7 @@ class DNSAuditsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\RecordAuditResponse',
+                        '\Contabo\Generated\Model\RecordAuditResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -780,7 +780,7 @@ class DNSAuditsApi
      */
     public function retrieveRecordAuditsListAsyncWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $recordId = null, $requestId = null, $changedBy = null, $startDate = null, $endDate = null, string $contentType = self::contentTypes['retrieveRecordAuditsList'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\RecordAuditResponse';
+        $returnType = '\Contabo\Generated\Model\RecordAuditResponse';
         $request = $this->retrieveRecordAuditsListRequest($xRequestId, $xTraceId, $page, $size, $orderBy, $recordId, $requestId, $changedBy, $startDate, $endDate, $contentType);
 
         return $this->client

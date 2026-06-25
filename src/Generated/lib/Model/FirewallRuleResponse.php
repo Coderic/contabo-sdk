@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * FirewallRuleResponse Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class FirewallRuleResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     protected static $openAPITypes = [
         'protocol' => 'string',
         'destPorts' => 'string[]',
-        'srcCidr' => '\Coderic\Contabo\Generated\Model\SrcCidr',
+        'srcCidr' => '\Contabo\Generated\Model\SrcCidr',
         'action' => 'string',
         'status' => 'string',
         'displayName' => 'string'
@@ -486,7 +486,7 @@ class FirewallRuleResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets srcCidr
      *
-     * @return \Coderic\Contabo\Generated\Model\SrcCidr
+     * @return \Contabo\Generated\Model\SrcCidr
      */
     public function getSrcCidr()
     {
@@ -496,7 +496,7 @@ class FirewallRuleResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets srcCidr
      *
-     * @param \Coderic\Contabo\Generated\Model\SrcCidr $srcCidr srcCidr
+     * @param \Contabo\Generated\Model\SrcCidr $srcCidr srcCidr
      *
      * @return self
      */

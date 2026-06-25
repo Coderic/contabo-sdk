@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Coderic\Contabo\Tests\Laravel;
+namespace Contabo\Tests\Laravel;
 
-use Coderic\Contabo\ContaboClient;
-use Coderic\Contabo\Laravel\ContaboServiceProvider;
-use Coderic\Contabo\Laravel\Facades\Contabo;
+use Contabo\ContaboClient;
+use Contabo\Laravel\ContaboServiceProvider;
+use Contabo\Laravel\Facades\Contabo;
 use Illuminate\Foundation\Application;
 use Orchestra\Testbench\TestCase;
 

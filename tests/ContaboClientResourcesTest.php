@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Coderic\Contabo\Tests;
+namespace Contabo\Tests;
 
-use Coderic\Contabo\ApiResourceProxy;
-use Coderic\Contabo\Auth\Credentials;
-use Coderic\Contabo\ContaboClient;
-use Coderic\Contabo\Tests\Support\MockHttp;
+use Contabo\ApiResourceProxy;
+use Contabo\Auth\Credentials;
+use Contabo\ContaboClient;
+use Contabo\Tests\Support\MockHttp;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 

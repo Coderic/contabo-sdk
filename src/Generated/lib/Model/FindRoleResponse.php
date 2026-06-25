@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * FindRoleResponse Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class FindRoleResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Coderic\Contabo\Generated\Model\RoleResponse[]',
-        'links' => '\Coderic\Contabo\Generated\Model\SelfLinks'
+        'data' => '\Contabo\Generated\Model\RoleResponse[]',
+        'links' => '\Contabo\Generated\Model\SelfLinks'
     ];
 
     /**
@@ -306,7 +306,7 @@ class FindRoleResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets data
      *
-     * @return \Coderic\Contabo\Generated\Model\RoleResponse[]
+     * @return \Contabo\Generated\Model\RoleResponse[]
      */
     public function getData()
     {
@@ -316,7 +316,7 @@ class FindRoleResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets data
      *
-     * @param \Coderic\Contabo\Generated\Model\RoleResponse[] $data data
+     * @param \Contabo\Generated\Model\RoleResponse[] $data data
      *
      * @return self
      */
@@ -333,7 +333,7 @@ class FindRoleResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets links
      *
-     * @return \Coderic\Contabo\Generated\Model\SelfLinks
+     * @return \Contabo\Generated\Model\SelfLinks
      */
     public function getLinks()
     {
@@ -343,7 +343,7 @@ class FindRoleResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets links
      *
-     * @param \Coderic\Contabo\Generated\Model\SelfLinks $links links
+     * @param \Contabo\Generated\Model\SelfLinks $links links
      *
      * @return self
      */

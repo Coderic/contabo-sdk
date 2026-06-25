@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * CheckCollectionsApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -139,13 +139,13 @@ class CheckCollectionsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  float $checkCollectionId Check collection&#39;s id (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelRequest $cancelRequest cancelRequest (required)
+     * @param  \Contabo\Generated\Model\CancelRequest $cancelRequest cancelRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelExtCheckCollection'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse
+     * @return \Contabo\Generated\Model\ExtCheckCollectionsGetResponse
      */
     public function cancelExtCheckCollection($xRequestId, $checkCollectionId, $cancelRequest, $xTraceId = null, string $contentType = self::contentTypes['cancelExtCheckCollection'][0])
     {
@@ -160,13 +160,13 @@ class CheckCollectionsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  float $checkCollectionId Check collection&#39;s id (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelRequest $cancelRequest (required)
+     * @param  \Contabo\Generated\Model\CancelRequest $cancelRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelExtCheckCollection'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ExtCheckCollectionsGetResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelExtCheckCollectionWithHttpInfo($xRequestId, $checkCollectionId, $cancelRequest, $xTraceId = null, string $contentType = self::contentTypes['cancelExtCheckCollection'][0])
     {
@@ -197,11 +197,11 @@ class CheckCollectionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ExtCheckCollectionsGetResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ExtCheckCollectionsGetResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -219,7 +219,7 @@ class CheckCollectionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ExtCheckCollectionsGetResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -238,7 +238,7 @@ class CheckCollectionsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse';
+            $returnType = '\Contabo\Generated\Model\ExtCheckCollectionsGetResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -271,7 +271,7 @@ class CheckCollectionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse',
+                        '\Contabo\Generated\Model\ExtCheckCollectionsGetResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -288,7 +288,7 @@ class CheckCollectionsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  float $checkCollectionId Check collection&#39;s id (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelRequest $cancelRequest (required)
+     * @param  \Contabo\Generated\Model\CancelRequest $cancelRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelExtCheckCollection'] to see the possible values for this operation
      *
@@ -312,7 +312,7 @@ class CheckCollectionsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  float $checkCollectionId Check collection&#39;s id (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelRequest $cancelRequest (required)
+     * @param  \Contabo\Generated\Model\CancelRequest $cancelRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelExtCheckCollection'] to see the possible values for this operation
      *
@@ -321,7 +321,7 @@ class CheckCollectionsApi
      */
     public function cancelExtCheckCollectionAsyncWithHttpInfo($xRequestId, $checkCollectionId, $cancelRequest, $xTraceId = null, string $contentType = self::contentTypes['cancelExtCheckCollection'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse';
+        $returnType = '\Contabo\Generated\Model\ExtCheckCollectionsGetResponse';
         $request = $this->cancelExtCheckCollectionRequest($xRequestId, $checkCollectionId, $cancelRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -365,7 +365,7 @@ class CheckCollectionsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  float $checkCollectionId Check collection&#39;s id (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelRequest $cancelRequest (required)
+     * @param  \Contabo\Generated\Model\CancelRequest $cancelRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelExtCheckCollection'] to see the possible values for this operation
      *
@@ -502,9 +502,9 @@ class CheckCollectionsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExtCheckCollection'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse
+     * @return \Contabo\Generated\Model\ExtCheckCollectionsGetResponse
      */
     public function getExtCheckCollection($xRequestId, $checkCollectionId, $xTraceId = null, string $contentType = self::contentTypes['getExtCheckCollection'][0])
     {
@@ -522,9 +522,9 @@ class CheckCollectionsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExtCheckCollection'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ExtCheckCollectionsGetResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getExtCheckCollectionWithHttpInfo($xRequestId, $checkCollectionId, $xTraceId = null, string $contentType = self::contentTypes['getExtCheckCollection'][0])
     {
@@ -555,11 +555,11 @@ class CheckCollectionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ExtCheckCollectionsGetResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ExtCheckCollectionsGetResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -577,7 +577,7 @@ class CheckCollectionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ExtCheckCollectionsGetResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -596,7 +596,7 @@ class CheckCollectionsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse';
+            $returnType = '\Contabo\Generated\Model\ExtCheckCollectionsGetResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -629,7 +629,7 @@ class CheckCollectionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse',
+                        '\Contabo\Generated\Model\ExtCheckCollectionsGetResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -677,7 +677,7 @@ class CheckCollectionsApi
      */
     public function getExtCheckCollectionAsyncWithHttpInfo($xRequestId, $checkCollectionId, $xTraceId = null, string $contentType = self::contentTypes['getExtCheckCollection'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse';
+        $returnType = '\Contabo\Generated\Model\ExtCheckCollectionsGetResponse';
         $request = $this->getExtCheckCollectionRequest($xRequestId, $checkCollectionId, $xTraceId, $contentType);
 
         return $this->client
@@ -845,9 +845,9 @@ class CheckCollectionsApi
      * @param  float|null $checkCollectionTemplateId Check Collection Template for this check collection (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listExtCheckCollections'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ExtCheckCollectionsListResponse
+     * @return \Contabo\Generated\Model\ExtCheckCollectionsListResponse
      */
     public function listExtCheckCollections($xRequestId, $xTraceId = null, $objectType = null, $objectId = null, $checkCollectionTemplateId = null, string $contentType = self::contentTypes['listExtCheckCollections'][0])
     {
@@ -867,9 +867,9 @@ class CheckCollectionsApi
      * @param  float|null $checkCollectionTemplateId Check Collection Template for this check collection (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listExtCheckCollections'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ExtCheckCollectionsListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ExtCheckCollectionsListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listExtCheckCollectionsWithHttpInfo($xRequestId, $xTraceId = null, $objectType = null, $objectId = null, $checkCollectionTemplateId = null, string $contentType = self::contentTypes['listExtCheckCollections'][0])
     {
@@ -900,11 +900,11 @@ class CheckCollectionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ExtCheckCollectionsListResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ExtCheckCollectionsListResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ExtCheckCollectionsListResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ExtCheckCollectionsListResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -922,7 +922,7 @@ class CheckCollectionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ExtCheckCollectionsListResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ExtCheckCollectionsListResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -941,7 +941,7 @@ class CheckCollectionsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ExtCheckCollectionsListResponse';
+            $returnType = '\Contabo\Generated\Model\ExtCheckCollectionsListResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -974,7 +974,7 @@ class CheckCollectionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ExtCheckCollectionsListResponse',
+                        '\Contabo\Generated\Model\ExtCheckCollectionsListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1026,7 +1026,7 @@ class CheckCollectionsApi
      */
     public function listExtCheckCollectionsAsyncWithHttpInfo($xRequestId, $xTraceId = null, $objectType = null, $objectId = null, $checkCollectionTemplateId = null, string $contentType = self::contentTypes['listExtCheckCollections'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ExtCheckCollectionsListResponse';
+        $returnType = '\Contabo\Generated\Model\ExtCheckCollectionsListResponse';
         $request = $this->listExtCheckCollectionsRequest($xRequestId, $xTraceId, $objectType, $objectId, $checkCollectionTemplateId, $contentType);
 
         return $this->client
@@ -1205,13 +1205,13 @@ class CheckCollectionsApi
      * Start check collection
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\BaseCheckCollectionCreateRequest $baseCheckCollectionCreateRequest baseCheckCollectionCreateRequest (required)
+     * @param  \Contabo\Generated\Model\BaseCheckCollectionCreateRequest $baseCheckCollectionCreateRequest baseCheckCollectionCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['startExtCheckCollection'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse
+     * @return \Contabo\Generated\Model\ExtCheckCollectionsGetResponse
      */
     public function startExtCheckCollection($xRequestId, $baseCheckCollectionCreateRequest, $xTraceId = null, string $contentType = self::contentTypes['startExtCheckCollection'][0])
     {
@@ -1225,13 +1225,13 @@ class CheckCollectionsApi
      * Start check collection
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\BaseCheckCollectionCreateRequest $baseCheckCollectionCreateRequest (required)
+     * @param  \Contabo\Generated\Model\BaseCheckCollectionCreateRequest $baseCheckCollectionCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['startExtCheckCollection'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ExtCheckCollectionsGetResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function startExtCheckCollectionWithHttpInfo($xRequestId, $baseCheckCollectionCreateRequest, $xTraceId = null, string $contentType = self::contentTypes['startExtCheckCollection'][0])
     {
@@ -1262,11 +1262,11 @@ class CheckCollectionsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ExtCheckCollectionsGetResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ExtCheckCollectionsGetResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1284,7 +1284,7 @@ class CheckCollectionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ExtCheckCollectionsGetResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1303,7 +1303,7 @@ class CheckCollectionsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse';
+            $returnType = '\Contabo\Generated\Model\ExtCheckCollectionsGetResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1336,7 +1336,7 @@ class CheckCollectionsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse',
+                        '\Contabo\Generated\Model\ExtCheckCollectionsGetResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1352,7 +1352,7 @@ class CheckCollectionsApi
      * Start check collection
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\BaseCheckCollectionCreateRequest $baseCheckCollectionCreateRequest (required)
+     * @param  \Contabo\Generated\Model\BaseCheckCollectionCreateRequest $baseCheckCollectionCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['startExtCheckCollection'] to see the possible values for this operation
      *
@@ -1375,7 +1375,7 @@ class CheckCollectionsApi
      * Start check collection
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\BaseCheckCollectionCreateRequest $baseCheckCollectionCreateRequest (required)
+     * @param  \Contabo\Generated\Model\BaseCheckCollectionCreateRequest $baseCheckCollectionCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['startExtCheckCollection'] to see the possible values for this operation
      *
@@ -1384,7 +1384,7 @@ class CheckCollectionsApi
      */
     public function startExtCheckCollectionAsyncWithHttpInfo($xRequestId, $baseCheckCollectionCreateRequest, $xTraceId = null, string $contentType = self::contentTypes['startExtCheckCollection'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ExtCheckCollectionsGetResponse';
+        $returnType = '\Contabo\Generated\Model\ExtCheckCollectionsGetResponse';
         $request = $this->startExtCheckCollectionRequest($xRequestId, $baseCheckCollectionCreateRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -1427,7 +1427,7 @@ class CheckCollectionsApi
      * Create request for operation 'startExtCheckCollection'
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\BaseCheckCollectionCreateRequest $baseCheckCollectionCreateRequest (required)
+     * @param  \Contabo\Generated\Model\BaseCheckCollectionCreateRequest $baseCheckCollectionCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['startExtCheckCollection'] to see the possible values for this operation
      *

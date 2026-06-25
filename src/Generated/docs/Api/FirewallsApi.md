@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\FirewallsApi
+# Contabo\Generated\FirewallsApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -18,7 +18,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `assignInstanceFirewall()`
 
 ```php
-assignInstanceFirewall($xRequestId, $firewallId, $instanceId, $xTraceId): \Coderic\Contabo\Generated\Model\AssignInstanceFirewallResponse
+assignInstanceFirewall($xRequestId, $firewallId, $instanceId, $xTraceId): \Contabo\Generated\Model\AssignInstanceFirewallResponse
 ```
 
 Add instance to a firewall
@@ -33,10 +33,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\FirewallsApi(
+$apiInstance = new Contabo\Generated\Api\FirewallsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -66,7 +66,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\AssignInstanceFirewallResponse**](../Model/AssignInstanceFirewallResponse.md)
+[**\Contabo\Generated\Model\AssignInstanceFirewallResponse**](../Model/AssignInstanceFirewallResponse.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ try {
 ## `createFirewall()`
 
 ```php
-createFirewall($xRequestId, $createFirewallRequest, $xTraceId): \Coderic\Contabo\Generated\Model\CreateFirewallResponse
+createFirewall($xRequestId, $createFirewallRequest, $xTraceId): \Contabo\Generated\Model\CreateFirewallResponse
 ```
 
 Create a new firewall definition
@@ -99,17 +99,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\FirewallsApi(
+$apiInstance = new Contabo\Generated\Api\FirewallsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
-$createFirewallRequest = new \Coderic\Contabo\Generated\Model\CreateFirewallRequest(); // \Coderic\Contabo\Generated\Model\CreateFirewallRequest
+$createFirewallRequest = new \Contabo\Generated\Model\CreateFirewallRequest(); // \Contabo\Generated\Model\CreateFirewallRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -125,12 +125,12 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
-| **createFirewallRequest** | [**\Coderic\Contabo\Generated\Model\CreateFirewallRequest**](../Model/CreateFirewallRequest.md)|  | |
+| **createFirewallRequest** | [**\Contabo\Generated\Model\CreateFirewallRequest**](../Model/CreateFirewallRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\CreateFirewallResponse**](../Model/CreateFirewallResponse.md)
+[**\Contabo\Generated\Model\CreateFirewallResponse**](../Model/CreateFirewallResponse.md)
 
 ### Authorization
 
@@ -163,10 +163,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\FirewallsApi(
+$apiInstance = new Contabo\Generated\Api\FirewallsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -211,7 +211,7 @@ void (empty response body)
 ## `patchFirewall()`
 
 ```php
-patchFirewall($xRequestId, $firewallId, $patchFirewallRequest, $xTraceId): \Coderic\Contabo\Generated\Model\PatchFirewallResponse
+patchFirewall($xRequestId, $firewallId, $patchFirewallRequest, $xTraceId): \Contabo\Generated\Model\PatchFirewallResponse
 ```
 
 Update a firewall by id
@@ -226,10 +226,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\FirewallsApi(
+$apiInstance = new Contabo\Generated\Api\FirewallsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -237,7 +237,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\FirewallsApi(
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $firewallId = b943b25a-c8b5-4570-9135-4bbaa7615b81; // string | The identifier of the firewall
-$patchFirewallRequest = new \Coderic\Contabo\Generated\Model\PatchFirewallRequest(); // \Coderic\Contabo\Generated\Model\PatchFirewallRequest
+$patchFirewallRequest = new \Contabo\Generated\Model\PatchFirewallRequest(); // \Contabo\Generated\Model\PatchFirewallRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -254,12 +254,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **firewallId** | **string**| The identifier of the firewall | |
-| **patchFirewallRequest** | [**\Coderic\Contabo\Generated\Model\PatchFirewallRequest**](../Model/PatchFirewallRequest.md)|  | |
+| **patchFirewallRequest** | [**\Contabo\Generated\Model\PatchFirewallRequest**](../Model/PatchFirewallRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\PatchFirewallResponse**](../Model/PatchFirewallResponse.md)
+[**\Contabo\Generated\Model\PatchFirewallResponse**](../Model/PatchFirewallResponse.md)
 
 ### Authorization
 
@@ -277,7 +277,7 @@ try {
 ## `putFirewall()`
 
 ```php
-putFirewall($xRequestId, $firewallId, $putFirewallRequest, $xTraceId): \Coderic\Contabo\Generated\Model\PutFirewallResponse
+putFirewall($xRequestId, $firewallId, $putFirewallRequest, $xTraceId): \Contabo\Generated\Model\PutFirewallResponse
 ```
 
 Update specific firewall rules
@@ -292,10 +292,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\FirewallsApi(
+$apiInstance = new Contabo\Generated\Api\FirewallsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -303,7 +303,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\FirewallsApi(
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $firewallId = b943b25a-c8b5-4570-9135-4bbaa7615b81; // string | The identifier of the firewall
-$putFirewallRequest = new \Coderic\Contabo\Generated\Model\PutFirewallRequest(); // \Coderic\Contabo\Generated\Model\PutFirewallRequest
+$putFirewallRequest = new \Contabo\Generated\Model\PutFirewallRequest(); // \Contabo\Generated\Model\PutFirewallRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -320,12 +320,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **firewallId** | **string**| The identifier of the firewall | |
-| **putFirewallRequest** | [**\Coderic\Contabo\Generated\Model\PutFirewallRequest**](../Model/PutFirewallRequest.md)|  | |
+| **putFirewallRequest** | [**\Contabo\Generated\Model\PutFirewallRequest**](../Model/PutFirewallRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\PutFirewallResponse**](../Model/PutFirewallResponse.md)
+[**\Contabo\Generated\Model\PutFirewallResponse**](../Model/PutFirewallResponse.md)
 
 ### Authorization
 
@@ -343,7 +343,7 @@ try {
 ## `retrieveFirewall()`
 
 ```php
-retrieveFirewall($xRequestId, $firewallId, $xTraceId, $page, $size, $orderBy, $name, $instanceIds): \Coderic\Contabo\Generated\Model\FindFirewallResponse
+retrieveFirewall($xRequestId, $firewallId, $xTraceId, $page, $size, $orderBy, $name, $instanceIds): \Contabo\Generated\Model\FindFirewallResponse
 ```
 
 Get specific firewall by its id
@@ -358,10 +358,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\FirewallsApi(
+$apiInstance = new Contabo\Generated\Api\FirewallsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -399,7 +399,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\FindFirewallResponse**](../Model/FindFirewallResponse.md)
+[**\Contabo\Generated\Model\FindFirewallResponse**](../Model/FindFirewallResponse.md)
 
 ### Authorization
 
@@ -417,7 +417,7 @@ try {
 ## `retrieveFirewallList()`
 
 ```php
-retrieveFirewallList($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $instanceIds): \Coderic\Contabo\Generated\Model\ListFirewallResponse
+retrieveFirewallList($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $instanceIds): \Contabo\Generated\Model\ListFirewallResponse
 ```
 
 List all firewalls
@@ -432,10 +432,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\FirewallsApi(
+$apiInstance = new Contabo\Generated\Api\FirewallsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -471,7 +471,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ListFirewallResponse**](../Model/ListFirewallResponse.md)
+[**\Contabo\Generated\Model\ListFirewallResponse**](../Model/ListFirewallResponse.md)
 
 ### Authorization
 
@@ -489,7 +489,7 @@ try {
 ## `retrievePresetRules()`
 
 ```php
-retrievePresetRules($xRequestId, $xTraceId, $page, $size, $orderBy, $name): \Coderic\Contabo\Generated\Model\ListPresetRulesResponse
+retrievePresetRules($xRequestId, $xTraceId, $page, $size, $orderBy, $name): \Contabo\Generated\Model\ListPresetRulesResponse
 ```
 
 Get all preset rules
@@ -502,10 +502,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\FirewallsApi(
+$apiInstance = new Contabo\Generated\Api\FirewallsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -539,7 +539,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ListPresetRulesResponse**](../Model/ListPresetRulesResponse.md)
+[**\Contabo\Generated\Model\ListPresetRulesResponse**](../Model/ListPresetRulesResponse.md)
 
 ### Authorization
 
@@ -557,7 +557,7 @@ try {
 ## `unassignInstanceFirewall()`
 
 ```php
-unassignInstanceFirewall($xRequestId, $firewallId, $instanceId, $xTraceId): \Coderic\Contabo\Generated\Model\UnassignInstanceFirewallResponse
+unassignInstanceFirewall($xRequestId, $firewallId, $instanceId, $xTraceId): \Contabo\Generated\Model\UnassignInstanceFirewallResponse
 ```
 
 Remove instance from a firewall
@@ -572,10 +572,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\FirewallsApi(
+$apiInstance = new Contabo\Generated\Api\FirewallsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -605,7 +605,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\UnassignInstanceFirewallResponse**](../Model/UnassignInstanceFirewallResponse.md)
+[**\Contabo\Generated\Model\UnassignInstanceFirewallResponse**](../Model/UnassignInstanceFirewallResponse.md)
 
 ### Authorization
 

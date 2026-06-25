@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\DNSAuditsApi
+# Contabo\Generated\DNSAuditsApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `retrieveDnsAuditsList()`
 
 ```php
-retrieveDnsAuditsList($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $requestId, $changedBy, $startDate, $endDate): \Coderic\Contabo\Generated\Model\ZoneAuditResponse
+retrieveDnsAuditsList($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $requestId, $changedBy, $startDate, $endDate): \Contabo\Generated\Model\ZoneAuditResponse
 ```
 
 List history about your DNS Zones (audit)
@@ -26,10 +26,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DNSAuditsApi(
+$apiInstance = new Contabo\Generated\Api\DNSAuditsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -71,7 +71,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ZoneAuditResponse**](../Model/ZoneAuditResponse.md)
+[**\Contabo\Generated\Model\ZoneAuditResponse**](../Model/ZoneAuditResponse.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ try {
 ## `retrieveRecordAuditsList()`
 
 ```php
-retrieveRecordAuditsList($xRequestId, $xTraceId, $page, $size, $orderBy, $recordId, $requestId, $changedBy, $startDate, $endDate): \Coderic\Contabo\Generated\Model\RecordAuditResponse
+retrieveRecordAuditsList($xRequestId, $xTraceId, $page, $size, $orderBy, $recordId, $requestId, $changedBy, $startDate, $endDate): \Contabo\Generated\Model\RecordAuditResponse
 ```
 
 List history about your DNS Records (audit)
@@ -104,10 +104,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DNSAuditsApi(
+$apiInstance = new Contabo\Generated\Api\DNSAuditsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -149,7 +149,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\RecordAuditResponse**](../Model/RecordAuditResponse.md)
+[**\Contabo\Generated\Model\RecordAuditResponse**](../Model/RecordAuditResponse.md)
 
 ### Authorization
 

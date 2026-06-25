@@ -15,6 +15,6 @@ Name | Type | Description | Notes
 **cidr** | **string** | The cidr range of the Private Network |
 **availableIps** | **int** | The total available IPs of the Private Network |
 **createdDate** | **\DateTime** | The creation date of the Private Network |
-**instances** | [**\Coderic\Contabo\Generated\Model\Instances[]**](Instances.md) |  |
+**instances** | [**\Contabo\Generated\Model\Instances[]**](Instances.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

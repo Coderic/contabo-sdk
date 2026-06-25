@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * InstanceDetails Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class InstanceDetails implements ModelInterface, ArrayAccess, \JsonSerializable
         'displayName' => 'string',
         'name' => 'string',
         'productId' => 'string',
-        'ipConfig' => '\Coderic\Contabo\Generated\Model\IpConfig1',
+        'ipConfig' => '\Contabo\Generated\Model\IpConfig1',
         'regionSlug' => 'string',
         'regionName' => 'string',
         'dataCenterSlug' => 'string',
@@ -484,7 +484,7 @@ class InstanceDetails implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets ipConfig
      *
-     * @return \Coderic\Contabo\Generated\Model\IpConfig1
+     * @return \Contabo\Generated\Model\IpConfig1
      */
     public function getIpConfig()
     {
@@ -494,7 +494,7 @@ class InstanceDetails implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets ipConfig
      *
-     * @param \Coderic\Contabo\Generated\Model\IpConfig1 $ipConfig ipConfig
+     * @param \Contabo\Generated\Model\IpConfig1 $ipConfig ipConfig
      *
      * @return self
      */

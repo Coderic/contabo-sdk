@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * SecretsApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -141,13 +141,13 @@ class SecretsApi
      * Create a new secret
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateSecretRequest $createSecretRequest createSecretRequest (required)
+     * @param  \Contabo\Generated\Model\CreateSecretRequest $createSecretRequest createSecretRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSecret'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\CreateSecretResponse
+     * @return \Contabo\Generated\Model\CreateSecretResponse
      */
     public function createSecret($xRequestId, $createSecretRequest, $xTraceId = null, string $contentType = self::contentTypes['createSecret'][0])
     {
@@ -161,13 +161,13 @@ class SecretsApi
      * Create a new secret
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateSecretRequest $createSecretRequest (required)
+     * @param  \Contabo\Generated\Model\CreateSecretRequest $createSecretRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSecret'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\CreateSecretResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\CreateSecretResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createSecretWithHttpInfo($xRequestId, $createSecretRequest, $xTraceId = null, string $contentType = self::contentTypes['createSecret'][0])
     {
@@ -198,11 +198,11 @@ class SecretsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\CreateSecretResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\CreateSecretResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\CreateSecretResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\CreateSecretResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -220,7 +220,7 @@ class SecretsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\CreateSecretResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\CreateSecretResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -239,7 +239,7 @@ class SecretsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\CreateSecretResponse';
+            $returnType = '\Contabo\Generated\Model\CreateSecretResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -272,7 +272,7 @@ class SecretsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\CreateSecretResponse',
+                        '\Contabo\Generated\Model\CreateSecretResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -288,7 +288,7 @@ class SecretsApi
      * Create a new secret
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateSecretRequest $createSecretRequest (required)
+     * @param  \Contabo\Generated\Model\CreateSecretRequest $createSecretRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSecret'] to see the possible values for this operation
      *
@@ -311,7 +311,7 @@ class SecretsApi
      * Create a new secret
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateSecretRequest $createSecretRequest (required)
+     * @param  \Contabo\Generated\Model\CreateSecretRequest $createSecretRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSecret'] to see the possible values for this operation
      *
@@ -320,7 +320,7 @@ class SecretsApi
      */
     public function createSecretAsyncWithHttpInfo($xRequestId, $createSecretRequest, $xTraceId = null, string $contentType = self::contentTypes['createSecret'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\CreateSecretResponse';
+        $returnType = '\Contabo\Generated\Model\CreateSecretResponse';
         $request = $this->createSecretRequest($xRequestId, $createSecretRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -363,7 +363,7 @@ class SecretsApi
      * Create request for operation 'createSecret'
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateSecretRequest $createSecretRequest (required)
+     * @param  \Contabo\Generated\Model\CreateSecretRequest $createSecretRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSecret'] to see the possible values for this operation
      *
@@ -485,7 +485,7 @@ class SecretsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSecret'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -504,7 +504,7 @@ class SecretsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSecret'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -735,9 +735,9 @@ class SecretsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveSecret'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\FindSecretResponse
+     * @return \Contabo\Generated\Model\FindSecretResponse
      */
     public function retrieveSecret($xRequestId, $secretId, $xTraceId = null, string $contentType = self::contentTypes['retrieveSecret'][0])
     {
@@ -755,9 +755,9 @@ class SecretsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveSecret'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\FindSecretResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\FindSecretResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveSecretWithHttpInfo($xRequestId, $secretId, $xTraceId = null, string $contentType = self::contentTypes['retrieveSecret'][0])
     {
@@ -788,11 +788,11 @@ class SecretsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\FindSecretResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\FindSecretResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\FindSecretResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\FindSecretResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -810,7 +810,7 @@ class SecretsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\FindSecretResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\FindSecretResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -829,7 +829,7 @@ class SecretsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\FindSecretResponse';
+            $returnType = '\Contabo\Generated\Model\FindSecretResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -862,7 +862,7 @@ class SecretsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\FindSecretResponse',
+                        '\Contabo\Generated\Model\FindSecretResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -910,7 +910,7 @@ class SecretsApi
      */
     public function retrieveSecretAsyncWithHttpInfo($xRequestId, $secretId, $xTraceId = null, string $contentType = self::contentTypes['retrieveSecret'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\FindSecretResponse';
+        $returnType = '\Contabo\Generated\Model\FindSecretResponse';
         $request = $this->retrieveSecretRequest($xRequestId, $secretId, $xTraceId, $contentType);
 
         return $this->client
@@ -1080,9 +1080,9 @@ class SecretsApi
      * @param  string|null $type Filter secrets by type (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveSecretList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ListSecretResponse
+     * @return \Contabo\Generated\Model\ListSecretResponse
      */
     public function retrieveSecretList($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $type = null, string $contentType = self::contentTypes['retrieveSecretList'][0])
     {
@@ -1104,9 +1104,9 @@ class SecretsApi
      * @param  string|null $type Filter secrets by type (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveSecretList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ListSecretResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ListSecretResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveSecretListWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $type = null, string $contentType = self::contentTypes['retrieveSecretList'][0])
     {
@@ -1137,11 +1137,11 @@ class SecretsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ListSecretResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ListSecretResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ListSecretResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ListSecretResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1159,7 +1159,7 @@ class SecretsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ListSecretResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ListSecretResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1178,7 +1178,7 @@ class SecretsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ListSecretResponse';
+            $returnType = '\Contabo\Generated\Model\ListSecretResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1211,7 +1211,7 @@ class SecretsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ListSecretResponse',
+                        '\Contabo\Generated\Model\ListSecretResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1267,7 +1267,7 @@ class SecretsApi
      */
     public function retrieveSecretListAsyncWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $type = null, string $contentType = self::contentTypes['retrieveSecretList'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ListSecretResponse';
+        $returnType = '\Contabo\Generated\Model\ListSecretResponse';
         $request = $this->retrieveSecretListRequest($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $type, $contentType);
 
         return $this->client
@@ -1469,13 +1469,13 @@ class SecretsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $secretId The id of the secret (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateSecretRequest $updateSecretRequest updateSecretRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateSecretRequest $updateSecretRequest updateSecretRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSecret'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\UpdateSecretResponse
+     * @return \Contabo\Generated\Model\UpdateSecretResponse
      */
     public function updateSecret($xRequestId, $secretId, $updateSecretRequest, $xTraceId = null, string $contentType = self::contentTypes['updateSecret'][0])
     {
@@ -1490,13 +1490,13 @@ class SecretsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $secretId The id of the secret (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateSecretRequest $updateSecretRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateSecretRequest $updateSecretRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSecret'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\UpdateSecretResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\UpdateSecretResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateSecretWithHttpInfo($xRequestId, $secretId, $updateSecretRequest, $xTraceId = null, string $contentType = self::contentTypes['updateSecret'][0])
     {
@@ -1527,11 +1527,11 @@ class SecretsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\UpdateSecretResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\UpdateSecretResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\UpdateSecretResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\UpdateSecretResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1549,7 +1549,7 @@ class SecretsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\UpdateSecretResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\UpdateSecretResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1568,7 +1568,7 @@ class SecretsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\UpdateSecretResponse';
+            $returnType = '\Contabo\Generated\Model\UpdateSecretResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1601,7 +1601,7 @@ class SecretsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\UpdateSecretResponse',
+                        '\Contabo\Generated\Model\UpdateSecretResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1618,7 +1618,7 @@ class SecretsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $secretId The id of the secret (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateSecretRequest $updateSecretRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateSecretRequest $updateSecretRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSecret'] to see the possible values for this operation
      *
@@ -1642,7 +1642,7 @@ class SecretsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $secretId The id of the secret (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateSecretRequest $updateSecretRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateSecretRequest $updateSecretRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSecret'] to see the possible values for this operation
      *
@@ -1651,7 +1651,7 @@ class SecretsApi
      */
     public function updateSecretAsyncWithHttpInfo($xRequestId, $secretId, $updateSecretRequest, $xTraceId = null, string $contentType = self::contentTypes['updateSecret'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\UpdateSecretResponse';
+        $returnType = '\Contabo\Generated\Model\UpdateSecretResponse';
         $request = $this->updateSecretRequest($xRequestId, $secretId, $updateSecretRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -1695,7 +1695,7 @@ class SecretsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $secretId The id of the secret (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateSecretRequest $updateSecretRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateSecretRequest $updateSecretRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSecret'] to see the possible values for this operation
      *

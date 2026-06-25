@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Coderic\Contabo\Tests\Auth;
+namespace Contabo\Tests\Auth;
 
-use Coderic\Contabo\Auth\Token;
+use Contabo\Auth\Token;
 use PHPUnit\Framework\TestCase;
 
 final class TokenTest extends TestCase

@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\InstanceActionsApi
+# Contabo\Generated\InstanceActionsApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `rescue()`
 
 ```php
-rescue($xRequestId, $instanceId, $instancesActionsRescueRequest, $xTraceId): \Coderic\Contabo\Generated\Model\InstanceRescueActionResponse
+rescue($xRequestId, $instanceId, $instancesActionsRescueRequest, $xTraceId): \Contabo\Generated\Model\InstanceRescueActionResponse
 ```
 
 Rescue a compute instance / resource identified by its id
@@ -30,10 +30,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InstanceActionsApi(
+$apiInstance = new Contabo\Generated\Api\InstanceActionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -41,7 +41,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\InstanceActionsApi(
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $instanceId = 12345; // int | The identifier of the compute instance / resource to be started in rescue mode.
-$instancesActionsRescueRequest = new \Coderic\Contabo\Generated\Model\InstancesActionsRescueRequest(); // \Coderic\Contabo\Generated\Model\InstancesActionsRescueRequest
+$instancesActionsRescueRequest = new \Contabo\Generated\Model\InstancesActionsRescueRequest(); // \Contabo\Generated\Model\InstancesActionsRescueRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -58,12 +58,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **instanceId** | **int**| The identifier of the compute instance / resource to be started in rescue mode. | |
-| **instancesActionsRescueRequest** | [**\Coderic\Contabo\Generated\Model\InstancesActionsRescueRequest**](../Model/InstancesActionsRescueRequest.md)|  | |
+| **instancesActionsRescueRequest** | [**\Contabo\Generated\Model\InstancesActionsRescueRequest**](../Model/InstancesActionsRescueRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\InstanceRescueActionResponse**](../Model/InstanceRescueActionResponse.md)
+[**\Contabo\Generated\Model\InstanceRescueActionResponse**](../Model/InstanceRescueActionResponse.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ try {
 ## `resetPasswordAction()`
 
 ```php
-resetPasswordAction($xRequestId, $instanceId, $instancesResetPasswordActionsRequest, $xTraceId): \Coderic\Contabo\Generated\Model\InstanceResetPasswordActionResponse
+resetPasswordAction($xRequestId, $instanceId, $instancesResetPasswordActionsRequest, $xTraceId): \Contabo\Generated\Model\InstanceResetPasswordActionResponse
 ```
 
 Reset password for a compute instance / resource referenced by an id
@@ -96,10 +96,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InstanceActionsApi(
+$apiInstance = new Contabo\Generated\Api\InstanceActionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -107,7 +107,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\InstanceActionsApi(
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $instanceId = 12345; // int | The identifier of the compute instance / resource to be started in rescue mode.
-$instancesResetPasswordActionsRequest = new \Coderic\Contabo\Generated\Model\InstancesResetPasswordActionsRequest(); // \Coderic\Contabo\Generated\Model\InstancesResetPasswordActionsRequest
+$instancesResetPasswordActionsRequest = new \Contabo\Generated\Model\InstancesResetPasswordActionsRequest(); // \Contabo\Generated\Model\InstancesResetPasswordActionsRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -124,12 +124,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **instanceId** | **int**| The identifier of the compute instance / resource to be started in rescue mode. | |
-| **instancesResetPasswordActionsRequest** | [**\Coderic\Contabo\Generated\Model\InstancesResetPasswordActionsRequest**](../Model/InstancesResetPasswordActionsRequest.md)|  | |
+| **instancesResetPasswordActionsRequest** | [**\Contabo\Generated\Model\InstancesResetPasswordActionsRequest**](../Model/InstancesResetPasswordActionsRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\InstanceResetPasswordActionResponse**](../Model/InstanceResetPasswordActionResponse.md)
+[**\Contabo\Generated\Model\InstanceResetPasswordActionResponse**](../Model/InstanceResetPasswordActionResponse.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ try {
 ## `restart()`
 
 ```php
-restart($xRequestId, $instanceId, $xTraceId): \Coderic\Contabo\Generated\Model\InstanceRestartActionResponse
+restart($xRequestId, $instanceId, $xTraceId): \Contabo\Generated\Model\InstanceRestartActionResponse
 ```
 
 Restart a compute instance / resource identified by its id.
@@ -162,10 +162,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InstanceActionsApi(
+$apiInstance = new Contabo\Generated\Api\InstanceActionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -193,7 +193,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\InstanceRestartActionResponse**](../Model/InstanceRestartActionResponse.md)
+[**\Contabo\Generated\Model\InstanceRestartActionResponse**](../Model/InstanceRestartActionResponse.md)
 
 ### Authorization
 
@@ -211,7 +211,7 @@ try {
 ## `shutdown()`
 
 ```php
-shutdown($xRequestId, $instanceId, $xTraceId): \Coderic\Contabo\Generated\Model\InstanceShutdownActionResponse
+shutdown($xRequestId, $instanceId, $xTraceId): \Contabo\Generated\Model\InstanceShutdownActionResponse
 ```
 
 Shutdown compute instance / resource by its id
@@ -226,10 +226,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InstanceActionsApi(
+$apiInstance = new Contabo\Generated\Api\InstanceActionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -257,7 +257,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\InstanceShutdownActionResponse**](../Model/InstanceShutdownActionResponse.md)
+[**\Contabo\Generated\Model\InstanceShutdownActionResponse**](../Model/InstanceShutdownActionResponse.md)
 
 ### Authorization
 
@@ -275,7 +275,7 @@ try {
 ## `start()`
 
 ```php
-start($xRequestId, $instanceId, $xTraceId): \Coderic\Contabo\Generated\Model\InstanceStartActionResponse
+start($xRequestId, $instanceId, $xTraceId): \Contabo\Generated\Model\InstanceStartActionResponse
 ```
 
 Start a compute instance / resource identified by its id
@@ -290,10 +290,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InstanceActionsApi(
+$apiInstance = new Contabo\Generated\Api\InstanceActionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -321,7 +321,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\InstanceStartActionResponse**](../Model/InstanceStartActionResponse.md)
+[**\Contabo\Generated\Model\InstanceStartActionResponse**](../Model/InstanceStartActionResponse.md)
 
 ### Authorization
 
@@ -339,7 +339,7 @@ try {
 ## `stop()`
 
 ```php
-stop($xRequestId, $instanceId, $xTraceId): \Coderic\Contabo\Generated\Model\InstanceStopActionResponse
+stop($xRequestId, $instanceId, $xTraceId): \Contabo\Generated\Model\InstanceStopActionResponse
 ```
 
 Stop compute instance / resource by its id
@@ -354,10 +354,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InstanceActionsApi(
+$apiInstance = new Contabo\Generated\Api\InstanceActionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -385,7 +385,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\InstanceStopActionResponse**](../Model/InstanceStopActionResponse.md)
+[**\Contabo\Generated\Model\InstanceStopActionResponse**](../Model/InstanceStopActionResponse.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\DomainsApi
+# Contabo\Generated\DomainsApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -21,7 +21,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `cancelDomain()`
 
 ```php
-cancelDomain($xRequestId, $domain, $cancelDomainRequest, $xTraceId): \Coderic\Contabo\Generated\Model\DomainCancelResponse
+cancelDomain($xRequestId, $domain, $cancelDomainRequest, $xTraceId): \Contabo\Generated\Model\DomainCancelResponse
 ```
 
 Cancel a specific domain
@@ -36,10 +36,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DomainsApi(
+$apiInstance = new Contabo\Generated\Api\DomainsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -47,7 +47,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\DomainsApi(
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $domain = testDomain.de; // string | Domain Name
-$cancelDomainRequest = new \Coderic\Contabo\Generated\Model\CancelDomainRequest(); // \Coderic\Contabo\Generated\Model\CancelDomainRequest
+$cancelDomainRequest = new \Contabo\Generated\Model\CancelDomainRequest(); // \Contabo\Generated\Model\CancelDomainRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -64,12 +64,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **domain** | **string**| Domain Name | |
-| **cancelDomainRequest** | [**\Coderic\Contabo\Generated\Model\CancelDomainRequest**](../Model/CancelDomainRequest.md)|  | |
+| **cancelDomainRequest** | [**\Contabo\Generated\Model\CancelDomainRequest**](../Model/CancelDomainRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\DomainCancelResponse**](../Model/DomainCancelResponse.md)
+[**\Contabo\Generated\Model\DomainCancelResponse**](../Model/DomainCancelResponse.md)
 
 ### Authorization
 
@@ -102,10 +102,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DomainsApi(
+$apiInstance = new Contabo\Generated\Api\DomainsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -165,10 +165,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DomainsApi(
+$apiInstance = new Contabo\Generated\Api\DomainsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -213,7 +213,7 @@ void (empty response body)
 ## `getAuthCode()`
 
 ```php
-getAuthCode($xRequestId, $domain, $xTraceId): \Coderic\Contabo\Generated\Model\DomainAuthCodeRegenerateResponse
+getAuthCode($xRequestId, $domain, $xTraceId): \Contabo\Generated\Model\DomainAuthCodeRegenerateResponse
 ```
 
 Get auth code for a domain
@@ -228,10 +228,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DomainsApi(
+$apiInstance = new Contabo\Generated\Api\DomainsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -259,7 +259,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\DomainAuthCodeRegenerateResponse**](../Model/DomainAuthCodeRegenerateResponse.md)
+[**\Contabo\Generated\Model\DomainAuthCodeRegenerateResponse**](../Model/DomainAuthCodeRegenerateResponse.md)
 
 ### Authorization
 
@@ -277,7 +277,7 @@ try {
 ## `listDomains()`
 
 ```php
-listDomains($xRequestId, $xTraceId, $page, $size, $orderBy, $sld, $tld, $status): \Coderic\Contabo\Generated\Model\DomainsListResponse
+listDomains($xRequestId, $xTraceId, $page, $size, $orderBy, $sld, $tld, $status): \Contabo\Generated\Model\DomainsListResponse
 ```
 
 List all domains
@@ -292,10 +292,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DomainsApi(
+$apiInstance = new Contabo\Generated\Api\DomainsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -333,7 +333,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\DomainsListResponse**](../Model/DomainsListResponse.md)
+[**\Contabo\Generated\Model\DomainsListResponse**](../Model/DomainsListResponse.md)
 
 ### Authorization
 
@@ -351,7 +351,7 @@ try {
 ## `orderDomain()`
 
 ```php
-orderDomain($xRequestId, $domainCreateRequest, $xTraceId): \Coderic\Contabo\Generated\Model\DomainCreateResponse
+orderDomain($xRequestId, $domainCreateRequest, $xTraceId): \Contabo\Generated\Model\DomainCreateResponse
 ```
 
 Create or transfer a domain
@@ -366,17 +366,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DomainsApi(
+$apiInstance = new Contabo\Generated\Api\DomainsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
-$domainCreateRequest = new \Coderic\Contabo\Generated\Model\DomainCreateRequest(); // \Coderic\Contabo\Generated\Model\DomainCreateRequest
+$domainCreateRequest = new \Contabo\Generated\Model\DomainCreateRequest(); // \Contabo\Generated\Model\DomainCreateRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -392,12 +392,12 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
-| **domainCreateRequest** | [**\Coderic\Contabo\Generated\Model\DomainCreateRequest**](../Model/DomainCreateRequest.md)|  | |
+| **domainCreateRequest** | [**\Contabo\Generated\Model\DomainCreateRequest**](../Model/DomainCreateRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\DomainCreateResponse**](../Model/DomainCreateResponse.md)
+[**\Contabo\Generated\Model\DomainCreateResponse**](../Model/DomainCreateResponse.md)
 
 ### Authorization
 
@@ -415,7 +415,7 @@ try {
 ## `retrieveDomain()`
 
 ```php
-retrieveDomain($xRequestId, $domain, $xTraceId): \Coderic\Contabo\Generated\Model\DomainFindResponse
+retrieveDomain($xRequestId, $domain, $xTraceId): \Contabo\Generated\Model\DomainFindResponse
 ```
 
 List specific domain
@@ -430,10 +430,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DomainsApi(
+$apiInstance = new Contabo\Generated\Api\DomainsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -461,7 +461,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\DomainFindResponse**](../Model/DomainFindResponse.md)
+[**\Contabo\Generated\Model\DomainFindResponse**](../Model/DomainFindResponse.md)
 
 ### Authorization
 
@@ -494,10 +494,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DomainsApi(
+$apiInstance = new Contabo\Generated\Api\DomainsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -557,10 +557,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DomainsApi(
+$apiInstance = new Contabo\Generated\Api\DomainsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -620,10 +620,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DomainsApi(
+$apiInstance = new Contabo\Generated\Api\DomainsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -668,7 +668,7 @@ void (empty response body)
 ## `updateDomain()`
 
 ```php
-updateDomain($xRequestId, $domain, $domainPatchRequest, $xTraceId): \Coderic\Contabo\Generated\Model\DomainPatchResponse
+updateDomain($xRequestId, $domain, $domainPatchRequest, $xTraceId): \Contabo\Generated\Model\DomainPatchResponse
 ```
 
 Update a specific domain
@@ -683,10 +683,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DomainsApi(
+$apiInstance = new Contabo\Generated\Api\DomainsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -694,7 +694,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\DomainsApi(
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $domain = testDomain.de; // string | Domain Name
-$domainPatchRequest = new \Coderic\Contabo\Generated\Model\DomainPatchRequest(); // \Coderic\Contabo\Generated\Model\DomainPatchRequest
+$domainPatchRequest = new \Contabo\Generated\Model\DomainPatchRequest(); // \Contabo\Generated\Model\DomainPatchRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -711,12 +711,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **domain** | **string**| Domain Name | |
-| **domainPatchRequest** | [**\Coderic\Contabo\Generated\Model\DomainPatchRequest**](../Model/DomainPatchRequest.md)|  | |
+| **domainPatchRequest** | [**\Contabo\Generated\Model\DomainPatchRequest**](../Model/DomainPatchRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\DomainPatchResponse**](../Model/DomainPatchResponse.md)
+[**\Contabo\Generated\Model\DomainPatchResponse**](../Model/DomainPatchResponse.md)
 
 ### Authorization
 
@@ -749,10 +749,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DomainsApi(
+$apiInstance = new Contabo\Generated\Api\DomainsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * CreateInstanceResponseData Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -65,9 +65,9 @@ class CreateInstanceResponseData implements ModelInterface, ArrayAccess, \JsonSe
         'imageId' => 'string',
         'productId' => 'string',
         'region' => 'string',
-        'addOns' => '\Coderic\Contabo\Generated\Model\AddOnResponse[]',
+        'addOns' => '\Contabo\Generated\Model\AddOnResponse[]',
         'osType' => 'string',
-        'status' => '\Coderic\Contabo\Generated\Model\InstanceStatus',
+        'status' => '\Contabo\Generated\Model\InstanceStatus',
         'sshKeys' => 'int[]'
     ];
 
@@ -603,7 +603,7 @@ class CreateInstanceResponseData implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets addOns
      *
-     * @return \Coderic\Contabo\Generated\Model\AddOnResponse[]
+     * @return \Contabo\Generated\Model\AddOnResponse[]
      */
     public function getAddOns()
     {
@@ -613,7 +613,7 @@ class CreateInstanceResponseData implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets addOns
      *
-     * @param \Coderic\Contabo\Generated\Model\AddOnResponse[] $addOns addOns
+     * @param \Contabo\Generated\Model\AddOnResponse[] $addOns addOns
      *
      * @return self
      */
@@ -657,7 +657,7 @@ class CreateInstanceResponseData implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets status
      *
-     * @return \Coderic\Contabo\Generated\Model\InstanceStatus
+     * @return \Contabo\Generated\Model\InstanceStatus
      */
     public function getStatus()
     {
@@ -667,7 +667,7 @@ class CreateInstanceResponseData implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets status
      *
-     * @param \Coderic\Contabo\Generated\Model\InstanceStatus $status Instance's status
+     * @param \Contabo\Generated\Model\InstanceStatus $status Instance's status
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * CreateAssignmentResponse Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class CreateAssignmentResponse implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'links' => '\Coderic\Contabo\Generated\Model\TagAssignmentSelfLinks'
+        'links' => '\Contabo\Generated\Model\TagAssignmentSelfLinks'
     ];
 
     /**
@@ -296,7 +296,7 @@ class CreateAssignmentResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets links
      *
-     * @return \Coderic\Contabo\Generated\Model\TagAssignmentSelfLinks
+     * @return \Contabo\Generated\Model\TagAssignmentSelfLinks
      */
     public function getLinks()
     {
@@ -306,7 +306,7 @@ class CreateAssignmentResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets links
      *
-     * @param \Coderic\Contabo\Generated\Model\TagAssignmentSelfLinks $links Links for easy navigation.
+     * @param \Contabo\Generated\Model\TagAssignmentSelfLinks $links Links for easy navigation.
      *
      * @return self
      */

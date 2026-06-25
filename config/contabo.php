@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Coderic\Contabo\Auth\OAuthTokenProvider;
-use Coderic\Contabo\ContaboClient;
+use Contabo\Auth\OAuthTokenProvider;
+use Contabo\ContaboClient;
 
 return [
     'client_id' => env('CONTABO_CLIENT_ID'),

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **name** | **string** | Application Name |
 **description** | **string** | Application Description |
 **type** | **string** | Application type |
-**applicationConfig** | [**\Coderic\Contabo\Generated\Model\ApplicationConfig[]**](ApplicationConfig.md) | Application Config |
-**requirements** | [**\Coderic\Contabo\Generated\Model\ApplicationRequirements**](ApplicationRequirements.md) | Application Requirements |
+**applicationConfig** | [**\Contabo\Generated\Model\ApplicationConfig[]**](ApplicationConfig.md) | Application Config |
+**requirements** | [**\Contabo\Generated\Model\ApplicationRequirements**](ApplicationRequirements.md) | Application Requirements |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

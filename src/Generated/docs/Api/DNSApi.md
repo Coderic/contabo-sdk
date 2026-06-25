@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\DNSApi
+# Contabo\Generated\DNSApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -23,7 +23,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `bulkDeleteDnsZoneRecords()`
 
 ```php
-bulkDeleteDnsZoneRecords($xRequestId, $zoneName, $bulkDeleteDnsZoneRecordsRequest, $xTraceId): \Coderic\Contabo\Generated\Model\ApiBulkDeleteDnsZoneRecordsResponse
+bulkDeleteDnsZoneRecords($xRequestId, $zoneName, $bulkDeleteDnsZoneRecordsRequest, $xTraceId): \Contabo\Generated\Model\ApiBulkDeleteDnsZoneRecordsResponse
 ```
 
 Bulk delete DNS zone records
@@ -38,10 +38,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DNSApi(
+$apiInstance = new Contabo\Generated\Api\DNSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -49,7 +49,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\DNSApi(
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $zoneName = example.com; // string | Zone name
-$bulkDeleteDnsZoneRecordsRequest = new \Coderic\Contabo\Generated\Model\BulkDeleteDnsZoneRecordsRequest(); // \Coderic\Contabo\Generated\Model\BulkDeleteDnsZoneRecordsRequest
+$bulkDeleteDnsZoneRecordsRequest = new \Contabo\Generated\Model\BulkDeleteDnsZoneRecordsRequest(); // \Contabo\Generated\Model\BulkDeleteDnsZoneRecordsRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -66,12 +66,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **zoneName** | **string**| Zone name | |
-| **bulkDeleteDnsZoneRecordsRequest** | [**\Coderic\Contabo\Generated\Model\BulkDeleteDnsZoneRecordsRequest**](../Model/BulkDeleteDnsZoneRecordsRequest.md)|  | |
+| **bulkDeleteDnsZoneRecordsRequest** | [**\Contabo\Generated\Model\BulkDeleteDnsZoneRecordsRequest**](../Model/BulkDeleteDnsZoneRecordsRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ApiBulkDeleteDnsZoneRecordsResponse**](../Model/ApiBulkDeleteDnsZoneRecordsResponse.md)
+[**\Contabo\Generated\Model\ApiBulkDeleteDnsZoneRecordsResponse**](../Model/ApiBulkDeleteDnsZoneRecordsResponse.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ try {
 ## `createDnsZone()`
 
 ```php
-createDnsZone($xRequestId, $createDnsZoneRequest, $xTraceId): \Coderic\Contabo\Generated\Model\ApiDnsZoneResponse
+createDnsZone($xRequestId, $createDnsZoneRequest, $xTraceId): \Contabo\Generated\Model\ApiDnsZoneResponse
 ```
 
 Create DNS zone
@@ -104,17 +104,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DNSApi(
+$apiInstance = new Contabo\Generated\Api\DNSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
-$createDnsZoneRequest = new \Coderic\Contabo\Generated\Model\CreateDnsZoneRequest(); // \Coderic\Contabo\Generated\Model\CreateDnsZoneRequest
+$createDnsZoneRequest = new \Contabo\Generated\Model\CreateDnsZoneRequest(); // \Contabo\Generated\Model\CreateDnsZoneRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -130,12 +130,12 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
-| **createDnsZoneRequest** | [**\Coderic\Contabo\Generated\Model\CreateDnsZoneRequest**](../Model/CreateDnsZoneRequest.md)|  | |
+| **createDnsZoneRequest** | [**\Contabo\Generated\Model\CreateDnsZoneRequest**](../Model/CreateDnsZoneRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ApiDnsZoneResponse**](../Model/ApiDnsZoneResponse.md)
+[**\Contabo\Generated\Model\ApiDnsZoneResponse**](../Model/ApiDnsZoneResponse.md)
 
 ### Authorization
 
@@ -153,7 +153,7 @@ try {
 ## `createDnsZoneRecord()`
 
 ```php
-createDnsZoneRecord($xRequestId, $zoneName, $createDnsZoneRecordRequest, $xTraceId): \Coderic\Contabo\Generated\Model\ApiDnsZoneRecordResponse
+createDnsZoneRecord($xRequestId, $zoneName, $createDnsZoneRecordRequest, $xTraceId): \Contabo\Generated\Model\ApiDnsZoneRecordResponse
 ```
 
 Create DNS zone record
@@ -168,10 +168,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DNSApi(
+$apiInstance = new Contabo\Generated\Api\DNSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -179,7 +179,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\DNSApi(
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $zoneName = example.com; // string | Zone name
-$createDnsZoneRecordRequest = new \Coderic\Contabo\Generated\Model\CreateDnsZoneRecordRequest(); // \Coderic\Contabo\Generated\Model\CreateDnsZoneRecordRequest
+$createDnsZoneRecordRequest = new \Contabo\Generated\Model\CreateDnsZoneRecordRequest(); // \Contabo\Generated\Model\CreateDnsZoneRecordRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -196,12 +196,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **zoneName** | **string**| Zone name | |
-| **createDnsZoneRecordRequest** | [**\Coderic\Contabo\Generated\Model\CreateDnsZoneRecordRequest**](../Model/CreateDnsZoneRecordRequest.md)|  | |
+| **createDnsZoneRecordRequest** | [**\Contabo\Generated\Model\CreateDnsZoneRecordRequest**](../Model/CreateDnsZoneRecordRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ApiDnsZoneRecordResponse**](../Model/ApiDnsZoneRecordResponse.md)
+[**\Contabo\Generated\Model\ApiDnsZoneRecordResponse**](../Model/ApiDnsZoneRecordResponse.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ try {
 ## `createPtrRecord()`
 
 ```php
-createPtrRecord($xRequestId, $createPtrRecordRequest, $xTraceId): \Coderic\Contabo\Generated\Model\ApiPtrRecordResponse
+createPtrRecord($xRequestId, $createPtrRecordRequest, $xTraceId): \Contabo\Generated\Model\ApiPtrRecordResponse
 ```
 
 Create a new PTR Record using ip address
@@ -234,17 +234,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DNSApi(
+$apiInstance = new Contabo\Generated\Api\DNSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
-$createPtrRecordRequest = new \Coderic\Contabo\Generated\Model\CreatePtrRecordRequest(); // \Coderic\Contabo\Generated\Model\CreatePtrRecordRequest
+$createPtrRecordRequest = new \Contabo\Generated\Model\CreatePtrRecordRequest(); // \Contabo\Generated\Model\CreatePtrRecordRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -260,12 +260,12 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
-| **createPtrRecordRequest** | [**\Coderic\Contabo\Generated\Model\CreatePtrRecordRequest**](../Model/CreatePtrRecordRequest.md)|  | |
+| **createPtrRecordRequest** | [**\Contabo\Generated\Model\CreatePtrRecordRequest**](../Model/CreatePtrRecordRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ApiPtrRecordResponse**](../Model/ApiPtrRecordResponse.md)
+[**\Contabo\Generated\Model\ApiPtrRecordResponse**](../Model/ApiPtrRecordResponse.md)
 
 ### Authorization
 
@@ -298,10 +298,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DNSApi(
+$apiInstance = new Contabo\Generated\Api\DNSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -361,10 +361,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DNSApi(
+$apiInstance = new Contabo\Generated\Api\DNSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -426,10 +426,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DNSApi(
+$apiInstance = new Contabo\Generated\Api\DNSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -489,10 +489,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DNSApi(
+$apiInstance = new Contabo\Generated\Api\DNSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -537,7 +537,7 @@ void (empty response body)
 ## `retrieveDnsZoneRecordsList()`
 
 ```php
-retrieveDnsZoneRecordsList($xRequestId, $zoneName, $xTraceId, $page, $size, $orderBy, $search): \Coderic\Contabo\Generated\Model\ListDnsZoneRecordsResponse
+retrieveDnsZoneRecordsList($xRequestId, $zoneName, $xTraceId, $page, $size, $orderBy, $search): \Contabo\Generated\Model\ListDnsZoneRecordsResponse
 ```
 
 List a DNS Zone's records
@@ -552,10 +552,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DNSApi(
+$apiInstance = new Contabo\Generated\Api\DNSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -591,7 +591,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ListDnsZoneRecordsResponse**](../Model/ListDnsZoneRecordsResponse.md)
+[**\Contabo\Generated\Model\ListDnsZoneRecordsResponse**](../Model/ListDnsZoneRecordsResponse.md)
 
 ### Authorization
 
@@ -609,7 +609,7 @@ try {
 ## `retrieveDnsZonesList()`
 
 ```php
-retrieveDnsZonesList($xRequestId, $xTraceId, $page, $size, $orderBy, $customerId, $tenantId, $zoneName): \Coderic\Contabo\Generated\Model\ListDnsZonesResponse
+retrieveDnsZonesList($xRequestId, $xTraceId, $page, $size, $orderBy, $customerId, $tenantId, $zoneName): \Contabo\Generated\Model\ListDnsZonesResponse
 ```
 
 List DNS zones
@@ -624,10 +624,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DNSApi(
+$apiInstance = new Contabo\Generated\Api\DNSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -665,7 +665,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ListDnsZonesResponse**](../Model/ListDnsZonesResponse.md)
+[**\Contabo\Generated\Model\ListDnsZonesResponse**](../Model/ListDnsZonesResponse.md)
 
 ### Authorization
 
@@ -683,7 +683,7 @@ try {
 ## `retrievePtrRecord()`
 
 ```php
-retrievePtrRecord($xRequestId, $ipAddress, $xTraceId): \Coderic\Contabo\Generated\Model\ApiPtrRecordResponse
+retrievePtrRecord($xRequestId, $ipAddress, $xTraceId): \Contabo\Generated\Model\ApiPtrRecordResponse
 ```
 
 Retrieve a PTR Record by ip address
@@ -698,10 +698,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DNSApi(
+$apiInstance = new Contabo\Generated\Api\DNSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -729,7 +729,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ApiPtrRecordResponse**](../Model/ApiPtrRecordResponse.md)
+[**\Contabo\Generated\Model\ApiPtrRecordResponse**](../Model/ApiPtrRecordResponse.md)
 
 ### Authorization
 
@@ -747,7 +747,7 @@ try {
 ## `retrievePtrRecordsList()`
 
 ```php
-retrievePtrRecordsList($xRequestId, $xTraceId, $page, $size, $orderBy, $customerId, $tenantId, $ips, $search): \Coderic\Contabo\Generated\Model\ListPtrRecordsResponse
+retrievePtrRecordsList($xRequestId, $xTraceId, $page, $size, $orderBy, $customerId, $tenantId, $ips, $search): \Contabo\Generated\Model\ListPtrRecordsResponse
 ```
 
 List PTR records
@@ -762,10 +762,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DNSApi(
+$apiInstance = new Contabo\Generated\Api\DNSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -805,7 +805,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ListPtrRecordsResponse**](../Model/ListPtrRecordsResponse.md)
+[**\Contabo\Generated\Model\ListPtrRecordsResponse**](../Model/ListPtrRecordsResponse.md)
 
 ### Authorization
 
@@ -823,7 +823,7 @@ try {
 ## `updateDnsZoneRecord()`
 
 ```php
-updateDnsZoneRecord($xRequestId, $recordId, $zoneName, $updateDnsZoneRecordRequest, $xTraceId): \Coderic\Contabo\Generated\Model\ApiDnsZoneRecordResponse
+updateDnsZoneRecord($xRequestId, $recordId, $zoneName, $updateDnsZoneRecordRequest, $xTraceId): \Contabo\Generated\Model\ApiDnsZoneRecordResponse
 ```
 
 Update DNS zone record
@@ -838,10 +838,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DNSApi(
+$apiInstance = new Contabo\Generated\Api\DNSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -850,7 +850,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\DNSApi(
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $recordId = 12345; // int | The identifier of the DNS record
 $zoneName = example.com; // string | Zone name
-$updateDnsZoneRecordRequest = new \Coderic\Contabo\Generated\Model\UpdateDnsZoneRecordRequest(); // \Coderic\Contabo\Generated\Model\UpdateDnsZoneRecordRequest
+$updateDnsZoneRecordRequest = new \Contabo\Generated\Model\UpdateDnsZoneRecordRequest(); // \Contabo\Generated\Model\UpdateDnsZoneRecordRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -868,12 +868,12 @@ try {
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **recordId** | **int**| The identifier of the DNS record | |
 | **zoneName** | **string**| Zone name | |
-| **updateDnsZoneRecordRequest** | [**\Coderic\Contabo\Generated\Model\UpdateDnsZoneRecordRequest**](../Model/UpdateDnsZoneRecordRequest.md)|  | |
+| **updateDnsZoneRecordRequest** | [**\Contabo\Generated\Model\UpdateDnsZoneRecordRequest**](../Model/UpdateDnsZoneRecordRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ApiDnsZoneRecordResponse**](../Model/ApiDnsZoneRecordResponse.md)
+[**\Contabo\Generated\Model\ApiDnsZoneRecordResponse**](../Model/ApiDnsZoneRecordResponse.md)
 
 ### Authorization
 
@@ -906,10 +906,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\DNSApi(
+$apiInstance = new Contabo\Generated\Api\DNSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -917,7 +917,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\DNSApi(
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $ipAddress = 11.10.2.3; // string | Ip Address
-$updatePtrRecordRequest = new \Coderic\Contabo\Generated\Model\UpdatePtrRecordRequest(); // \Coderic\Contabo\Generated\Model\UpdatePtrRecordRequest
+$updatePtrRecordRequest = new \Contabo\Generated\Model\UpdatePtrRecordRequest(); // \Contabo\Generated\Model\UpdatePtrRecordRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -933,7 +933,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **ipAddress** | **string**| Ip Address | |
-| **updatePtrRecordRequest** | [**\Coderic\Contabo\Generated\Model\UpdatePtrRecordRequest**](../Model/UpdatePtrRecordRequest.md)|  | |
+| **updatePtrRecordRequest** | [**\Contabo\Generated\Model\UpdatePtrRecordRequest**](../Model/UpdatePtrRecordRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type

@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\InternalRemedyTemplatesApi
+# Contabo\Generated\InternalRemedyTemplatesApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `getRemedyTemplate()`
 
 ```php
-getRemedyTemplate($xRequestId, $orgId, $remedyTemplateId, $xTraceId): \Coderic\Contabo\Generated\Model\RemedyTemplatesGetResponse
+getRemedyTemplate($xRequestId, $orgId, $remedyTemplateId, $xTraceId): \Contabo\Generated\Model\RemedyTemplatesGetResponse
 ```
 
 Get remedy
@@ -26,10 +26,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InternalRemedyTemplatesApi(
+$apiInstance = new Contabo\Generated\Api\InternalRemedyTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -59,7 +59,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\RemedyTemplatesGetResponse**](../Model/RemedyTemplatesGetResponse.md)
+[**\Contabo\Generated\Model\RemedyTemplatesGetResponse**](../Model/RemedyTemplatesGetResponse.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ try {
 ## `listRemedyTemplates()`
 
 ```php
-listRemedyTemplates($xRequestId, $orgIds, $xTraceId, $page, $size, $orderBy, $creationStartTime, $creationEndTime, $modificationStartTime, $modificationEndTime, $accountId, $internal, $objectType, $collectorClass, $remedyClass): \Coderic\Contabo\Generated\Model\RemedyTemplatesListResponse
+listRemedyTemplates($xRequestId, $orgIds, $xTraceId, $page, $size, $orderBy, $creationStartTime, $creationEndTime, $modificationStartTime, $modificationEndTime, $accountId, $internal, $objectType, $collectorClass, $remedyClass): \Contabo\Generated\Model\RemedyTemplatesListResponse
 ```
 
 List remedy templates
@@ -92,10 +92,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InternalRemedyTemplatesApi(
+$apiInstance = new Contabo\Generated\Api\InternalRemedyTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -147,7 +147,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\RemedyTemplatesListResponse**](../Model/RemedyTemplatesListResponse.md)
+[**\Contabo\Generated\Model\RemedyTemplatesListResponse**](../Model/RemedyTemplatesListResponse.md)
 
 ### Authorization
 

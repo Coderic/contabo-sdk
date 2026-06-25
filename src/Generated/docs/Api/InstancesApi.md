@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\InstancesApi
+# Contabo\Generated\InstancesApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -16,7 +16,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `cancelInstance()`
 
 ```php
-cancelInstance($xRequestId, $instanceId, $cancelInstanceRequest, $xTraceId): \Coderic\Contabo\Generated\Model\CancelInstanceResponse
+cancelInstance($xRequestId, $instanceId, $cancelInstanceRequest, $xTraceId): \Contabo\Generated\Model\CancelInstanceResponse
 ```
 
 Cancel specific instance by id
@@ -31,10 +31,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InstancesApi(
+$apiInstance = new Contabo\Generated\Api\InstancesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -42,7 +42,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\InstancesApi(
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $instanceId = 12345; // int | The identifier of the instance
-$cancelInstanceRequest = new \Coderic\Contabo\Generated\Model\CancelInstanceRequest(); // \Coderic\Contabo\Generated\Model\CancelInstanceRequest
+$cancelInstanceRequest = new \Contabo\Generated\Model\CancelInstanceRequest(); // \Contabo\Generated\Model\CancelInstanceRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -59,12 +59,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **instanceId** | **int**| The identifier of the instance | |
-| **cancelInstanceRequest** | [**\Coderic\Contabo\Generated\Model\CancelInstanceRequest**](../Model/CancelInstanceRequest.md)|  | |
+| **cancelInstanceRequest** | [**\Contabo\Generated\Model\CancelInstanceRequest**](../Model/CancelInstanceRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\CancelInstanceResponse**](../Model/CancelInstanceResponse.md)
+[**\Contabo\Generated\Model\CancelInstanceResponse**](../Model/CancelInstanceResponse.md)
 
 ### Authorization
 
@@ -82,7 +82,7 @@ try {
 ## `createInstance()`
 
 ```php
-createInstance($xRequestId, $createInstanceRequest, $xTraceId): \Coderic\Contabo\Generated\Model\CreateInstanceResponse
+createInstance($xRequestId, $createInstanceRequest, $xTraceId): \Contabo\Generated\Model\CreateInstanceResponse
 ```
 
 Create a new instance
@@ -97,17 +97,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InstancesApi(
+$apiInstance = new Contabo\Generated\Api\InstancesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
-$createInstanceRequest = new \Coderic\Contabo\Generated\Model\CreateInstanceRequest(); // \Coderic\Contabo\Generated\Model\CreateInstanceRequest
+$createInstanceRequest = new \Contabo\Generated\Model\CreateInstanceRequest(); // \Contabo\Generated\Model\CreateInstanceRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -123,12 +123,12 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
-| **createInstanceRequest** | [**\Coderic\Contabo\Generated\Model\CreateInstanceRequest**](../Model/CreateInstanceRequest.md)|  | |
+| **createInstanceRequest** | [**\Contabo\Generated\Model\CreateInstanceRequest**](../Model/CreateInstanceRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\CreateInstanceResponse**](../Model/CreateInstanceResponse.md)
+[**\Contabo\Generated\Model\CreateInstanceResponse**](../Model/CreateInstanceResponse.md)
 
 ### Authorization
 
@@ -146,7 +146,7 @@ try {
 ## `patchInstance()`
 
 ```php
-patchInstance($xRequestId, $instanceId, $patchInstanceRequest, $xTraceId): \Coderic\Contabo\Generated\Model\PatchInstanceResponse
+patchInstance($xRequestId, $instanceId, $patchInstanceRequest, $xTraceId): \Contabo\Generated\Model\PatchInstanceResponse
 ```
 
 Update specific instance
@@ -161,10 +161,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InstancesApi(
+$apiInstance = new Contabo\Generated\Api\InstancesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -172,7 +172,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\InstancesApi(
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $instanceId = 12345; // int | The identifier of the instance
-$patchInstanceRequest = new \Coderic\Contabo\Generated\Model\PatchInstanceRequest(); // \Coderic\Contabo\Generated\Model\PatchInstanceRequest
+$patchInstanceRequest = new \Contabo\Generated\Model\PatchInstanceRequest(); // \Contabo\Generated\Model\PatchInstanceRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -189,12 +189,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **instanceId** | **int**| The identifier of the instance | |
-| **patchInstanceRequest** | [**\Coderic\Contabo\Generated\Model\PatchInstanceRequest**](../Model/PatchInstanceRequest.md)|  | |
+| **patchInstanceRequest** | [**\Contabo\Generated\Model\PatchInstanceRequest**](../Model/PatchInstanceRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\PatchInstanceResponse**](../Model/PatchInstanceResponse.md)
+[**\Contabo\Generated\Model\PatchInstanceResponse**](../Model/PatchInstanceResponse.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ try {
 ## `reinstallInstance()`
 
 ```php
-reinstallInstance($xRequestId, $instanceId, $reinstallInstanceRequest, $xTraceId): \Coderic\Contabo\Generated\Model\ReinstallInstanceResponse
+reinstallInstance($xRequestId, $instanceId, $reinstallInstanceRequest, $xTraceId): \Contabo\Generated\Model\ReinstallInstanceResponse
 ```
 
 Reinstall specific instance
@@ -227,10 +227,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InstancesApi(
+$apiInstance = new Contabo\Generated\Api\InstancesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -238,7 +238,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\InstancesApi(
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $instanceId = 12345; // int | The identifier of the instance
-$reinstallInstanceRequest = new \Coderic\Contabo\Generated\Model\ReinstallInstanceRequest(); // \Coderic\Contabo\Generated\Model\ReinstallInstanceRequest
+$reinstallInstanceRequest = new \Contabo\Generated\Model\ReinstallInstanceRequest(); // \Contabo\Generated\Model\ReinstallInstanceRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -255,12 +255,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **instanceId** | **int**| The identifier of the instance | |
-| **reinstallInstanceRequest** | [**\Coderic\Contabo\Generated\Model\ReinstallInstanceRequest**](../Model/ReinstallInstanceRequest.md)|  | |
+| **reinstallInstanceRequest** | [**\Contabo\Generated\Model\ReinstallInstanceRequest**](../Model/ReinstallInstanceRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ReinstallInstanceResponse**](../Model/ReinstallInstanceResponse.md)
+[**\Contabo\Generated\Model\ReinstallInstanceResponse**](../Model/ReinstallInstanceResponse.md)
 
 ### Authorization
 
@@ -278,7 +278,7 @@ try {
 ## `retrieveInstance()`
 
 ```php
-retrieveInstance($xRequestId, $instanceId, $xTraceId): \Coderic\Contabo\Generated\Model\FindInstanceResponse
+retrieveInstance($xRequestId, $instanceId, $xTraceId): \Contabo\Generated\Model\FindInstanceResponse
 ```
 
 Get specific instance by id
@@ -293,10 +293,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InstancesApi(
+$apiInstance = new Contabo\Generated\Api\InstancesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -324,7 +324,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\FindInstanceResponse**](../Model/FindInstanceResponse.md)
+[**\Contabo\Generated\Model\FindInstanceResponse**](../Model/FindInstanceResponse.md)
 
 ### Authorization
 
@@ -342,7 +342,7 @@ try {
 ## `retrieveInstancesList()`
 
 ```php
-retrieveInstancesList($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $displayName, $dataCenter, $region, $instanceId, $instanceIds, $status, $productIds, $addOnIds, $productTypes, $ipConfig, $search, $customerId, $tenantId): \Coderic\Contabo\Generated\Model\ListInstancesResponse
+retrieveInstancesList($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $displayName, $dataCenter, $region, $instanceId, $instanceIds, $status, $productIds, $addOnIds, $productTypes, $ipConfig, $search, $customerId, $tenantId): \Contabo\Generated\Model\ListInstancesResponse
 ```
 
 List instances
@@ -357,10 +357,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InstancesApi(
+$apiInstance = new Contabo\Generated\Api\InstancesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -420,7 +420,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ListInstancesResponse**](../Model/ListInstancesResponse.md)
+[**\Contabo\Generated\Model\ListInstancesResponse**](../Model/ListInstancesResponse.md)
 
 ### Authorization
 
@@ -438,7 +438,7 @@ try {
 ## `upgradeInstance()`
 
 ```php
-upgradeInstance($xRequestId, $instanceId, $upgradeInstanceRequest, $xTraceId): \Coderic\Contabo\Generated\Model\PatchInstanceResponse
+upgradeInstance($xRequestId, $instanceId, $upgradeInstanceRequest, $xTraceId): \Contabo\Generated\Model\PatchInstanceResponse
 ```
 
 Upgrading instance capabilities
@@ -453,10 +453,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InstancesApi(
+$apiInstance = new Contabo\Generated\Api\InstancesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -464,7 +464,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\InstancesApi(
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $instanceId = 12345; // int | The identifier of the instance
-$upgradeInstanceRequest = new \Coderic\Contabo\Generated\Model\UpgradeInstanceRequest(); // \Coderic\Contabo\Generated\Model\UpgradeInstanceRequest
+$upgradeInstanceRequest = new \Contabo\Generated\Model\UpgradeInstanceRequest(); // \Contabo\Generated\Model\UpgradeInstanceRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -481,12 +481,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **instanceId** | **int**| The identifier of the instance | |
-| **upgradeInstanceRequest** | [**\Coderic\Contabo\Generated\Model\UpgradeInstanceRequest**](../Model/UpgradeInstanceRequest.md)|  | |
+| **upgradeInstanceRequest** | [**\Contabo\Generated\Model\UpgradeInstanceRequest**](../Model/UpgradeInstanceRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\PatchInstanceResponse**](../Model/PatchInstanceResponse.md)
+[**\Contabo\Generated\Model\PatchInstanceResponse**](../Model/PatchInstanceResponse.md)
 
 ### Authorization
 

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * CheckCollectionCheckTemplates Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class CheckCollectionCheckTemplates implements ModelInterface, ArrayAccess, \Jso
         'checkTemplateId' => 'float',
         'runConcurrent' => 'bool',
         'ignoreErrors' => 'bool',
-        'checkTemplates' => '\Coderic\Contabo\Generated\Model\CheckCollectionCheckTemplates[]'
+        'checkTemplates' => '\Contabo\Generated\Model\CheckCollectionCheckTemplates[]'
     ];
 
     /**
@@ -441,7 +441,7 @@ class CheckCollectionCheckTemplates implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets checkTemplates
      *
-     * @return \Coderic\Contabo\Generated\Model\CheckCollectionCheckTemplates[]|null
+     * @return \Contabo\Generated\Model\CheckCollectionCheckTemplates[]|null
      */
     public function getCheckTemplates()
     {
@@ -451,7 +451,7 @@ class CheckCollectionCheckTemplates implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets checkTemplates
      *
-     * @param \Coderic\Contabo\Generated\Model\CheckCollectionCheckTemplates[]|null $checkTemplates Nested check templates
+     * @param \Contabo\Generated\Model\CheckCollectionCheckTemplates[]|null $checkTemplates Nested check templates
      *
      * @return self
      */

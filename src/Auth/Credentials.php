@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Coderic\Contabo\Auth;
+namespace Contabo\Auth;
 
 final readonly class Credentials
 {

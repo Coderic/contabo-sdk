@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * HandlesAuditsApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -140,9 +140,9 @@ class HandlesAuditsApi
      * @param  \DateTime|null $endDate End of search time range. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveHandlesAuditsList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\HandleAuditResponse
+     * @return \Contabo\Generated\Model\HandleAuditResponse
      */
     public function retrieveHandlesAuditsList($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $handleId = null, $requestId = null, $changedBy = null, $startDate = null, $endDate = null, string $contentType = self::contentTypes['retrieveHandlesAuditsList'][0])
     {
@@ -167,9 +167,9 @@ class HandlesAuditsApi
      * @param  \DateTime|null $endDate End of search time range. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveHandlesAuditsList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\HandleAuditResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\HandleAuditResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveHandlesAuditsListWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $handleId = null, $requestId = null, $changedBy = null, $startDate = null, $endDate = null, string $contentType = self::contentTypes['retrieveHandlesAuditsList'][0])
     {
@@ -200,11 +200,11 @@ class HandlesAuditsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\HandleAuditResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\HandleAuditResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\HandleAuditResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\HandleAuditResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -222,7 +222,7 @@ class HandlesAuditsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\HandleAuditResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\HandleAuditResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -241,7 +241,7 @@ class HandlesAuditsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\HandleAuditResponse';
+            $returnType = '\Contabo\Generated\Model\HandleAuditResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -274,7 +274,7 @@ class HandlesAuditsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\HandleAuditResponse',
+                        '\Contabo\Generated\Model\HandleAuditResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -336,7 +336,7 @@ class HandlesAuditsApi
      */
     public function retrieveHandlesAuditsListAsyncWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $handleId = null, $requestId = null, $changedBy = null, $startDate = null, $endDate = null, string $contentType = self::contentTypes['retrieveHandlesAuditsList'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\HandleAuditResponse';
+        $returnType = '\Contabo\Generated\Model\HandleAuditResponse';
         $request = $this->retrieveHandlesAuditsListRequest($xRequestId, $xTraceId, $page, $size, $orderBy, $handleId, $requestId, $changedBy, $startDate, $endDate, $contentType);
 
         return $this->client

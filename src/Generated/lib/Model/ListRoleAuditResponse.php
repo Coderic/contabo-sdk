@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * ListRoleAuditResponse Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class ListRoleAuditResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Coderic\Contabo\Generated\Model\RoleAuditResponse[]',
-        'links' => '\Coderic\Contabo\Generated\Model\Links'
+        'data' => '\Contabo\Generated\Model\RoleAuditResponse[]',
+        'links' => '\Contabo\Generated\Model\Links'
     ];
 
     /**
@@ -306,7 +306,7 @@ class ListRoleAuditResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets data
      *
-     * @return \Coderic\Contabo\Generated\Model\RoleAuditResponse[]
+     * @return \Contabo\Generated\Model\RoleAuditResponse[]
      */
     public function getData()
     {
@@ -316,7 +316,7 @@ class ListRoleAuditResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets data
      *
-     * @param \Coderic\Contabo\Generated\Model\RoleAuditResponse[] $data data
+     * @param \Contabo\Generated\Model\RoleAuditResponse[] $data data
      *
      * @return self
      */
@@ -333,7 +333,7 @@ class ListRoleAuditResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets links
      *
-     * @return \Coderic\Contabo\Generated\Model\Links
+     * @return \Contabo\Generated\Model\Links
      */
     public function getLinks()
     {
@@ -343,7 +343,7 @@ class ListRoleAuditResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets links
      *
-     * @param \Coderic\Contabo\Generated\Model\Links $links links
+     * @param \Contabo\Generated\Model\Links $links links
      *
      * @return self
      */

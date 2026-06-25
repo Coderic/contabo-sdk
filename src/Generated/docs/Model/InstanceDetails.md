@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **displayName** | **string** | Instance display name |
 **name** | **string** | Instance name |
 **productId** | **string** | Product id |
-**ipConfig** | [**\Coderic\Contabo\Generated\Model\IpConfig1**](IpConfig1.md) |  |
+**ipConfig** | [**\Contabo\Generated\Model\IpConfig1**](IpConfig1.md) |  |
 **regionSlug** | **string** | Slug of the region where the instance is located. |
 **regionName** | **string** | Name of the region where the instance is located. |
 **dataCenterSlug** | **string** | Slug of the data center where the instance is located. |

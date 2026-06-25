@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * UsersAuditsApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -140,9 +140,9 @@ class UsersAuditsApi
      * @param  \DateTime|null $endDate End of search time range. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveUserAuditsList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ListUserAuditResponse
+     * @return \Contabo\Generated\Model\ListUserAuditResponse
      */
     public function retrieveUserAuditsList($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $userId = null, $requestId = null, $changedBy = null, $startDate = null, $endDate = null, string $contentType = self::contentTypes['retrieveUserAuditsList'][0])
     {
@@ -167,9 +167,9 @@ class UsersAuditsApi
      * @param  \DateTime|null $endDate End of search time range. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveUserAuditsList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ListUserAuditResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ListUserAuditResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveUserAuditsListWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $userId = null, $requestId = null, $changedBy = null, $startDate = null, $endDate = null, string $contentType = self::contentTypes['retrieveUserAuditsList'][0])
     {
@@ -200,11 +200,11 @@ class UsersAuditsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ListUserAuditResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ListUserAuditResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ListUserAuditResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ListUserAuditResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -222,7 +222,7 @@ class UsersAuditsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ListUserAuditResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ListUserAuditResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -241,7 +241,7 @@ class UsersAuditsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ListUserAuditResponse';
+            $returnType = '\Contabo\Generated\Model\ListUserAuditResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -274,7 +274,7 @@ class UsersAuditsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ListUserAuditResponse',
+                        '\Contabo\Generated\Model\ListUserAuditResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -336,7 +336,7 @@ class UsersAuditsApi
      */
     public function retrieveUserAuditsListAsyncWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $userId = null, $requestId = null, $changedBy = null, $startDate = null, $endDate = null, string $contentType = self::contentTypes['retrieveUserAuditsList'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ListUserAuditResponse';
+        $returnType = '\Contabo\Generated\Model\ListUserAuditResponse';
         $request = $this->retrieveUserAuditsListRequest($xRequestId, $xTraceId, $page, $size, $orderBy, $userId, $requestId, $changedBy, $startDate, $endDate, $contentType);
 
         return $this->client

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * UsersObjectStorageCredentialsApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -141,9 +141,9 @@ class UsersObjectStorageCredentialsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getObjectStorageCredentials'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\FindCredentialResponse
+     * @return \Contabo\Generated\Model\FindCredentialResponse
      */
     public function getObjectStorageCredentials($xRequestId, $userId, $objectStorageId, $credentialId, $xTraceId = null, string $contentType = self::contentTypes['getObjectStorageCredentials'][0])
     {
@@ -163,9 +163,9 @@ class UsersObjectStorageCredentialsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getObjectStorageCredentials'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\FindCredentialResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\FindCredentialResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getObjectStorageCredentialsWithHttpInfo($xRequestId, $userId, $objectStorageId, $credentialId, $xTraceId = null, string $contentType = self::contentTypes['getObjectStorageCredentials'][0])
     {
@@ -196,11 +196,11 @@ class UsersObjectStorageCredentialsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\FindCredentialResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\FindCredentialResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\FindCredentialResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\FindCredentialResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -218,7 +218,7 @@ class UsersObjectStorageCredentialsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\FindCredentialResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\FindCredentialResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -237,7 +237,7 @@ class UsersObjectStorageCredentialsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\FindCredentialResponse';
+            $returnType = '\Contabo\Generated\Model\FindCredentialResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -270,7 +270,7 @@ class UsersObjectStorageCredentialsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\FindCredentialResponse',
+                        '\Contabo\Generated\Model\FindCredentialResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -322,7 +322,7 @@ class UsersObjectStorageCredentialsApi
      */
     public function getObjectStorageCredentialsAsyncWithHttpInfo($xRequestId, $userId, $objectStorageId, $credentialId, $xTraceId = null, string $contentType = self::contentTypes['getObjectStorageCredentials'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\FindCredentialResponse';
+        $returnType = '\Contabo\Generated\Model\FindCredentialResponse';
         $request = $this->getObjectStorageCredentialsRequest($xRequestId, $userId, $objectStorageId, $credentialId, $xTraceId, $contentType);
 
         return $this->client
@@ -526,9 +526,9 @@ class UsersObjectStorageCredentialsApi
      * @param  string|null $displayName Filter for Object Storage by his displayName. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listObjectStorageCredentials'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ListCredentialResponse
+     * @return \Contabo\Generated\Model\ListCredentialResponse
      */
     public function listObjectStorageCredentials($xRequestId, $userId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $objectStorageId = null, $regionName = null, $displayName = null, string $contentType = self::contentTypes['listObjectStorageCredentials'][0])
     {
@@ -552,9 +552,9 @@ class UsersObjectStorageCredentialsApi
      * @param  string|null $displayName Filter for Object Storage by his displayName. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listObjectStorageCredentials'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ListCredentialResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ListCredentialResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listObjectStorageCredentialsWithHttpInfo($xRequestId, $userId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $objectStorageId = null, $regionName = null, $displayName = null, string $contentType = self::contentTypes['listObjectStorageCredentials'][0])
     {
@@ -585,11 +585,11 @@ class UsersObjectStorageCredentialsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ListCredentialResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ListCredentialResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ListCredentialResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ListCredentialResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -607,7 +607,7 @@ class UsersObjectStorageCredentialsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ListCredentialResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ListCredentialResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -626,7 +626,7 @@ class UsersObjectStorageCredentialsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ListCredentialResponse';
+            $returnType = '\Contabo\Generated\Model\ListCredentialResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -659,7 +659,7 @@ class UsersObjectStorageCredentialsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ListCredentialResponse',
+                        '\Contabo\Generated\Model\ListCredentialResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -719,7 +719,7 @@ class UsersObjectStorageCredentialsApi
      */
     public function listObjectStorageCredentialsAsyncWithHttpInfo($xRequestId, $userId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $objectStorageId = null, $regionName = null, $displayName = null, string $contentType = self::contentTypes['listObjectStorageCredentials'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ListCredentialResponse';
+        $returnType = '\Contabo\Generated\Model\ListCredentialResponse';
         $request = $this->listObjectStorageCredentialsRequest($xRequestId, $userId, $xTraceId, $page, $size, $orderBy, $objectStorageId, $regionName, $displayName, $contentType);
 
         return $this->client
@@ -953,9 +953,9 @@ class UsersObjectStorageCredentialsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['regenerateObjectStorageCredentials'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\FindCredentialResponse
+     * @return \Contabo\Generated\Model\FindCredentialResponse
      */
     public function regenerateObjectStorageCredentials($xRequestId, $userId, $objectStorageId, $credentialId, $xTraceId = null, string $contentType = self::contentTypes['regenerateObjectStorageCredentials'][0])
     {
@@ -975,9 +975,9 @@ class UsersObjectStorageCredentialsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['regenerateObjectStorageCredentials'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\FindCredentialResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\FindCredentialResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function regenerateObjectStorageCredentialsWithHttpInfo($xRequestId, $userId, $objectStorageId, $credentialId, $xTraceId = null, string $contentType = self::contentTypes['regenerateObjectStorageCredentials'][0])
     {
@@ -1008,11 +1008,11 @@ class UsersObjectStorageCredentialsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\FindCredentialResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\FindCredentialResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\FindCredentialResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\FindCredentialResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1030,7 +1030,7 @@ class UsersObjectStorageCredentialsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\FindCredentialResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\FindCredentialResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1049,7 +1049,7 @@ class UsersObjectStorageCredentialsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\FindCredentialResponse';
+            $returnType = '\Contabo\Generated\Model\FindCredentialResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1082,7 +1082,7 @@ class UsersObjectStorageCredentialsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\FindCredentialResponse',
+                        '\Contabo\Generated\Model\FindCredentialResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1134,7 +1134,7 @@ class UsersObjectStorageCredentialsApi
      */
     public function regenerateObjectStorageCredentialsAsyncWithHttpInfo($xRequestId, $userId, $objectStorageId, $credentialId, $xTraceId = null, string $contentType = self::contentTypes['regenerateObjectStorageCredentials'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\FindCredentialResponse';
+        $returnType = '\Contabo\Generated\Model\FindCredentialResponse';
         $request = $this->regenerateObjectStorageCredentialsRequest($xRequestId, $userId, $objectStorageId, $credentialId, $xTraceId, $contentType);
 
         return $this->client

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Coderic\Contabo;
+namespace Contabo;
 
-use Coderic\Contabo\Auth\TokenProviderInterface;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration as GeneratedConfiguration;
+use Contabo\Auth\TokenProviderInterface;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration as GeneratedConfiguration;
 
 final class ApiResourceProxy
 {

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * CheckCollectionResponse Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -63,12 +63,12 @@ class CheckCollectionResponse implements ModelInterface, ArrayAccess, \JsonSeria
         'objectId' => 'string',
         'checkCollectionId' => 'float',
         'checkCollectionTemplateId' => 'float',
-        'checkTemplates' => '\Coderic\Contabo\Generated\Model\CheckCollectionCheckTemplates[]',
+        'checkTemplates' => '\Contabo\Generated\Model\CheckCollectionCheckTemplates[]',
         'createdDate' => '\DateTime',
         'modifiedDate' => '\DateTime',
         'orgId' => 'string',
         'accountId' => 'string',
-        'checks' => '\Coderic\Contabo\Generated\Model\CheckResponse[]'
+        'checks' => '\Contabo\Generated\Model\CheckResponse[]'
     ];
 
     /**
@@ -615,7 +615,7 @@ class CheckCollectionResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets checkTemplates
      *
-     * @return \Coderic\Contabo\Generated\Model\CheckCollectionCheckTemplates[]
+     * @return \Contabo\Generated\Model\CheckCollectionCheckTemplates[]
      */
     public function getCheckTemplates()
     {
@@ -625,7 +625,7 @@ class CheckCollectionResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets checkTemplates
      *
-     * @param \Coderic\Contabo\Generated\Model\CheckCollectionCheckTemplates[] $checkTemplates Check templates which are part of this collection template
+     * @param \Contabo\Generated\Model\CheckCollectionCheckTemplates[] $checkTemplates Check templates which are part of this collection template
      *
      * @return self
      */
@@ -760,7 +760,7 @@ class CheckCollectionResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets checks
      *
-     * @return \Coderic\Contabo\Generated\Model\CheckResponse[]
+     * @return \Contabo\Generated\Model\CheckResponse[]
      */
     public function getChecks()
     {
@@ -770,7 +770,7 @@ class CheckCollectionResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets checks
      *
-     * @param \Coderic\Contabo\Generated\Model\CheckResponse[] $checks Checks performed in this check collection
+     * @param \Contabo\Generated\Model\CheckResponse[] $checks Checks performed in this check collection
      *
      * @return self
      */

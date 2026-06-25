@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\InternalCheckCollectionsApi
+# Contabo\Generated\InternalCheckCollectionsApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `cancelCheckCollection()`
 
 ```php
-cancelCheckCollection($xRequestId, $checkCollectionId, $orgId, $cancelRequest, $xTraceId): \Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse
+cancelCheckCollection($xRequestId, $checkCollectionId, $orgId, $cancelRequest, $xTraceId): \Contabo\Generated\Model\CheckCollectionsGetResponse
 ```
 
 Cancel check collection
@@ -28,10 +28,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InternalCheckCollectionsApi(
+$apiInstance = new Contabo\Generated\Api\InternalCheckCollectionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -40,7 +40,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\InternalCheckCollectionsApi(
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $checkCollectionId = 12345; // float | Check collection's id
 $orgId = cntb; // string | Org ID
-$cancelRequest = new \Coderic\Contabo\Generated\Model\CancelRequest(); // \Coderic\Contabo\Generated\Model\CancelRequest
+$cancelRequest = new \Contabo\Generated\Model\CancelRequest(); // \Contabo\Generated\Model\CancelRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -58,12 +58,12 @@ try {
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **checkCollectionId** | **float**| Check collection&#39;s id | |
 | **orgId** | **string**| Org ID | |
-| **cancelRequest** | [**\Coderic\Contabo\Generated\Model\CancelRequest**](../Model/CancelRequest.md)|  | |
+| **cancelRequest** | [**\Contabo\Generated\Model\CancelRequest**](../Model/CancelRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse**](../Model/CheckCollectionsGetResponse.md)
+[**\Contabo\Generated\Model\CheckCollectionsGetResponse**](../Model/CheckCollectionsGetResponse.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ try {
 ## `getCheckCollection()`
 
 ```php
-getCheckCollection($xRequestId, $checkCollectionId, $orgId, $xTraceId): \Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse
+getCheckCollection($xRequestId, $checkCollectionId, $orgId, $xTraceId): \Contabo\Generated\Model\CheckCollectionsGetResponse
 ```
 
 Get check collection
@@ -96,10 +96,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InternalCheckCollectionsApi(
+$apiInstance = new Contabo\Generated\Api\InternalCheckCollectionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -129,7 +129,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse**](../Model/CheckCollectionsGetResponse.md)
+[**\Contabo\Generated\Model\CheckCollectionsGetResponse**](../Model/CheckCollectionsGetResponse.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ try {
 ## `listCheckCollections()`
 
 ```php
-listCheckCollections($xRequestId, $orgIds, $xTraceId, $objectType, $objectId, $checkCollectionTemplateId, $page, $size, $orderBy, $creationStartTime, $creationEndTime, $modificationStartTime, $modificationEndTime, $accountId): \Coderic\Contabo\Generated\Model\CheckCollectionsListResponse
+listCheckCollections($xRequestId, $orgIds, $xTraceId, $objectType, $objectId, $checkCollectionTemplateId, $page, $size, $orderBy, $creationStartTime, $creationEndTime, $modificationStartTime, $modificationEndTime, $accountId): \Contabo\Generated\Model\CheckCollectionsListResponse
 ```
 
 List check collections
@@ -162,10 +162,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InternalCheckCollectionsApi(
+$apiInstance = new Contabo\Generated\Api\InternalCheckCollectionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -215,7 +215,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\CheckCollectionsListResponse**](../Model/CheckCollectionsListResponse.md)
+[**\Contabo\Generated\Model\CheckCollectionsListResponse**](../Model/CheckCollectionsListResponse.md)
 
 ### Authorization
 
@@ -233,7 +233,7 @@ try {
 ## `startCheckCollection()`
 
 ```php
-startCheckCollection($xRequestId, $checkCollectionCreateRequest, $xTraceId): \Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse
+startCheckCollection($xRequestId, $checkCollectionCreateRequest, $xTraceId): \Contabo\Generated\Model\CheckCollectionsGetResponse
 ```
 
 Start check collection
@@ -248,17 +248,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InternalCheckCollectionsApi(
+$apiInstance = new Contabo\Generated\Api\InternalCheckCollectionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
-$checkCollectionCreateRequest = new \Coderic\Contabo\Generated\Model\CheckCollectionCreateRequest(); // \Coderic\Contabo\Generated\Model\CheckCollectionCreateRequest
+$checkCollectionCreateRequest = new \Contabo\Generated\Model\CheckCollectionCreateRequest(); // \Contabo\Generated\Model\CheckCollectionCreateRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -274,12 +274,12 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
-| **checkCollectionCreateRequest** | [**\Coderic\Contabo\Generated\Model\CheckCollectionCreateRequest**](../Model/CheckCollectionCreateRequest.md)|  | |
+| **checkCollectionCreateRequest** | [**\Contabo\Generated\Model\CheckCollectionCreateRequest**](../Model/CheckCollectionCreateRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse**](../Model/CheckCollectionsGetResponse.md)
+[**\Contabo\Generated\Model\CheckCollectionsGetResponse**](../Model/CheckCollectionsGetResponse.md)
 
 ### Authorization
 

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * DNSApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -169,13 +169,13 @@ class DNSApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $zoneName Zone name (required)
-     * @param  \Coderic\Contabo\Generated\Model\BulkDeleteDnsZoneRecordsRequest $bulkDeleteDnsZoneRecordsRequest bulkDeleteDnsZoneRecordsRequest (required)
+     * @param  \Contabo\Generated\Model\BulkDeleteDnsZoneRecordsRequest $bulkDeleteDnsZoneRecordsRequest bulkDeleteDnsZoneRecordsRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkDeleteDnsZoneRecords'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ApiBulkDeleteDnsZoneRecordsResponse
+     * @return \Contabo\Generated\Model\ApiBulkDeleteDnsZoneRecordsResponse
      */
     public function bulkDeleteDnsZoneRecords($xRequestId, $zoneName, $bulkDeleteDnsZoneRecordsRequest, $xTraceId = null, string $contentType = self::contentTypes['bulkDeleteDnsZoneRecords'][0])
     {
@@ -190,13 +190,13 @@ class DNSApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $zoneName Zone name (required)
-     * @param  \Coderic\Contabo\Generated\Model\BulkDeleteDnsZoneRecordsRequest $bulkDeleteDnsZoneRecordsRequest (required)
+     * @param  \Contabo\Generated\Model\BulkDeleteDnsZoneRecordsRequest $bulkDeleteDnsZoneRecordsRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkDeleteDnsZoneRecords'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ApiBulkDeleteDnsZoneRecordsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ApiBulkDeleteDnsZoneRecordsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function bulkDeleteDnsZoneRecordsWithHttpInfo($xRequestId, $zoneName, $bulkDeleteDnsZoneRecordsRequest, $xTraceId = null, string $contentType = self::contentTypes['bulkDeleteDnsZoneRecords'][0])
     {
@@ -227,11 +227,11 @@ class DNSApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ApiBulkDeleteDnsZoneRecordsResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ApiBulkDeleteDnsZoneRecordsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ApiBulkDeleteDnsZoneRecordsResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ApiBulkDeleteDnsZoneRecordsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -249,7 +249,7 @@ class DNSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ApiBulkDeleteDnsZoneRecordsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ApiBulkDeleteDnsZoneRecordsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -268,7 +268,7 @@ class DNSApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ApiBulkDeleteDnsZoneRecordsResponse';
+            $returnType = '\Contabo\Generated\Model\ApiBulkDeleteDnsZoneRecordsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -301,7 +301,7 @@ class DNSApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ApiBulkDeleteDnsZoneRecordsResponse',
+                        '\Contabo\Generated\Model\ApiBulkDeleteDnsZoneRecordsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -318,7 +318,7 @@ class DNSApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $zoneName Zone name (required)
-     * @param  \Coderic\Contabo\Generated\Model\BulkDeleteDnsZoneRecordsRequest $bulkDeleteDnsZoneRecordsRequest (required)
+     * @param  \Contabo\Generated\Model\BulkDeleteDnsZoneRecordsRequest $bulkDeleteDnsZoneRecordsRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkDeleteDnsZoneRecords'] to see the possible values for this operation
      *
@@ -342,7 +342,7 @@ class DNSApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $zoneName Zone name (required)
-     * @param  \Coderic\Contabo\Generated\Model\BulkDeleteDnsZoneRecordsRequest $bulkDeleteDnsZoneRecordsRequest (required)
+     * @param  \Contabo\Generated\Model\BulkDeleteDnsZoneRecordsRequest $bulkDeleteDnsZoneRecordsRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkDeleteDnsZoneRecords'] to see the possible values for this operation
      *
@@ -351,7 +351,7 @@ class DNSApi
      */
     public function bulkDeleteDnsZoneRecordsAsyncWithHttpInfo($xRequestId, $zoneName, $bulkDeleteDnsZoneRecordsRequest, $xTraceId = null, string $contentType = self::contentTypes['bulkDeleteDnsZoneRecords'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ApiBulkDeleteDnsZoneRecordsResponse';
+        $returnType = '\Contabo\Generated\Model\ApiBulkDeleteDnsZoneRecordsResponse';
         $request = $this->bulkDeleteDnsZoneRecordsRequest($xRequestId, $zoneName, $bulkDeleteDnsZoneRecordsRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -395,7 +395,7 @@ class DNSApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $zoneName Zone name (required)
-     * @param  \Coderic\Contabo\Generated\Model\BulkDeleteDnsZoneRecordsRequest $bulkDeleteDnsZoneRecordsRequest (required)
+     * @param  \Contabo\Generated\Model\BulkDeleteDnsZoneRecordsRequest $bulkDeleteDnsZoneRecordsRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkDeleteDnsZoneRecords'] to see the possible values for this operation
      *
@@ -528,13 +528,13 @@ class DNSApi
      * Create DNS zone
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateDnsZoneRequest $createDnsZoneRequest createDnsZoneRequest (required)
+     * @param  \Contabo\Generated\Model\CreateDnsZoneRequest $createDnsZoneRequest createDnsZoneRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDnsZone'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ApiDnsZoneResponse
+     * @return \Contabo\Generated\Model\ApiDnsZoneResponse
      */
     public function createDnsZone($xRequestId, $createDnsZoneRequest, $xTraceId = null, string $contentType = self::contentTypes['createDnsZone'][0])
     {
@@ -548,13 +548,13 @@ class DNSApi
      * Create DNS zone
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateDnsZoneRequest $createDnsZoneRequest (required)
+     * @param  \Contabo\Generated\Model\CreateDnsZoneRequest $createDnsZoneRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDnsZone'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ApiDnsZoneResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ApiDnsZoneResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createDnsZoneWithHttpInfo($xRequestId, $createDnsZoneRequest, $xTraceId = null, string $contentType = self::contentTypes['createDnsZone'][0])
     {
@@ -585,11 +585,11 @@ class DNSApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\ApiDnsZoneResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ApiDnsZoneResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ApiDnsZoneResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ApiDnsZoneResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -607,7 +607,7 @@ class DNSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ApiDnsZoneResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ApiDnsZoneResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -626,7 +626,7 @@ class DNSApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ApiDnsZoneResponse';
+            $returnType = '\Contabo\Generated\Model\ApiDnsZoneResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -659,7 +659,7 @@ class DNSApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ApiDnsZoneResponse',
+                        '\Contabo\Generated\Model\ApiDnsZoneResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -675,7 +675,7 @@ class DNSApi
      * Create DNS zone
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateDnsZoneRequest $createDnsZoneRequest (required)
+     * @param  \Contabo\Generated\Model\CreateDnsZoneRequest $createDnsZoneRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDnsZone'] to see the possible values for this operation
      *
@@ -698,7 +698,7 @@ class DNSApi
      * Create DNS zone
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateDnsZoneRequest $createDnsZoneRequest (required)
+     * @param  \Contabo\Generated\Model\CreateDnsZoneRequest $createDnsZoneRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDnsZone'] to see the possible values for this operation
      *
@@ -707,7 +707,7 @@ class DNSApi
      */
     public function createDnsZoneAsyncWithHttpInfo($xRequestId, $createDnsZoneRequest, $xTraceId = null, string $contentType = self::contentTypes['createDnsZone'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ApiDnsZoneResponse';
+        $returnType = '\Contabo\Generated\Model\ApiDnsZoneResponse';
         $request = $this->createDnsZoneRequest($xRequestId, $createDnsZoneRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -750,7 +750,7 @@ class DNSApi
      * Create request for operation 'createDnsZone'
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateDnsZoneRequest $createDnsZoneRequest (required)
+     * @param  \Contabo\Generated\Model\CreateDnsZoneRequest $createDnsZoneRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDnsZone'] to see the possible values for this operation
      *
@@ -869,13 +869,13 @@ class DNSApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $zoneName Zone name (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateDnsZoneRecordRequest $createDnsZoneRecordRequest createDnsZoneRecordRequest (required)
+     * @param  \Contabo\Generated\Model\CreateDnsZoneRecordRequest $createDnsZoneRecordRequest createDnsZoneRecordRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDnsZoneRecord'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ApiDnsZoneRecordResponse
+     * @return \Contabo\Generated\Model\ApiDnsZoneRecordResponse
      */
     public function createDnsZoneRecord($xRequestId, $zoneName, $createDnsZoneRecordRequest, $xTraceId = null, string $contentType = self::contentTypes['createDnsZoneRecord'][0])
     {
@@ -890,13 +890,13 @@ class DNSApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $zoneName Zone name (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateDnsZoneRecordRequest $createDnsZoneRecordRequest (required)
+     * @param  \Contabo\Generated\Model\CreateDnsZoneRecordRequest $createDnsZoneRecordRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDnsZoneRecord'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ApiDnsZoneRecordResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ApiDnsZoneRecordResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createDnsZoneRecordWithHttpInfo($xRequestId, $zoneName, $createDnsZoneRecordRequest, $xTraceId = null, string $contentType = self::contentTypes['createDnsZoneRecord'][0])
     {
@@ -927,11 +927,11 @@ class DNSApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\ApiDnsZoneRecordResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ApiDnsZoneRecordResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ApiDnsZoneRecordResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ApiDnsZoneRecordResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -949,7 +949,7 @@ class DNSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ApiDnsZoneRecordResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ApiDnsZoneRecordResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -968,7 +968,7 @@ class DNSApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ApiDnsZoneRecordResponse';
+            $returnType = '\Contabo\Generated\Model\ApiDnsZoneRecordResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1001,7 +1001,7 @@ class DNSApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ApiDnsZoneRecordResponse',
+                        '\Contabo\Generated\Model\ApiDnsZoneRecordResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1018,7 +1018,7 @@ class DNSApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $zoneName Zone name (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateDnsZoneRecordRequest $createDnsZoneRecordRequest (required)
+     * @param  \Contabo\Generated\Model\CreateDnsZoneRecordRequest $createDnsZoneRecordRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDnsZoneRecord'] to see the possible values for this operation
      *
@@ -1042,7 +1042,7 @@ class DNSApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $zoneName Zone name (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateDnsZoneRecordRequest $createDnsZoneRecordRequest (required)
+     * @param  \Contabo\Generated\Model\CreateDnsZoneRecordRequest $createDnsZoneRecordRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDnsZoneRecord'] to see the possible values for this operation
      *
@@ -1051,7 +1051,7 @@ class DNSApi
      */
     public function createDnsZoneRecordAsyncWithHttpInfo($xRequestId, $zoneName, $createDnsZoneRecordRequest, $xTraceId = null, string $contentType = self::contentTypes['createDnsZoneRecord'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ApiDnsZoneRecordResponse';
+        $returnType = '\Contabo\Generated\Model\ApiDnsZoneRecordResponse';
         $request = $this->createDnsZoneRecordRequest($xRequestId, $zoneName, $createDnsZoneRecordRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -1095,7 +1095,7 @@ class DNSApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $zoneName Zone name (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateDnsZoneRecordRequest $createDnsZoneRecordRequest (required)
+     * @param  \Contabo\Generated\Model\CreateDnsZoneRecordRequest $createDnsZoneRecordRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDnsZoneRecord'] to see the possible values for this operation
      *
@@ -1228,13 +1228,13 @@ class DNSApi
      * Create a new PTR Record using ip address
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreatePtrRecordRequest $createPtrRecordRequest createPtrRecordRequest (required)
+     * @param  \Contabo\Generated\Model\CreatePtrRecordRequest $createPtrRecordRequest createPtrRecordRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPtrRecord'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ApiPtrRecordResponse
+     * @return \Contabo\Generated\Model\ApiPtrRecordResponse
      */
     public function createPtrRecord($xRequestId, $createPtrRecordRequest, $xTraceId = null, string $contentType = self::contentTypes['createPtrRecord'][0])
     {
@@ -1248,13 +1248,13 @@ class DNSApi
      * Create a new PTR Record using ip address
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreatePtrRecordRequest $createPtrRecordRequest (required)
+     * @param  \Contabo\Generated\Model\CreatePtrRecordRequest $createPtrRecordRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPtrRecord'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ApiPtrRecordResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ApiPtrRecordResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createPtrRecordWithHttpInfo($xRequestId, $createPtrRecordRequest, $xTraceId = null, string $contentType = self::contentTypes['createPtrRecord'][0])
     {
@@ -1285,11 +1285,11 @@ class DNSApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\ApiPtrRecordResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ApiPtrRecordResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ApiPtrRecordResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ApiPtrRecordResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1307,7 +1307,7 @@ class DNSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ApiPtrRecordResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ApiPtrRecordResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1326,7 +1326,7 @@ class DNSApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ApiPtrRecordResponse';
+            $returnType = '\Contabo\Generated\Model\ApiPtrRecordResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1359,7 +1359,7 @@ class DNSApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ApiPtrRecordResponse',
+                        '\Contabo\Generated\Model\ApiPtrRecordResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1375,7 +1375,7 @@ class DNSApi
      * Create a new PTR Record using ip address
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreatePtrRecordRequest $createPtrRecordRequest (required)
+     * @param  \Contabo\Generated\Model\CreatePtrRecordRequest $createPtrRecordRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPtrRecord'] to see the possible values for this operation
      *
@@ -1398,7 +1398,7 @@ class DNSApi
      * Create a new PTR Record using ip address
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreatePtrRecordRequest $createPtrRecordRequest (required)
+     * @param  \Contabo\Generated\Model\CreatePtrRecordRequest $createPtrRecordRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPtrRecord'] to see the possible values for this operation
      *
@@ -1407,7 +1407,7 @@ class DNSApi
      */
     public function createPtrRecordAsyncWithHttpInfo($xRequestId, $createPtrRecordRequest, $xTraceId = null, string $contentType = self::contentTypes['createPtrRecord'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ApiPtrRecordResponse';
+        $returnType = '\Contabo\Generated\Model\ApiPtrRecordResponse';
         $request = $this->createPtrRecordRequest($xRequestId, $createPtrRecordRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -1450,7 +1450,7 @@ class DNSApi
      * Create request for operation 'createPtrRecord'
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreatePtrRecordRequest $createPtrRecordRequest (required)
+     * @param  \Contabo\Generated\Model\CreatePtrRecordRequest $createPtrRecordRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPtrRecord'] to see the possible values for this operation
      *
@@ -1572,7 +1572,7 @@ class DNSApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteDnsZone'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1591,7 +1591,7 @@ class DNSApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteDnsZone'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1823,7 +1823,7 @@ class DNSApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteDnsZoneRecord'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1843,7 +1843,7 @@ class DNSApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteDnsZoneRecord'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2092,7 +2092,7 @@ class DNSApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePtrRecord'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2111,7 +2111,7 @@ class DNSApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePtrRecord'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2342,7 +2342,7 @@ class DNSApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveDnsZone'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2361,7 +2361,7 @@ class DNSApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveDnsZone'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2596,9 +2596,9 @@ class DNSApi
      * @param  string|null $search Search DNS records by name, type or data (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveDnsZoneRecordsList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ListDnsZoneRecordsResponse
+     * @return \Contabo\Generated\Model\ListDnsZoneRecordsResponse
      */
     public function retrieveDnsZoneRecordsList($xRequestId, $zoneName, $xTraceId = null, $page = null, $size = null, $orderBy = null, $search = null, string $contentType = self::contentTypes['retrieveDnsZoneRecordsList'][0])
     {
@@ -2620,9 +2620,9 @@ class DNSApi
      * @param  string|null $search Search DNS records by name, type or data (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveDnsZoneRecordsList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ListDnsZoneRecordsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ListDnsZoneRecordsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveDnsZoneRecordsListWithHttpInfo($xRequestId, $zoneName, $xTraceId = null, $page = null, $size = null, $orderBy = null, $search = null, string $contentType = self::contentTypes['retrieveDnsZoneRecordsList'][0])
     {
@@ -2653,11 +2653,11 @@ class DNSApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ListDnsZoneRecordsResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ListDnsZoneRecordsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ListDnsZoneRecordsResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ListDnsZoneRecordsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2675,7 +2675,7 @@ class DNSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ListDnsZoneRecordsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ListDnsZoneRecordsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2694,7 +2694,7 @@ class DNSApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ListDnsZoneRecordsResponse';
+            $returnType = '\Contabo\Generated\Model\ListDnsZoneRecordsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2727,7 +2727,7 @@ class DNSApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ListDnsZoneRecordsResponse',
+                        '\Contabo\Generated\Model\ListDnsZoneRecordsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2783,7 +2783,7 @@ class DNSApi
      */
     public function retrieveDnsZoneRecordsListAsyncWithHttpInfo($xRequestId, $zoneName, $xTraceId = null, $page = null, $size = null, $orderBy = null, $search = null, string $contentType = self::contentTypes['retrieveDnsZoneRecordsList'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ListDnsZoneRecordsResponse';
+        $returnType = '\Contabo\Generated\Model\ListDnsZoneRecordsResponse';
         $request = $this->retrieveDnsZoneRecordsListRequest($xRequestId, $zoneName, $xTraceId, $page, $size, $orderBy, $search, $contentType);
 
         return $this->client
@@ -2998,9 +2998,9 @@ class DNSApi
      * @param  string|null $zoneName Seach by zone name (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveDnsZonesList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ListDnsZonesResponse
+     * @return \Contabo\Generated\Model\ListDnsZonesResponse
      */
     public function retrieveDnsZonesList($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $customerId = null, $tenantId = null, $zoneName = null, string $contentType = self::contentTypes['retrieveDnsZonesList'][0])
     {
@@ -3023,9 +3023,9 @@ class DNSApi
      * @param  string|null $zoneName Seach by zone name (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveDnsZonesList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ListDnsZonesResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ListDnsZonesResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveDnsZonesListWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $customerId = null, $tenantId = null, $zoneName = null, string $contentType = self::contentTypes['retrieveDnsZonesList'][0])
     {
@@ -3056,11 +3056,11 @@ class DNSApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ListDnsZonesResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ListDnsZonesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ListDnsZonesResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ListDnsZonesResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3078,7 +3078,7 @@ class DNSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ListDnsZonesResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ListDnsZonesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3097,7 +3097,7 @@ class DNSApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ListDnsZonesResponse';
+            $returnType = '\Contabo\Generated\Model\ListDnsZonesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3130,7 +3130,7 @@ class DNSApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ListDnsZonesResponse',
+                        '\Contabo\Generated\Model\ListDnsZonesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3188,7 +3188,7 @@ class DNSApi
      */
     public function retrieveDnsZonesListAsyncWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $customerId = null, $tenantId = null, $zoneName = null, string $contentType = self::contentTypes['retrieveDnsZonesList'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ListDnsZonesResponse';
+        $returnType = '\Contabo\Generated\Model\ListDnsZonesResponse';
         $request = $this->retrieveDnsZonesListRequest($xRequestId, $xTraceId, $page, $size, $orderBy, $customerId, $tenantId, $zoneName, $contentType);
 
         return $this->client
@@ -3404,9 +3404,9 @@ class DNSApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrievePtrRecord'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ApiPtrRecordResponse
+     * @return \Contabo\Generated\Model\ApiPtrRecordResponse
      */
     public function retrievePtrRecord($xRequestId, $ipAddress, $xTraceId = null, string $contentType = self::contentTypes['retrievePtrRecord'][0])
     {
@@ -3424,9 +3424,9 @@ class DNSApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrievePtrRecord'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ApiPtrRecordResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ApiPtrRecordResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrievePtrRecordWithHttpInfo($xRequestId, $ipAddress, $xTraceId = null, string $contentType = self::contentTypes['retrievePtrRecord'][0])
     {
@@ -3457,11 +3457,11 @@ class DNSApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ApiPtrRecordResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ApiPtrRecordResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ApiPtrRecordResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ApiPtrRecordResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3479,7 +3479,7 @@ class DNSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ApiPtrRecordResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ApiPtrRecordResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3498,7 +3498,7 @@ class DNSApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ApiPtrRecordResponse';
+            $returnType = '\Contabo\Generated\Model\ApiPtrRecordResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3531,7 +3531,7 @@ class DNSApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ApiPtrRecordResponse',
+                        '\Contabo\Generated\Model\ApiPtrRecordResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3579,7 +3579,7 @@ class DNSApi
      */
     public function retrievePtrRecordAsyncWithHttpInfo($xRequestId, $ipAddress, $xTraceId = null, string $contentType = self::contentTypes['retrievePtrRecord'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ApiPtrRecordResponse';
+        $returnType = '\Contabo\Generated\Model\ApiPtrRecordResponse';
         $request = $this->retrievePtrRecordRequest($xRequestId, $ipAddress, $xTraceId, $contentType);
 
         return $this->client
@@ -3751,9 +3751,9 @@ class DNSApi
      * @param  string|null $search Search PTR records by ip or data (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrievePtrRecordsList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ListPtrRecordsResponse
+     * @return \Contabo\Generated\Model\ListPtrRecordsResponse
      */
     public function retrievePtrRecordsList($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $customerId = null, $tenantId = null, $ips = null, $search = null, string $contentType = self::contentTypes['retrievePtrRecordsList'][0])
     {
@@ -3777,9 +3777,9 @@ class DNSApi
      * @param  string|null $search Search PTR records by ip or data (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrievePtrRecordsList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ListPtrRecordsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ListPtrRecordsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrievePtrRecordsListWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $customerId = null, $tenantId = null, $ips = null, $search = null, string $contentType = self::contentTypes['retrievePtrRecordsList'][0])
     {
@@ -3810,11 +3810,11 @@ class DNSApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ListPtrRecordsResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ListPtrRecordsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ListPtrRecordsResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ListPtrRecordsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3832,7 +3832,7 @@ class DNSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ListPtrRecordsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ListPtrRecordsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3851,7 +3851,7 @@ class DNSApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ListPtrRecordsResponse';
+            $returnType = '\Contabo\Generated\Model\ListPtrRecordsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3884,7 +3884,7 @@ class DNSApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ListPtrRecordsResponse',
+                        '\Contabo\Generated\Model\ListPtrRecordsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3944,7 +3944,7 @@ class DNSApi
      */
     public function retrievePtrRecordsListAsyncWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $customerId = null, $tenantId = null, $ips = null, $search = null, string $contentType = self::contentTypes['retrievePtrRecordsList'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ListPtrRecordsResponse';
+        $returnType = '\Contabo\Generated\Model\ListPtrRecordsResponse';
         $request = $this->retrievePtrRecordsListRequest($xRequestId, $xTraceId, $page, $size, $orderBy, $customerId, $tenantId, $ips, $search, $contentType);
 
         return $this->client
@@ -4169,13 +4169,13 @@ class DNSApi
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $recordId The identifier of the DNS record (required)
      * @param  string $zoneName Zone name (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateDnsZoneRecordRequest $updateDnsZoneRecordRequest updateDnsZoneRecordRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateDnsZoneRecordRequest $updateDnsZoneRecordRequest updateDnsZoneRecordRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDnsZoneRecord'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ApiDnsZoneRecordResponse
+     * @return \Contabo\Generated\Model\ApiDnsZoneRecordResponse
      */
     public function updateDnsZoneRecord($xRequestId, $recordId, $zoneName, $updateDnsZoneRecordRequest, $xTraceId = null, string $contentType = self::contentTypes['updateDnsZoneRecord'][0])
     {
@@ -4191,13 +4191,13 @@ class DNSApi
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $recordId The identifier of the DNS record (required)
      * @param  string $zoneName Zone name (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateDnsZoneRecordRequest $updateDnsZoneRecordRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateDnsZoneRecordRequest $updateDnsZoneRecordRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDnsZoneRecord'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ApiDnsZoneRecordResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ApiDnsZoneRecordResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateDnsZoneRecordWithHttpInfo($xRequestId, $recordId, $zoneName, $updateDnsZoneRecordRequest, $xTraceId = null, string $contentType = self::contentTypes['updateDnsZoneRecord'][0])
     {
@@ -4228,11 +4228,11 @@ class DNSApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ApiDnsZoneRecordResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ApiDnsZoneRecordResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ApiDnsZoneRecordResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ApiDnsZoneRecordResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4250,7 +4250,7 @@ class DNSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ApiDnsZoneRecordResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ApiDnsZoneRecordResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4269,7 +4269,7 @@ class DNSApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ApiDnsZoneRecordResponse';
+            $returnType = '\Contabo\Generated\Model\ApiDnsZoneRecordResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4302,7 +4302,7 @@ class DNSApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ApiDnsZoneRecordResponse',
+                        '\Contabo\Generated\Model\ApiDnsZoneRecordResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4320,7 +4320,7 @@ class DNSApi
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $recordId The identifier of the DNS record (required)
      * @param  string $zoneName Zone name (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateDnsZoneRecordRequest $updateDnsZoneRecordRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateDnsZoneRecordRequest $updateDnsZoneRecordRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDnsZoneRecord'] to see the possible values for this operation
      *
@@ -4345,7 +4345,7 @@ class DNSApi
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $recordId The identifier of the DNS record (required)
      * @param  string $zoneName Zone name (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateDnsZoneRecordRequest $updateDnsZoneRecordRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateDnsZoneRecordRequest $updateDnsZoneRecordRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDnsZoneRecord'] to see the possible values for this operation
      *
@@ -4354,7 +4354,7 @@ class DNSApi
      */
     public function updateDnsZoneRecordAsyncWithHttpInfo($xRequestId, $recordId, $zoneName, $updateDnsZoneRecordRequest, $xTraceId = null, string $contentType = self::contentTypes['updateDnsZoneRecord'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ApiDnsZoneRecordResponse';
+        $returnType = '\Contabo\Generated\Model\ApiDnsZoneRecordResponse';
         $request = $this->updateDnsZoneRecordRequest($xRequestId, $recordId, $zoneName, $updateDnsZoneRecordRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -4399,7 +4399,7 @@ class DNSApi
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $recordId The identifier of the DNS record (required)
      * @param  string $zoneName Zone name (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateDnsZoneRecordRequest $updateDnsZoneRecordRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateDnsZoneRecordRequest $updateDnsZoneRecordRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDnsZoneRecord'] to see the possible values for this operation
      *
@@ -4548,11 +4548,11 @@ class DNSApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $ipAddress Ip Address (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdatePtrRecordRequest $updatePtrRecordRequest updatePtrRecordRequest (required)
+     * @param  \Contabo\Generated\Model\UpdatePtrRecordRequest $updatePtrRecordRequest updatePtrRecordRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePtrRecord'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4568,11 +4568,11 @@ class DNSApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $ipAddress Ip Address (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdatePtrRecordRequest $updatePtrRecordRequest (required)
+     * @param  \Contabo\Generated\Model\UpdatePtrRecordRequest $updatePtrRecordRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePtrRecord'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4619,7 +4619,7 @@ class DNSApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $ipAddress Ip Address (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdatePtrRecordRequest $updatePtrRecordRequest (required)
+     * @param  \Contabo\Generated\Model\UpdatePtrRecordRequest $updatePtrRecordRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePtrRecord'] to see the possible values for this operation
      *
@@ -4643,7 +4643,7 @@ class DNSApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $ipAddress Ip Address (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdatePtrRecordRequest $updatePtrRecordRequest (required)
+     * @param  \Contabo\Generated\Model\UpdatePtrRecordRequest $updatePtrRecordRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePtrRecord'] to see the possible values for this operation
      *
@@ -4683,7 +4683,7 @@ class DNSApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $ipAddress Ip Address (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdatePtrRecordRequest $updatePtrRecordRequest (required)
+     * @param  \Contabo\Generated\Model\UpdatePtrRecordRequest $updatePtrRecordRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePtrRecord'] to see the possible values for this operation
      *

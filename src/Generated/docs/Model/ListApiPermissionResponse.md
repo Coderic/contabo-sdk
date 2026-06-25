@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**\Coderic\Contabo\Generated\Model\ApiPermissionsResponse[]**](ApiPermissionsResponse.md) |  |
-**links** | [**\Coderic\Contabo\Generated\Model\Links**](Links.md) |  |
+**data** | [**\Contabo\Generated\Model\ApiPermissionsResponse[]**](ApiPermissionsResponse.md) |  |
+**links** | [**\Contabo\Generated\Model\Links**](Links.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

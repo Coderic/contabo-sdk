@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * TagAssignmentsApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -144,9 +144,9 @@ class TagAssignmentsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAssignment'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\CreateAssignmentResponse
+     * @return \Contabo\Generated\Model\CreateAssignmentResponse
      */
     public function createAssignment($xRequestId, $tagId, $resourceType, $resourceId, $xTraceId = null, string $contentType = self::contentTypes['createAssignment'][0])
     {
@@ -166,9 +166,9 @@ class TagAssignmentsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAssignment'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\CreateAssignmentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\CreateAssignmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAssignmentWithHttpInfo($xRequestId, $tagId, $resourceType, $resourceId, $xTraceId = null, string $contentType = self::contentTypes['createAssignment'][0])
     {
@@ -199,11 +199,11 @@ class TagAssignmentsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\CreateAssignmentResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\CreateAssignmentResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\CreateAssignmentResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\CreateAssignmentResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -221,7 +221,7 @@ class TagAssignmentsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\CreateAssignmentResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\CreateAssignmentResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -240,7 +240,7 @@ class TagAssignmentsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\CreateAssignmentResponse';
+            $returnType = '\Contabo\Generated\Model\CreateAssignmentResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -273,7 +273,7 @@ class TagAssignmentsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\CreateAssignmentResponse',
+                        '\Contabo\Generated\Model\CreateAssignmentResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -325,7 +325,7 @@ class TagAssignmentsApi
      */
     public function createAssignmentAsyncWithHttpInfo($xRequestId, $tagId, $resourceType, $resourceId, $xTraceId = null, string $contentType = self::contentTypes['createAssignment'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\CreateAssignmentResponse';
+        $returnType = '\Contabo\Generated\Model\CreateAssignmentResponse';
         $request = $this->createAssignmentRequest($xRequestId, $tagId, $resourceType, $resourceId, $xTraceId, $contentType);
 
         return $this->client
@@ -525,7 +525,7 @@ class TagAssignmentsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAssignment'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -546,7 +546,7 @@ class TagAssignmentsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAssignment'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -815,9 +815,9 @@ class TagAssignmentsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveAssignment'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\FindAssignmentResponse
+     * @return \Contabo\Generated\Model\FindAssignmentResponse
      */
     public function retrieveAssignment($xRequestId, $tagId, $resourceType, $resourceId, $xTraceId = null, string $contentType = self::contentTypes['retrieveAssignment'][0])
     {
@@ -837,9 +837,9 @@ class TagAssignmentsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveAssignment'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\FindAssignmentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\FindAssignmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveAssignmentWithHttpInfo($xRequestId, $tagId, $resourceType, $resourceId, $xTraceId = null, string $contentType = self::contentTypes['retrieveAssignment'][0])
     {
@@ -870,11 +870,11 @@ class TagAssignmentsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\FindAssignmentResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\FindAssignmentResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\FindAssignmentResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\FindAssignmentResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -892,7 +892,7 @@ class TagAssignmentsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\FindAssignmentResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\FindAssignmentResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -911,7 +911,7 @@ class TagAssignmentsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\FindAssignmentResponse';
+            $returnType = '\Contabo\Generated\Model\FindAssignmentResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -944,7 +944,7 @@ class TagAssignmentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\FindAssignmentResponse',
+                        '\Contabo\Generated\Model\FindAssignmentResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -996,7 +996,7 @@ class TagAssignmentsApi
      */
     public function retrieveAssignmentAsyncWithHttpInfo($xRequestId, $tagId, $resourceType, $resourceId, $xTraceId = null, string $contentType = self::contentTypes['retrieveAssignment'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\FindAssignmentResponse';
+        $returnType = '\Contabo\Generated\Model\FindAssignmentResponse';
         $request = $this->retrieveAssignmentRequest($xRequestId, $tagId, $resourceType, $resourceId, $xTraceId, $contentType);
 
         return $this->client
@@ -1198,9 +1198,9 @@ class TagAssignmentsApi
      * @param  string|null $resourceType Filter as substring match for assignment resource type. Resource type is one of &#x60;instance|image|object-storage&#x60;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveAssignmentList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ListAssignmentResponse
+     * @return \Contabo\Generated\Model\ListAssignmentResponse
      */
     public function retrieveAssignmentList($xRequestId, $tagId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $resourceType = null, string $contentType = self::contentTypes['retrieveAssignmentList'][0])
     {
@@ -1222,9 +1222,9 @@ class TagAssignmentsApi
      * @param  string|null $resourceType Filter as substring match for assignment resource type. Resource type is one of &#x60;instance|image|object-storage&#x60;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveAssignmentList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ListAssignmentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ListAssignmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveAssignmentListWithHttpInfo($xRequestId, $tagId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $resourceType = null, string $contentType = self::contentTypes['retrieveAssignmentList'][0])
     {
@@ -1255,11 +1255,11 @@ class TagAssignmentsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ListAssignmentResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ListAssignmentResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ListAssignmentResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ListAssignmentResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1277,7 +1277,7 @@ class TagAssignmentsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ListAssignmentResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ListAssignmentResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1296,7 +1296,7 @@ class TagAssignmentsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ListAssignmentResponse';
+            $returnType = '\Contabo\Generated\Model\ListAssignmentResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1329,7 +1329,7 @@ class TagAssignmentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ListAssignmentResponse',
+                        '\Contabo\Generated\Model\ListAssignmentResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1385,7 +1385,7 @@ class TagAssignmentsApi
      */
     public function retrieveAssignmentListAsyncWithHttpInfo($xRequestId, $tagId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $resourceType = null, string $contentType = self::contentTypes['retrieveAssignmentList'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ListAssignmentResponse';
+        $returnType = '\Contabo\Generated\Model\ListAssignmentResponse';
         $request = $this->retrieveAssignmentListRequest($xRequestId, $tagId, $xTraceId, $page, $size, $orderBy, $resourceType, $contentType);
 
         return $this->client

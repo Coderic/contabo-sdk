@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * ObjectStoragesApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -151,13 +151,13 @@ class ObjectStoragesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $objectStorageId The identifier of the object storage. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelObjectStorageRequest $cancelObjectStorageRequest cancelObjectStorageRequest (required)
+     * @param  \Contabo\Generated\Model\CancelObjectStorageRequest $cancelObjectStorageRequest cancelObjectStorageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelObjectStorage'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\CancelObjectStorageResponse
+     * @return \Contabo\Generated\Model\CancelObjectStorageResponse
      */
     public function cancelObjectStorage($xRequestId, $objectStorageId, $cancelObjectStorageRequest, $xTraceId = null, string $contentType = self::contentTypes['cancelObjectStorage'][0])
     {
@@ -172,13 +172,13 @@ class ObjectStoragesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $objectStorageId The identifier of the object storage. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelObjectStorageRequest $cancelObjectStorageRequest (required)
+     * @param  \Contabo\Generated\Model\CancelObjectStorageRequest $cancelObjectStorageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelObjectStorage'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\CancelObjectStorageResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\CancelObjectStorageResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelObjectStorageWithHttpInfo($xRequestId, $objectStorageId, $cancelObjectStorageRequest, $xTraceId = null, string $contentType = self::contentTypes['cancelObjectStorage'][0])
     {
@@ -209,11 +209,11 @@ class ObjectStoragesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\CancelObjectStorageResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\CancelObjectStorageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\CancelObjectStorageResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\CancelObjectStorageResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -231,7 +231,7 @@ class ObjectStoragesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\CancelObjectStorageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\CancelObjectStorageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -250,7 +250,7 @@ class ObjectStoragesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\CancelObjectStorageResponse';
+            $returnType = '\Contabo\Generated\Model\CancelObjectStorageResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -283,7 +283,7 @@ class ObjectStoragesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\CancelObjectStorageResponse',
+                        '\Contabo\Generated\Model\CancelObjectStorageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -300,7 +300,7 @@ class ObjectStoragesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $objectStorageId The identifier of the object storage. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelObjectStorageRequest $cancelObjectStorageRequest (required)
+     * @param  \Contabo\Generated\Model\CancelObjectStorageRequest $cancelObjectStorageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelObjectStorage'] to see the possible values for this operation
      *
@@ -324,7 +324,7 @@ class ObjectStoragesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $objectStorageId The identifier of the object storage. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelObjectStorageRequest $cancelObjectStorageRequest (required)
+     * @param  \Contabo\Generated\Model\CancelObjectStorageRequest $cancelObjectStorageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelObjectStorage'] to see the possible values for this operation
      *
@@ -333,7 +333,7 @@ class ObjectStoragesApi
      */
     public function cancelObjectStorageAsyncWithHttpInfo($xRequestId, $objectStorageId, $cancelObjectStorageRequest, $xTraceId = null, string $contentType = self::contentTypes['cancelObjectStorage'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\CancelObjectStorageResponse';
+        $returnType = '\Contabo\Generated\Model\CancelObjectStorageResponse';
         $request = $this->cancelObjectStorageRequest($xRequestId, $objectStorageId, $cancelObjectStorageRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -377,7 +377,7 @@ class ObjectStoragesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $objectStorageId The identifier of the object storage. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelObjectStorageRequest $cancelObjectStorageRequest (required)
+     * @param  \Contabo\Generated\Model\CancelObjectStorageRequest $cancelObjectStorageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelObjectStorage'] to see the possible values for this operation
      *
@@ -510,13 +510,13 @@ class ObjectStoragesApi
      * Create a new object storage
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateObjectStorageRequest $createObjectStorageRequest createObjectStorageRequest (required)
+     * @param  \Contabo\Generated\Model\CreateObjectStorageRequest $createObjectStorageRequest createObjectStorageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createObjectStorage'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\CreateObjectStorageResponse
+     * @return \Contabo\Generated\Model\CreateObjectStorageResponse
      */
     public function createObjectStorage($xRequestId, $createObjectStorageRequest, $xTraceId = null, string $contentType = self::contentTypes['createObjectStorage'][0])
     {
@@ -530,13 +530,13 @@ class ObjectStoragesApi
      * Create a new object storage
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateObjectStorageRequest $createObjectStorageRequest (required)
+     * @param  \Contabo\Generated\Model\CreateObjectStorageRequest $createObjectStorageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createObjectStorage'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\CreateObjectStorageResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\CreateObjectStorageResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createObjectStorageWithHttpInfo($xRequestId, $createObjectStorageRequest, $xTraceId = null, string $contentType = self::contentTypes['createObjectStorage'][0])
     {
@@ -567,11 +567,11 @@ class ObjectStoragesApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\CreateObjectStorageResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\CreateObjectStorageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\CreateObjectStorageResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\CreateObjectStorageResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -589,7 +589,7 @@ class ObjectStoragesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\CreateObjectStorageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\CreateObjectStorageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -608,7 +608,7 @@ class ObjectStoragesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\CreateObjectStorageResponse';
+            $returnType = '\Contabo\Generated\Model\CreateObjectStorageResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -641,7 +641,7 @@ class ObjectStoragesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\CreateObjectStorageResponse',
+                        '\Contabo\Generated\Model\CreateObjectStorageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -657,7 +657,7 @@ class ObjectStoragesApi
      * Create a new object storage
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateObjectStorageRequest $createObjectStorageRequest (required)
+     * @param  \Contabo\Generated\Model\CreateObjectStorageRequest $createObjectStorageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createObjectStorage'] to see the possible values for this operation
      *
@@ -680,7 +680,7 @@ class ObjectStoragesApi
      * Create a new object storage
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateObjectStorageRequest $createObjectStorageRequest (required)
+     * @param  \Contabo\Generated\Model\CreateObjectStorageRequest $createObjectStorageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createObjectStorage'] to see the possible values for this operation
      *
@@ -689,7 +689,7 @@ class ObjectStoragesApi
      */
     public function createObjectStorageAsyncWithHttpInfo($xRequestId, $createObjectStorageRequest, $xTraceId = null, string $contentType = self::contentTypes['createObjectStorage'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\CreateObjectStorageResponse';
+        $returnType = '\Contabo\Generated\Model\CreateObjectStorageResponse';
         $request = $this->createObjectStorageRequest($xRequestId, $createObjectStorageRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -732,7 +732,7 @@ class ObjectStoragesApi
      * Create request for operation 'createObjectStorage'
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateObjectStorageRequest $createObjectStorageRequest (required)
+     * @param  \Contabo\Generated\Model\CreateObjectStorageRequest $createObjectStorageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createObjectStorage'] to see the possible values for this operation
      *
@@ -860,9 +860,9 @@ class ObjectStoragesApi
      * @param  string|null $regionSlug Filter for Object Storage region slugs. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveDataCenterList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ListDataCenterResponse
+     * @return \Contabo\Generated\Model\ListDataCenterResponse
      */
     public function retrieveDataCenterList($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $slug = null, $name = null, $regionName = null, $regionSlug = null, string $contentType = self::contentTypes['retrieveDataCenterList'][0])
     {
@@ -886,9 +886,9 @@ class ObjectStoragesApi
      * @param  string|null $regionSlug Filter for Object Storage region slugs. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveDataCenterList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ListDataCenterResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ListDataCenterResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveDataCenterListWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $slug = null, $name = null, $regionName = null, $regionSlug = null, string $contentType = self::contentTypes['retrieveDataCenterList'][0])
     {
@@ -919,11 +919,11 @@ class ObjectStoragesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ListDataCenterResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ListDataCenterResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ListDataCenterResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ListDataCenterResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -941,7 +941,7 @@ class ObjectStoragesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ListDataCenterResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ListDataCenterResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -960,7 +960,7 @@ class ObjectStoragesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ListDataCenterResponse';
+            $returnType = '\Contabo\Generated\Model\ListDataCenterResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -993,7 +993,7 @@ class ObjectStoragesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ListDataCenterResponse',
+                        '\Contabo\Generated\Model\ListDataCenterResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1053,7 +1053,7 @@ class ObjectStoragesApi
      */
     public function retrieveDataCenterListAsyncWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $slug = null, $name = null, $regionName = null, $regionSlug = null, string $contentType = self::contentTypes['retrieveDataCenterList'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ListDataCenterResponse';
+        $returnType = '\Contabo\Generated\Model\ListDataCenterResponse';
         $request = $this->retrieveDataCenterListRequest($xRequestId, $xTraceId, $page, $size, $orderBy, $slug, $name, $regionName, $regionSlug, $contentType);
 
         return $this->client
@@ -1292,9 +1292,9 @@ class ObjectStoragesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveObjectStorage'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\FindObjectStorageResponse
+     * @return \Contabo\Generated\Model\FindObjectStorageResponse
      */
     public function retrieveObjectStorage($xRequestId, $objectStorageId, $xTraceId = null, string $contentType = self::contentTypes['retrieveObjectStorage'][0])
     {
@@ -1312,9 +1312,9 @@ class ObjectStoragesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveObjectStorage'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\FindObjectStorageResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\FindObjectStorageResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveObjectStorageWithHttpInfo($xRequestId, $objectStorageId, $xTraceId = null, string $contentType = self::contentTypes['retrieveObjectStorage'][0])
     {
@@ -1345,11 +1345,11 @@ class ObjectStoragesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\FindObjectStorageResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\FindObjectStorageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\FindObjectStorageResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\FindObjectStorageResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1367,7 +1367,7 @@ class ObjectStoragesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\FindObjectStorageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\FindObjectStorageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1386,7 +1386,7 @@ class ObjectStoragesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\FindObjectStorageResponse';
+            $returnType = '\Contabo\Generated\Model\FindObjectStorageResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1419,7 +1419,7 @@ class ObjectStoragesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\FindObjectStorageResponse',
+                        '\Contabo\Generated\Model\FindObjectStorageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1467,7 +1467,7 @@ class ObjectStoragesApi
      */
     public function retrieveObjectStorageAsyncWithHttpInfo($xRequestId, $objectStorageId, $xTraceId = null, string $contentType = self::contentTypes['retrieveObjectStorage'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\FindObjectStorageResponse';
+        $returnType = '\Contabo\Generated\Model\FindObjectStorageResponse';
         $request = $this->retrieveObjectStorageRequest($xRequestId, $objectStorageId, $xTraceId, $contentType);
 
         return $this->client
@@ -1639,9 +1639,9 @@ class ObjectStoragesApi
      * @param  string|null $displayName Filter for Object Storage by display name. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveObjectStorageList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ListObjectStorageResponse
+     * @return \Contabo\Generated\Model\ListObjectStorageResponse
      */
     public function retrieveObjectStorageList($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $dataCenterName = null, $s3TenantId = null, $region = null, $displayName = null, string $contentType = self::contentTypes['retrieveObjectStorageList'][0])
     {
@@ -1665,9 +1665,9 @@ class ObjectStoragesApi
      * @param  string|null $displayName Filter for Object Storage by display name. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveObjectStorageList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ListObjectStorageResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ListObjectStorageResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveObjectStorageListWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $dataCenterName = null, $s3TenantId = null, $region = null, $displayName = null, string $contentType = self::contentTypes['retrieveObjectStorageList'][0])
     {
@@ -1698,11 +1698,11 @@ class ObjectStoragesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ListObjectStorageResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ListObjectStorageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ListObjectStorageResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ListObjectStorageResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1720,7 +1720,7 @@ class ObjectStoragesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ListObjectStorageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ListObjectStorageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1739,7 +1739,7 @@ class ObjectStoragesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ListObjectStorageResponse';
+            $returnType = '\Contabo\Generated\Model\ListObjectStorageResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1772,7 +1772,7 @@ class ObjectStoragesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ListObjectStorageResponse',
+                        '\Contabo\Generated\Model\ListObjectStorageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1832,7 +1832,7 @@ class ObjectStoragesApi
      */
     public function retrieveObjectStorageListAsyncWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $dataCenterName = null, $s3TenantId = null, $region = null, $displayName = null, string $contentType = self::contentTypes['retrieveObjectStorageList'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ListObjectStorageResponse';
+        $returnType = '\Contabo\Generated\Model\ListObjectStorageResponse';
         $request = $this->retrieveObjectStorageListRequest($xRequestId, $xTraceId, $page, $size, $orderBy, $dataCenterName, $s3TenantId, $region, $displayName, $contentType);
 
         return $this->client
@@ -2062,9 +2062,9 @@ class ObjectStoragesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveObjectStoragesStats'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ObjectStoragesStatsResponse
+     * @return \Contabo\Generated\Model\ObjectStoragesStatsResponse
      */
     public function retrieveObjectStoragesStats($xRequestId, $objectStorageId, $xTraceId = null, string $contentType = self::contentTypes['retrieveObjectStoragesStats'][0])
     {
@@ -2082,9 +2082,9 @@ class ObjectStoragesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveObjectStoragesStats'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ObjectStoragesStatsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ObjectStoragesStatsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveObjectStoragesStatsWithHttpInfo($xRequestId, $objectStorageId, $xTraceId = null, string $contentType = self::contentTypes['retrieveObjectStoragesStats'][0])
     {
@@ -2115,11 +2115,11 @@ class ObjectStoragesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ObjectStoragesStatsResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ObjectStoragesStatsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ObjectStoragesStatsResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ObjectStoragesStatsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2137,7 +2137,7 @@ class ObjectStoragesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ObjectStoragesStatsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ObjectStoragesStatsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2156,7 +2156,7 @@ class ObjectStoragesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ObjectStoragesStatsResponse';
+            $returnType = '\Contabo\Generated\Model\ObjectStoragesStatsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2189,7 +2189,7 @@ class ObjectStoragesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ObjectStoragesStatsResponse',
+                        '\Contabo\Generated\Model\ObjectStoragesStatsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2237,7 +2237,7 @@ class ObjectStoragesApi
      */
     public function retrieveObjectStoragesStatsAsyncWithHttpInfo($xRequestId, $objectStorageId, $xTraceId = null, string $contentType = self::contentTypes['retrieveObjectStoragesStats'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ObjectStoragesStatsResponse';
+        $returnType = '\Contabo\Generated\Model\ObjectStoragesStatsResponse';
         $request = $this->retrieveObjectStoragesStatsRequest($xRequestId, $objectStorageId, $xTraceId, $contentType);
 
         return $this->client
@@ -2400,13 +2400,13 @@ class ObjectStoragesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $objectStorageId The identifier of the object storage. (required)
-     * @param  \Coderic\Contabo\Generated\Model\PatchObjectStorageRequest $patchObjectStorageRequest patchObjectStorageRequest (required)
+     * @param  \Contabo\Generated\Model\PatchObjectStorageRequest $patchObjectStorageRequest patchObjectStorageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateObjectStorage'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\CancelObjectStorageResponse
+     * @return \Contabo\Generated\Model\CancelObjectStorageResponse
      */
     public function updateObjectStorage($xRequestId, $objectStorageId, $patchObjectStorageRequest, $xTraceId = null, string $contentType = self::contentTypes['updateObjectStorage'][0])
     {
@@ -2421,13 +2421,13 @@ class ObjectStoragesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $objectStorageId The identifier of the object storage. (required)
-     * @param  \Coderic\Contabo\Generated\Model\PatchObjectStorageRequest $patchObjectStorageRequest (required)
+     * @param  \Contabo\Generated\Model\PatchObjectStorageRequest $patchObjectStorageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateObjectStorage'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\CancelObjectStorageResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\CancelObjectStorageResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateObjectStorageWithHttpInfo($xRequestId, $objectStorageId, $patchObjectStorageRequest, $xTraceId = null, string $contentType = self::contentTypes['updateObjectStorage'][0])
     {
@@ -2458,11 +2458,11 @@ class ObjectStoragesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\CancelObjectStorageResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\CancelObjectStorageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\CancelObjectStorageResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\CancelObjectStorageResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2480,7 +2480,7 @@ class ObjectStoragesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\CancelObjectStorageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\CancelObjectStorageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2499,7 +2499,7 @@ class ObjectStoragesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\CancelObjectStorageResponse';
+            $returnType = '\Contabo\Generated\Model\CancelObjectStorageResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2532,7 +2532,7 @@ class ObjectStoragesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\CancelObjectStorageResponse',
+                        '\Contabo\Generated\Model\CancelObjectStorageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2549,7 +2549,7 @@ class ObjectStoragesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $objectStorageId The identifier of the object storage. (required)
-     * @param  \Coderic\Contabo\Generated\Model\PatchObjectStorageRequest $patchObjectStorageRequest (required)
+     * @param  \Contabo\Generated\Model\PatchObjectStorageRequest $patchObjectStorageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateObjectStorage'] to see the possible values for this operation
      *
@@ -2573,7 +2573,7 @@ class ObjectStoragesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $objectStorageId The identifier of the object storage. (required)
-     * @param  \Coderic\Contabo\Generated\Model\PatchObjectStorageRequest $patchObjectStorageRequest (required)
+     * @param  \Contabo\Generated\Model\PatchObjectStorageRequest $patchObjectStorageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateObjectStorage'] to see the possible values for this operation
      *
@@ -2582,7 +2582,7 @@ class ObjectStoragesApi
      */
     public function updateObjectStorageAsyncWithHttpInfo($xRequestId, $objectStorageId, $patchObjectStorageRequest, $xTraceId = null, string $contentType = self::contentTypes['updateObjectStorage'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\CancelObjectStorageResponse';
+        $returnType = '\Contabo\Generated\Model\CancelObjectStorageResponse';
         $request = $this->updateObjectStorageRequest($xRequestId, $objectStorageId, $patchObjectStorageRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -2626,7 +2626,7 @@ class ObjectStoragesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $objectStorageId The identifier of the object storage. (required)
-     * @param  \Coderic\Contabo\Generated\Model\PatchObjectStorageRequest $patchObjectStorageRequest (required)
+     * @param  \Contabo\Generated\Model\PatchObjectStorageRequest $patchObjectStorageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateObjectStorage'] to see the possible values for this operation
      *
@@ -2760,13 +2760,13 @@ class ObjectStoragesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $objectStorageId The identifier of the object storage. (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpgradeObjectStorageRequest $upgradeObjectStorageRequest upgradeObjectStorageRequest (required)
+     * @param  \Contabo\Generated\Model\UpgradeObjectStorageRequest $upgradeObjectStorageRequest upgradeObjectStorageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['upgradeObjectStorage'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\UpgradeObjectStorageResponse
+     * @return \Contabo\Generated\Model\UpgradeObjectStorageResponse
      */
     public function upgradeObjectStorage($xRequestId, $objectStorageId, $upgradeObjectStorageRequest, $xTraceId = null, string $contentType = self::contentTypes['upgradeObjectStorage'][0])
     {
@@ -2781,13 +2781,13 @@ class ObjectStoragesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $objectStorageId The identifier of the object storage. (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpgradeObjectStorageRequest $upgradeObjectStorageRequest (required)
+     * @param  \Contabo\Generated\Model\UpgradeObjectStorageRequest $upgradeObjectStorageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['upgradeObjectStorage'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\UpgradeObjectStorageResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\UpgradeObjectStorageResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function upgradeObjectStorageWithHttpInfo($xRequestId, $objectStorageId, $upgradeObjectStorageRequest, $xTraceId = null, string $contentType = self::contentTypes['upgradeObjectStorage'][0])
     {
@@ -2818,11 +2818,11 @@ class ObjectStoragesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\UpgradeObjectStorageResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\UpgradeObjectStorageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\UpgradeObjectStorageResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\UpgradeObjectStorageResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2840,7 +2840,7 @@ class ObjectStoragesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\UpgradeObjectStorageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\UpgradeObjectStorageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2859,7 +2859,7 @@ class ObjectStoragesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\UpgradeObjectStorageResponse';
+            $returnType = '\Contabo\Generated\Model\UpgradeObjectStorageResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2892,7 +2892,7 @@ class ObjectStoragesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\UpgradeObjectStorageResponse',
+                        '\Contabo\Generated\Model\UpgradeObjectStorageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2909,7 +2909,7 @@ class ObjectStoragesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $objectStorageId The identifier of the object storage. (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpgradeObjectStorageRequest $upgradeObjectStorageRequest (required)
+     * @param  \Contabo\Generated\Model\UpgradeObjectStorageRequest $upgradeObjectStorageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['upgradeObjectStorage'] to see the possible values for this operation
      *
@@ -2933,7 +2933,7 @@ class ObjectStoragesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $objectStorageId The identifier of the object storage. (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpgradeObjectStorageRequest $upgradeObjectStorageRequest (required)
+     * @param  \Contabo\Generated\Model\UpgradeObjectStorageRequest $upgradeObjectStorageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['upgradeObjectStorage'] to see the possible values for this operation
      *
@@ -2942,7 +2942,7 @@ class ObjectStoragesApi
      */
     public function upgradeObjectStorageAsyncWithHttpInfo($xRequestId, $objectStorageId, $upgradeObjectStorageRequest, $xTraceId = null, string $contentType = self::contentTypes['upgradeObjectStorage'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\UpgradeObjectStorageResponse';
+        $returnType = '\Contabo\Generated\Model\UpgradeObjectStorageResponse';
         $request = $this->upgradeObjectStorageRequest($xRequestId, $objectStorageId, $upgradeObjectStorageRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -2986,7 +2986,7 @@ class ObjectStoragesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $objectStorageId The identifier of the object storage. (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpgradeObjectStorageRequest $upgradeObjectStorageRequest (required)
+     * @param  \Contabo\Generated\Model\UpgradeObjectStorageRequest $upgradeObjectStorageRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['upgradeObjectStorage'] to see the possible values for this operation
      *

@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Coderic\Contabo\Laravel\Facades;
+namespace Contabo\Laravel\Facades;
 
-use Coderic\Contabo\ContaboClient;
+use Contabo\ContaboClient;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @method static \Coderic\Contabo\ApiResourceProxy instances()
- * @method static \Coderic\Contabo\ApiResourceProxy objectStorages()
- * @method static \Coderic\Contabo\ApiResourceProxy domains()
- * @method static \Coderic\Contabo\ApiResourceProxy dns()
- * @method static \Coderic\Contabo\ApiResourceProxy firewalls()
+ * @method static \Contabo\ApiResourceProxy instances()
+ * @method static \Contabo\ApiResourceProxy objectStorages()
+ * @method static \Contabo\ApiResourceProxy domains()
+ * @method static \Contabo\ApiResourceProxy dns()
+ * @method static \Contabo\ApiResourceProxy firewalls()
  *
  * @see ContaboClient
  */

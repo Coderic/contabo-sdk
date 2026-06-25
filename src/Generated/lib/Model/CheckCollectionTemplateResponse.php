@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * CheckCollectionTemplateResponse Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -67,7 +67,7 @@ class CheckCollectionTemplateResponse implements ModelInterface, ArrayAccess, \J
         'description' => 'string',
         'internal' => 'bool',
         'objectType' => 'string',
-        'checkTemplates' => '\Coderic\Contabo\Generated\Model\CheckCollectionTemplatesCheckTemplates[]'
+        'checkTemplates' => '\Contabo\Generated\Model\CheckCollectionTemplatesCheckTemplates[]'
     ];
 
     /**
@@ -679,7 +679,7 @@ class CheckCollectionTemplateResponse implements ModelInterface, ArrayAccess, \J
     /**
      * Gets checkTemplates
      *
-     * @return \Coderic\Contabo\Generated\Model\CheckCollectionTemplatesCheckTemplates[]
+     * @return \Contabo\Generated\Model\CheckCollectionTemplatesCheckTemplates[]
      */
     public function getCheckTemplates()
     {
@@ -689,7 +689,7 @@ class CheckCollectionTemplateResponse implements ModelInterface, ArrayAccess, \J
     /**
      * Sets checkTemplates
      *
-     * @param \Coderic\Contabo\Generated\Model\CheckCollectionTemplatesCheckTemplates[] $checkTemplates Check templates which are part of this collection template
+     * @param \Contabo\Generated\Model\CheckCollectionTemplatesCheckTemplates[] $checkTemplates Check templates which are part of this collection template
      *
      * @return self
      */

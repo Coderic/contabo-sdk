@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\SnapshotsApi
+# Contabo\Generated\SnapshotsApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `createSnapshot()`
 
 ```php
-createSnapshot($xRequestId, $instanceId, $createSnapshotRequest, $xTraceId): \Coderic\Contabo\Generated\Model\CreateSnapshotResponse
+createSnapshot($xRequestId, $instanceId, $createSnapshotRequest, $xTraceId): \Contabo\Generated\Model\CreateSnapshotResponse
 ```
 
 Create a new instance snapshot
@@ -30,10 +30,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\SnapshotsApi(
+$apiInstance = new Contabo\Generated\Api\SnapshotsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -41,7 +41,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\SnapshotsApi(
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $instanceId = 12345; // int | The identifier of the instance
-$createSnapshotRequest = new \Coderic\Contabo\Generated\Model\CreateSnapshotRequest(); // \Coderic\Contabo\Generated\Model\CreateSnapshotRequest
+$createSnapshotRequest = new \Contabo\Generated\Model\CreateSnapshotRequest(); // \Contabo\Generated\Model\CreateSnapshotRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -58,12 +58,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **instanceId** | **int**| The identifier of the instance | |
-| **createSnapshotRequest** | [**\Coderic\Contabo\Generated\Model\CreateSnapshotRequest**](../Model/CreateSnapshotRequest.md)|  | |
+| **createSnapshotRequest** | [**\Contabo\Generated\Model\CreateSnapshotRequest**](../Model/CreateSnapshotRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\CreateSnapshotResponse**](../Model/CreateSnapshotResponse.md)
+[**\Contabo\Generated\Model\CreateSnapshotResponse**](../Model/CreateSnapshotResponse.md)
 
 ### Authorization
 
@@ -96,10 +96,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\SnapshotsApi(
+$apiInstance = new Contabo\Generated\Api\SnapshotsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -146,7 +146,7 @@ void (empty response body)
 ## `retrieveSnapshot()`
 
 ```php
-retrieveSnapshot($xRequestId, $instanceId, $snapshotId, $xTraceId): \Coderic\Contabo\Generated\Model\FindSnapshotResponse
+retrieveSnapshot($xRequestId, $instanceId, $snapshotId, $xTraceId): \Contabo\Generated\Model\FindSnapshotResponse
 ```
 
 Retrieve a specific snapshot by id
@@ -161,10 +161,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\SnapshotsApi(
+$apiInstance = new Contabo\Generated\Api\SnapshotsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -194,7 +194,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\FindSnapshotResponse**](../Model/FindSnapshotResponse.md)
+[**\Contabo\Generated\Model\FindSnapshotResponse**](../Model/FindSnapshotResponse.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ try {
 ## `retrieveSnapshotList()`
 
 ```php
-retrieveSnapshotList($xRequestId, $instanceId, $xTraceId, $page, $size, $orderBy, $name): \Coderic\Contabo\Generated\Model\ListSnapshotResponse
+retrieveSnapshotList($xRequestId, $instanceId, $xTraceId, $page, $size, $orderBy, $name): \Contabo\Generated\Model\ListSnapshotResponse
 ```
 
 List snapshots
@@ -227,10 +227,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\SnapshotsApi(
+$apiInstance = new Contabo\Generated\Api\SnapshotsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -266,7 +266,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ListSnapshotResponse**](../Model/ListSnapshotResponse.md)
+[**\Contabo\Generated\Model\ListSnapshotResponse**](../Model/ListSnapshotResponse.md)
 
 ### Authorization
 
@@ -284,7 +284,7 @@ try {
 ## `rollbackSnapshot()`
 
 ```php
-rollbackSnapshot($xRequestId, $instanceId, $snapshotId, $body, $xTraceId): \Coderic\Contabo\Generated\Model\RollbackSnapshotResponse
+rollbackSnapshot($xRequestId, $instanceId, $snapshotId, $body, $xTraceId): \Contabo\Generated\Model\RollbackSnapshotResponse
 ```
 
 Revert the instance to a particular snapshot based on its identifier
@@ -299,10 +299,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\SnapshotsApi(
+$apiInstance = new Contabo\Generated\Api\SnapshotsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -334,7 +334,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\RollbackSnapshotResponse**](../Model/RollbackSnapshotResponse.md)
+[**\Contabo\Generated\Model\RollbackSnapshotResponse**](../Model/RollbackSnapshotResponse.md)
 
 ### Authorization
 
@@ -352,7 +352,7 @@ try {
 ## `updateSnapshot()`
 
 ```php
-updateSnapshot($xRequestId, $instanceId, $snapshotId, $updateSnapshotRequest, $xTraceId): \Coderic\Contabo\Generated\Model\UpdateSnapshotResponse
+updateSnapshot($xRequestId, $instanceId, $snapshotId, $updateSnapshotRequest, $xTraceId): \Contabo\Generated\Model\UpdateSnapshotResponse
 ```
 
 Update specific snapshot by id
@@ -367,10 +367,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\SnapshotsApi(
+$apiInstance = new Contabo\Generated\Api\SnapshotsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -379,7 +379,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\SnapshotsApi(
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $instanceId = 12345; // int | The identifier of the instance
 $snapshotId = snap1628603855; // string | The identifier of the snapshot
-$updateSnapshotRequest = new \Coderic\Contabo\Generated\Model\UpdateSnapshotRequest(); // \Coderic\Contabo\Generated\Model\UpdateSnapshotRequest
+$updateSnapshotRequest = new \Contabo\Generated\Model\UpdateSnapshotRequest(); // \Contabo\Generated\Model\UpdateSnapshotRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -397,12 +397,12 @@ try {
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **instanceId** | **int**| The identifier of the instance | |
 | **snapshotId** | **string**| The identifier of the snapshot | |
-| **updateSnapshotRequest** | [**\Coderic\Contabo\Generated\Model\UpdateSnapshotRequest**](../Model/UpdateSnapshotRequest.md)|  | |
+| **updateSnapshotRequest** | [**\Contabo\Generated\Model\UpdateSnapshotRequest**](../Model/UpdateSnapshotRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\UpdateSnapshotResponse**](../Model/UpdateSnapshotResponse.md)
+[**\Contabo\Generated\Model\UpdateSnapshotResponse**](../Model/UpdateSnapshotResponse.md)
 
 ### Authorization
 

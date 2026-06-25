@@ -11,9 +11,9 @@ Name | Type | Description | Notes
 **imageId** | **string** | Image&#39;s id |
 **productId** | **string** | Product ID |
 **region** | **string** | Instance Region where the compute instance should be located. |
-**addOns** | [**\Coderic\Contabo\Generated\Model\AddOnResponse[]**](AddOnResponse.md) |  |
+**addOns** | [**\Contabo\Generated\Model\AddOnResponse[]**](AddOnResponse.md) |  |
 **osType** | **string** | Type of operating system (OS) |
-**status** | [**\Coderic\Contabo\Generated\Model\InstanceStatus**](InstanceStatus.md) | Instance&#39;s status |
+**status** | [**\Contabo\Generated\Model\InstanceStatus**](InstanceStatus.md) | Instance&#39;s status |
 **sshKeys** | **int[]** | Array of &#x60;secretId&#x60;s of public SSH keys for logging into as &#x60;defaultUser&#x60; with administrator/root privileges. Applies to Linux/BSD systems. Please refer to Secrets Management API. |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

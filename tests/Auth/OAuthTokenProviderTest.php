@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Coderic\Contabo\Tests\Auth;
+namespace Contabo\Tests\Auth;
 
-use Coderic\Contabo\Auth\Credentials;
-use Coderic\Contabo\Auth\OAuthTokenProvider;
-use Coderic\Contabo\Tests\Support\MockHttp;
+use Contabo\Auth\Credentials;
+use Contabo\Auth\OAuthTokenProvider;
+use Contabo\Tests\Support\MockHttp;
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;

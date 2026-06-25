@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**autoScaling** | [**\Coderic\Contabo\Generated\Model\UpgradeAutoScalingType**](UpgradeAutoScalingType.md) | New monthly object storage size limit for autoscaling if enabled. | [optional]
+**autoScaling** | [**\Contabo\Generated\Model\UpgradeAutoScalingType**](UpgradeAutoScalingType.md) | New monthly object storage size limit for autoscaling if enabled. | [optional]
 **totalPurchasedSpaceTB** | **float** | New total object storage limit. If this number is larger than before you will also be billed for the added storage space. No downgrade possible. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

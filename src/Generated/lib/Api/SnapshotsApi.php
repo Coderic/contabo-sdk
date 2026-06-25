@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * SnapshotsApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -145,13 +145,13 @@ class SnapshotsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateSnapshotRequest $createSnapshotRequest createSnapshotRequest (required)
+     * @param  \Contabo\Generated\Model\CreateSnapshotRequest $createSnapshotRequest createSnapshotRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSnapshot'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\CreateSnapshotResponse
+     * @return \Contabo\Generated\Model\CreateSnapshotResponse
      */
     public function createSnapshot($xRequestId, $instanceId, $createSnapshotRequest, $xTraceId = null, string $contentType = self::contentTypes['createSnapshot'][0])
     {
@@ -166,13 +166,13 @@ class SnapshotsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateSnapshotRequest $createSnapshotRequest (required)
+     * @param  \Contabo\Generated\Model\CreateSnapshotRequest $createSnapshotRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSnapshot'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\CreateSnapshotResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\CreateSnapshotResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createSnapshotWithHttpInfo($xRequestId, $instanceId, $createSnapshotRequest, $xTraceId = null, string $contentType = self::contentTypes['createSnapshot'][0])
     {
@@ -203,11 +203,11 @@ class SnapshotsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\CreateSnapshotResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\CreateSnapshotResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\CreateSnapshotResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\CreateSnapshotResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -225,7 +225,7 @@ class SnapshotsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\CreateSnapshotResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\CreateSnapshotResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -244,7 +244,7 @@ class SnapshotsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\CreateSnapshotResponse';
+            $returnType = '\Contabo\Generated\Model\CreateSnapshotResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -277,7 +277,7 @@ class SnapshotsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\CreateSnapshotResponse',
+                        '\Contabo\Generated\Model\CreateSnapshotResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -294,7 +294,7 @@ class SnapshotsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateSnapshotRequest $createSnapshotRequest (required)
+     * @param  \Contabo\Generated\Model\CreateSnapshotRequest $createSnapshotRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSnapshot'] to see the possible values for this operation
      *
@@ -318,7 +318,7 @@ class SnapshotsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateSnapshotRequest $createSnapshotRequest (required)
+     * @param  \Contabo\Generated\Model\CreateSnapshotRequest $createSnapshotRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSnapshot'] to see the possible values for this operation
      *
@@ -327,7 +327,7 @@ class SnapshotsApi
      */
     public function createSnapshotAsyncWithHttpInfo($xRequestId, $instanceId, $createSnapshotRequest, $xTraceId = null, string $contentType = self::contentTypes['createSnapshot'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\CreateSnapshotResponse';
+        $returnType = '\Contabo\Generated\Model\CreateSnapshotResponse';
         $request = $this->createSnapshotRequest($xRequestId, $instanceId, $createSnapshotRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -371,7 +371,7 @@ class SnapshotsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateSnapshotRequest $createSnapshotRequest (required)
+     * @param  \Contabo\Generated\Model\CreateSnapshotRequest $createSnapshotRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSnapshot'] to see the possible values for this operation
      *
@@ -509,7 +509,7 @@ class SnapshotsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSnapshot'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -529,7 +529,7 @@ class SnapshotsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSnapshot'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -779,9 +779,9 @@ class SnapshotsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveSnapshot'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\FindSnapshotResponse
+     * @return \Contabo\Generated\Model\FindSnapshotResponse
      */
     public function retrieveSnapshot($xRequestId, $instanceId, $snapshotId, $xTraceId = null, string $contentType = self::contentTypes['retrieveSnapshot'][0])
     {
@@ -800,9 +800,9 @@ class SnapshotsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveSnapshot'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\FindSnapshotResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\FindSnapshotResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveSnapshotWithHttpInfo($xRequestId, $instanceId, $snapshotId, $xTraceId = null, string $contentType = self::contentTypes['retrieveSnapshot'][0])
     {
@@ -833,11 +833,11 @@ class SnapshotsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\FindSnapshotResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\FindSnapshotResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\FindSnapshotResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\FindSnapshotResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -855,7 +855,7 @@ class SnapshotsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\FindSnapshotResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\FindSnapshotResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -874,7 +874,7 @@ class SnapshotsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\FindSnapshotResponse';
+            $returnType = '\Contabo\Generated\Model\FindSnapshotResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -907,7 +907,7 @@ class SnapshotsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\FindSnapshotResponse',
+                        '\Contabo\Generated\Model\FindSnapshotResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -957,7 +957,7 @@ class SnapshotsApi
      */
     public function retrieveSnapshotAsyncWithHttpInfo($xRequestId, $instanceId, $snapshotId, $xTraceId = null, string $contentType = self::contentTypes['retrieveSnapshot'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\FindSnapshotResponse';
+        $returnType = '\Contabo\Generated\Model\FindSnapshotResponse';
         $request = $this->retrieveSnapshotRequest($xRequestId, $instanceId, $snapshotId, $xTraceId, $contentType);
 
         return $this->client
@@ -1143,9 +1143,9 @@ class SnapshotsApi
      * @param  string|null $name Filter as substring match for snapshots names. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveSnapshotList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ListSnapshotResponse
+     * @return \Contabo\Generated\Model\ListSnapshotResponse
      */
     public function retrieveSnapshotList($xRequestId, $instanceId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, string $contentType = self::contentTypes['retrieveSnapshotList'][0])
     {
@@ -1167,9 +1167,9 @@ class SnapshotsApi
      * @param  string|null $name Filter as substring match for snapshots names. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveSnapshotList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ListSnapshotResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ListSnapshotResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveSnapshotListWithHttpInfo($xRequestId, $instanceId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, string $contentType = self::contentTypes['retrieveSnapshotList'][0])
     {
@@ -1200,11 +1200,11 @@ class SnapshotsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ListSnapshotResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ListSnapshotResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ListSnapshotResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ListSnapshotResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1222,7 +1222,7 @@ class SnapshotsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ListSnapshotResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ListSnapshotResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1241,7 +1241,7 @@ class SnapshotsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ListSnapshotResponse';
+            $returnType = '\Contabo\Generated\Model\ListSnapshotResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1274,7 +1274,7 @@ class SnapshotsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ListSnapshotResponse',
+                        '\Contabo\Generated\Model\ListSnapshotResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1330,7 +1330,7 @@ class SnapshotsApi
      */
     public function retrieveSnapshotListAsyncWithHttpInfo($xRequestId, $instanceId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, string $contentType = self::contentTypes['retrieveSnapshotList'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ListSnapshotResponse';
+        $returnType = '\Contabo\Generated\Model\ListSnapshotResponse';
         $request = $this->retrieveSnapshotListRequest($xRequestId, $instanceId, $xTraceId, $page, $size, $orderBy, $name, $contentType);
 
         return $this->client
@@ -1542,9 +1542,9 @@ class SnapshotsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rollbackSnapshot'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\RollbackSnapshotResponse
+     * @return \Contabo\Generated\Model\RollbackSnapshotResponse
      */
     public function rollbackSnapshot($xRequestId, $instanceId, $snapshotId, $body, $xTraceId = null, string $contentType = self::contentTypes['rollbackSnapshot'][0])
     {
@@ -1564,9 +1564,9 @@ class SnapshotsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rollbackSnapshot'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\RollbackSnapshotResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\RollbackSnapshotResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function rollbackSnapshotWithHttpInfo($xRequestId, $instanceId, $snapshotId, $body, $xTraceId = null, string $contentType = self::contentTypes['rollbackSnapshot'][0])
     {
@@ -1597,11 +1597,11 @@ class SnapshotsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\RollbackSnapshotResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\RollbackSnapshotResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\RollbackSnapshotResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\RollbackSnapshotResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1619,7 +1619,7 @@ class SnapshotsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\RollbackSnapshotResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\RollbackSnapshotResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1638,7 +1638,7 @@ class SnapshotsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\RollbackSnapshotResponse';
+            $returnType = '\Contabo\Generated\Model\RollbackSnapshotResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1671,7 +1671,7 @@ class SnapshotsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\RollbackSnapshotResponse',
+                        '\Contabo\Generated\Model\RollbackSnapshotResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1723,7 +1723,7 @@ class SnapshotsApi
      */
     public function rollbackSnapshotAsyncWithHttpInfo($xRequestId, $instanceId, $snapshotId, $body, $xTraceId = null, string $contentType = self::contentTypes['rollbackSnapshot'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\RollbackSnapshotResponse';
+        $returnType = '\Contabo\Generated\Model\RollbackSnapshotResponse';
         $request = $this->rollbackSnapshotRequest($xRequestId, $instanceId, $snapshotId, $body, $xTraceId, $contentType);
 
         return $this->client
@@ -1918,13 +1918,13 @@ class SnapshotsApi
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
      * @param  string $snapshotId The identifier of the snapshot (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateSnapshotRequest $updateSnapshotRequest updateSnapshotRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateSnapshotRequest $updateSnapshotRequest updateSnapshotRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSnapshot'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\UpdateSnapshotResponse
+     * @return \Contabo\Generated\Model\UpdateSnapshotResponse
      */
     public function updateSnapshot($xRequestId, $instanceId, $snapshotId, $updateSnapshotRequest, $xTraceId = null, string $contentType = self::contentTypes['updateSnapshot'][0])
     {
@@ -1940,13 +1940,13 @@ class SnapshotsApi
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
      * @param  string $snapshotId The identifier of the snapshot (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateSnapshotRequest $updateSnapshotRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateSnapshotRequest $updateSnapshotRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSnapshot'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\UpdateSnapshotResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\UpdateSnapshotResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateSnapshotWithHttpInfo($xRequestId, $instanceId, $snapshotId, $updateSnapshotRequest, $xTraceId = null, string $contentType = self::contentTypes['updateSnapshot'][0])
     {
@@ -1977,11 +1977,11 @@ class SnapshotsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\UpdateSnapshotResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\UpdateSnapshotResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\UpdateSnapshotResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\UpdateSnapshotResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1999,7 +1999,7 @@ class SnapshotsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\UpdateSnapshotResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\UpdateSnapshotResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2018,7 +2018,7 @@ class SnapshotsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\UpdateSnapshotResponse';
+            $returnType = '\Contabo\Generated\Model\UpdateSnapshotResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2051,7 +2051,7 @@ class SnapshotsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\UpdateSnapshotResponse',
+                        '\Contabo\Generated\Model\UpdateSnapshotResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2069,7 +2069,7 @@ class SnapshotsApi
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
      * @param  string $snapshotId The identifier of the snapshot (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateSnapshotRequest $updateSnapshotRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateSnapshotRequest $updateSnapshotRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSnapshot'] to see the possible values for this operation
      *
@@ -2094,7 +2094,7 @@ class SnapshotsApi
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
      * @param  string $snapshotId The identifier of the snapshot (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateSnapshotRequest $updateSnapshotRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateSnapshotRequest $updateSnapshotRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSnapshot'] to see the possible values for this operation
      *
@@ -2103,7 +2103,7 @@ class SnapshotsApi
      */
     public function updateSnapshotAsyncWithHttpInfo($xRequestId, $instanceId, $snapshotId, $updateSnapshotRequest, $xTraceId = null, string $contentType = self::contentTypes['updateSnapshot'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\UpdateSnapshotResponse';
+        $returnType = '\Contabo\Generated\Model\UpdateSnapshotResponse';
         $request = $this->updateSnapshotRequest($xRequestId, $instanceId, $snapshotId, $updateSnapshotRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -2148,7 +2148,7 @@ class SnapshotsApi
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
      * @param  string $snapshotId The identifier of the snapshot (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateSnapshotRequest $updateSnapshotRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateSnapshotRequest $updateSnapshotRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSnapshot'] to see the possible values for this operation
      *

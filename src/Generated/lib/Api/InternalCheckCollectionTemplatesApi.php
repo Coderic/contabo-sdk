@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * InternalCheckCollectionTemplatesApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -137,9 +137,9 @@ class InternalCheckCollectionTemplatesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCheckCollectionTemplate'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\CheckCollectionTemplatesGetResponse
+     * @return \Contabo\Generated\Model\CheckCollectionTemplatesGetResponse
      */
     public function getCheckCollectionTemplate($xRequestId, $orgId, $checkCollectionTemplateId, $xTraceId = null, string $contentType = self::contentTypes['getCheckCollectionTemplate'][0])
     {
@@ -158,9 +158,9 @@ class InternalCheckCollectionTemplatesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCheckCollectionTemplate'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\CheckCollectionTemplatesGetResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\CheckCollectionTemplatesGetResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCheckCollectionTemplateWithHttpInfo($xRequestId, $orgId, $checkCollectionTemplateId, $xTraceId = null, string $contentType = self::contentTypes['getCheckCollectionTemplate'][0])
     {
@@ -191,11 +191,11 @@ class InternalCheckCollectionTemplatesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\CheckCollectionTemplatesGetResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\CheckCollectionTemplatesGetResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\CheckCollectionTemplatesGetResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\CheckCollectionTemplatesGetResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -213,7 +213,7 @@ class InternalCheckCollectionTemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\CheckCollectionTemplatesGetResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\CheckCollectionTemplatesGetResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -232,7 +232,7 @@ class InternalCheckCollectionTemplatesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\CheckCollectionTemplatesGetResponse';
+            $returnType = '\Contabo\Generated\Model\CheckCollectionTemplatesGetResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -265,7 +265,7 @@ class InternalCheckCollectionTemplatesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\CheckCollectionTemplatesGetResponse',
+                        '\Contabo\Generated\Model\CheckCollectionTemplatesGetResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -315,7 +315,7 @@ class InternalCheckCollectionTemplatesApi
      */
     public function getCheckCollectionTemplateAsyncWithHttpInfo($xRequestId, $orgId, $checkCollectionTemplateId, $xTraceId = null, string $contentType = self::contentTypes['getCheckCollectionTemplate'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\CheckCollectionTemplatesGetResponse';
+        $returnType = '\Contabo\Generated\Model\CheckCollectionTemplatesGetResponse';
         $request = $this->getCheckCollectionTemplateRequest($xRequestId, $orgId, $checkCollectionTemplateId, $xTraceId, $contentType);
 
         return $this->client
@@ -507,9 +507,9 @@ class InternalCheckCollectionTemplatesApi
      * @param  string|null $objectType Object type for which the check template can be used (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCheckCollectionTemplates'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\CheckCollectionTemplatesListResponse
+     * @return \Contabo\Generated\Model\CheckCollectionTemplatesListResponse
      */
     public function listCheckCollectionTemplates($xRequestId, $orgIds, $xTraceId = null, $page = null, $size = null, $orderBy = null, $creationStartTime = null, $creationEndTime = null, $modificationStartTime = null, $modificationEndTime = null, $accountId = null, $internal = null, $objectType = null, string $contentType = self::contentTypes['listCheckCollectionTemplates'][0])
     {
@@ -537,9 +537,9 @@ class InternalCheckCollectionTemplatesApi
      * @param  string|null $objectType Object type for which the check template can be used (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCheckCollectionTemplates'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\CheckCollectionTemplatesListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\CheckCollectionTemplatesListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCheckCollectionTemplatesWithHttpInfo($xRequestId, $orgIds, $xTraceId = null, $page = null, $size = null, $orderBy = null, $creationStartTime = null, $creationEndTime = null, $modificationStartTime = null, $modificationEndTime = null, $accountId = null, $internal = null, $objectType = null, string $contentType = self::contentTypes['listCheckCollectionTemplates'][0])
     {
@@ -570,11 +570,11 @@ class InternalCheckCollectionTemplatesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\CheckCollectionTemplatesListResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\CheckCollectionTemplatesListResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\CheckCollectionTemplatesListResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\CheckCollectionTemplatesListResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -592,7 +592,7 @@ class InternalCheckCollectionTemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\CheckCollectionTemplatesListResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\CheckCollectionTemplatesListResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -611,7 +611,7 @@ class InternalCheckCollectionTemplatesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\CheckCollectionTemplatesListResponse';
+            $returnType = '\Contabo\Generated\Model\CheckCollectionTemplatesListResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -644,7 +644,7 @@ class InternalCheckCollectionTemplatesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\CheckCollectionTemplatesListResponse',
+                        '\Contabo\Generated\Model\CheckCollectionTemplatesListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -712,7 +712,7 @@ class InternalCheckCollectionTemplatesApi
      */
     public function listCheckCollectionTemplatesAsyncWithHttpInfo($xRequestId, $orgIds, $xTraceId = null, $page = null, $size = null, $orderBy = null, $creationStartTime = null, $creationEndTime = null, $modificationStartTime = null, $modificationEndTime = null, $accountId = null, $internal = null, $objectType = null, string $contentType = self::contentTypes['listCheckCollectionTemplates'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\CheckCollectionTemplatesListResponse';
+        $returnType = '\Contabo\Generated\Model\CheckCollectionTemplatesListResponse';
         $request = $this->listCheckCollectionTemplatesRequest($xRequestId, $orgIds, $xTraceId, $page, $size, $orderBy, $creationStartTime, $creationEndTime, $modificationStartTime, $modificationEndTime, $accountId, $internal, $objectType, $contentType);
 
         return $this->client

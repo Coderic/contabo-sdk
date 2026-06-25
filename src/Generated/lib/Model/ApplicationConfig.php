@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * ApplicationConfig Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class ApplicationConfig implements ModelInterface, ArrayAccess, \JsonSerializabl
         'imageId' => 'string',
         'userDataId' => 'string',
         'userData' => 'string',
-        'metaData' => '\Coderic\Contabo\Generated\Model\ApplicationMetaData'
+        'metaData' => '\Contabo\Generated\Model\ApplicationMetaData'
     ];
 
     /**
@@ -407,7 +407,7 @@ class ApplicationConfig implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets metaData
      *
-     * @return \Coderic\Contabo\Generated\Model\ApplicationMetaData
+     * @return \Contabo\Generated\Model\ApplicationMetaData
      */
     public function getMetaData()
     {
@@ -417,7 +417,7 @@ class ApplicationConfig implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets metaData
      *
-     * @param \Coderic\Contabo\Generated\Model\ApplicationMetaData $metaData Metadata of the application configuration
+     * @param \Contabo\Generated\Model\ApplicationMetaData $metaData Metadata of the application configuration
      *
      * @return self
      */

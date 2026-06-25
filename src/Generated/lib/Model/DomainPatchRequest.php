@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * DomainPatchRequest Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class DomainPatchRequest implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'nameservers' => '\Coderic\Contabo\Generated\Model\Nameserver[]',
-        'handles' => '\Coderic\Contabo\Generated\Model\DomainHandles'
+        'nameservers' => '\Contabo\Generated\Model\Nameserver[]',
+        'handles' => '\Contabo\Generated\Model\DomainHandles'
     ];
 
     /**
@@ -300,7 +300,7 @@ class DomainPatchRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets nameservers
      *
-     * @return \Coderic\Contabo\Generated\Model\Nameserver[]|null
+     * @return \Contabo\Generated\Model\Nameserver[]|null
      */
     public function getNameservers()
     {
@@ -310,7 +310,7 @@ class DomainPatchRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets nameservers
      *
-     * @param \Coderic\Contabo\Generated\Model\Nameserver[]|null $nameservers Nameservers
+     * @param \Contabo\Generated\Model\Nameserver[]|null $nameservers Nameservers
      *
      * @return self
      */
@@ -327,7 +327,7 @@ class DomainPatchRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets handles
      *
-     * @return \Coderic\Contabo\Generated\Model\DomainHandles|null
+     * @return \Contabo\Generated\Model\DomainHandles|null
      */
     public function getHandles()
     {
@@ -337,7 +337,7 @@ class DomainPatchRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets handles
      *
-     * @param \Coderic\Contabo\Generated\Model\DomainHandles|null $handles The handles of the domain
+     * @param \Contabo\Generated\Model\DomainHandles|null $handles The handles of the domain
      *
      * @return self
      */

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **objectStorageId** | **string** | Object storage id |
 **createdDate** | **string** | Creation date for object storage. |
 **dataCenter** | **string** | Data center of the object storage. |
-**autoScaling** | [**\Coderic\Contabo\Generated\Model\AutoScalingTypeResponse**](AutoScalingTypeResponse.md) | The autoscaling limit of the object storage. |
+**autoScaling** | [**\Contabo\Generated\Model\AutoScalingTypeResponse**](AutoScalingTypeResponse.md) | The autoscaling limit of the object storage. |
 **s3Url** | **string** | S3 URL to connect to your S3 compatible object storage |
 **status** | **string** | The object storage status |
 **totalPurchasedSpaceTB** | **float** | Total purchased object storage space in TB. |

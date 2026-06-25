@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * ObjectStorageResponse Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -63,7 +63,7 @@ class ObjectStorageResponse implements ModelInterface, ArrayAccess, \JsonSeriali
         'objectStorageId' => 'string',
         'createdDate' => '\DateTime',
         'cancelDate' => '\DateTime',
-        'autoScaling' => '\Coderic\Contabo\Generated\Model\AutoScalingTypeResponse',
+        'autoScaling' => '\Contabo\Generated\Model\AutoScalingTypeResponse',
         'dataCenter' => 'string',
         'totalPurchasedSpaceTB' => 'float',
         's3Url' => 'string',
@@ -636,7 +636,7 @@ class ObjectStorageResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets autoScaling
      *
-     * @return \Coderic\Contabo\Generated\Model\AutoScalingTypeResponse
+     * @return \Contabo\Generated\Model\AutoScalingTypeResponse
      */
     public function getAutoScaling()
     {
@@ -646,7 +646,7 @@ class ObjectStorageResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets autoScaling
      *
-     * @param \Coderic\Contabo\Generated\Model\AutoScalingTypeResponse $autoScaling Autoscaling settings
+     * @param \Contabo\Generated\Model\AutoScalingTypeResponse $autoScaling Autoscaling settings
      *
      * @return self
      */

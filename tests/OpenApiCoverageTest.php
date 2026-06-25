@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Coderic\Contabo\Tests;
+namespace Contabo\Tests;
 
-use Coderic\Contabo\ApiResourceProxy;
-use Coderic\Contabo\ContaboClient;
+use Contabo\ApiResourceProxy;
+use Contabo\ContaboClient;
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
 

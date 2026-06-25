@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * FirewallResponse Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -64,9 +64,9 @@ class FirewallResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'string',
         'description' => 'string',
         'status' => 'string',
-        'instanceStatus' => '\Coderic\Contabo\Generated\Model\InstanceStatusRepresentation[]',
-        'instances' => '\Coderic\Contabo\Generated\Model\InstanceDetails[]',
-        'rules' => '\Coderic\Contabo\Generated\Model\Rules',
+        'instanceStatus' => '\Contabo\Generated\Model\InstanceStatusRepresentation[]',
+        'instances' => '\Contabo\Generated\Model\InstanceDetails[]',
+        'rules' => '\Contabo\Generated\Model\Rules',
         'createdDate' => '\DateTime',
         'updatedDate' => '\DateTime'
     ];
@@ -635,7 +635,7 @@ class FirewallResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets instanceStatus
      *
-     * @return \Coderic\Contabo\Generated\Model\InstanceStatusRepresentation[]
+     * @return \Contabo\Generated\Model\InstanceStatusRepresentation[]
      */
     public function getInstanceStatus()
     {
@@ -645,7 +645,7 @@ class FirewallResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets instanceStatus
      *
-     * @param \Coderic\Contabo\Generated\Model\InstanceStatusRepresentation[] $instanceStatus instanceStatus
+     * @param \Contabo\Generated\Model\InstanceStatusRepresentation[] $instanceStatus instanceStatus
      *
      * @return self
      */
@@ -662,7 +662,7 @@ class FirewallResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets instances
      *
-     * @return \Coderic\Contabo\Generated\Model\InstanceDetails[]
+     * @return \Contabo\Generated\Model\InstanceDetails[]
      */
     public function getInstances()
     {
@@ -672,7 +672,7 @@ class FirewallResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets instances
      *
-     * @param \Coderic\Contabo\Generated\Model\InstanceDetails[] $instances instances
+     * @param \Contabo\Generated\Model\InstanceDetails[] $instances instances
      *
      * @return self
      */
@@ -689,7 +689,7 @@ class FirewallResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets rules
      *
-     * @return \Coderic\Contabo\Generated\Model\Rules
+     * @return \Contabo\Generated\Model\Rules
      */
     public function getRules()
     {
@@ -699,7 +699,7 @@ class FirewallResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets rules
      *
-     * @param \Coderic\Contabo\Generated\Model\Rules $rules rules
+     * @param \Contabo\Generated\Model\Rules $rules rules
      *
      * @return self
      */

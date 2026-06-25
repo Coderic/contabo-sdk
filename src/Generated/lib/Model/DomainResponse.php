@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * DomainResponse Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,10 +61,10 @@ class DomainResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'tenantId' => 'string',
         'customerId' => 'string',
         'domain' => 'string',
-        'domainDetails' => '\Coderic\Contabo\Generated\Model\DomainDetails',
+        'domainDetails' => '\Contabo\Generated\Model\DomainDetails',
         'status' => 'string',
         'nameservers' => 'string[]',
-        'handles' => '\Coderic\Contabo\Generated\Model\DomainHandles',
+        'handles' => '\Contabo\Generated\Model\DomainHandles',
         'registrationDate' => '\DateTime',
         'renewalDate' => '\DateTime',
         'terminationDate' => '\DateTime',
@@ -549,7 +549,7 @@ class DomainResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets domainDetails
      *
-     * @return \Coderic\Contabo\Generated\Model\DomainDetails
+     * @return \Contabo\Generated\Model\DomainDetails
      */
     public function getDomainDetails()
     {
@@ -559,7 +559,7 @@ class DomainResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets domainDetails
      *
-     * @param \Coderic\Contabo\Generated\Model\DomainDetails $domainDetails Domain Details
+     * @param \Contabo\Generated\Model\DomainDetails $domainDetails Domain Details
      *
      * @return self
      */
@@ -640,7 +640,7 @@ class DomainResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets handles
      *
-     * @return \Coderic\Contabo\Generated\Model\DomainHandles
+     * @return \Contabo\Generated\Model\DomainHandles
      */
     public function getHandles()
     {
@@ -650,7 +650,7 @@ class DomainResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets handles
      *
-     * @param \Coderic\Contabo\Generated\Model\DomainHandles $handles The handles of the domain
+     * @param \Contabo\Generated\Model\DomainHandles $handles The handles of the domain
      *
      * @return self
      */

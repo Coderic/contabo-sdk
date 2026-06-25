@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated\Model
+ * @package  Contabo\Generated\Model
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,12 +27,12 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 /**
  * Interface abstracting model access.
  *
- * @package Coderic\Contabo\Generated\Model
+ * @package Contabo\Generated\Model
  * @author  OpenAPI Generator team
  */
 interface ModelInterface

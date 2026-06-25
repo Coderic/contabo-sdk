@@ -33,13 +33,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Coderic\\Contabo\\Generated\\": "src/Generated/lib/",
-            "Coderic\\Contabo\\": "src/"
+            "Contabo\\Generated\\": "src/Generated/lib/",
+            "Contabo\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Coderic\\Contabo\\Tests\\": "tests/"
+            "Contabo\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -53,10 +53,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Coderic\\Contabo\\Laravel\\ContaboServiceProvider"
+                "Contabo\\Laravel\\ContaboServiceProvider"
             ],
             "aliases": {
-                "Contabo": "Coderic\\Contabo\\Laravel\\Facades\\Contabo"
+                "Contabo": "Contabo\\Laravel\\Facades\\Contabo"
             }
         }
     },

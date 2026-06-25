@@ -20,6 +20,6 @@ Name | Type | Description | Notes
 **standardImage** | **bool** | Flag indicating that image is either a standard (true) or a custom image (false) |
 **creationDate** | **\DateTime** | The creation date time for the image |
 **lastModifiedDate** | **\DateTime** | The last modified date time for the image |
-**tags** | [**\Coderic\Contabo\Generated\Model\AssignedTagResponse[]**](AssignedTagResponse.md) | The tags assigned to the image |
+**tags** | [**\Contabo\Generated\Model\AssignedTagResponse[]**](AssignedTagResponse.md) | The tags assigned to the image |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

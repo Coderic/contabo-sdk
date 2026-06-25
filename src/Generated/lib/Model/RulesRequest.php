@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * RulesRequest Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class RulesRequest implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'inbound' => '\Coderic\Contabo\Generated\Model\FirewallRuleRequest[]'
+        'inbound' => '\Contabo\Generated\Model\FirewallRuleRequest[]'
     ];
 
     /**
@@ -296,7 +296,7 @@ class RulesRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets inbound
      *
-     * @return \Coderic\Contabo\Generated\Model\FirewallRuleRequest[]
+     * @return \Contabo\Generated\Model\FirewallRuleRequest[]
      */
     public function getInbound()
     {
@@ -306,7 +306,7 @@ class RulesRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets inbound
      *
-     * @param \Coderic\Contabo\Generated\Model\FirewallRuleRequest[] $inbound inbound
+     * @param \Contabo\Generated\Model\FirewallRuleRequest[] $inbound inbound
      *
      * @return self
      */

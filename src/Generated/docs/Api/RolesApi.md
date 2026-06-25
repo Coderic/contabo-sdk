@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\RolesApi
+# Contabo\Generated\RolesApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `createRole()`
 
 ```php
-createRole($xRequestId, $createRoleRequest, $xTraceId): \Coderic\Contabo\Generated\Model\CreateRoleResponse
+createRole($xRequestId, $createRoleRequest, $xTraceId): \Contabo\Generated\Model\CreateRoleResponse
 ```
 
 Create a new role
@@ -30,17 +30,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\RolesApi(
+$apiInstance = new Contabo\Generated\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
-$createRoleRequest = new \Coderic\Contabo\Generated\Model\CreateRoleRequest(); // \Coderic\Contabo\Generated\Model\CreateRoleRequest
+$createRoleRequest = new \Contabo\Generated\Model\CreateRoleRequest(); // \Contabo\Generated\Model\CreateRoleRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -56,12 +56,12 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
-| **createRoleRequest** | [**\Coderic\Contabo\Generated\Model\CreateRoleRequest**](../Model/CreateRoleRequest.md)|  | |
+| **createRoleRequest** | [**\Contabo\Generated\Model\CreateRoleRequest**](../Model/CreateRoleRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\CreateRoleResponse**](../Model/CreateRoleResponse.md)
+[**\Contabo\Generated\Model\CreateRoleResponse**](../Model/CreateRoleResponse.md)
 
 ### Authorization
 
@@ -94,10 +94,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\RolesApi(
+$apiInstance = new Contabo\Generated\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -142,7 +142,7 @@ void (empty response body)
 ## `retrieveApiPermissionsList()`
 
 ```php
-retrieveApiPermissionsList($xRequestId, $xTraceId, $page, $size, $orderBy, $apiName): \Coderic\Contabo\Generated\Model\ListApiPermissionResponse
+retrieveApiPermissionsList($xRequestId, $xTraceId, $page, $size, $orderBy, $apiName): \Contabo\Generated\Model\ListApiPermissionResponse
 ```
 
 List of API permissions
@@ -157,10 +157,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\RolesApi(
+$apiInstance = new Contabo\Generated\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -194,7 +194,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ListApiPermissionResponse**](../Model/ListApiPermissionResponse.md)
+[**\Contabo\Generated\Model\ListApiPermissionResponse**](../Model/ListApiPermissionResponse.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ try {
 ## `retrieveRole()`
 
 ```php
-retrieveRole($xRequestId, $roleId, $xTraceId): \Coderic\Contabo\Generated\Model\FindRoleResponse
+retrieveRole($xRequestId, $roleId, $xTraceId): \Contabo\Generated\Model\FindRoleResponse
 ```
 
 Get specific role by id
@@ -227,10 +227,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\RolesApi(
+$apiInstance = new Contabo\Generated\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -258,7 +258,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\FindRoleResponse**](../Model/FindRoleResponse.md)
+[**\Contabo\Generated\Model\FindRoleResponse**](../Model/FindRoleResponse.md)
 
 ### Authorization
 
@@ -276,7 +276,7 @@ try {
 ## `retrieveRoleList()`
 
 ```php
-retrieveRoleList($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $apiName, $tagName, $type): \Coderic\Contabo\Generated\Model\ListRoleResponse
+retrieveRoleList($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $apiName, $tagName, $type): \Contabo\Generated\Model\ListRoleResponse
 ```
 
 List roles
@@ -291,10 +291,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\RolesApi(
+$apiInstance = new Contabo\Generated\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -334,7 +334,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ListRoleResponse**](../Model/ListRoleResponse.md)
+[**\Contabo\Generated\Model\ListRoleResponse**](../Model/ListRoleResponse.md)
 
 ### Authorization
 
@@ -352,7 +352,7 @@ try {
 ## `updateRole()`
 
 ```php
-updateRole($xRequestId, $roleId, $updateRoleRequest, $xTraceId): \Coderic\Contabo\Generated\Model\UpdateRoleResponse
+updateRole($xRequestId, $roleId, $updateRoleRequest, $xTraceId): \Contabo\Generated\Model\UpdateRoleResponse
 ```
 
 Update specific role by id
@@ -367,10 +367,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\RolesApi(
+$apiInstance = new Contabo\Generated\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -378,7 +378,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\RolesApi(
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $roleId = 12345; // int | The identifier of the role
-$updateRoleRequest = new \Coderic\Contabo\Generated\Model\UpdateRoleRequest(); // \Coderic\Contabo\Generated\Model\UpdateRoleRequest
+$updateRoleRequest = new \Contabo\Generated\Model\UpdateRoleRequest(); // \Contabo\Generated\Model\UpdateRoleRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -395,12 +395,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **roleId** | **int**| The identifier of the role | |
-| **updateRoleRequest** | [**\Coderic\Contabo\Generated\Model\UpdateRoleRequest**](../Model/UpdateRoleRequest.md)|  | |
+| **updateRoleRequest** | [**\Contabo\Generated\Model\UpdateRoleRequest**](../Model/UpdateRoleRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\UpdateRoleResponse**](../Model/UpdateRoleResponse.md)
+[**\Contabo\Generated\Model\UpdateRoleResponse**](../Model/UpdateRoleResponse.md)
 
 ### Authorization
 

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * RoleResponse Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -65,7 +65,7 @@ class RoleResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'admin' => 'bool',
         'accessAllResources' => 'bool',
         'type' => 'string',
-        'permissions' => '\Coderic\Contabo\Generated\Model\PermissionResponse[]'
+        'permissions' => '\Contabo\Generated\Model\PermissionResponse[]'
     ];
 
     /**
@@ -570,7 +570,7 @@ class RoleResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets permissions
      *
-     * @return \Coderic\Contabo\Generated\Model\PermissionResponse[]|null
+     * @return \Contabo\Generated\Model\PermissionResponse[]|null
      */
     public function getPermissions()
     {
@@ -580,7 +580,7 @@ class RoleResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets permissions
      *
-     * @param \Coderic\Contabo\Generated\Model\PermissionResponse[]|null $permissions permissions
+     * @param \Contabo\Generated\Model\PermissionResponse[]|null $permissions permissions
      *
      * @return self
      */

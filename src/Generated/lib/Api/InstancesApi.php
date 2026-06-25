@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * InstancesApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -148,13 +148,13 @@ class InstancesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelInstanceRequest $cancelInstanceRequest cancelInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\CancelInstanceRequest $cancelInstanceRequest cancelInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelInstance'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\CancelInstanceResponse
+     * @return \Contabo\Generated\Model\CancelInstanceResponse
      */
     public function cancelInstance($xRequestId, $instanceId, $cancelInstanceRequest, $xTraceId = null, string $contentType = self::contentTypes['cancelInstance'][0])
     {
@@ -169,13 +169,13 @@ class InstancesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelInstanceRequest $cancelInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\CancelInstanceRequest $cancelInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelInstance'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\CancelInstanceResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\CancelInstanceResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelInstanceWithHttpInfo($xRequestId, $instanceId, $cancelInstanceRequest, $xTraceId = null, string $contentType = self::contentTypes['cancelInstance'][0])
     {
@@ -206,11 +206,11 @@ class InstancesApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\CancelInstanceResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\CancelInstanceResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\CancelInstanceResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\CancelInstanceResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -228,7 +228,7 @@ class InstancesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\CancelInstanceResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\CancelInstanceResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -247,7 +247,7 @@ class InstancesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\CancelInstanceResponse';
+            $returnType = '\Contabo\Generated\Model\CancelInstanceResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -280,7 +280,7 @@ class InstancesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\CancelInstanceResponse',
+                        '\Contabo\Generated\Model\CancelInstanceResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -297,7 +297,7 @@ class InstancesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelInstanceRequest $cancelInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\CancelInstanceRequest $cancelInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelInstance'] to see the possible values for this operation
      *
@@ -321,7 +321,7 @@ class InstancesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelInstanceRequest $cancelInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\CancelInstanceRequest $cancelInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelInstance'] to see the possible values for this operation
      *
@@ -330,7 +330,7 @@ class InstancesApi
      */
     public function cancelInstanceAsyncWithHttpInfo($xRequestId, $instanceId, $cancelInstanceRequest, $xTraceId = null, string $contentType = self::contentTypes['cancelInstance'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\CancelInstanceResponse';
+        $returnType = '\Contabo\Generated\Model\CancelInstanceResponse';
         $request = $this->cancelInstanceRequest($xRequestId, $instanceId, $cancelInstanceRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -374,7 +374,7 @@ class InstancesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelInstanceRequest $cancelInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\CancelInstanceRequest $cancelInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelInstance'] to see the possible values for this operation
      *
@@ -507,13 +507,13 @@ class InstancesApi
      * Create a new instance
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateInstanceRequest $createInstanceRequest createInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\CreateInstanceRequest $createInstanceRequest createInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInstance'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\CreateInstanceResponse
+     * @return \Contabo\Generated\Model\CreateInstanceResponse
      */
     public function createInstance($xRequestId, $createInstanceRequest, $xTraceId = null, string $contentType = self::contentTypes['createInstance'][0])
     {
@@ -527,13 +527,13 @@ class InstancesApi
      * Create a new instance
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateInstanceRequest $createInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\CreateInstanceRequest $createInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInstance'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\CreateInstanceResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\CreateInstanceResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createInstanceWithHttpInfo($xRequestId, $createInstanceRequest, $xTraceId = null, string $contentType = self::contentTypes['createInstance'][0])
     {
@@ -564,11 +564,11 @@ class InstancesApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\CreateInstanceResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\CreateInstanceResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\CreateInstanceResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\CreateInstanceResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -586,7 +586,7 @@ class InstancesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\CreateInstanceResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\CreateInstanceResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -605,7 +605,7 @@ class InstancesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\CreateInstanceResponse';
+            $returnType = '\Contabo\Generated\Model\CreateInstanceResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -638,7 +638,7 @@ class InstancesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\CreateInstanceResponse',
+                        '\Contabo\Generated\Model\CreateInstanceResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -654,7 +654,7 @@ class InstancesApi
      * Create a new instance
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateInstanceRequest $createInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\CreateInstanceRequest $createInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInstance'] to see the possible values for this operation
      *
@@ -677,7 +677,7 @@ class InstancesApi
      * Create a new instance
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateInstanceRequest $createInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\CreateInstanceRequest $createInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInstance'] to see the possible values for this operation
      *
@@ -686,7 +686,7 @@ class InstancesApi
      */
     public function createInstanceAsyncWithHttpInfo($xRequestId, $createInstanceRequest, $xTraceId = null, string $contentType = self::contentTypes['createInstance'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\CreateInstanceResponse';
+        $returnType = '\Contabo\Generated\Model\CreateInstanceResponse';
         $request = $this->createInstanceRequest($xRequestId, $createInstanceRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -729,7 +729,7 @@ class InstancesApi
      * Create request for operation 'createInstance'
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateInstanceRequest $createInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\CreateInstanceRequest $createInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInstance'] to see the possible values for this operation
      *
@@ -848,13 +848,13 @@ class InstancesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\PatchInstanceRequest $patchInstanceRequest patchInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\PatchInstanceRequest $patchInstanceRequest patchInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchInstance'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\PatchInstanceResponse
+     * @return \Contabo\Generated\Model\PatchInstanceResponse
      */
     public function patchInstance($xRequestId, $instanceId, $patchInstanceRequest, $xTraceId = null, string $contentType = self::contentTypes['patchInstance'][0])
     {
@@ -869,13 +869,13 @@ class InstancesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\PatchInstanceRequest $patchInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\PatchInstanceRequest $patchInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchInstance'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\PatchInstanceResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\PatchInstanceResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchInstanceWithHttpInfo($xRequestId, $instanceId, $patchInstanceRequest, $xTraceId = null, string $contentType = self::contentTypes['patchInstance'][0])
     {
@@ -906,11 +906,11 @@ class InstancesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\PatchInstanceResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\PatchInstanceResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\PatchInstanceResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\PatchInstanceResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -928,7 +928,7 @@ class InstancesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\PatchInstanceResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\PatchInstanceResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -947,7 +947,7 @@ class InstancesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\PatchInstanceResponse';
+            $returnType = '\Contabo\Generated\Model\PatchInstanceResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -980,7 +980,7 @@ class InstancesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\PatchInstanceResponse',
+                        '\Contabo\Generated\Model\PatchInstanceResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -997,7 +997,7 @@ class InstancesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\PatchInstanceRequest $patchInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\PatchInstanceRequest $patchInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchInstance'] to see the possible values for this operation
      *
@@ -1021,7 +1021,7 @@ class InstancesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\PatchInstanceRequest $patchInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\PatchInstanceRequest $patchInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchInstance'] to see the possible values for this operation
      *
@@ -1030,7 +1030,7 @@ class InstancesApi
      */
     public function patchInstanceAsyncWithHttpInfo($xRequestId, $instanceId, $patchInstanceRequest, $xTraceId = null, string $contentType = self::contentTypes['patchInstance'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\PatchInstanceResponse';
+        $returnType = '\Contabo\Generated\Model\PatchInstanceResponse';
         $request = $this->patchInstanceRequest($xRequestId, $instanceId, $patchInstanceRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -1074,7 +1074,7 @@ class InstancesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\PatchInstanceRequest $patchInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\PatchInstanceRequest $patchInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchInstance'] to see the possible values for this operation
      *
@@ -1208,13 +1208,13 @@ class InstancesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\ReinstallInstanceRequest $reinstallInstanceRequest reinstallInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\ReinstallInstanceRequest $reinstallInstanceRequest reinstallInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reinstallInstance'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ReinstallInstanceResponse
+     * @return \Contabo\Generated\Model\ReinstallInstanceResponse
      */
     public function reinstallInstance($xRequestId, $instanceId, $reinstallInstanceRequest, $xTraceId = null, string $contentType = self::contentTypes['reinstallInstance'][0])
     {
@@ -1229,13 +1229,13 @@ class InstancesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\ReinstallInstanceRequest $reinstallInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\ReinstallInstanceRequest $reinstallInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reinstallInstance'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ReinstallInstanceResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ReinstallInstanceResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function reinstallInstanceWithHttpInfo($xRequestId, $instanceId, $reinstallInstanceRequest, $xTraceId = null, string $contentType = self::contentTypes['reinstallInstance'][0])
     {
@@ -1266,11 +1266,11 @@ class InstancesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ReinstallInstanceResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ReinstallInstanceResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ReinstallInstanceResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ReinstallInstanceResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1288,7 +1288,7 @@ class InstancesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ReinstallInstanceResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ReinstallInstanceResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1307,7 +1307,7 @@ class InstancesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ReinstallInstanceResponse';
+            $returnType = '\Contabo\Generated\Model\ReinstallInstanceResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1340,7 +1340,7 @@ class InstancesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ReinstallInstanceResponse',
+                        '\Contabo\Generated\Model\ReinstallInstanceResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1357,7 +1357,7 @@ class InstancesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\ReinstallInstanceRequest $reinstallInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\ReinstallInstanceRequest $reinstallInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reinstallInstance'] to see the possible values for this operation
      *
@@ -1381,7 +1381,7 @@ class InstancesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\ReinstallInstanceRequest $reinstallInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\ReinstallInstanceRequest $reinstallInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reinstallInstance'] to see the possible values for this operation
      *
@@ -1390,7 +1390,7 @@ class InstancesApi
      */
     public function reinstallInstanceAsyncWithHttpInfo($xRequestId, $instanceId, $reinstallInstanceRequest, $xTraceId = null, string $contentType = self::contentTypes['reinstallInstance'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ReinstallInstanceResponse';
+        $returnType = '\Contabo\Generated\Model\ReinstallInstanceResponse';
         $request = $this->reinstallInstanceRequest($xRequestId, $instanceId, $reinstallInstanceRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -1434,7 +1434,7 @@ class InstancesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\ReinstallInstanceRequest $reinstallInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\ReinstallInstanceRequest $reinstallInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reinstallInstance'] to see the possible values for this operation
      *
@@ -1571,9 +1571,9 @@ class InstancesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveInstance'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\FindInstanceResponse
+     * @return \Contabo\Generated\Model\FindInstanceResponse
      */
     public function retrieveInstance($xRequestId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['retrieveInstance'][0])
     {
@@ -1591,9 +1591,9 @@ class InstancesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveInstance'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\FindInstanceResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\FindInstanceResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveInstanceWithHttpInfo($xRequestId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['retrieveInstance'][0])
     {
@@ -1624,11 +1624,11 @@ class InstancesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\FindInstanceResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\FindInstanceResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\FindInstanceResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\FindInstanceResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1646,7 +1646,7 @@ class InstancesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\FindInstanceResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\FindInstanceResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1665,7 +1665,7 @@ class InstancesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\FindInstanceResponse';
+            $returnType = '\Contabo\Generated\Model\FindInstanceResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1698,7 +1698,7 @@ class InstancesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\FindInstanceResponse',
+                        '\Contabo\Generated\Model\FindInstanceResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1746,7 +1746,7 @@ class InstancesApi
      */
     public function retrieveInstanceAsyncWithHttpInfo($xRequestId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['retrieveInstance'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\FindInstanceResponse';
+        $returnType = '\Contabo\Generated\Model\FindInstanceResponse';
         $request = $this->retrieveInstanceRequest($xRequestId, $instanceId, $xTraceId, $contentType);
 
         return $this->client
@@ -1928,9 +1928,9 @@ class InstancesApi
      * @param  string|null $tenantId Filter by tenant ID (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveInstancesList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ListInstancesResponse
+     * @return \Contabo\Generated\Model\ListInstancesResponse
      */
     public function retrieveInstancesList($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $displayName = null, $dataCenter = null, $region = null, $instanceId = null, $instanceIds = null, $status = null, $productIds = null, $addOnIds = null, $productTypes = null, $ipConfig = null, $search = null, $customerId = null, $tenantId = null, string $contentType = self::contentTypes['retrieveInstancesList'][0])
     {
@@ -1964,9 +1964,9 @@ class InstancesApi
      * @param  string|null $tenantId Filter by tenant ID (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveInstancesList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ListInstancesResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ListInstancesResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveInstancesListWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $displayName = null, $dataCenter = null, $region = null, $instanceId = null, $instanceIds = null, $status = null, $productIds = null, $addOnIds = null, $productTypes = null, $ipConfig = null, $search = null, $customerId = null, $tenantId = null, string $contentType = self::contentTypes['retrieveInstancesList'][0])
     {
@@ -1997,11 +1997,11 @@ class InstancesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ListInstancesResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ListInstancesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ListInstancesResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ListInstancesResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2019,7 +2019,7 @@ class InstancesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ListInstancesResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ListInstancesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2038,7 +2038,7 @@ class InstancesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ListInstancesResponse';
+            $returnType = '\Contabo\Generated\Model\ListInstancesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2071,7 +2071,7 @@ class InstancesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ListInstancesResponse',
+                        '\Contabo\Generated\Model\ListInstancesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2151,7 +2151,7 @@ class InstancesApi
      */
     public function retrieveInstancesListAsyncWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $displayName = null, $dataCenter = null, $region = null, $instanceId = null, $instanceIds = null, $status = null, $productIds = null, $addOnIds = null, $productTypes = null, $ipConfig = null, $search = null, $customerId = null, $tenantId = null, string $contentType = self::contentTypes['retrieveInstancesList'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ListInstancesResponse';
+        $returnType = '\Contabo\Generated\Model\ListInstancesResponse';
         $request = $this->retrieveInstancesListRequest($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $displayName, $dataCenter, $region, $instanceId, $instanceIds, $status, $productIds, $addOnIds, $productTypes, $ipConfig, $search, $customerId, $tenantId, $contentType);
 
         return $this->client
@@ -2485,13 +2485,13 @@ class InstancesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpgradeInstanceRequest $upgradeInstanceRequest upgradeInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\UpgradeInstanceRequest $upgradeInstanceRequest upgradeInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['upgradeInstance'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\PatchInstanceResponse
+     * @return \Contabo\Generated\Model\PatchInstanceResponse
      */
     public function upgradeInstance($xRequestId, $instanceId, $upgradeInstanceRequest, $xTraceId = null, string $contentType = self::contentTypes['upgradeInstance'][0])
     {
@@ -2506,13 +2506,13 @@ class InstancesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpgradeInstanceRequest $upgradeInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\UpgradeInstanceRequest $upgradeInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['upgradeInstance'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\PatchInstanceResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\PatchInstanceResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function upgradeInstanceWithHttpInfo($xRequestId, $instanceId, $upgradeInstanceRequest, $xTraceId = null, string $contentType = self::contentTypes['upgradeInstance'][0])
     {
@@ -2543,11 +2543,11 @@ class InstancesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\PatchInstanceResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\PatchInstanceResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\PatchInstanceResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\PatchInstanceResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2565,7 +2565,7 @@ class InstancesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\PatchInstanceResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\PatchInstanceResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2584,7 +2584,7 @@ class InstancesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\PatchInstanceResponse';
+            $returnType = '\Contabo\Generated\Model\PatchInstanceResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2617,7 +2617,7 @@ class InstancesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\PatchInstanceResponse',
+                        '\Contabo\Generated\Model\PatchInstanceResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2634,7 +2634,7 @@ class InstancesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpgradeInstanceRequest $upgradeInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\UpgradeInstanceRequest $upgradeInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['upgradeInstance'] to see the possible values for this operation
      *
@@ -2658,7 +2658,7 @@ class InstancesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpgradeInstanceRequest $upgradeInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\UpgradeInstanceRequest $upgradeInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['upgradeInstance'] to see the possible values for this operation
      *
@@ -2667,7 +2667,7 @@ class InstancesApi
      */
     public function upgradeInstanceAsyncWithHttpInfo($xRequestId, $instanceId, $upgradeInstanceRequest, $xTraceId = null, string $contentType = self::contentTypes['upgradeInstance'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\PatchInstanceResponse';
+        $returnType = '\Contabo\Generated\Model\PatchInstanceResponse';
         $request = $this->upgradeInstanceRequest($xRequestId, $instanceId, $upgradeInstanceRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -2711,7 +2711,7 @@ class InstancesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the instance (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpgradeInstanceRequest $upgradeInstanceRequest (required)
+     * @param  \Contabo\Generated\Model\UpgradeInstanceRequest $upgradeInstanceRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['upgradeInstance'] to see the possible values for this operation
      *

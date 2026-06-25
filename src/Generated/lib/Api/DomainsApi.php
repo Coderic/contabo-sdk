@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * DomainsApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -163,13 +163,13 @@ class DomainsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $domain Domain Name (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelDomainRequest $cancelDomainRequest cancelDomainRequest (required)
+     * @param  \Contabo\Generated\Model\CancelDomainRequest $cancelDomainRequest cancelDomainRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelDomain'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\DomainCancelResponse
+     * @return \Contabo\Generated\Model\DomainCancelResponse
      */
     public function cancelDomain($xRequestId, $domain, $cancelDomainRequest, $xTraceId = null, string $contentType = self::contentTypes['cancelDomain'][0])
     {
@@ -184,13 +184,13 @@ class DomainsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $domain Domain Name (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelDomainRequest $cancelDomainRequest (required)
+     * @param  \Contabo\Generated\Model\CancelDomainRequest $cancelDomainRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelDomain'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\DomainCancelResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\DomainCancelResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelDomainWithHttpInfo($xRequestId, $domain, $cancelDomainRequest, $xTraceId = null, string $contentType = self::contentTypes['cancelDomain'][0])
     {
@@ -221,11 +221,11 @@ class DomainsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\DomainCancelResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\DomainCancelResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\DomainCancelResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\DomainCancelResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -243,7 +243,7 @@ class DomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\DomainCancelResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\DomainCancelResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -262,7 +262,7 @@ class DomainsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\DomainCancelResponse';
+            $returnType = '\Contabo\Generated\Model\DomainCancelResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -295,7 +295,7 @@ class DomainsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\DomainCancelResponse',
+                        '\Contabo\Generated\Model\DomainCancelResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -312,7 +312,7 @@ class DomainsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $domain Domain Name (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelDomainRequest $cancelDomainRequest (required)
+     * @param  \Contabo\Generated\Model\CancelDomainRequest $cancelDomainRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelDomain'] to see the possible values for this operation
      *
@@ -336,7 +336,7 @@ class DomainsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $domain Domain Name (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelDomainRequest $cancelDomainRequest (required)
+     * @param  \Contabo\Generated\Model\CancelDomainRequest $cancelDomainRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelDomain'] to see the possible values for this operation
      *
@@ -345,7 +345,7 @@ class DomainsApi
      */
     public function cancelDomainAsyncWithHttpInfo($xRequestId, $domain, $cancelDomainRequest, $xTraceId = null, string $contentType = self::contentTypes['cancelDomain'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\DomainCancelResponse';
+        $returnType = '\Contabo\Generated\Model\DomainCancelResponse';
         $request = $this->cancelDomainRequest($xRequestId, $domain, $cancelDomainRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -389,7 +389,7 @@ class DomainsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $domain Domain Name (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelDomainRequest $cancelDomainRequest (required)
+     * @param  \Contabo\Generated\Model\CancelDomainRequest $cancelDomainRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelDomain'] to see the possible values for this operation
      *
@@ -526,7 +526,7 @@ class DomainsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['confirmDomainTransferOut'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -545,7 +545,7 @@ class DomainsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['confirmDomainTransferOut'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -776,7 +776,7 @@ class DomainsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['confirmDomainTransferOut_0'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -795,7 +795,7 @@ class DomainsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['confirmDomainTransferOut_0'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1026,9 +1026,9 @@ class DomainsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAuthCode'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\DomainAuthCodeRegenerateResponse
+     * @return \Contabo\Generated\Model\DomainAuthCodeRegenerateResponse
      */
     public function getAuthCode($xRequestId, $domain, $xTraceId = null, string $contentType = self::contentTypes['getAuthCode'][0])
     {
@@ -1046,9 +1046,9 @@ class DomainsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAuthCode'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\DomainAuthCodeRegenerateResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\DomainAuthCodeRegenerateResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAuthCodeWithHttpInfo($xRequestId, $domain, $xTraceId = null, string $contentType = self::contentTypes['getAuthCode'][0])
     {
@@ -1079,11 +1079,11 @@ class DomainsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\DomainAuthCodeRegenerateResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\DomainAuthCodeRegenerateResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\DomainAuthCodeRegenerateResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\DomainAuthCodeRegenerateResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1101,7 +1101,7 @@ class DomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\DomainAuthCodeRegenerateResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\DomainAuthCodeRegenerateResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1120,7 +1120,7 @@ class DomainsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\DomainAuthCodeRegenerateResponse';
+            $returnType = '\Contabo\Generated\Model\DomainAuthCodeRegenerateResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1153,7 +1153,7 @@ class DomainsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\DomainAuthCodeRegenerateResponse',
+                        '\Contabo\Generated\Model\DomainAuthCodeRegenerateResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1201,7 +1201,7 @@ class DomainsApi
      */
     public function getAuthCodeAsyncWithHttpInfo($xRequestId, $domain, $xTraceId = null, string $contentType = self::contentTypes['getAuthCode'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\DomainAuthCodeRegenerateResponse';
+        $returnType = '\Contabo\Generated\Model\DomainAuthCodeRegenerateResponse';
         $request = $this->getAuthCodeRequest($xRequestId, $domain, $xTraceId, $contentType);
 
         return $this->client
@@ -1372,9 +1372,9 @@ class DomainsApi
      * @param  string|null $status Filter domains by status (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listDomains'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\DomainsListResponse
+     * @return \Contabo\Generated\Model\DomainsListResponse
      */
     public function listDomains($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $sld = null, $tld = null, $status = null, string $contentType = self::contentTypes['listDomains'][0])
     {
@@ -1397,9 +1397,9 @@ class DomainsApi
      * @param  string|null $status Filter domains by status (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listDomains'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\DomainsListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\DomainsListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listDomainsWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $sld = null, $tld = null, $status = null, string $contentType = self::contentTypes['listDomains'][0])
     {
@@ -1430,11 +1430,11 @@ class DomainsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\DomainsListResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\DomainsListResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\DomainsListResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\DomainsListResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1452,7 +1452,7 @@ class DomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\DomainsListResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\DomainsListResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1471,7 +1471,7 @@ class DomainsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\DomainsListResponse';
+            $returnType = '\Contabo\Generated\Model\DomainsListResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1504,7 +1504,7 @@ class DomainsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\DomainsListResponse',
+                        '\Contabo\Generated\Model\DomainsListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1562,7 +1562,7 @@ class DomainsApi
      */
     public function listDomainsAsyncWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $sld = null, $tld = null, $status = null, string $contentType = self::contentTypes['listDomains'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\DomainsListResponse';
+        $returnType = '\Contabo\Generated\Model\DomainsListResponse';
         $request = $this->listDomainsRequest($xRequestId, $xTraceId, $page, $size, $orderBy, $sld, $tld, $status, $contentType);
 
         return $this->client
@@ -1774,13 +1774,13 @@ class DomainsApi
      * Create or transfer a domain
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\DomainCreateRequest $domainCreateRequest domainCreateRequest (required)
+     * @param  \Contabo\Generated\Model\DomainCreateRequest $domainCreateRequest domainCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['orderDomain'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\DomainCreateResponse
+     * @return \Contabo\Generated\Model\DomainCreateResponse
      */
     public function orderDomain($xRequestId, $domainCreateRequest, $xTraceId = null, string $contentType = self::contentTypes['orderDomain'][0])
     {
@@ -1794,13 +1794,13 @@ class DomainsApi
      * Create or transfer a domain
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\DomainCreateRequest $domainCreateRequest (required)
+     * @param  \Contabo\Generated\Model\DomainCreateRequest $domainCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['orderDomain'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\DomainCreateResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\DomainCreateResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function orderDomainWithHttpInfo($xRequestId, $domainCreateRequest, $xTraceId = null, string $contentType = self::contentTypes['orderDomain'][0])
     {
@@ -1831,11 +1831,11 @@ class DomainsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\DomainCreateResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\DomainCreateResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\DomainCreateResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\DomainCreateResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1853,7 +1853,7 @@ class DomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\DomainCreateResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\DomainCreateResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1872,7 +1872,7 @@ class DomainsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\DomainCreateResponse';
+            $returnType = '\Contabo\Generated\Model\DomainCreateResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1905,7 +1905,7 @@ class DomainsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\DomainCreateResponse',
+                        '\Contabo\Generated\Model\DomainCreateResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1921,7 +1921,7 @@ class DomainsApi
      * Create or transfer a domain
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\DomainCreateRequest $domainCreateRequest (required)
+     * @param  \Contabo\Generated\Model\DomainCreateRequest $domainCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['orderDomain'] to see the possible values for this operation
      *
@@ -1944,7 +1944,7 @@ class DomainsApi
      * Create or transfer a domain
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\DomainCreateRequest $domainCreateRequest (required)
+     * @param  \Contabo\Generated\Model\DomainCreateRequest $domainCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['orderDomain'] to see the possible values for this operation
      *
@@ -1953,7 +1953,7 @@ class DomainsApi
      */
     public function orderDomainAsyncWithHttpInfo($xRequestId, $domainCreateRequest, $xTraceId = null, string $contentType = self::contentTypes['orderDomain'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\DomainCreateResponse';
+        $returnType = '\Contabo\Generated\Model\DomainCreateResponse';
         $request = $this->orderDomainRequest($xRequestId, $domainCreateRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -1996,7 +1996,7 @@ class DomainsApi
      * Create request for operation 'orderDomain'
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\DomainCreateRequest $domainCreateRequest (required)
+     * @param  \Contabo\Generated\Model\DomainCreateRequest $domainCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['orderDomain'] to see the possible values for this operation
      *
@@ -2118,9 +2118,9 @@ class DomainsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveDomain'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\DomainFindResponse
+     * @return \Contabo\Generated\Model\DomainFindResponse
      */
     public function retrieveDomain($xRequestId, $domain, $xTraceId = null, string $contentType = self::contentTypes['retrieveDomain'][0])
     {
@@ -2138,9 +2138,9 @@ class DomainsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveDomain'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\DomainFindResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\DomainFindResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveDomainWithHttpInfo($xRequestId, $domain, $xTraceId = null, string $contentType = self::contentTypes['retrieveDomain'][0])
     {
@@ -2171,11 +2171,11 @@ class DomainsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\DomainFindResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\DomainFindResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\DomainFindResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\DomainFindResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2193,7 +2193,7 @@ class DomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\DomainFindResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\DomainFindResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2212,7 +2212,7 @@ class DomainsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\DomainFindResponse';
+            $returnType = '\Contabo\Generated\Model\DomainFindResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2245,7 +2245,7 @@ class DomainsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\DomainFindResponse',
+                        '\Contabo\Generated\Model\DomainFindResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2293,7 +2293,7 @@ class DomainsApi
      */
     public function retrieveDomainAsyncWithHttpInfo($xRequestId, $domain, $xTraceId = null, string $contentType = self::contentTypes['retrieveDomain'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\DomainFindResponse';
+        $returnType = '\Contabo\Generated\Model\DomainFindResponse';
         $request = $this->retrieveDomainRequest($xRequestId, $domain, $xTraceId, $contentType);
 
         return $this->client
@@ -2459,7 +2459,7 @@ class DomainsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['revokeCancelDomain'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2478,7 +2478,7 @@ class DomainsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['revokeCancelDomain'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2709,7 +2709,7 @@ class DomainsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['revokeDomainTransferOut'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2728,7 +2728,7 @@ class DomainsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['revokeDomainTransferOut'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2959,7 +2959,7 @@ class DomainsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['revokeDomainTransferOut_0'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2978,7 +2978,7 @@ class DomainsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['revokeDomainTransferOut_0'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3206,13 +3206,13 @@ class DomainsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $domain Domain Name (required)
-     * @param  \Coderic\Contabo\Generated\Model\DomainPatchRequest $domainPatchRequest domainPatchRequest (required)
+     * @param  \Contabo\Generated\Model\DomainPatchRequest $domainPatchRequest domainPatchRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDomain'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\DomainPatchResponse
+     * @return \Contabo\Generated\Model\DomainPatchResponse
      */
     public function updateDomain($xRequestId, $domain, $domainPatchRequest, $xTraceId = null, string $contentType = self::contentTypes['updateDomain'][0])
     {
@@ -3227,13 +3227,13 @@ class DomainsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $domain Domain Name (required)
-     * @param  \Coderic\Contabo\Generated\Model\DomainPatchRequest $domainPatchRequest (required)
+     * @param  \Contabo\Generated\Model\DomainPatchRequest $domainPatchRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDomain'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\DomainPatchResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\DomainPatchResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateDomainWithHttpInfo($xRequestId, $domain, $domainPatchRequest, $xTraceId = null, string $contentType = self::contentTypes['updateDomain'][0])
     {
@@ -3264,11 +3264,11 @@ class DomainsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\DomainPatchResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\DomainPatchResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\DomainPatchResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\DomainPatchResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3286,7 +3286,7 @@ class DomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\DomainPatchResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\DomainPatchResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3305,7 +3305,7 @@ class DomainsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\DomainPatchResponse';
+            $returnType = '\Contabo\Generated\Model\DomainPatchResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3338,7 +3338,7 @@ class DomainsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\DomainPatchResponse',
+                        '\Contabo\Generated\Model\DomainPatchResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3355,7 +3355,7 @@ class DomainsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $domain Domain Name (required)
-     * @param  \Coderic\Contabo\Generated\Model\DomainPatchRequest $domainPatchRequest (required)
+     * @param  \Contabo\Generated\Model\DomainPatchRequest $domainPatchRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDomain'] to see the possible values for this operation
      *
@@ -3379,7 +3379,7 @@ class DomainsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $domain Domain Name (required)
-     * @param  \Coderic\Contabo\Generated\Model\DomainPatchRequest $domainPatchRequest (required)
+     * @param  \Contabo\Generated\Model\DomainPatchRequest $domainPatchRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDomain'] to see the possible values for this operation
      *
@@ -3388,7 +3388,7 @@ class DomainsApi
      */
     public function updateDomainAsyncWithHttpInfo($xRequestId, $domain, $domainPatchRequest, $xTraceId = null, string $contentType = self::contentTypes['updateDomain'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\DomainPatchResponse';
+        $returnType = '\Contabo\Generated\Model\DomainPatchResponse';
         $request = $this->updateDomainRequest($xRequestId, $domain, $domainPatchRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -3432,7 +3432,7 @@ class DomainsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $domain Domain Name (required)
-     * @param  \Coderic\Contabo\Generated\Model\DomainPatchRequest $domainPatchRequest (required)
+     * @param  \Contabo\Generated\Model\DomainPatchRequest $domainPatchRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDomain'] to see the possible values for this operation
      *
@@ -3569,7 +3569,7 @@ class DomainsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['validateDomainAvailability'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3588,7 +3588,7 @@ class DomainsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['validateDomainAvailability'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * InstanceResponse Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'tenantId' => 'string',
         'customerId' => 'string',
-        'additionalIps' => '\Coderic\Contabo\Generated\Model\AdditionalIp[]',
+        'additionalIps' => '\Contabo\Generated\Model\AdditionalIp[]',
         'name' => 'string',
         'displayName' => 'string',
         'instanceId' => 'int',
@@ -69,7 +69,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'regionName' => 'string',
         'productId' => 'string',
         'imageId' => 'string',
-        'ipConfig' => '\Coderic\Contabo\Generated\Model\IpConfig2',
+        'ipConfig' => '\Contabo\Generated\Model\IpConfig2',
         'macAddress' => 'string',
         'ramMb' => 'float',
         'cpuCores' => 'int',
@@ -78,11 +78,11 @@ class InstanceResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'sshKeys' => 'int[]',
         'createdDate' => '\DateTime',
         'cancelDate' => '\DateTime',
-        'status' => '\Coderic\Contabo\Generated\Model\InstanceStatus',
+        'status' => '\Contabo\Generated\Model\InstanceStatus',
         'vHostId' => 'int',
         'vHostNumber' => 'int',
         'vHostName' => 'string',
-        'addOns' => '\Coderic\Contabo\Generated\Model\AddOnResponse[]',
+        'addOns' => '\Contabo\Generated\Model\AddOnResponse[]',
         'errorMessage' => 'string',
         'productType' => 'string',
         'productName' => 'string',
@@ -752,7 +752,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets additionalIps
      *
-     * @return \Coderic\Contabo\Generated\Model\AdditionalIp[]
+     * @return \Contabo\Generated\Model\AdditionalIp[]
      */
     public function getAdditionalIps()
     {
@@ -762,7 +762,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets additionalIps
      *
-     * @param \Coderic\Contabo\Generated\Model\AdditionalIp[] $additionalIps additionalIps
+     * @param \Contabo\Generated\Model\AdditionalIp[] $additionalIps additionalIps
      *
      * @return self
      */
@@ -995,7 +995,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets ipConfig
      *
-     * @return \Coderic\Contabo\Generated\Model\IpConfig2
+     * @return \Contabo\Generated\Model\IpConfig2
      */
     public function getIpConfig()
     {
@@ -1005,7 +1005,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets ipConfig
      *
-     * @param \Coderic\Contabo\Generated\Model\IpConfig2 $ipConfig ipConfig
+     * @param \Contabo\Generated\Model\IpConfig2 $ipConfig ipConfig
      *
      * @return self
      */
@@ -1248,7 +1248,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets status
      *
-     * @return \Coderic\Contabo\Generated\Model\InstanceStatus
+     * @return \Contabo\Generated\Model\InstanceStatus
      */
     public function getStatus()
     {
@@ -1258,7 +1258,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets status
      *
-     * @param \Coderic\Contabo\Generated\Model\InstanceStatus $status Instance's status
+     * @param \Contabo\Generated\Model\InstanceStatus $status Instance's status
      *
      * @return self
      */
@@ -1356,7 +1356,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets addOns
      *
-     * @return \Coderic\Contabo\Generated\Model\AddOnResponse[]
+     * @return \Contabo\Generated\Model\AddOnResponse[]
      */
     public function getAddOns()
     {
@@ -1366,7 +1366,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets addOns
      *
-     * @param \Coderic\Contabo\Generated\Model\AddOnResponse[] $addOns addOns
+     * @param \Contabo\Generated\Model\AddOnResponse[] $addOns addOns
      *
      * @return self
      */

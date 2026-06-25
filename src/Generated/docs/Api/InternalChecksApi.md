@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\InternalChecksApi
+# Contabo\Generated\InternalChecksApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `cancelCheck()`
 
 ```php
-cancelCheck($xRequestId, $checkId, $orgId, $cancelRequest, $xTraceId): \Coderic\Contabo\Generated\Model\ChecksGetResponse
+cancelCheck($xRequestId, $checkId, $orgId, $cancelRequest, $xTraceId): \Contabo\Generated\Model\ChecksGetResponse
 ```
 
 Cancel check
@@ -28,10 +28,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InternalChecksApi(
+$apiInstance = new Contabo\Generated\Api\InternalChecksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -40,7 +40,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\InternalChecksApi(
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $checkId = 12345; // float | Check's id
 $orgId = cntb; // string | Org ID
-$cancelRequest = new \Coderic\Contabo\Generated\Model\CancelRequest(); // \Coderic\Contabo\Generated\Model\CancelRequest
+$cancelRequest = new \Contabo\Generated\Model\CancelRequest(); // \Contabo\Generated\Model\CancelRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -58,12 +58,12 @@ try {
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **checkId** | **float**| Check&#39;s id | |
 | **orgId** | **string**| Org ID | |
-| **cancelRequest** | [**\Coderic\Contabo\Generated\Model\CancelRequest**](../Model/CancelRequest.md)|  | |
+| **cancelRequest** | [**\Contabo\Generated\Model\CancelRequest**](../Model/CancelRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ChecksGetResponse**](../Model/ChecksGetResponse.md)
+[**\Contabo\Generated\Model\ChecksGetResponse**](../Model/ChecksGetResponse.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ try {
 ## `getCheck()`
 
 ```php
-getCheck($xRequestId, $checkId, $orgId, $xTraceId): \Coderic\Contabo\Generated\Model\ChecksGetResponse
+getCheck($xRequestId, $checkId, $orgId, $xTraceId): \Contabo\Generated\Model\ChecksGetResponse
 ```
 
 Get check
@@ -96,10 +96,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InternalChecksApi(
+$apiInstance = new Contabo\Generated\Api\InternalChecksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -129,7 +129,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ChecksGetResponse**](../Model/ChecksGetResponse.md)
+[**\Contabo\Generated\Model\ChecksGetResponse**](../Model/ChecksGetResponse.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ try {
 ## `listChecks()`
 
 ```php
-listChecks($xRequestId, $orgIds, $xTraceId, $objectType, $objectId, $status, $checkCollectionId, $checkTemplateId, $page, $size, $orderBy, $creationStartTime, $creationEndTime, $modificationStartTime, $modificationEndTime, $accountId): \Coderic\Contabo\Generated\Model\ChecksListResponse
+listChecks($xRequestId, $orgIds, $xTraceId, $objectType, $objectId, $status, $checkCollectionId, $checkTemplateId, $page, $size, $orderBy, $creationStartTime, $creationEndTime, $modificationStartTime, $modificationEndTime, $accountId): \Contabo\Generated\Model\ChecksListResponse
 ```
 
 List check
@@ -162,10 +162,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InternalChecksApi(
+$apiInstance = new Contabo\Generated\Api\InternalChecksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -219,7 +219,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ChecksListResponse**](../Model/ChecksListResponse.md)
+[**\Contabo\Generated\Model\ChecksListResponse**](../Model/ChecksListResponse.md)
 
 ### Authorization
 
@@ -237,7 +237,7 @@ try {
 ## `startCheck()`
 
 ```php
-startCheck($xRequestId, $checkCreateRequest, $xTraceId): \Coderic\Contabo\Generated\Model\ChecksGetResponse
+startCheck($xRequestId, $checkCreateRequest, $xTraceId): \Contabo\Generated\Model\ChecksGetResponse
 ```
 
 Start check
@@ -252,17 +252,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InternalChecksApi(
+$apiInstance = new Contabo\Generated\Api\InternalChecksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
-$checkCreateRequest = new \Coderic\Contabo\Generated\Model\CheckCreateRequest(); // \Coderic\Contabo\Generated\Model\CheckCreateRequest
+$checkCreateRequest = new \Contabo\Generated\Model\CheckCreateRequest(); // \Contabo\Generated\Model\CheckCreateRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -278,12 +278,12 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
-| **checkCreateRequest** | [**\Coderic\Contabo\Generated\Model\CheckCreateRequest**](../Model/CheckCreateRequest.md)|  | |
+| **checkCreateRequest** | [**\Contabo\Generated\Model\CheckCreateRequest**](../Model/CheckCreateRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ChecksGetResponse**](../Model/ChecksGetResponse.md)
+[**\Contabo\Generated\Model\ChecksGetResponse**](../Model/ChecksGetResponse.md)
 
 ### Authorization
 

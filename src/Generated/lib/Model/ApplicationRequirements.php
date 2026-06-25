@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * ApplicationRequirements Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class ApplicationRequirements implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'minimum' => '\Coderic\Contabo\Generated\Model\MinimumRequirements',
-        'optimal' => '\Coderic\Contabo\Generated\Model\OptimalRequirements'
+        'minimum' => '\Contabo\Generated\Model\MinimumRequirements',
+        'optimal' => '\Contabo\Generated\Model\OptimalRequirements'
     ];
 
     /**
@@ -300,7 +300,7 @@ class ApplicationRequirements implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets minimum
      *
-     * @return \Coderic\Contabo\Generated\Model\MinimumRequirements|null
+     * @return \Contabo\Generated\Model\MinimumRequirements|null
      */
     public function getMinimum()
     {
@@ -310,7 +310,7 @@ class ApplicationRequirements implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets minimum
      *
-     * @param \Coderic\Contabo\Generated\Model\MinimumRequirements|null $minimum Application minimum requirements
+     * @param \Contabo\Generated\Model\MinimumRequirements|null $minimum Application minimum requirements
      *
      * @return self
      */
@@ -327,7 +327,7 @@ class ApplicationRequirements implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets optimal
      *
-     * @return \Coderic\Contabo\Generated\Model\OptimalRequirements|null
+     * @return \Contabo\Generated\Model\OptimalRequirements|null
      */
     public function getOptimal()
     {
@@ -337,7 +337,7 @@ class ApplicationRequirements implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets optimal
      *
-     * @param \Coderic\Contabo\Generated\Model\OptimalRequirements|null $optimal Application optimal requirements
+     * @param \Contabo\Generated\Model\OptimalRequirements|null $optimal Application optimal requirements
      *
      * @return self
      */

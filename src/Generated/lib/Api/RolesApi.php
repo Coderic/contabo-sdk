@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * RolesApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -144,13 +144,13 @@ class RolesApi
      * Create a new role
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateRoleRequest $createRoleRequest createRoleRequest (required)
+     * @param  \Contabo\Generated\Model\CreateRoleRequest $createRoleRequest createRoleRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRole'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\CreateRoleResponse
+     * @return \Contabo\Generated\Model\CreateRoleResponse
      */
     public function createRole($xRequestId, $createRoleRequest, $xTraceId = null, string $contentType = self::contentTypes['createRole'][0])
     {
@@ -164,13 +164,13 @@ class RolesApi
      * Create a new role
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateRoleRequest $createRoleRequest (required)
+     * @param  \Contabo\Generated\Model\CreateRoleRequest $createRoleRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRole'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\CreateRoleResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\CreateRoleResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createRoleWithHttpInfo($xRequestId, $createRoleRequest, $xTraceId = null, string $contentType = self::contentTypes['createRole'][0])
     {
@@ -201,11 +201,11 @@ class RolesApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\CreateRoleResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\CreateRoleResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\CreateRoleResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\CreateRoleResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -223,7 +223,7 @@ class RolesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\CreateRoleResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\CreateRoleResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -242,7 +242,7 @@ class RolesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\CreateRoleResponse';
+            $returnType = '\Contabo\Generated\Model\CreateRoleResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -275,7 +275,7 @@ class RolesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\CreateRoleResponse',
+                        '\Contabo\Generated\Model\CreateRoleResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -291,7 +291,7 @@ class RolesApi
      * Create a new role
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateRoleRequest $createRoleRequest (required)
+     * @param  \Contabo\Generated\Model\CreateRoleRequest $createRoleRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRole'] to see the possible values for this operation
      *
@@ -314,7 +314,7 @@ class RolesApi
      * Create a new role
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateRoleRequest $createRoleRequest (required)
+     * @param  \Contabo\Generated\Model\CreateRoleRequest $createRoleRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRole'] to see the possible values for this operation
      *
@@ -323,7 +323,7 @@ class RolesApi
      */
     public function createRoleAsyncWithHttpInfo($xRequestId, $createRoleRequest, $xTraceId = null, string $contentType = self::contentTypes['createRole'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\CreateRoleResponse';
+        $returnType = '\Contabo\Generated\Model\CreateRoleResponse';
         $request = $this->createRoleRequest($xRequestId, $createRoleRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -366,7 +366,7 @@ class RolesApi
      * Create request for operation 'createRole'
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateRoleRequest $createRoleRequest (required)
+     * @param  \Contabo\Generated\Model\CreateRoleRequest $createRoleRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRole'] to see the possible values for this operation
      *
@@ -488,7 +488,7 @@ class RolesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteRole'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -507,7 +507,7 @@ class RolesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteRole'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -741,9 +741,9 @@ class RolesApi
      * @param  string|null $apiName The name of api (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveApiPermissionsList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ListApiPermissionResponse
+     * @return \Contabo\Generated\Model\ListApiPermissionResponse
      */
     public function retrieveApiPermissionsList($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $apiName = null, string $contentType = self::contentTypes['retrieveApiPermissionsList'][0])
     {
@@ -764,9 +764,9 @@ class RolesApi
      * @param  string|null $apiName The name of api (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveApiPermissionsList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ListApiPermissionResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ListApiPermissionResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveApiPermissionsListWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $apiName = null, string $contentType = self::contentTypes['retrieveApiPermissionsList'][0])
     {
@@ -797,11 +797,11 @@ class RolesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ListApiPermissionResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ListApiPermissionResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ListApiPermissionResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ListApiPermissionResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -819,7 +819,7 @@ class RolesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ListApiPermissionResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ListApiPermissionResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -838,7 +838,7 @@ class RolesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ListApiPermissionResponse';
+            $returnType = '\Contabo\Generated\Model\ListApiPermissionResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -871,7 +871,7 @@ class RolesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ListApiPermissionResponse',
+                        '\Contabo\Generated\Model\ListApiPermissionResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -925,7 +925,7 @@ class RolesApi
      */
     public function retrieveApiPermissionsListAsyncWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $apiName = null, string $contentType = self::contentTypes['retrieveApiPermissionsList'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ListApiPermissionResponse';
+        $returnType = '\Contabo\Generated\Model\ListApiPermissionResponse';
         $request = $this->retrieveApiPermissionsListRequest($xRequestId, $xTraceId, $page, $size, $orderBy, $apiName, $contentType);
 
         return $this->client
@@ -1119,9 +1119,9 @@ class RolesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveRole'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\FindRoleResponse
+     * @return \Contabo\Generated\Model\FindRoleResponse
      */
     public function retrieveRole($xRequestId, $roleId, $xTraceId = null, string $contentType = self::contentTypes['retrieveRole'][0])
     {
@@ -1139,9 +1139,9 @@ class RolesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveRole'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\FindRoleResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\FindRoleResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveRoleWithHttpInfo($xRequestId, $roleId, $xTraceId = null, string $contentType = self::contentTypes['retrieveRole'][0])
     {
@@ -1172,11 +1172,11 @@ class RolesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\FindRoleResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\FindRoleResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\FindRoleResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\FindRoleResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1194,7 +1194,7 @@ class RolesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\FindRoleResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\FindRoleResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1213,7 +1213,7 @@ class RolesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\FindRoleResponse';
+            $returnType = '\Contabo\Generated\Model\FindRoleResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1246,7 +1246,7 @@ class RolesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\FindRoleResponse',
+                        '\Contabo\Generated\Model\FindRoleResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1294,7 +1294,7 @@ class RolesApi
      */
     public function retrieveRoleAsyncWithHttpInfo($xRequestId, $roleId, $xTraceId = null, string $contentType = self::contentTypes['retrieveRole'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\FindRoleResponse';
+        $returnType = '\Contabo\Generated\Model\FindRoleResponse';
         $request = $this->retrieveRoleRequest($xRequestId, $roleId, $xTraceId, $contentType);
 
         return $this->client
@@ -1466,9 +1466,9 @@ class RolesApi
      * @param  string|null $type The type of the tag. Can be either &#x60;default&#x60; or &#x60;custom&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveRoleList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ListRoleResponse
+     * @return \Contabo\Generated\Model\ListRoleResponse
      */
     public function retrieveRoleList($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $apiName = null, $tagName = null, $type = null, string $contentType = self::contentTypes['retrieveRoleList'][0])
     {
@@ -1492,9 +1492,9 @@ class RolesApi
      * @param  string|null $type The type of the tag. Can be either &#x60;default&#x60; or &#x60;custom&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveRoleList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ListRoleResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ListRoleResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveRoleListWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $apiName = null, $tagName = null, $type = null, string $contentType = self::contentTypes['retrieveRoleList'][0])
     {
@@ -1525,11 +1525,11 @@ class RolesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ListRoleResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ListRoleResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ListRoleResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ListRoleResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1547,7 +1547,7 @@ class RolesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ListRoleResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ListRoleResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1566,7 +1566,7 @@ class RolesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ListRoleResponse';
+            $returnType = '\Contabo\Generated\Model\ListRoleResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1599,7 +1599,7 @@ class RolesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ListRoleResponse',
+                        '\Contabo\Generated\Model\ListRoleResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1659,7 +1659,7 @@ class RolesApi
      */
     public function retrieveRoleListAsyncWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $apiName = null, $tagName = null, $type = null, string $contentType = self::contentTypes['retrieveRoleList'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ListRoleResponse';
+        $returnType = '\Contabo\Generated\Model\ListRoleResponse';
         $request = $this->retrieveRoleListRequest($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $apiName, $tagName, $type, $contentType);
 
         return $this->client
@@ -1883,13 +1883,13 @@ class RolesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $roleId The identifier of the role (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateRoleRequest $updateRoleRequest updateRoleRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateRoleRequest $updateRoleRequest updateRoleRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateRole'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\UpdateRoleResponse
+     * @return \Contabo\Generated\Model\UpdateRoleResponse
      */
     public function updateRole($xRequestId, $roleId, $updateRoleRequest, $xTraceId = null, string $contentType = self::contentTypes['updateRole'][0])
     {
@@ -1904,13 +1904,13 @@ class RolesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $roleId The identifier of the role (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateRoleRequest $updateRoleRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateRoleRequest $updateRoleRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateRole'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\UpdateRoleResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\UpdateRoleResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateRoleWithHttpInfo($xRequestId, $roleId, $updateRoleRequest, $xTraceId = null, string $contentType = self::contentTypes['updateRole'][0])
     {
@@ -1941,11 +1941,11 @@ class RolesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\UpdateRoleResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\UpdateRoleResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\UpdateRoleResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\UpdateRoleResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1963,7 +1963,7 @@ class RolesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\UpdateRoleResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\UpdateRoleResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1982,7 +1982,7 @@ class RolesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\UpdateRoleResponse';
+            $returnType = '\Contabo\Generated\Model\UpdateRoleResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2015,7 +2015,7 @@ class RolesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\UpdateRoleResponse',
+                        '\Contabo\Generated\Model\UpdateRoleResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2032,7 +2032,7 @@ class RolesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $roleId The identifier of the role (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateRoleRequest $updateRoleRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateRoleRequest $updateRoleRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateRole'] to see the possible values for this operation
      *
@@ -2056,7 +2056,7 @@ class RolesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $roleId The identifier of the role (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateRoleRequest $updateRoleRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateRoleRequest $updateRoleRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateRole'] to see the possible values for this operation
      *
@@ -2065,7 +2065,7 @@ class RolesApi
      */
     public function updateRoleAsyncWithHttpInfo($xRequestId, $roleId, $updateRoleRequest, $xTraceId = null, string $contentType = self::contentTypes['updateRole'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\UpdateRoleResponse';
+        $returnType = '\Contabo\Generated\Model\UpdateRoleResponse';
         $request = $this->updateRoleRequest($xRequestId, $roleId, $updateRoleRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -2109,7 +2109,7 @@ class RolesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $roleId The identifier of the role (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateRoleRequest $updateRoleRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateRoleRequest $updateRoleRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateRole'] to see the possible values for this operation
      *

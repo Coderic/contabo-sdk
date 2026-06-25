@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * InternalRemediesApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -140,13 +140,13 @@ class InternalRemediesApi
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  float $remedyId Remedy&#39;s id (required)
      * @param  string $orgId Org ID (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelRequest $cancelRequest cancelRequest (required)
+     * @param  \Contabo\Generated\Model\CancelRequest $cancelRequest cancelRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelRemedy'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\RemediesGetResponse
+     * @return \Contabo\Generated\Model\RemediesGetResponse
      */
     public function cancelRemedy($xRequestId, $remedyId, $orgId, $cancelRequest, $xTraceId = null, string $contentType = self::contentTypes['cancelRemedy'][0])
     {
@@ -162,13 +162,13 @@ class InternalRemediesApi
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  float $remedyId Remedy&#39;s id (required)
      * @param  string $orgId Org ID (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelRequest $cancelRequest (required)
+     * @param  \Contabo\Generated\Model\CancelRequest $cancelRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelRemedy'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\RemediesGetResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\RemediesGetResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelRemedyWithHttpInfo($xRequestId, $remedyId, $orgId, $cancelRequest, $xTraceId = null, string $contentType = self::contentTypes['cancelRemedy'][0])
     {
@@ -199,11 +199,11 @@ class InternalRemediesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\RemediesGetResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\RemediesGetResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\RemediesGetResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\RemediesGetResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -221,7 +221,7 @@ class InternalRemediesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\RemediesGetResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\RemediesGetResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -240,7 +240,7 @@ class InternalRemediesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\RemediesGetResponse';
+            $returnType = '\Contabo\Generated\Model\RemediesGetResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -273,7 +273,7 @@ class InternalRemediesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\RemediesGetResponse',
+                        '\Contabo\Generated\Model\RemediesGetResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -291,7 +291,7 @@ class InternalRemediesApi
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  float $remedyId Remedy&#39;s id (required)
      * @param  string $orgId Org ID (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelRequest $cancelRequest (required)
+     * @param  \Contabo\Generated\Model\CancelRequest $cancelRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelRemedy'] to see the possible values for this operation
      *
@@ -316,7 +316,7 @@ class InternalRemediesApi
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  float $remedyId Remedy&#39;s id (required)
      * @param  string $orgId Org ID (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelRequest $cancelRequest (required)
+     * @param  \Contabo\Generated\Model\CancelRequest $cancelRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelRemedy'] to see the possible values for this operation
      *
@@ -325,7 +325,7 @@ class InternalRemediesApi
      */
     public function cancelRemedyAsyncWithHttpInfo($xRequestId, $remedyId, $orgId, $cancelRequest, $xTraceId = null, string $contentType = self::contentTypes['cancelRemedy'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\RemediesGetResponse';
+        $returnType = '\Contabo\Generated\Model\RemediesGetResponse';
         $request = $this->cancelRemedyRequest($xRequestId, $remedyId, $orgId, $cancelRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -370,7 +370,7 @@ class InternalRemediesApi
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  float $remedyId Remedy&#39;s id (required)
      * @param  string $orgId Org ID (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelRequest $cancelRequest (required)
+     * @param  \Contabo\Generated\Model\CancelRequest $cancelRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelRemedy'] to see the possible values for this operation
      *
@@ -523,9 +523,9 @@ class InternalRemediesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRemedy'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\RemediesGetResponse
+     * @return \Contabo\Generated\Model\RemediesGetResponse
      */
     public function getRemedy($xRequestId, $remedyId, $orgId, $xTraceId = null, string $contentType = self::contentTypes['getRemedy'][0])
     {
@@ -544,9 +544,9 @@ class InternalRemediesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRemedy'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\RemediesGetResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\RemediesGetResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRemedyWithHttpInfo($xRequestId, $remedyId, $orgId, $xTraceId = null, string $contentType = self::contentTypes['getRemedy'][0])
     {
@@ -577,11 +577,11 @@ class InternalRemediesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\RemediesGetResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\RemediesGetResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\RemediesGetResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\RemediesGetResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -599,7 +599,7 @@ class InternalRemediesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\RemediesGetResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\RemediesGetResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -618,7 +618,7 @@ class InternalRemediesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\RemediesGetResponse';
+            $returnType = '\Contabo\Generated\Model\RemediesGetResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -651,7 +651,7 @@ class InternalRemediesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\RemediesGetResponse',
+                        '\Contabo\Generated\Model\RemediesGetResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -701,7 +701,7 @@ class InternalRemediesApi
      */
     public function getRemedyAsyncWithHttpInfo($xRequestId, $remedyId, $orgId, $xTraceId = null, string $contentType = self::contentTypes['getRemedy'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\RemediesGetResponse';
+        $returnType = '\Contabo\Generated\Model\RemediesGetResponse';
         $request = $this->getRemedyRequest($xRequestId, $remedyId, $orgId, $xTraceId, $contentType);
 
         return $this->client
@@ -896,9 +896,9 @@ class InternalRemediesApi
      * @param  string|null $accountId Filter by account ID (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listRemedies'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\RemediesListResponse
+     * @return \Contabo\Generated\Model\RemediesListResponse
      */
     public function listRemedies($xRequestId, $orgIds, $xTraceId = null, $objectType = null, $objectId = null, $status = null, $remedyCollectionId = null, $remedyTemplateId = null, $page = null, $size = null, $orderBy = null, $creationStartTime = null, $creationEndTime = null, $modificationStartTime = null, $modificationEndTime = null, $accountId = null, string $contentType = self::contentTypes['listRemedies'][0])
     {
@@ -929,9 +929,9 @@ class InternalRemediesApi
      * @param  string|null $accountId Filter by account ID (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listRemedies'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\RemediesListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\RemediesListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listRemediesWithHttpInfo($xRequestId, $orgIds, $xTraceId = null, $objectType = null, $objectId = null, $status = null, $remedyCollectionId = null, $remedyTemplateId = null, $page = null, $size = null, $orderBy = null, $creationStartTime = null, $creationEndTime = null, $modificationStartTime = null, $modificationEndTime = null, $accountId = null, string $contentType = self::contentTypes['listRemedies'][0])
     {
@@ -962,11 +962,11 @@ class InternalRemediesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\RemediesListResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\RemediesListResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\RemediesListResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\RemediesListResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -984,7 +984,7 @@ class InternalRemediesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\RemediesListResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\RemediesListResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1003,7 +1003,7 @@ class InternalRemediesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\RemediesListResponse';
+            $returnType = '\Contabo\Generated\Model\RemediesListResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1036,7 +1036,7 @@ class InternalRemediesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\RemediesListResponse',
+                        '\Contabo\Generated\Model\RemediesListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1110,7 +1110,7 @@ class InternalRemediesApi
      */
     public function listRemediesAsyncWithHttpInfo($xRequestId, $orgIds, $xTraceId = null, $objectType = null, $objectId = null, $status = null, $remedyCollectionId = null, $remedyTemplateId = null, $page = null, $size = null, $orderBy = null, $creationStartTime = null, $creationEndTime = null, $modificationStartTime = null, $modificationEndTime = null, $accountId = null, string $contentType = self::contentTypes['listRemedies'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\RemediesListResponse';
+        $returnType = '\Contabo\Generated\Model\RemediesListResponse';
         $request = $this->listRemediesRequest($xRequestId, $orgIds, $xTraceId, $objectType, $objectId, $status, $remedyCollectionId, $remedyTemplateId, $page, $size, $orderBy, $creationStartTime, $creationEndTime, $modificationStartTime, $modificationEndTime, $accountId, $contentType);
 
         return $this->client
@@ -1416,13 +1416,13 @@ class InternalRemediesApi
      * Start remedy
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\RemediesCreateRequest $remediesCreateRequest remediesCreateRequest (required)
+     * @param  \Contabo\Generated\Model\RemediesCreateRequest $remediesCreateRequest remediesCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['startRemedy'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\RemediesGetResponse
+     * @return \Contabo\Generated\Model\RemediesGetResponse
      */
     public function startRemedy($xRequestId, $remediesCreateRequest, $xTraceId = null, string $contentType = self::contentTypes['startRemedy'][0])
     {
@@ -1436,13 +1436,13 @@ class InternalRemediesApi
      * Start remedy
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\RemediesCreateRequest $remediesCreateRequest (required)
+     * @param  \Contabo\Generated\Model\RemediesCreateRequest $remediesCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['startRemedy'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\RemediesGetResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\RemediesGetResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function startRemedyWithHttpInfo($xRequestId, $remediesCreateRequest, $xTraceId = null, string $contentType = self::contentTypes['startRemedy'][0])
     {
@@ -1473,11 +1473,11 @@ class InternalRemediesApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\RemediesGetResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\RemediesGetResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\RemediesGetResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\RemediesGetResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1495,7 +1495,7 @@ class InternalRemediesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\RemediesGetResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\RemediesGetResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1514,7 +1514,7 @@ class InternalRemediesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\RemediesGetResponse';
+            $returnType = '\Contabo\Generated\Model\RemediesGetResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1547,7 +1547,7 @@ class InternalRemediesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\RemediesGetResponse',
+                        '\Contabo\Generated\Model\RemediesGetResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1563,7 +1563,7 @@ class InternalRemediesApi
      * Start remedy
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\RemediesCreateRequest $remediesCreateRequest (required)
+     * @param  \Contabo\Generated\Model\RemediesCreateRequest $remediesCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['startRemedy'] to see the possible values for this operation
      *
@@ -1586,7 +1586,7 @@ class InternalRemediesApi
      * Start remedy
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\RemediesCreateRequest $remediesCreateRequest (required)
+     * @param  \Contabo\Generated\Model\RemediesCreateRequest $remediesCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['startRemedy'] to see the possible values for this operation
      *
@@ -1595,7 +1595,7 @@ class InternalRemediesApi
      */
     public function startRemedyAsyncWithHttpInfo($xRequestId, $remediesCreateRequest, $xTraceId = null, string $contentType = self::contentTypes['startRemedy'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\RemediesGetResponse';
+        $returnType = '\Contabo\Generated\Model\RemediesGetResponse';
         $request = $this->startRemedyRequest($xRequestId, $remediesCreateRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -1638,7 +1638,7 @@ class InternalRemediesApi
      * Create request for operation 'startRemedy'
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\RemediesCreateRequest $remediesCreateRequest (required)
+     * @param  \Contabo\Generated\Model\RemediesCreateRequest $remediesCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['startRemedy'] to see the possible values for this operation
      *

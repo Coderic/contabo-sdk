@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * HandlePatchRequest Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,10 +60,10 @@ class HandlePatchRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $openAPITypes = [
         'email' => 'string',
         'gender' => 'string',
-        'birthInfo' => '\Coderic\Contabo\Generated\Model\HandleBirthInfo',
-        'address' => '\Coderic\Contabo\Generated\Model\HandleAddress',
-        'phone' => '\Coderic\Contabo\Generated\Model\HandlePhone',
-        'fax' => '\Coderic\Contabo\Generated\Model\HandlePhone'
+        'birthInfo' => '\Contabo\Generated\Model\HandleBirthInfo',
+        'address' => '\Contabo\Generated\Model\HandleAddress',
+        'phone' => '\Contabo\Generated\Model\HandlePhone',
+        'fax' => '\Contabo\Generated\Model\HandlePhone'
     ];
 
     /**
@@ -445,7 +445,7 @@ class HandlePatchRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets birthInfo
      *
-     * @return \Coderic\Contabo\Generated\Model\HandleBirthInfo|null
+     * @return \Contabo\Generated\Model\HandleBirthInfo|null
      */
     public function getBirthInfo()
     {
@@ -455,7 +455,7 @@ class HandlePatchRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets birthInfo
      *
-     * @param \Coderic\Contabo\Generated\Model\HandleBirthInfo|null $birthInfo The birth info of the handle
+     * @param \Contabo\Generated\Model\HandleBirthInfo|null $birthInfo The birth info of the handle
      *
      * @return self
      */
@@ -472,7 +472,7 @@ class HandlePatchRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets address
      *
-     * @return \Coderic\Contabo\Generated\Model\HandleAddress
+     * @return \Contabo\Generated\Model\HandleAddress
      */
     public function getAddress()
     {
@@ -482,7 +482,7 @@ class HandlePatchRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets address
      *
-     * @param \Coderic\Contabo\Generated\Model\HandleAddress $address Address details for handle
+     * @param \Contabo\Generated\Model\HandleAddress $address Address details for handle
      *
      * @return self
      */
@@ -499,7 +499,7 @@ class HandlePatchRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets phone
      *
-     * @return \Coderic\Contabo\Generated\Model\HandlePhone
+     * @return \Contabo\Generated\Model\HandlePhone
      */
     public function getPhone()
     {
@@ -509,7 +509,7 @@ class HandlePatchRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets phone
      *
-     * @param \Coderic\Contabo\Generated\Model\HandlePhone $phone Handle phone
+     * @param \Contabo\Generated\Model\HandlePhone $phone Handle phone
      *
      * @return self
      */
@@ -526,7 +526,7 @@ class HandlePatchRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets fax
      *
-     * @return \Coderic\Contabo\Generated\Model\HandlePhone|null
+     * @return \Contabo\Generated\Model\HandlePhone|null
      */
     public function getFax()
     {
@@ -536,7 +536,7 @@ class HandlePatchRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets fax
      *
-     * @param \Coderic\Contabo\Generated\Model\HandlePhone|null $fax Handle fax
+     * @param \Contabo\Generated\Model\HandlePhone|null $fax Handle fax
      *
      * @return self
      */

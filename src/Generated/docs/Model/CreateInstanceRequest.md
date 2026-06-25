@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **period** | **int** | Initial contract period in months. Available periods are: 1, 3, 6 and 12 months. Default to 1 month | [default to 1]
 **displayName** | **string** | The display name of the instance | [optional]
 **defaultUser** | **string** | Default user name created for login during (re-)installation with administrative privileges. Allowed values for Linux/BSD are &#x60;admin&#x60; (use sudo to apply administrative privileges like root) or &#x60;root&#x60;. Allowed values for Windows are &#x60;admin&#x60; (has administrative privileges like administrator) or &#x60;administrator&#x60;. | [optional] [default to 'admin']
-**addOns** | [**\Coderic\Contabo\Generated\Model\CreateInstanceAddons**](CreateInstanceAddons.md) | Set attributes in the addons object for the corresponding ones that need to be added to the instance | [optional]
+**addOns** | [**\Contabo\Generated\Model\CreateInstanceAddons**](CreateInstanceAddons.md) | Set attributes in the addons object for the corresponding ones that need to be added to the instance | [optional]
 **applicationId** | **string** | Application ID | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

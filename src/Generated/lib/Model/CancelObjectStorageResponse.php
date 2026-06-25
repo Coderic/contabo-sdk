@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * CancelObjectStorageResponse Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class CancelObjectStorageResponse implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'links' => '\Coderic\Contabo\Generated\Model\SelfLinks',
-        'data' => '\Coderic\Contabo\Generated\Model\CancelObjectStorageResponseData[]'
+        'links' => '\Contabo\Generated\Model\SelfLinks',
+        'data' => '\Contabo\Generated\Model\CancelObjectStorageResponseData[]'
     ];
 
     /**
@@ -306,7 +306,7 @@ class CancelObjectStorageResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets links
      *
-     * @return \Coderic\Contabo\Generated\Model\SelfLinks
+     * @return \Contabo\Generated\Model\SelfLinks
      */
     public function getLinks()
     {
@@ -316,7 +316,7 @@ class CancelObjectStorageResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets links
      *
-     * @param \Coderic\Contabo\Generated\Model\SelfLinks $links links
+     * @param \Contabo\Generated\Model\SelfLinks $links links
      *
      * @return self
      */
@@ -333,7 +333,7 @@ class CancelObjectStorageResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets data
      *
-     * @return \Coderic\Contabo\Generated\Model\CancelObjectStorageResponseData[]
+     * @return \Contabo\Generated\Model\CancelObjectStorageResponseData[]
      */
     public function getData()
     {
@@ -343,7 +343,7 @@ class CancelObjectStorageResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets data
      *
-     * @param \Coderic\Contabo\Generated\Model\CancelObjectStorageResponseData[] $data data
+     * @param \Contabo\Generated\Model\CancelObjectStorageResponseData[] $data data
      *
      * @return self
      */

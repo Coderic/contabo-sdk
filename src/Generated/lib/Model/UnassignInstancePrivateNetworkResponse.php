@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * UnassignInstancePrivateNetworkResponse Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class UnassignInstancePrivateNetworkResponse implements ModelInterface, ArrayAcc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'links' => '\Coderic\Contabo\Generated\Model\InstanceAssignmentSelfLinks'
+        'links' => '\Contabo\Generated\Model\InstanceAssignmentSelfLinks'
     ];
 
     /**
@@ -296,7 +296,7 @@ class UnassignInstancePrivateNetworkResponse implements ModelInterface, ArrayAcc
     /**
      * Gets links
      *
-     * @return \Coderic\Contabo\Generated\Model\InstanceAssignmentSelfLinks
+     * @return \Contabo\Generated\Model\InstanceAssignmentSelfLinks
      */
     public function getLinks()
     {
@@ -306,7 +306,7 @@ class UnassignInstancePrivateNetworkResponse implements ModelInterface, ArrayAcc
     /**
      * Sets links
      *
-     * @param \Coderic\Contabo\Generated\Model\InstanceAssignmentSelfLinks $links Links for easy navigation.
+     * @param \Contabo\Generated\Model\InstanceAssignmentSelfLinks $links Links for easy navigation.
      *
      * @return self
      */

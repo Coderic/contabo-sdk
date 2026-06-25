@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * ApplicationResponse Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -64,8 +64,8 @@ class ApplicationResponse implements ModelInterface, ArrayAccess, \JsonSerializa
         'name' => 'string',
         'description' => 'string',
         'type' => 'string',
-        'applicationConfig' => '\Coderic\Contabo\Generated\Model\ApplicationConfig[]',
-        'requirements' => '\Coderic\Contabo\Generated\Model\ApplicationRequirements'
+        'applicationConfig' => '\Contabo\Generated\Model\ApplicationConfig[]',
+        'requirements' => '\Contabo\Generated\Model\ApplicationRequirements'
     ];
 
     /**
@@ -614,7 +614,7 @@ class ApplicationResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets applicationConfig
      *
-     * @return \Coderic\Contabo\Generated\Model\ApplicationConfig[]
+     * @return \Contabo\Generated\Model\ApplicationConfig[]
      */
     public function getApplicationConfig()
     {
@@ -624,7 +624,7 @@ class ApplicationResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets applicationConfig
      *
-     * @param \Coderic\Contabo\Generated\Model\ApplicationConfig[] $applicationConfig Application Config
+     * @param \Contabo\Generated\Model\ApplicationConfig[] $applicationConfig Application Config
      *
      * @return self
      */
@@ -641,7 +641,7 @@ class ApplicationResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets requirements
      *
-     * @return \Coderic\Contabo\Generated\Model\ApplicationRequirements
+     * @return \Contabo\Generated\Model\ApplicationRequirements
      */
     public function getRequirements()
     {
@@ -651,7 +651,7 @@ class ApplicationResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets requirements
      *
-     * @param \Coderic\Contabo\Generated\Model\ApplicationRequirements $requirements Application Requirements
+     * @param \Contabo\Generated\Model\ApplicationRequirements $requirements Application Requirements
      *
      * @return self
      */

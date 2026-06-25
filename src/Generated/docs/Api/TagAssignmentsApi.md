@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\TagAssignmentsApi
+# Contabo\Generated\TagAssignmentsApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `createAssignment()`
 
 ```php
-createAssignment($xRequestId, $tagId, $resourceType, $resourceId, $xTraceId): \Coderic\Contabo\Generated\Model\CreateAssignmentResponse
+createAssignment($xRequestId, $tagId, $resourceType, $resourceId, $xTraceId): \Contabo\Generated\Model\CreateAssignmentResponse
 ```
 
 Create a new assignment for the tag
@@ -28,10 +28,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\TagAssignmentsApi(
+$apiInstance = new Contabo\Generated\Api\TagAssignmentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -63,7 +63,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\CreateAssignmentResponse**](../Model/CreateAssignmentResponse.md)
+[**\Contabo\Generated\Model\CreateAssignmentResponse**](../Model/CreateAssignmentResponse.md)
 
 ### Authorization
 
@@ -96,10 +96,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\TagAssignmentsApi(
+$apiInstance = new Contabo\Generated\Api\TagAssignmentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -148,7 +148,7 @@ void (empty response body)
 ## `retrieveAssignment()`
 
 ```php
-retrieveAssignment($xRequestId, $tagId, $resourceType, $resourceId, $xTraceId): \Coderic\Contabo\Generated\Model\FindAssignmentResponse
+retrieveAssignment($xRequestId, $tagId, $resourceType, $resourceId, $xTraceId): \Contabo\Generated\Model\FindAssignmentResponse
 ```
 
 Get specific assignment for the tag
@@ -163,10 +163,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\TagAssignmentsApi(
+$apiInstance = new Contabo\Generated\Api\TagAssignmentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -198,7 +198,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\FindAssignmentResponse**](../Model/FindAssignmentResponse.md)
+[**\Contabo\Generated\Model\FindAssignmentResponse**](../Model/FindAssignmentResponse.md)
 
 ### Authorization
 
@@ -216,7 +216,7 @@ try {
 ## `retrieveAssignmentList()`
 
 ```php
-retrieveAssignmentList($xRequestId, $tagId, $xTraceId, $page, $size, $orderBy, $resourceType): \Coderic\Contabo\Generated\Model\ListAssignmentResponse
+retrieveAssignmentList($xRequestId, $tagId, $xTraceId, $page, $size, $orderBy, $resourceType): \Contabo\Generated\Model\ListAssignmentResponse
 ```
 
 List tag assignments
@@ -231,10 +231,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\TagAssignmentsApi(
+$apiInstance = new Contabo\Generated\Api\TagAssignmentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -270,7 +270,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ListAssignmentResponse**](../Model/ListAssignmentResponse.md)
+[**\Contabo\Generated\Model\ListAssignmentResponse**](../Model/ListAssignmentResponse.md)
 
 ### Authorization
 

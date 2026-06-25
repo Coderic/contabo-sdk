@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\ImagesApi
+# Contabo\Generated\ImagesApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `createCustomImage()`
 
 ```php
-createCustomImage($xRequestId, $createCustomImageRequest, $xTraceId): \Coderic\Contabo\Generated\Model\CreateCustomImageResponse
+createCustomImage($xRequestId, $createCustomImageRequest, $xTraceId): \Contabo\Generated\Model\CreateCustomImageResponse
 ```
 
 Provide a custom image
@@ -30,17 +30,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\ImagesApi(
+$apiInstance = new Contabo\Generated\Api\ImagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
-$createCustomImageRequest = new \Coderic\Contabo\Generated\Model\CreateCustomImageRequest(); // \Coderic\Contabo\Generated\Model\CreateCustomImageRequest
+$createCustomImageRequest = new \Contabo\Generated\Model\CreateCustomImageRequest(); // \Contabo\Generated\Model\CreateCustomImageRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -56,12 +56,12 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
-| **createCustomImageRequest** | [**\Coderic\Contabo\Generated\Model\CreateCustomImageRequest**](../Model/CreateCustomImageRequest.md)|  | |
+| **createCustomImageRequest** | [**\Contabo\Generated\Model\CreateCustomImageRequest**](../Model/CreateCustomImageRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\CreateCustomImageResponse**](../Model/CreateCustomImageResponse.md)
+[**\Contabo\Generated\Model\CreateCustomImageResponse**](../Model/CreateCustomImageResponse.md)
 
 ### Authorization
 
@@ -94,10 +94,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\ImagesApi(
+$apiInstance = new Contabo\Generated\Api\ImagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -142,7 +142,7 @@ void (empty response body)
 ## `retrieveCustomImagesStats()`
 
 ```php
-retrieveCustomImagesStats($xRequestId, $xTraceId): \Coderic\Contabo\Generated\Model\CustomImagesStatsResponse
+retrieveCustomImagesStats($xRequestId, $xTraceId): \Contabo\Generated\Model\CustomImagesStatsResponse
 ```
 
 List statistics regarding the customer's custom images
@@ -157,10 +157,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\ImagesApi(
+$apiInstance = new Contabo\Generated\Api\ImagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -186,7 +186,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\CustomImagesStatsResponse**](../Model/CustomImagesStatsResponse.md)
+[**\Contabo\Generated\Model\CustomImagesStatsResponse**](../Model/CustomImagesStatsResponse.md)
 
 ### Authorization
 
@@ -204,7 +204,7 @@ try {
 ## `retrieveImage()`
 
 ```php
-retrieveImage($xRequestId, $imageId, $xTraceId): \Coderic\Contabo\Generated\Model\FindImageResponse
+retrieveImage($xRequestId, $imageId, $xTraceId): \Contabo\Generated\Model\FindImageResponse
 ```
 
 Get details about a specific image by its id
@@ -219,10 +219,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\ImagesApi(
+$apiInstance = new Contabo\Generated\Api\ImagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -250,7 +250,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\FindImageResponse**](../Model/FindImageResponse.md)
+[**\Contabo\Generated\Model\FindImageResponse**](../Model/FindImageResponse.md)
 
 ### Authorization
 
@@ -268,7 +268,7 @@ try {
 ## `retrieveImageList()`
 
 ```php
-retrieveImageList($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $standardImage, $search): \Coderic\Contabo\Generated\Model\ListImageResponse
+retrieveImageList($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $standardImage, $search): \Contabo\Generated\Model\ListImageResponse
 ```
 
 List available standard and custom images
@@ -283,10 +283,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\ImagesApi(
+$apiInstance = new Contabo\Generated\Api\ImagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -324,7 +324,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ListImageResponse**](../Model/ListImageResponse.md)
+[**\Contabo\Generated\Model\ListImageResponse**](../Model/ListImageResponse.md)
 
 ### Authorization
 
@@ -342,7 +342,7 @@ try {
 ## `updateImage()`
 
 ```php
-updateImage($xRequestId, $imageId, $updateCustomImageRequest, $xTraceId): \Coderic\Contabo\Generated\Model\UpdateCustomImageResponse
+updateImage($xRequestId, $imageId, $updateCustomImageRequest, $xTraceId): \Contabo\Generated\Model\UpdateCustomImageResponse
 ```
 
 Update custom image name by its id
@@ -357,10 +357,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\ImagesApi(
+$apiInstance = new Contabo\Generated\Api\ImagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -368,7 +368,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\ImagesApi(
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $imageId = 9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d; // string | The identifier of the image
-$updateCustomImageRequest = new \Coderic\Contabo\Generated\Model\UpdateCustomImageRequest(); // \Coderic\Contabo\Generated\Model\UpdateCustomImageRequest
+$updateCustomImageRequest = new \Contabo\Generated\Model\UpdateCustomImageRequest(); // \Contabo\Generated\Model\UpdateCustomImageRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -385,12 +385,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **imageId** | **string**| The identifier of the image | |
-| **updateCustomImageRequest** | [**\Coderic\Contabo\Generated\Model\UpdateCustomImageRequest**](../Model/UpdateCustomImageRequest.md)|  | |
+| **updateCustomImageRequest** | [**\Contabo\Generated\Model\UpdateCustomImageRequest**](../Model/UpdateCustomImageRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\UpdateCustomImageResponse**](../Model/UpdateCustomImageResponse.md)
+[**\Contabo\Generated\Model\UpdateCustomImageResponse**](../Model/UpdateCustomImageResponse.md)
 
 ### Authorization
 

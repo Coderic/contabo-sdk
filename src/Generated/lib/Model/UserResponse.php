@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * UserResponse Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -68,7 +68,7 @@ class UserResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'enabled' => 'bool',
         'totp' => 'bool',
         'locale' => 'string',
-        'roles' => '\Coderic\Contabo\Generated\Model\RoleResponse[]',
+        'roles' => '\Contabo\Generated\Model\RoleResponse[]',
         'owner' => 'bool'
     ];
 
@@ -785,7 +785,7 @@ class UserResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets roles
      *
-     * @return \Coderic\Contabo\Generated\Model\RoleResponse[]
+     * @return \Contabo\Generated\Model\RoleResponse[]
      */
     public function getRoles()
     {
@@ -795,7 +795,7 @@ class UserResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets roles
      *
-     * @param \Coderic\Contabo\Generated\Model\RoleResponse[] $roles The roles as list of `roleId`s of the user.
+     * @param \Contabo\Generated\Model\RoleResponse[] $roles The roles as list of `roleId`s of the user.
      *
      * @return self
      */

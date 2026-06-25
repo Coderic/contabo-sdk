@@ -1,4 +1,4 @@
-# Coderic Contabo SDK
+# Contabo SDK
 
 SDK PHP para la API de Contabo v1, construido desde el OpenAPI oficial de `contabo/cntb` y envuelto con una capa manual para OAuth2, `x-request-id` automtico y uso opcional en Laravel.
 
@@ -11,8 +11,8 @@ composer require contabo/contabo-sdk
 ## Uso PHP
 
 ```php
-use Coderic\Contabo\Auth\Credentials;
-use Coderic\Contabo\ContaboClient;
+use Contabo\Auth\Credentials;
+use Contabo\ContaboClient;
 
 $client = ContaboClient::fromCredentials(new Credentials(
     clientId: getenv('CONTABO_CLIENT_ID'),
@@ -47,7 +47,7 @@ CONTABO_TRACE_ID=coderic-contabo-sdk
 Ejemplo:
 
 ```php
-use Coderic\Contabo\Laravel\Facades\Contabo;
+use Contabo\Laravel\Facades\Contabo;
 
 $images = Contabo::images()->listImages();
 ```

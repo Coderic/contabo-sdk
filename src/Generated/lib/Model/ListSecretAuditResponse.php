@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * ListSecretAuditResponse Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,9 +58,9 @@ class ListSecretAuditResponse implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'pagination' => '\Coderic\Contabo\Generated\Model\PaginationMeta',
-        'data' => '\Coderic\Contabo\Generated\Model\SecretAuditResponse[]',
-        'links' => '\Coderic\Contabo\Generated\Model\Links'
+        'pagination' => '\Contabo\Generated\Model\PaginationMeta',
+        'data' => '\Contabo\Generated\Model\SecretAuditResponse[]',
+        'links' => '\Contabo\Generated\Model\Links'
     ];
 
     /**
@@ -316,7 +316,7 @@ class ListSecretAuditResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets pagination
      *
-     * @return \Coderic\Contabo\Generated\Model\PaginationMeta
+     * @return \Contabo\Generated\Model\PaginationMeta
      */
     public function getPagination()
     {
@@ -326,7 +326,7 @@ class ListSecretAuditResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets pagination
      *
-     * @param \Coderic\Contabo\Generated\Model\PaginationMeta $pagination Data about pagination like how many results, pages, page size.
+     * @param \Contabo\Generated\Model\PaginationMeta $pagination Data about pagination like how many results, pages, page size.
      *
      * @return self
      */
@@ -343,7 +343,7 @@ class ListSecretAuditResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets data
      *
-     * @return \Coderic\Contabo\Generated\Model\SecretAuditResponse[]
+     * @return \Contabo\Generated\Model\SecretAuditResponse[]
      */
     public function getData()
     {
@@ -353,7 +353,7 @@ class ListSecretAuditResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets data
      *
-     * @param \Coderic\Contabo\Generated\Model\SecretAuditResponse[] $data data
+     * @param \Contabo\Generated\Model\SecretAuditResponse[] $data data
      *
      * @return self
      */
@@ -370,7 +370,7 @@ class ListSecretAuditResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets links
      *
-     * @return \Coderic\Contabo\Generated\Model\Links
+     * @return \Contabo\Generated\Model\Links
      */
     public function getLinks()
     {
@@ -380,7 +380,7 @@ class ListSecretAuditResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets links
      *
-     * @param \Coderic\Contabo\Generated\Model\Links $links links
+     * @param \Contabo\Generated\Model\Links $links links
      *
      * @return self
      */

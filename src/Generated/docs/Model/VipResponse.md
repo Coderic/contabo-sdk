@@ -15,6 +15,6 @@ Name | Type | Description | Notes
 **resourceDisplayName** | **string** | Resource display name. |
 **ipVersion** | **string** | Version of Ip. |
 **type** | **string** | The VIP type. | [optional]
-**v4** | [**\Coderic\Contabo\Generated\Model\IpV4**](IpV4.md) |  | [optional]
+**v4** | [**\Contabo\Generated\Model\IpV4**](IpV4.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

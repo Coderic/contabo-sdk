@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * InstanceRestartActionResponse Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class InstanceRestartActionResponse implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Coderic\Contabo\Generated\Model\InstanceRestartActionResponseData[]',
-        'links' => '\Coderic\Contabo\Generated\Model\SelfLinks'
+        'data' => '\Contabo\Generated\Model\InstanceRestartActionResponseData[]',
+        'links' => '\Contabo\Generated\Model\SelfLinks'
     ];
 
     /**
@@ -306,7 +306,7 @@ class InstanceRestartActionResponse implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets data
      *
-     * @return \Coderic\Contabo\Generated\Model\InstanceRestartActionResponseData[]
+     * @return \Contabo\Generated\Model\InstanceRestartActionResponseData[]
      */
     public function getData()
     {
@@ -316,7 +316,7 @@ class InstanceRestartActionResponse implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets data
      *
-     * @param \Coderic\Contabo\Generated\Model\InstanceRestartActionResponseData[] $data data
+     * @param \Contabo\Generated\Model\InstanceRestartActionResponseData[] $data data
      *
      * @return self
      */
@@ -333,7 +333,7 @@ class InstanceRestartActionResponse implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets links
      *
-     * @return \Coderic\Contabo\Generated\Model\SelfLinks
+     * @return \Contabo\Generated\Model\SelfLinks
      */
     public function getLinks()
     {
@@ -343,7 +343,7 @@ class InstanceRestartActionResponse implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets links
      *
-     * @param \Coderic\Contabo\Generated\Model\SelfLinks $links links
+     * @param \Contabo\Generated\Model\SelfLinks $links links
      *
      * @return self
      */

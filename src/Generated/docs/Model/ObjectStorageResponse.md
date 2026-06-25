@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **objectStorageId** | **string** | Your object storage id |
 **createdDate** | **\DateTime** | Creation date for object storage. |
 **cancelDate** | **\DateTime** | Cancellation date for object storage. |
-**autoScaling** | [**\Coderic\Contabo\Generated\Model\AutoScalingTypeResponse**](AutoScalingTypeResponse.md) | Autoscaling settings |
+**autoScaling** | [**\Contabo\Generated\Model\AutoScalingTypeResponse**](AutoScalingTypeResponse.md) | Autoscaling settings |
 **dataCenter** | **string** | Data center your object storage is located |
 **totalPurchasedSpaceTB** | **float** | Amount of purchased / requested object storage in TB. |
 **s3Url** | **string** | S3 URL to connect to your S3 compatible object storage |

@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\SecretsApi
+# Contabo\Generated\SecretsApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `createSecret()`
 
 ```php
-createSecret($xRequestId, $createSecretRequest, $xTraceId): \Coderic\Contabo\Generated\Model\CreateSecretResponse
+createSecret($xRequestId, $createSecretRequest, $xTraceId): \Contabo\Generated\Model\CreateSecretResponse
 ```
 
 Create a new secret
@@ -29,17 +29,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\SecretsApi(
+$apiInstance = new Contabo\Generated\Api\SecretsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
-$createSecretRequest = new \Coderic\Contabo\Generated\Model\CreateSecretRequest(); // \Coderic\Contabo\Generated\Model\CreateSecretRequest
+$createSecretRequest = new \Contabo\Generated\Model\CreateSecretRequest(); // \Contabo\Generated\Model\CreateSecretRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -55,12 +55,12 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
-| **createSecretRequest** | [**\Coderic\Contabo\Generated\Model\CreateSecretRequest**](../Model/CreateSecretRequest.md)|  | |
+| **createSecretRequest** | [**\Contabo\Generated\Model\CreateSecretRequest**](../Model/CreateSecretRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\CreateSecretResponse**](../Model/CreateSecretResponse.md)
+[**\Contabo\Generated\Model\CreateSecretResponse**](../Model/CreateSecretResponse.md)
 
 ### Authorization
 
@@ -93,10 +93,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\SecretsApi(
+$apiInstance = new Contabo\Generated\Api\SecretsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -141,7 +141,7 @@ void (empty response body)
 ## `retrieveSecret()`
 
 ```php
-retrieveSecret($xRequestId, $secretId, $xTraceId): \Coderic\Contabo\Generated\Model\FindSecretResponse
+retrieveSecret($xRequestId, $secretId, $xTraceId): \Contabo\Generated\Model\FindSecretResponse
 ```
 
 Get specific secret by id
@@ -156,10 +156,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\SecretsApi(
+$apiInstance = new Contabo\Generated\Api\SecretsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -187,7 +187,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\FindSecretResponse**](../Model/FindSecretResponse.md)
+[**\Contabo\Generated\Model\FindSecretResponse**](../Model/FindSecretResponse.md)
 
 ### Authorization
 
@@ -205,7 +205,7 @@ try {
 ## `retrieveSecretList()`
 
 ```php
-retrieveSecretList($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $type): \Coderic\Contabo\Generated\Model\ListSecretResponse
+retrieveSecretList($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $type): \Contabo\Generated\Model\ListSecretResponse
 ```
 
 List secrets
@@ -220,10 +220,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\SecretsApi(
+$apiInstance = new Contabo\Generated\Api\SecretsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -259,7 +259,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ListSecretResponse**](../Model/ListSecretResponse.md)
+[**\Contabo\Generated\Model\ListSecretResponse**](../Model/ListSecretResponse.md)
 
 ### Authorization
 
@@ -277,7 +277,7 @@ try {
 ## `updateSecret()`
 
 ```php
-updateSecret($xRequestId, $secretId, $updateSecretRequest, $xTraceId): \Coderic\Contabo\Generated\Model\UpdateSecretResponse
+updateSecret($xRequestId, $secretId, $updateSecretRequest, $xTraceId): \Contabo\Generated\Model\UpdateSecretResponse
 ```
 
 Update specific secret by id
@@ -292,10 +292,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\SecretsApi(
+$apiInstance = new Contabo\Generated\Api\SecretsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -303,7 +303,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\SecretsApi(
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $secretId = 123; // int | The id of the secret
-$updateSecretRequest = new \Coderic\Contabo\Generated\Model\UpdateSecretRequest(); // \Coderic\Contabo\Generated\Model\UpdateSecretRequest
+$updateSecretRequest = new \Contabo\Generated\Model\UpdateSecretRequest(); // \Contabo\Generated\Model\UpdateSecretRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -320,12 +320,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **secretId** | **int**| The id of the secret | |
-| **updateSecretRequest** | [**\Coderic\Contabo\Generated\Model\UpdateSecretRequest**](../Model/UpdateSecretRequest.md)|  | |
+| **updateSecretRequest** | [**\Contabo\Generated\Model\UpdateSecretRequest**](../Model/UpdateSecretRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\UpdateSecretResponse**](../Model/UpdateSecretResponse.md)
+[**\Contabo\Generated\Model\UpdateSecretResponse**](../Model/UpdateSecretResponse.md)
 
 ### Authorization
 

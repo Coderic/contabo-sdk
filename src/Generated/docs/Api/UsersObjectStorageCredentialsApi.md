@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\UsersObjectStorageCredentialsApi
+# Contabo\Generated\UsersObjectStorageCredentialsApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `getObjectStorageCredentials()`
 
 ```php
-getObjectStorageCredentials($xRequestId, $userId, $objectStorageId, $credentialId, $xTraceId): \Coderic\Contabo\Generated\Model\FindCredentialResponse
+getObjectStorageCredentials($xRequestId, $userId, $objectStorageId, $credentialId, $xTraceId): \Contabo\Generated\Model\FindCredentialResponse
 ```
 
 Get S3 compatible object storage credentials.
@@ -27,10 +27,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\UsersObjectStorageCredentialsApi(
+$apiInstance = new Contabo\Generated\Api\UsersObjectStorageCredentialsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -62,7 +62,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\FindCredentialResponse**](../Model/FindCredentialResponse.md)
+[**\Contabo\Generated\Model\FindCredentialResponse**](../Model/FindCredentialResponse.md)
 
 ### Authorization
 
@@ -80,7 +80,7 @@ try {
 ## `listObjectStorageCredentials()`
 
 ```php
-listObjectStorageCredentials($xRequestId, $userId, $xTraceId, $page, $size, $orderBy, $objectStorageId, $regionName, $displayName): \Coderic\Contabo\Generated\Model\ListCredentialResponse
+listObjectStorageCredentials($xRequestId, $userId, $xTraceId, $page, $size, $orderBy, $objectStorageId, $regionName, $displayName): \Contabo\Generated\Model\ListCredentialResponse
 ```
 
 Get list of S3 compatible object storage credentials for user.
@@ -95,10 +95,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\UsersObjectStorageCredentialsApi(
+$apiInstance = new Contabo\Generated\Api\UsersObjectStorageCredentialsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -138,7 +138,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ListCredentialResponse**](../Model/ListCredentialResponse.md)
+[**\Contabo\Generated\Model\ListCredentialResponse**](../Model/ListCredentialResponse.md)
 
 ### Authorization
 
@@ -156,7 +156,7 @@ try {
 ## `regenerateObjectStorageCredentials()`
 
 ```php
-regenerateObjectStorageCredentials($xRequestId, $userId, $objectStorageId, $credentialId, $xTraceId): \Coderic\Contabo\Generated\Model\FindCredentialResponse
+regenerateObjectStorageCredentials($xRequestId, $userId, $objectStorageId, $credentialId, $xTraceId): \Contabo\Generated\Model\FindCredentialResponse
 ```
 
 Regenerates secret key of specified user for the S3 compatible object storages.
@@ -171,10 +171,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\UsersObjectStorageCredentialsApi(
+$apiInstance = new Contabo\Generated\Api\UsersObjectStorageCredentialsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -206,7 +206,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\FindCredentialResponse**](../Model/FindCredentialResponse.md)
+[**\Contabo\Generated\Model\FindCredentialResponse**](../Model/FindCredentialResponse.md)
 
 ### Authorization
 

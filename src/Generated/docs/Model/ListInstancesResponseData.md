@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **tenantId** | **string** | Your customer tenant id |
 **customerId** | **string** | Customer ID |
-**additionalIps** | [**\Coderic\Contabo\Generated\Model\AdditionalIp[]**](AdditionalIp.md) |  |
+**additionalIps** | [**\Contabo\Generated\Model\AdditionalIp[]**](AdditionalIp.md) |  |
 **name** | **string** | Instance Name |
 **displayName** | **string** | Instance display name |
 **instanceId** | **int** | Instance ID |
@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **regionName** | **string** | The name of the region where the instance is located. |
 **productId** | **string** | Product ID |
 **imageId** | **string** | Image&#39;s id |
-**ipConfig** | [**\Coderic\Contabo\Generated\Model\IpConfig2**](IpConfig2.md) |  |
+**ipConfig** | [**\Contabo\Generated\Model\IpConfig2**](IpConfig2.md) |  |
 **macAddress** | **string** | MAC Address |
 **ramMb** | **float** | Image RAM size in MB |
 **cpuCores** | **int** | CPU core count |
@@ -24,11 +24,11 @@ Name | Type | Description | Notes
 **sshKeys** | **int[]** | Array of &#x60;secretId&#x60;s of public SSH keys for logging into as &#x60;defaultUser&#x60; with administrator/root privileges. Applies to Linux/BSD systems. Please refer to Secrets Management API. |
 **createdDate** | **\DateTime** | The creation date for the instance |
 **cancelDate** | **\DateTime** | The date on which the instance will be cancelled |
-**status** | [**\Coderic\Contabo\Generated\Model\InstanceStatus**](InstanceStatus.md) | Instance&#39;s status |
+**status** | [**\Contabo\Generated\Model\InstanceStatus**](InstanceStatus.md) | Instance&#39;s status |
 **vHostId** | **int** | ID of host system |
 **vHostNumber** | **int** | Number of host system |
 **vHostName** | **string** | Name of host system |
-**addOns** | [**\Coderic\Contabo\Generated\Model\AddOnResponse[]**](AddOnResponse.md) |  |
+**addOns** | [**\Contabo\Generated\Model\AddOnResponse[]**](AddOnResponse.md) |  |
 **errorMessage** | **string** | Message in case of an error. | [optional]
 **productType** | **string** | Instance&#39;s category depending on Product Id |
 **productName** | **string** | Instance&#39;s Product Name |

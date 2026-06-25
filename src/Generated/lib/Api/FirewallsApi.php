@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * FirewallsApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -158,9 +158,9 @@ class FirewallsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignInstanceFirewall'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\AssignInstanceFirewallResponse
+     * @return \Contabo\Generated\Model\AssignInstanceFirewallResponse
      */
     public function assignInstanceFirewall($xRequestId, $firewallId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['assignInstanceFirewall'][0])
     {
@@ -179,9 +179,9 @@ class FirewallsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignInstanceFirewall'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\AssignInstanceFirewallResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\AssignInstanceFirewallResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function assignInstanceFirewallWithHttpInfo($xRequestId, $firewallId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['assignInstanceFirewall'][0])
     {
@@ -212,11 +212,11 @@ class FirewallsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\AssignInstanceFirewallResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\AssignInstanceFirewallResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\AssignInstanceFirewallResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\AssignInstanceFirewallResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -234,7 +234,7 @@ class FirewallsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\AssignInstanceFirewallResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\AssignInstanceFirewallResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -253,7 +253,7 @@ class FirewallsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\AssignInstanceFirewallResponse';
+            $returnType = '\Contabo\Generated\Model\AssignInstanceFirewallResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -286,7 +286,7 @@ class FirewallsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\AssignInstanceFirewallResponse',
+                        '\Contabo\Generated\Model\AssignInstanceFirewallResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -336,7 +336,7 @@ class FirewallsApi
      */
     public function assignInstanceFirewallAsyncWithHttpInfo($xRequestId, $firewallId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['assignInstanceFirewall'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\AssignInstanceFirewallResponse';
+        $returnType = '\Contabo\Generated\Model\AssignInstanceFirewallResponse';
         $request = $this->assignInstanceFirewallRequest($xRequestId, $firewallId, $instanceId, $xTraceId, $contentType);
 
         return $this->client
@@ -514,13 +514,13 @@ class FirewallsApi
      * Create a new firewall definition
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateFirewallRequest $createFirewallRequest createFirewallRequest (required)
+     * @param  \Contabo\Generated\Model\CreateFirewallRequest $createFirewallRequest createFirewallRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFirewall'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\CreateFirewallResponse
+     * @return \Contabo\Generated\Model\CreateFirewallResponse
      */
     public function createFirewall($xRequestId, $createFirewallRequest, $xTraceId = null, string $contentType = self::contentTypes['createFirewall'][0])
     {
@@ -534,13 +534,13 @@ class FirewallsApi
      * Create a new firewall definition
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateFirewallRequest $createFirewallRequest (required)
+     * @param  \Contabo\Generated\Model\CreateFirewallRequest $createFirewallRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFirewall'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\CreateFirewallResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\CreateFirewallResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createFirewallWithHttpInfo($xRequestId, $createFirewallRequest, $xTraceId = null, string $contentType = self::contentTypes['createFirewall'][0])
     {
@@ -571,11 +571,11 @@ class FirewallsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\CreateFirewallResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\CreateFirewallResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\CreateFirewallResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\CreateFirewallResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -593,7 +593,7 @@ class FirewallsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\CreateFirewallResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\CreateFirewallResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -612,7 +612,7 @@ class FirewallsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\CreateFirewallResponse';
+            $returnType = '\Contabo\Generated\Model\CreateFirewallResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -645,7 +645,7 @@ class FirewallsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\CreateFirewallResponse',
+                        '\Contabo\Generated\Model\CreateFirewallResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -661,7 +661,7 @@ class FirewallsApi
      * Create a new firewall definition
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateFirewallRequest $createFirewallRequest (required)
+     * @param  \Contabo\Generated\Model\CreateFirewallRequest $createFirewallRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFirewall'] to see the possible values for this operation
      *
@@ -684,7 +684,7 @@ class FirewallsApi
      * Create a new firewall definition
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateFirewallRequest $createFirewallRequest (required)
+     * @param  \Contabo\Generated\Model\CreateFirewallRequest $createFirewallRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFirewall'] to see the possible values for this operation
      *
@@ -693,7 +693,7 @@ class FirewallsApi
      */
     public function createFirewallAsyncWithHttpInfo($xRequestId, $createFirewallRequest, $xTraceId = null, string $contentType = self::contentTypes['createFirewall'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\CreateFirewallResponse';
+        $returnType = '\Contabo\Generated\Model\CreateFirewallResponse';
         $request = $this->createFirewallRequest($xRequestId, $createFirewallRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -736,7 +736,7 @@ class FirewallsApi
      * Create request for operation 'createFirewall'
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateFirewallRequest $createFirewallRequest (required)
+     * @param  \Contabo\Generated\Model\CreateFirewallRequest $createFirewallRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFirewall'] to see the possible values for this operation
      *
@@ -858,7 +858,7 @@ class FirewallsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFirewall'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -877,7 +877,7 @@ class FirewallsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFirewall'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1105,13 +1105,13 @@ class FirewallsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $firewallId The identifier of the firewall (required)
-     * @param  \Coderic\Contabo\Generated\Model\PatchFirewallRequest $patchFirewallRequest patchFirewallRequest (required)
+     * @param  \Contabo\Generated\Model\PatchFirewallRequest $patchFirewallRequest patchFirewallRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchFirewall'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\PatchFirewallResponse
+     * @return \Contabo\Generated\Model\PatchFirewallResponse
      */
     public function patchFirewall($xRequestId, $firewallId, $patchFirewallRequest, $xTraceId = null, string $contentType = self::contentTypes['patchFirewall'][0])
     {
@@ -1126,13 +1126,13 @@ class FirewallsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $firewallId The identifier of the firewall (required)
-     * @param  \Coderic\Contabo\Generated\Model\PatchFirewallRequest $patchFirewallRequest (required)
+     * @param  \Contabo\Generated\Model\PatchFirewallRequest $patchFirewallRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchFirewall'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\PatchFirewallResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\PatchFirewallResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchFirewallWithHttpInfo($xRequestId, $firewallId, $patchFirewallRequest, $xTraceId = null, string $contentType = self::contentTypes['patchFirewall'][0])
     {
@@ -1163,11 +1163,11 @@ class FirewallsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\PatchFirewallResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\PatchFirewallResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\PatchFirewallResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\PatchFirewallResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1185,7 +1185,7 @@ class FirewallsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\PatchFirewallResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\PatchFirewallResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1204,7 +1204,7 @@ class FirewallsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\PatchFirewallResponse';
+            $returnType = '\Contabo\Generated\Model\PatchFirewallResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1237,7 +1237,7 @@ class FirewallsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\PatchFirewallResponse',
+                        '\Contabo\Generated\Model\PatchFirewallResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1254,7 +1254,7 @@ class FirewallsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $firewallId The identifier of the firewall (required)
-     * @param  \Coderic\Contabo\Generated\Model\PatchFirewallRequest $patchFirewallRequest (required)
+     * @param  \Contabo\Generated\Model\PatchFirewallRequest $patchFirewallRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchFirewall'] to see the possible values for this operation
      *
@@ -1278,7 +1278,7 @@ class FirewallsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $firewallId The identifier of the firewall (required)
-     * @param  \Coderic\Contabo\Generated\Model\PatchFirewallRequest $patchFirewallRequest (required)
+     * @param  \Contabo\Generated\Model\PatchFirewallRequest $patchFirewallRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchFirewall'] to see the possible values for this operation
      *
@@ -1287,7 +1287,7 @@ class FirewallsApi
      */
     public function patchFirewallAsyncWithHttpInfo($xRequestId, $firewallId, $patchFirewallRequest, $xTraceId = null, string $contentType = self::contentTypes['patchFirewall'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\PatchFirewallResponse';
+        $returnType = '\Contabo\Generated\Model\PatchFirewallResponse';
         $request = $this->patchFirewallRequest($xRequestId, $firewallId, $patchFirewallRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -1331,7 +1331,7 @@ class FirewallsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $firewallId The identifier of the firewall (required)
-     * @param  \Coderic\Contabo\Generated\Model\PatchFirewallRequest $patchFirewallRequest (required)
+     * @param  \Contabo\Generated\Model\PatchFirewallRequest $patchFirewallRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchFirewall'] to see the possible values for this operation
      *
@@ -1465,13 +1465,13 @@ class FirewallsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $firewallId The identifier of the firewall (required)
-     * @param  \Coderic\Contabo\Generated\Model\PutFirewallRequest $putFirewallRequest putFirewallRequest (required)
+     * @param  \Contabo\Generated\Model\PutFirewallRequest $putFirewallRequest putFirewallRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFirewall'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\PutFirewallResponse
+     * @return \Contabo\Generated\Model\PutFirewallResponse
      */
     public function putFirewall($xRequestId, $firewallId, $putFirewallRequest, $xTraceId = null, string $contentType = self::contentTypes['putFirewall'][0])
     {
@@ -1486,13 +1486,13 @@ class FirewallsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $firewallId The identifier of the firewall (required)
-     * @param  \Coderic\Contabo\Generated\Model\PutFirewallRequest $putFirewallRequest (required)
+     * @param  \Contabo\Generated\Model\PutFirewallRequest $putFirewallRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFirewall'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\PutFirewallResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\PutFirewallResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function putFirewallWithHttpInfo($xRequestId, $firewallId, $putFirewallRequest, $xTraceId = null, string $contentType = self::contentTypes['putFirewall'][0])
     {
@@ -1523,11 +1523,11 @@ class FirewallsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\PutFirewallResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\PutFirewallResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\PutFirewallResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\PutFirewallResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1545,7 +1545,7 @@ class FirewallsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\PutFirewallResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\PutFirewallResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1564,7 +1564,7 @@ class FirewallsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\PutFirewallResponse';
+            $returnType = '\Contabo\Generated\Model\PutFirewallResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1597,7 +1597,7 @@ class FirewallsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\PutFirewallResponse',
+                        '\Contabo\Generated\Model\PutFirewallResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1614,7 +1614,7 @@ class FirewallsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $firewallId The identifier of the firewall (required)
-     * @param  \Coderic\Contabo\Generated\Model\PutFirewallRequest $putFirewallRequest (required)
+     * @param  \Contabo\Generated\Model\PutFirewallRequest $putFirewallRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFirewall'] to see the possible values for this operation
      *
@@ -1638,7 +1638,7 @@ class FirewallsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $firewallId The identifier of the firewall (required)
-     * @param  \Coderic\Contabo\Generated\Model\PutFirewallRequest $putFirewallRequest (required)
+     * @param  \Contabo\Generated\Model\PutFirewallRequest $putFirewallRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFirewall'] to see the possible values for this operation
      *
@@ -1647,7 +1647,7 @@ class FirewallsApi
      */
     public function putFirewallAsyncWithHttpInfo($xRequestId, $firewallId, $putFirewallRequest, $xTraceId = null, string $contentType = self::contentTypes['putFirewall'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\PutFirewallResponse';
+        $returnType = '\Contabo\Generated\Model\PutFirewallResponse';
         $request = $this->putFirewallRequest($xRequestId, $firewallId, $putFirewallRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -1691,7 +1691,7 @@ class FirewallsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $firewallId The identifier of the firewall (required)
-     * @param  \Coderic\Contabo\Generated\Model\PutFirewallRequest $putFirewallRequest (required)
+     * @param  \Contabo\Generated\Model\PutFirewallRequest $putFirewallRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFirewall'] to see the possible values for this operation
      *
@@ -1833,9 +1833,9 @@ class FirewallsApi
      * @param  string|null $instanceIds Comma separated instance IDs. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveFirewall'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\FindFirewallResponse
+     * @return \Contabo\Generated\Model\FindFirewallResponse
      */
     public function retrieveFirewall($xRequestId, $firewallId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $instanceIds = null, string $contentType = self::contentTypes['retrieveFirewall'][0])
     {
@@ -1858,9 +1858,9 @@ class FirewallsApi
      * @param  string|null $instanceIds Comma separated instance IDs. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveFirewall'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\FindFirewallResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\FindFirewallResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveFirewallWithHttpInfo($xRequestId, $firewallId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $instanceIds = null, string $contentType = self::contentTypes['retrieveFirewall'][0])
     {
@@ -1891,11 +1891,11 @@ class FirewallsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\FindFirewallResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\FindFirewallResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\FindFirewallResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\FindFirewallResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1913,7 +1913,7 @@ class FirewallsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\FindFirewallResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\FindFirewallResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1932,7 +1932,7 @@ class FirewallsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\FindFirewallResponse';
+            $returnType = '\Contabo\Generated\Model\FindFirewallResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1965,7 +1965,7 @@ class FirewallsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\FindFirewallResponse',
+                        '\Contabo\Generated\Model\FindFirewallResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2023,7 +2023,7 @@ class FirewallsApi
      */
     public function retrieveFirewallAsyncWithHttpInfo($xRequestId, $firewallId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $instanceIds = null, string $contentType = self::contentTypes['retrieveFirewall'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\FindFirewallResponse';
+        $returnType = '\Contabo\Generated\Model\FindFirewallResponse';
         $request = $this->retrieveFirewallRequest($xRequestId, $firewallId, $xTraceId, $page, $size, $orderBy, $name, $instanceIds, $contentType);
 
         return $this->client
@@ -2248,9 +2248,9 @@ class FirewallsApi
      * @param  string|null $instanceIds Comma separated instance IDs. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveFirewallList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ListFirewallResponse
+     * @return \Contabo\Generated\Model\ListFirewallResponse
      */
     public function retrieveFirewallList($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $instanceIds = null, string $contentType = self::contentTypes['retrieveFirewallList'][0])
     {
@@ -2272,9 +2272,9 @@ class FirewallsApi
      * @param  string|null $instanceIds Comma separated instance IDs. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveFirewallList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ListFirewallResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ListFirewallResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveFirewallListWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $instanceIds = null, string $contentType = self::contentTypes['retrieveFirewallList'][0])
     {
@@ -2305,11 +2305,11 @@ class FirewallsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ListFirewallResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ListFirewallResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ListFirewallResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ListFirewallResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2327,7 +2327,7 @@ class FirewallsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ListFirewallResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ListFirewallResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2346,7 +2346,7 @@ class FirewallsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ListFirewallResponse';
+            $returnType = '\Contabo\Generated\Model\ListFirewallResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2379,7 +2379,7 @@ class FirewallsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ListFirewallResponse',
+                        '\Contabo\Generated\Model\ListFirewallResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2435,7 +2435,7 @@ class FirewallsApi
      */
     public function retrieveFirewallListAsyncWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $instanceIds = null, string $contentType = self::contentTypes['retrieveFirewallList'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ListFirewallResponse';
+        $returnType = '\Contabo\Generated\Model\ListFirewallResponse';
         $request = $this->retrieveFirewallListRequest($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $instanceIds, $contentType);
 
         return $this->client
@@ -2643,9 +2643,9 @@ class FirewallsApi
      * @param  string|null $name The name of preset rule (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrievePresetRules'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ListPresetRulesResponse
+     * @return \Contabo\Generated\Model\ListPresetRulesResponse
      */
     public function retrievePresetRules($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, string $contentType = self::contentTypes['retrievePresetRules'][0])
     {
@@ -2666,9 +2666,9 @@ class FirewallsApi
      * @param  string|null $name The name of preset rule (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrievePresetRules'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ListPresetRulesResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ListPresetRulesResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrievePresetRulesWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, string $contentType = self::contentTypes['retrievePresetRules'][0])
     {
@@ -2699,11 +2699,11 @@ class FirewallsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ListPresetRulesResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ListPresetRulesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ListPresetRulesResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ListPresetRulesResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2721,7 +2721,7 @@ class FirewallsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ListPresetRulesResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ListPresetRulesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2740,7 +2740,7 @@ class FirewallsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ListPresetRulesResponse';
+            $returnType = '\Contabo\Generated\Model\ListPresetRulesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2773,7 +2773,7 @@ class FirewallsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ListPresetRulesResponse',
+                        '\Contabo\Generated\Model\ListPresetRulesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2827,7 +2827,7 @@ class FirewallsApi
      */
     public function retrievePresetRulesAsyncWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, string $contentType = self::contentTypes['retrievePresetRules'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ListPresetRulesResponse';
+        $returnType = '\Contabo\Generated\Model\ListPresetRulesResponse';
         $request = $this->retrievePresetRulesRequest($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $contentType);
 
         return $this->client
@@ -3022,9 +3022,9 @@ class FirewallsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unassignInstanceFirewall'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\UnassignInstanceFirewallResponse
+     * @return \Contabo\Generated\Model\UnassignInstanceFirewallResponse
      */
     public function unassignInstanceFirewall($xRequestId, $firewallId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['unassignInstanceFirewall'][0])
     {
@@ -3043,9 +3043,9 @@ class FirewallsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unassignInstanceFirewall'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\UnassignInstanceFirewallResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\UnassignInstanceFirewallResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function unassignInstanceFirewallWithHttpInfo($xRequestId, $firewallId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['unassignInstanceFirewall'][0])
     {
@@ -3076,11 +3076,11 @@ class FirewallsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\UnassignInstanceFirewallResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\UnassignInstanceFirewallResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\UnassignInstanceFirewallResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\UnassignInstanceFirewallResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3098,7 +3098,7 @@ class FirewallsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\UnassignInstanceFirewallResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\UnassignInstanceFirewallResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3117,7 +3117,7 @@ class FirewallsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\UnassignInstanceFirewallResponse';
+            $returnType = '\Contabo\Generated\Model\UnassignInstanceFirewallResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3150,7 +3150,7 @@ class FirewallsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\UnassignInstanceFirewallResponse',
+                        '\Contabo\Generated\Model\UnassignInstanceFirewallResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3200,7 +3200,7 @@ class FirewallsApi
      */
     public function unassignInstanceFirewallAsyncWithHttpInfo($xRequestId, $firewallId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['unassignInstanceFirewall'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\UnassignInstanceFirewallResponse';
+        $returnType = '\Contabo\Generated\Model\UnassignInstanceFirewallResponse';
         $request = $this->unassignInstanceFirewallRequest($xRequestId, $firewallId, $instanceId, $xTraceId, $contentType);
 
         return $this->client

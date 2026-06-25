@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * Instances Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,8 +62,8 @@ class Instances implements ModelInterface, ArrayAccess, \JsonSerializable
         'displayName' => 'string',
         'name' => 'string',
         'productId' => 'string',
-        'privateIpConfig' => '\Coderic\Contabo\Generated\Model\PrivateIpConfig',
-        'ipConfig' => '\Coderic\Contabo\Generated\Model\IpConfig',
+        'privateIpConfig' => '\Contabo\Generated\Model\PrivateIpConfig',
+        'ipConfig' => '\Contabo\Generated\Model\IpConfig',
         'status' => 'string',
         'errorMessage' => 'string'
     ];
@@ -501,7 +501,7 @@ class Instances implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets privateIpConfig
      *
-     * @return \Coderic\Contabo\Generated\Model\PrivateIpConfig
+     * @return \Contabo\Generated\Model\PrivateIpConfig
      */
     public function getPrivateIpConfig()
     {
@@ -511,7 +511,7 @@ class Instances implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets privateIpConfig
      *
-     * @param \Coderic\Contabo\Generated\Model\PrivateIpConfig $privateIpConfig privateIpConfig
+     * @param \Contabo\Generated\Model\PrivateIpConfig $privateIpConfig privateIpConfig
      *
      * @return self
      */
@@ -528,7 +528,7 @@ class Instances implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets ipConfig
      *
-     * @return \Coderic\Contabo\Generated\Model\IpConfig
+     * @return \Contabo\Generated\Model\IpConfig
      */
     public function getIpConfig()
     {
@@ -538,7 +538,7 @@ class Instances implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets ipConfig
      *
-     * @param \Coderic\Contabo\Generated\Model\IpConfig $ipConfig ipConfig
+     * @param \Contabo\Generated\Model\IpConfig $ipConfig ipConfig
      *
      * @return self
      */

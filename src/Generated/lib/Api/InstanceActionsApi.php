@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * InstanceActionsApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -145,13 +145,13 @@ class InstanceActionsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the compute instance / resource to be started in rescue mode. (required)
-     * @param  \Coderic\Contabo\Generated\Model\InstancesActionsRescueRequest $instancesActionsRescueRequest instancesActionsRescueRequest (required)
+     * @param  \Contabo\Generated\Model\InstancesActionsRescueRequest $instancesActionsRescueRequest instancesActionsRescueRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rescue'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\InstanceRescueActionResponse
+     * @return \Contabo\Generated\Model\InstanceRescueActionResponse
      */
     public function rescue($xRequestId, $instanceId, $instancesActionsRescueRequest, $xTraceId = null, string $contentType = self::contentTypes['rescue'][0])
     {
@@ -166,13 +166,13 @@ class InstanceActionsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the compute instance / resource to be started in rescue mode. (required)
-     * @param  \Coderic\Contabo\Generated\Model\InstancesActionsRescueRequest $instancesActionsRescueRequest (required)
+     * @param  \Contabo\Generated\Model\InstancesActionsRescueRequest $instancesActionsRescueRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rescue'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\InstanceRescueActionResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\InstanceRescueActionResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function rescueWithHttpInfo($xRequestId, $instanceId, $instancesActionsRescueRequest, $xTraceId = null, string $contentType = self::contentTypes['rescue'][0])
     {
@@ -203,11 +203,11 @@ class InstanceActionsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\InstanceRescueActionResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\InstanceRescueActionResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\InstanceRescueActionResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\InstanceRescueActionResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -225,7 +225,7 @@ class InstanceActionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\InstanceRescueActionResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\InstanceRescueActionResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -244,7 +244,7 @@ class InstanceActionsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\InstanceRescueActionResponse';
+            $returnType = '\Contabo\Generated\Model\InstanceRescueActionResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -277,7 +277,7 @@ class InstanceActionsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\InstanceRescueActionResponse',
+                        '\Contabo\Generated\Model\InstanceRescueActionResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -294,7 +294,7 @@ class InstanceActionsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the compute instance / resource to be started in rescue mode. (required)
-     * @param  \Coderic\Contabo\Generated\Model\InstancesActionsRescueRequest $instancesActionsRescueRequest (required)
+     * @param  \Contabo\Generated\Model\InstancesActionsRescueRequest $instancesActionsRescueRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rescue'] to see the possible values for this operation
      *
@@ -318,7 +318,7 @@ class InstanceActionsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the compute instance / resource to be started in rescue mode. (required)
-     * @param  \Coderic\Contabo\Generated\Model\InstancesActionsRescueRequest $instancesActionsRescueRequest (required)
+     * @param  \Contabo\Generated\Model\InstancesActionsRescueRequest $instancesActionsRescueRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rescue'] to see the possible values for this operation
      *
@@ -327,7 +327,7 @@ class InstanceActionsApi
      */
     public function rescueAsyncWithHttpInfo($xRequestId, $instanceId, $instancesActionsRescueRequest, $xTraceId = null, string $contentType = self::contentTypes['rescue'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\InstanceRescueActionResponse';
+        $returnType = '\Contabo\Generated\Model\InstanceRescueActionResponse';
         $request = $this->rescueRequest($xRequestId, $instanceId, $instancesActionsRescueRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -371,7 +371,7 @@ class InstanceActionsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the compute instance / resource to be started in rescue mode. (required)
-     * @param  \Coderic\Contabo\Generated\Model\InstancesActionsRescueRequest $instancesActionsRescueRequest (required)
+     * @param  \Contabo\Generated\Model\InstancesActionsRescueRequest $instancesActionsRescueRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rescue'] to see the possible values for this operation
      *
@@ -505,13 +505,13 @@ class InstanceActionsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the compute instance / resource to be started in rescue mode. (required)
-     * @param  \Coderic\Contabo\Generated\Model\InstancesResetPasswordActionsRequest $instancesResetPasswordActionsRequest instancesResetPasswordActionsRequest (required)
+     * @param  \Contabo\Generated\Model\InstancesResetPasswordActionsRequest $instancesResetPasswordActionsRequest instancesResetPasswordActionsRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resetPasswordAction'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\InstanceResetPasswordActionResponse
+     * @return \Contabo\Generated\Model\InstanceResetPasswordActionResponse
      */
     public function resetPasswordAction($xRequestId, $instanceId, $instancesResetPasswordActionsRequest, $xTraceId = null, string $contentType = self::contentTypes['resetPasswordAction'][0])
     {
@@ -526,13 +526,13 @@ class InstanceActionsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the compute instance / resource to be started in rescue mode. (required)
-     * @param  \Coderic\Contabo\Generated\Model\InstancesResetPasswordActionsRequest $instancesResetPasswordActionsRequest (required)
+     * @param  \Contabo\Generated\Model\InstancesResetPasswordActionsRequest $instancesResetPasswordActionsRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resetPasswordAction'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\InstanceResetPasswordActionResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\InstanceResetPasswordActionResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function resetPasswordActionWithHttpInfo($xRequestId, $instanceId, $instancesResetPasswordActionsRequest, $xTraceId = null, string $contentType = self::contentTypes['resetPasswordAction'][0])
     {
@@ -563,11 +563,11 @@ class InstanceActionsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\InstanceResetPasswordActionResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\InstanceResetPasswordActionResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\InstanceResetPasswordActionResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\InstanceResetPasswordActionResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -585,7 +585,7 @@ class InstanceActionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\InstanceResetPasswordActionResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\InstanceResetPasswordActionResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -604,7 +604,7 @@ class InstanceActionsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\InstanceResetPasswordActionResponse';
+            $returnType = '\Contabo\Generated\Model\InstanceResetPasswordActionResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -637,7 +637,7 @@ class InstanceActionsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\InstanceResetPasswordActionResponse',
+                        '\Contabo\Generated\Model\InstanceResetPasswordActionResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -654,7 +654,7 @@ class InstanceActionsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the compute instance / resource to be started in rescue mode. (required)
-     * @param  \Coderic\Contabo\Generated\Model\InstancesResetPasswordActionsRequest $instancesResetPasswordActionsRequest (required)
+     * @param  \Contabo\Generated\Model\InstancesResetPasswordActionsRequest $instancesResetPasswordActionsRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resetPasswordAction'] to see the possible values for this operation
      *
@@ -678,7 +678,7 @@ class InstanceActionsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the compute instance / resource to be started in rescue mode. (required)
-     * @param  \Coderic\Contabo\Generated\Model\InstancesResetPasswordActionsRequest $instancesResetPasswordActionsRequest (required)
+     * @param  \Contabo\Generated\Model\InstancesResetPasswordActionsRequest $instancesResetPasswordActionsRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resetPasswordAction'] to see the possible values for this operation
      *
@@ -687,7 +687,7 @@ class InstanceActionsApi
      */
     public function resetPasswordActionAsyncWithHttpInfo($xRequestId, $instanceId, $instancesResetPasswordActionsRequest, $xTraceId = null, string $contentType = self::contentTypes['resetPasswordAction'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\InstanceResetPasswordActionResponse';
+        $returnType = '\Contabo\Generated\Model\InstanceResetPasswordActionResponse';
         $request = $this->resetPasswordActionRequest($xRequestId, $instanceId, $instancesResetPasswordActionsRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -731,7 +731,7 @@ class InstanceActionsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $instanceId The identifier of the compute instance / resource to be started in rescue mode. (required)
-     * @param  \Coderic\Contabo\Generated\Model\InstancesResetPasswordActionsRequest $instancesResetPasswordActionsRequest (required)
+     * @param  \Contabo\Generated\Model\InstancesResetPasswordActionsRequest $instancesResetPasswordActionsRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resetPasswordAction'] to see the possible values for this operation
      *
@@ -868,9 +868,9 @@ class InstanceActionsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restart'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\InstanceRestartActionResponse
+     * @return \Contabo\Generated\Model\InstanceRestartActionResponse
      */
     public function restart($xRequestId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['restart'][0])
     {
@@ -888,9 +888,9 @@ class InstanceActionsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restart'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\InstanceRestartActionResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\InstanceRestartActionResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restartWithHttpInfo($xRequestId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['restart'][0])
     {
@@ -921,11 +921,11 @@ class InstanceActionsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\InstanceRestartActionResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\InstanceRestartActionResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\InstanceRestartActionResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\InstanceRestartActionResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -943,7 +943,7 @@ class InstanceActionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\InstanceRestartActionResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\InstanceRestartActionResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -962,7 +962,7 @@ class InstanceActionsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\InstanceRestartActionResponse';
+            $returnType = '\Contabo\Generated\Model\InstanceRestartActionResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -995,7 +995,7 @@ class InstanceActionsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\InstanceRestartActionResponse',
+                        '\Contabo\Generated\Model\InstanceRestartActionResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1043,7 +1043,7 @@ class InstanceActionsApi
      */
     public function restartAsyncWithHttpInfo($xRequestId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['restart'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\InstanceRestartActionResponse';
+        $returnType = '\Contabo\Generated\Model\InstanceRestartActionResponse';
         $request = $this->restartRequest($xRequestId, $instanceId, $xTraceId, $contentType);
 
         return $this->client
@@ -1209,9 +1209,9 @@ class InstanceActionsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shutdown'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\InstanceShutdownActionResponse
+     * @return \Contabo\Generated\Model\InstanceShutdownActionResponse
      */
     public function shutdown($xRequestId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['shutdown'][0])
     {
@@ -1229,9 +1229,9 @@ class InstanceActionsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shutdown'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\InstanceShutdownActionResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\InstanceShutdownActionResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function shutdownWithHttpInfo($xRequestId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['shutdown'][0])
     {
@@ -1262,11 +1262,11 @@ class InstanceActionsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\InstanceShutdownActionResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\InstanceShutdownActionResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\InstanceShutdownActionResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\InstanceShutdownActionResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1284,7 +1284,7 @@ class InstanceActionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\InstanceShutdownActionResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\InstanceShutdownActionResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1303,7 +1303,7 @@ class InstanceActionsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\InstanceShutdownActionResponse';
+            $returnType = '\Contabo\Generated\Model\InstanceShutdownActionResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1336,7 +1336,7 @@ class InstanceActionsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\InstanceShutdownActionResponse',
+                        '\Contabo\Generated\Model\InstanceShutdownActionResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1384,7 +1384,7 @@ class InstanceActionsApi
      */
     public function shutdownAsyncWithHttpInfo($xRequestId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['shutdown'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\InstanceShutdownActionResponse';
+        $returnType = '\Contabo\Generated\Model\InstanceShutdownActionResponse';
         $request = $this->shutdownRequest($xRequestId, $instanceId, $xTraceId, $contentType);
 
         return $this->client
@@ -1550,9 +1550,9 @@ class InstanceActionsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['start'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\InstanceStartActionResponse
+     * @return \Contabo\Generated\Model\InstanceStartActionResponse
      */
     public function start($xRequestId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['start'][0])
     {
@@ -1570,9 +1570,9 @@ class InstanceActionsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['start'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\InstanceStartActionResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\InstanceStartActionResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function startWithHttpInfo($xRequestId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['start'][0])
     {
@@ -1603,11 +1603,11 @@ class InstanceActionsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\InstanceStartActionResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\InstanceStartActionResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\InstanceStartActionResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\InstanceStartActionResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1625,7 +1625,7 @@ class InstanceActionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\InstanceStartActionResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\InstanceStartActionResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1644,7 +1644,7 @@ class InstanceActionsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\InstanceStartActionResponse';
+            $returnType = '\Contabo\Generated\Model\InstanceStartActionResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1677,7 +1677,7 @@ class InstanceActionsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\InstanceStartActionResponse',
+                        '\Contabo\Generated\Model\InstanceStartActionResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1725,7 +1725,7 @@ class InstanceActionsApi
      */
     public function startAsyncWithHttpInfo($xRequestId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['start'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\InstanceStartActionResponse';
+        $returnType = '\Contabo\Generated\Model\InstanceStartActionResponse';
         $request = $this->startRequest($xRequestId, $instanceId, $xTraceId, $contentType);
 
         return $this->client
@@ -1891,9 +1891,9 @@ class InstanceActionsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['stop'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\InstanceStopActionResponse
+     * @return \Contabo\Generated\Model\InstanceStopActionResponse
      */
     public function stop($xRequestId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['stop'][0])
     {
@@ -1911,9 +1911,9 @@ class InstanceActionsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['stop'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\InstanceStopActionResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\InstanceStopActionResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function stopWithHttpInfo($xRequestId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['stop'][0])
     {
@@ -1944,11 +1944,11 @@ class InstanceActionsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\InstanceStopActionResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\InstanceStopActionResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\InstanceStopActionResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\InstanceStopActionResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1966,7 +1966,7 @@ class InstanceActionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\InstanceStopActionResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\InstanceStopActionResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1985,7 +1985,7 @@ class InstanceActionsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\InstanceStopActionResponse';
+            $returnType = '\Contabo\Generated\Model\InstanceStopActionResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2018,7 +2018,7 @@ class InstanceActionsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\InstanceStopActionResponse',
+                        '\Contabo\Generated\Model\InstanceStopActionResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2066,7 +2066,7 @@ class InstanceActionsApi
      */
     public function stopAsyncWithHttpInfo($xRequestId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['stop'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\InstanceStopActionResponse';
+        $returnType = '\Contabo\Generated\Model\InstanceStopActionResponse';
         $request = $this->stopRequest($xRequestId, $instanceId, $xTraceId, $contentType);
 
         return $this->client

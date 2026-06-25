@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * TagsApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -141,13 +141,13 @@ class TagsApi
      * Create a new tag
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateTagRequest $createTagRequest createTagRequest (required)
+     * @param  \Contabo\Generated\Model\CreateTagRequest $createTagRequest createTagRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTag'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\CreateTagResponse
+     * @return \Contabo\Generated\Model\CreateTagResponse
      */
     public function createTag($xRequestId, $createTagRequest, $xTraceId = null, string $contentType = self::contentTypes['createTag'][0])
     {
@@ -161,13 +161,13 @@ class TagsApi
      * Create a new tag
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateTagRequest $createTagRequest (required)
+     * @param  \Contabo\Generated\Model\CreateTagRequest $createTagRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTag'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\CreateTagResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\CreateTagResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createTagWithHttpInfo($xRequestId, $createTagRequest, $xTraceId = null, string $contentType = self::contentTypes['createTag'][0])
     {
@@ -198,11 +198,11 @@ class TagsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\CreateTagResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\CreateTagResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\CreateTagResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\CreateTagResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -220,7 +220,7 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\CreateTagResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\CreateTagResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -239,7 +239,7 @@ class TagsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\CreateTagResponse';
+            $returnType = '\Contabo\Generated\Model\CreateTagResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -272,7 +272,7 @@ class TagsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\CreateTagResponse',
+                        '\Contabo\Generated\Model\CreateTagResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -288,7 +288,7 @@ class TagsApi
      * Create a new tag
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateTagRequest $createTagRequest (required)
+     * @param  \Contabo\Generated\Model\CreateTagRequest $createTagRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTag'] to see the possible values for this operation
      *
@@ -311,7 +311,7 @@ class TagsApi
      * Create a new tag
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateTagRequest $createTagRequest (required)
+     * @param  \Contabo\Generated\Model\CreateTagRequest $createTagRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTag'] to see the possible values for this operation
      *
@@ -320,7 +320,7 @@ class TagsApi
      */
     public function createTagAsyncWithHttpInfo($xRequestId, $createTagRequest, $xTraceId = null, string $contentType = self::contentTypes['createTag'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\CreateTagResponse';
+        $returnType = '\Contabo\Generated\Model\CreateTagResponse';
         $request = $this->createTagRequest($xRequestId, $createTagRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -363,7 +363,7 @@ class TagsApi
      * Create request for operation 'createTag'
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreateTagRequest $createTagRequest (required)
+     * @param  \Contabo\Generated\Model\CreateTagRequest $createTagRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTag'] to see the possible values for this operation
      *
@@ -485,7 +485,7 @@ class TagsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteTag'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -504,7 +504,7 @@ class TagsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteTag'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -735,9 +735,9 @@ class TagsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveTag'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\FindTagResponse
+     * @return \Contabo\Generated\Model\FindTagResponse
      */
     public function retrieveTag($xRequestId, $tagId, $xTraceId = null, string $contentType = self::contentTypes['retrieveTag'][0])
     {
@@ -755,9 +755,9 @@ class TagsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveTag'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\FindTagResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\FindTagResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveTagWithHttpInfo($xRequestId, $tagId, $xTraceId = null, string $contentType = self::contentTypes['retrieveTag'][0])
     {
@@ -788,11 +788,11 @@ class TagsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\FindTagResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\FindTagResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\FindTagResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\FindTagResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -810,7 +810,7 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\FindTagResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\FindTagResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -829,7 +829,7 @@ class TagsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\FindTagResponse';
+            $returnType = '\Contabo\Generated\Model\FindTagResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -862,7 +862,7 @@ class TagsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\FindTagResponse',
+                        '\Contabo\Generated\Model\FindTagResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -910,7 +910,7 @@ class TagsApi
      */
     public function retrieveTagAsyncWithHttpInfo($xRequestId, $tagId, $xTraceId = null, string $contentType = self::contentTypes['retrieveTag'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\FindTagResponse';
+        $returnType = '\Contabo\Generated\Model\FindTagResponse';
         $request = $this->retrieveTagRequest($xRequestId, $tagId, $xTraceId, $contentType);
 
         return $this->client
@@ -1079,9 +1079,9 @@ class TagsApi
      * @param  string|null $name Filter as substring match for tag names. Tags may contain letters, numbers, colons, dashes, and underscores. There is a limit of 255 characters per tag. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveTagList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ListTagResponse
+     * @return \Contabo\Generated\Model\ListTagResponse
      */
     public function retrieveTagList($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, string $contentType = self::contentTypes['retrieveTagList'][0])
     {
@@ -1102,9 +1102,9 @@ class TagsApi
      * @param  string|null $name Filter as substring match for tag names. Tags may contain letters, numbers, colons, dashes, and underscores. There is a limit of 255 characters per tag. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveTagList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ListTagResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ListTagResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveTagListWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, string $contentType = self::contentTypes['retrieveTagList'][0])
     {
@@ -1135,11 +1135,11 @@ class TagsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ListTagResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ListTagResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ListTagResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ListTagResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1157,7 +1157,7 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ListTagResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ListTagResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1176,7 +1176,7 @@ class TagsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ListTagResponse';
+            $returnType = '\Contabo\Generated\Model\ListTagResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1209,7 +1209,7 @@ class TagsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ListTagResponse',
+                        '\Contabo\Generated\Model\ListTagResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1263,7 +1263,7 @@ class TagsApi
      */
     public function retrieveTagListAsyncWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, string $contentType = self::contentTypes['retrieveTagList'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ListTagResponse';
+        $returnType = '\Contabo\Generated\Model\ListTagResponse';
         $request = $this->retrieveTagListRequest($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $contentType);
 
         return $this->client
@@ -1454,13 +1454,13 @@ class TagsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $tagId The identifier of the tag (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateTagRequest $updateTagRequest updateTagRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateTagRequest $updateTagRequest updateTagRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTag'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\UpdateTagResponse
+     * @return \Contabo\Generated\Model\UpdateTagResponse
      */
     public function updateTag($xRequestId, $tagId, $updateTagRequest, $xTraceId = null, string $contentType = self::contentTypes['updateTag'][0])
     {
@@ -1475,13 +1475,13 @@ class TagsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $tagId The identifier of the tag (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateTagRequest $updateTagRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateTagRequest $updateTagRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTag'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\UpdateTagResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\UpdateTagResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateTagWithHttpInfo($xRequestId, $tagId, $updateTagRequest, $xTraceId = null, string $contentType = self::contentTypes['updateTag'][0])
     {
@@ -1512,11 +1512,11 @@ class TagsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\UpdateTagResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\UpdateTagResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\UpdateTagResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\UpdateTagResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1534,7 +1534,7 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\UpdateTagResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\UpdateTagResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1553,7 +1553,7 @@ class TagsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\UpdateTagResponse';
+            $returnType = '\Contabo\Generated\Model\UpdateTagResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1586,7 +1586,7 @@ class TagsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\UpdateTagResponse',
+                        '\Contabo\Generated\Model\UpdateTagResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1603,7 +1603,7 @@ class TagsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $tagId The identifier of the tag (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateTagRequest $updateTagRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateTagRequest $updateTagRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTag'] to see the possible values for this operation
      *
@@ -1627,7 +1627,7 @@ class TagsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $tagId The identifier of the tag (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateTagRequest $updateTagRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateTagRequest $updateTagRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTag'] to see the possible values for this operation
      *
@@ -1636,7 +1636,7 @@ class TagsApi
      */
     public function updateTagAsyncWithHttpInfo($xRequestId, $tagId, $updateTagRequest, $xTraceId = null, string $contentType = self::contentTypes['updateTag'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\UpdateTagResponse';
+        $returnType = '\Contabo\Generated\Model\UpdateTagResponse';
         $request = $this->updateTagRequest($xRequestId, $tagId, $updateTagRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -1680,7 +1680,7 @@ class TagsApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $tagId The identifier of the tag (required)
-     * @param  \Coderic\Contabo\Generated\Model\UpdateTagRequest $updateTagRequest (required)
+     * @param  \Contabo\Generated\Model\UpdateTagRequest $updateTagRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTag'] to see the possible values for this operation
      *

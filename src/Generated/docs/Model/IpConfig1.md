@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**v4** | [**\Coderic\Contabo\Generated\Model\IpV42**](IpV42.md) |  |
-**v6** | [**\Coderic\Contabo\Generated\Model\IpV6**](IpV6.md) |  |
+**v4** | [**\Contabo\Generated\Model\IpV42**](IpV42.md) |  |
+**v6** | [**\Contabo\Generated\Model\IpV6**](IpV6.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * CreateInstanceAddons Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,9 +61,9 @@ class CreateInstanceAddons implements ModelInterface, ArrayAccess, \JsonSerializ
         'privateNetworking' => 'array<string,mixed>',
         'additionalIps' => 'array<string,mixed>',
         'backup' => 'array<string,mixed>',
-        'extraStorage' => '\Coderic\Contabo\Generated\Model\ExtraStorageRequest',
+        'extraStorage' => '\Contabo\Generated\Model\ExtraStorageRequest',
         'customImage' => 'array<string,mixed>',
-        'addonsIds' => '\Coderic\Contabo\Generated\Model\AddOnRequest[]'
+        'addonsIds' => '\Contabo\Generated\Model\AddOnRequest[]'
     ];
 
     /**
@@ -409,7 +409,7 @@ class CreateInstanceAddons implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets extraStorage
      *
-     * @return \Coderic\Contabo\Generated\Model\ExtraStorageRequest|null
+     * @return \Contabo\Generated\Model\ExtraStorageRequest|null
      */
     public function getExtraStorage()
     {
@@ -419,7 +419,7 @@ class CreateInstanceAddons implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets extraStorage
      *
-     * @param \Coderic\Contabo\Generated\Model\ExtraStorageRequest|null $extraStorage Set this attribute if you want to upgrade your instance with the Extra Storage addon.
+     * @param \Contabo\Generated\Model\ExtraStorageRequest|null $extraStorage Set this attribute if you want to upgrade your instance with the Extra Storage addon.
      *
      * @return self
      */
@@ -463,7 +463,7 @@ class CreateInstanceAddons implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets addonsIds
      *
-     * @return \Coderic\Contabo\Generated\Model\AddOnRequest[]|null
+     * @return \Contabo\Generated\Model\AddOnRequest[]|null
      */
     public function getAddonsIds()
     {
@@ -473,7 +473,7 @@ class CreateInstanceAddons implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets addonsIds
      *
-     * @param \Coderic\Contabo\Generated\Model\AddOnRequest[]|null $addonsIds addonsIds
+     * @param \Contabo\Generated\Model\AddOnRequest[]|null $addonsIds addonsIds
      *
      * @return self
      */

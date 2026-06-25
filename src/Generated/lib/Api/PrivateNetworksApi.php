@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * PrivateNetworksApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -152,9 +152,9 @@ class PrivateNetworksApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignInstancePrivateNetwork'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\AssignInstancePrivateNetworkResponse
+     * @return \Contabo\Generated\Model\AssignInstancePrivateNetworkResponse
      */
     public function assignInstancePrivateNetwork($xRequestId, $privateNetworkId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['assignInstancePrivateNetwork'][0])
     {
@@ -173,9 +173,9 @@ class PrivateNetworksApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignInstancePrivateNetwork'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\AssignInstancePrivateNetworkResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\AssignInstancePrivateNetworkResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function assignInstancePrivateNetworkWithHttpInfo($xRequestId, $privateNetworkId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['assignInstancePrivateNetwork'][0])
     {
@@ -206,11 +206,11 @@ class PrivateNetworksApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\AssignInstancePrivateNetworkResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\AssignInstancePrivateNetworkResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\AssignInstancePrivateNetworkResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\AssignInstancePrivateNetworkResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -228,7 +228,7 @@ class PrivateNetworksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\AssignInstancePrivateNetworkResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\AssignInstancePrivateNetworkResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -247,7 +247,7 @@ class PrivateNetworksApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\AssignInstancePrivateNetworkResponse';
+            $returnType = '\Contabo\Generated\Model\AssignInstancePrivateNetworkResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -280,7 +280,7 @@ class PrivateNetworksApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\AssignInstancePrivateNetworkResponse',
+                        '\Contabo\Generated\Model\AssignInstancePrivateNetworkResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -330,7 +330,7 @@ class PrivateNetworksApi
      */
     public function assignInstancePrivateNetworkAsyncWithHttpInfo($xRequestId, $privateNetworkId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['assignInstancePrivateNetwork'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\AssignInstancePrivateNetworkResponse';
+        $returnType = '\Contabo\Generated\Model\AssignInstancePrivateNetworkResponse';
         $request = $this->assignInstancePrivateNetworkRequest($xRequestId, $privateNetworkId, $instanceId, $xTraceId, $contentType);
 
         return $this->client
@@ -508,13 +508,13 @@ class PrivateNetworksApi
      * Create a new Private Network
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreatePrivateNetworkRequest $createPrivateNetworkRequest createPrivateNetworkRequest (required)
+     * @param  \Contabo\Generated\Model\CreatePrivateNetworkRequest $createPrivateNetworkRequest createPrivateNetworkRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPrivateNetwork'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\CreatePrivateNetworkResponse
+     * @return \Contabo\Generated\Model\CreatePrivateNetworkResponse
      */
     public function createPrivateNetwork($xRequestId, $createPrivateNetworkRequest, $xTraceId = null, string $contentType = self::contentTypes['createPrivateNetwork'][0])
     {
@@ -528,13 +528,13 @@ class PrivateNetworksApi
      * Create a new Private Network
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreatePrivateNetworkRequest $createPrivateNetworkRequest (required)
+     * @param  \Contabo\Generated\Model\CreatePrivateNetworkRequest $createPrivateNetworkRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPrivateNetwork'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\CreatePrivateNetworkResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\CreatePrivateNetworkResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createPrivateNetworkWithHttpInfo($xRequestId, $createPrivateNetworkRequest, $xTraceId = null, string $contentType = self::contentTypes['createPrivateNetwork'][0])
     {
@@ -565,11 +565,11 @@ class PrivateNetworksApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\CreatePrivateNetworkResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\CreatePrivateNetworkResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\CreatePrivateNetworkResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\CreatePrivateNetworkResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -587,7 +587,7 @@ class PrivateNetworksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\CreatePrivateNetworkResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\CreatePrivateNetworkResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -606,7 +606,7 @@ class PrivateNetworksApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\CreatePrivateNetworkResponse';
+            $returnType = '\Contabo\Generated\Model\CreatePrivateNetworkResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -639,7 +639,7 @@ class PrivateNetworksApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\CreatePrivateNetworkResponse',
+                        '\Contabo\Generated\Model\CreatePrivateNetworkResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -655,7 +655,7 @@ class PrivateNetworksApi
      * Create a new Private Network
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreatePrivateNetworkRequest $createPrivateNetworkRequest (required)
+     * @param  \Contabo\Generated\Model\CreatePrivateNetworkRequest $createPrivateNetworkRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPrivateNetwork'] to see the possible values for this operation
      *
@@ -678,7 +678,7 @@ class PrivateNetworksApi
      * Create a new Private Network
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreatePrivateNetworkRequest $createPrivateNetworkRequest (required)
+     * @param  \Contabo\Generated\Model\CreatePrivateNetworkRequest $createPrivateNetworkRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPrivateNetwork'] to see the possible values for this operation
      *
@@ -687,7 +687,7 @@ class PrivateNetworksApi
      */
     public function createPrivateNetworkAsyncWithHttpInfo($xRequestId, $createPrivateNetworkRequest, $xTraceId = null, string $contentType = self::contentTypes['createPrivateNetwork'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\CreatePrivateNetworkResponse';
+        $returnType = '\Contabo\Generated\Model\CreatePrivateNetworkResponse';
         $request = $this->createPrivateNetworkRequest($xRequestId, $createPrivateNetworkRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -730,7 +730,7 @@ class PrivateNetworksApi
      * Create request for operation 'createPrivateNetwork'
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CreatePrivateNetworkRequest $createPrivateNetworkRequest (required)
+     * @param  \Contabo\Generated\Model\CreatePrivateNetworkRequest $createPrivateNetworkRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPrivateNetwork'] to see the possible values for this operation
      *
@@ -852,7 +852,7 @@ class PrivateNetworksApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePrivateNetwork'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -871,7 +871,7 @@ class PrivateNetworksApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePrivateNetwork'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1099,13 +1099,13 @@ class PrivateNetworksApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $privateNetworkId The identifier of the Private Network (required)
-     * @param  \Coderic\Contabo\Generated\Model\PatchPrivateNetworkRequest $patchPrivateNetworkRequest patchPrivateNetworkRequest (required)
+     * @param  \Contabo\Generated\Model\PatchPrivateNetworkRequest $patchPrivateNetworkRequest patchPrivateNetworkRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchPrivateNetwork'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\PatchPrivateNetworkResponse
+     * @return \Contabo\Generated\Model\PatchPrivateNetworkResponse
      */
     public function patchPrivateNetwork($xRequestId, $privateNetworkId, $patchPrivateNetworkRequest, $xTraceId = null, string $contentType = self::contentTypes['patchPrivateNetwork'][0])
     {
@@ -1120,13 +1120,13 @@ class PrivateNetworksApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $privateNetworkId The identifier of the Private Network (required)
-     * @param  \Coderic\Contabo\Generated\Model\PatchPrivateNetworkRequest $patchPrivateNetworkRequest (required)
+     * @param  \Contabo\Generated\Model\PatchPrivateNetworkRequest $patchPrivateNetworkRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchPrivateNetwork'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\PatchPrivateNetworkResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\PatchPrivateNetworkResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchPrivateNetworkWithHttpInfo($xRequestId, $privateNetworkId, $patchPrivateNetworkRequest, $xTraceId = null, string $contentType = self::contentTypes['patchPrivateNetwork'][0])
     {
@@ -1157,11 +1157,11 @@ class PrivateNetworksApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\PatchPrivateNetworkResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\PatchPrivateNetworkResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\PatchPrivateNetworkResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\PatchPrivateNetworkResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1179,7 +1179,7 @@ class PrivateNetworksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\PatchPrivateNetworkResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\PatchPrivateNetworkResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1198,7 +1198,7 @@ class PrivateNetworksApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\PatchPrivateNetworkResponse';
+            $returnType = '\Contabo\Generated\Model\PatchPrivateNetworkResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1231,7 +1231,7 @@ class PrivateNetworksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\PatchPrivateNetworkResponse',
+                        '\Contabo\Generated\Model\PatchPrivateNetworkResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1248,7 +1248,7 @@ class PrivateNetworksApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $privateNetworkId The identifier of the Private Network (required)
-     * @param  \Coderic\Contabo\Generated\Model\PatchPrivateNetworkRequest $patchPrivateNetworkRequest (required)
+     * @param  \Contabo\Generated\Model\PatchPrivateNetworkRequest $patchPrivateNetworkRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchPrivateNetwork'] to see the possible values for this operation
      *
@@ -1272,7 +1272,7 @@ class PrivateNetworksApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $privateNetworkId The identifier of the Private Network (required)
-     * @param  \Coderic\Contabo\Generated\Model\PatchPrivateNetworkRequest $patchPrivateNetworkRequest (required)
+     * @param  \Contabo\Generated\Model\PatchPrivateNetworkRequest $patchPrivateNetworkRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchPrivateNetwork'] to see the possible values for this operation
      *
@@ -1281,7 +1281,7 @@ class PrivateNetworksApi
      */
     public function patchPrivateNetworkAsyncWithHttpInfo($xRequestId, $privateNetworkId, $patchPrivateNetworkRequest, $xTraceId = null, string $contentType = self::contentTypes['patchPrivateNetwork'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\PatchPrivateNetworkResponse';
+        $returnType = '\Contabo\Generated\Model\PatchPrivateNetworkResponse';
         $request = $this->patchPrivateNetworkRequest($xRequestId, $privateNetworkId, $patchPrivateNetworkRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -1325,7 +1325,7 @@ class PrivateNetworksApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  int $privateNetworkId The identifier of the Private Network (required)
-     * @param  \Coderic\Contabo\Generated\Model\PatchPrivateNetworkRequest $patchPrivateNetworkRequest (required)
+     * @param  \Contabo\Generated\Model\PatchPrivateNetworkRequest $patchPrivateNetworkRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchPrivateNetwork'] to see the possible values for this operation
      *
@@ -1462,9 +1462,9 @@ class PrivateNetworksApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrievePrivateNetwork'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\FindPrivateNetworkResponse
+     * @return \Contabo\Generated\Model\FindPrivateNetworkResponse
      */
     public function retrievePrivateNetwork($xRequestId, $privateNetworkId, $xTraceId = null, string $contentType = self::contentTypes['retrievePrivateNetwork'][0])
     {
@@ -1482,9 +1482,9 @@ class PrivateNetworksApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrievePrivateNetwork'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\FindPrivateNetworkResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\FindPrivateNetworkResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrievePrivateNetworkWithHttpInfo($xRequestId, $privateNetworkId, $xTraceId = null, string $contentType = self::contentTypes['retrievePrivateNetwork'][0])
     {
@@ -1515,11 +1515,11 @@ class PrivateNetworksApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\FindPrivateNetworkResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\FindPrivateNetworkResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\FindPrivateNetworkResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\FindPrivateNetworkResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1537,7 +1537,7 @@ class PrivateNetworksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\FindPrivateNetworkResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\FindPrivateNetworkResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1556,7 +1556,7 @@ class PrivateNetworksApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\FindPrivateNetworkResponse';
+            $returnType = '\Contabo\Generated\Model\FindPrivateNetworkResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1589,7 +1589,7 @@ class PrivateNetworksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\FindPrivateNetworkResponse',
+                        '\Contabo\Generated\Model\FindPrivateNetworkResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1637,7 +1637,7 @@ class PrivateNetworksApi
      */
     public function retrievePrivateNetworkAsyncWithHttpInfo($xRequestId, $privateNetworkId, $xTraceId = null, string $contentType = self::contentTypes['retrievePrivateNetwork'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\FindPrivateNetworkResponse';
+        $returnType = '\Contabo\Generated\Model\FindPrivateNetworkResponse';
         $request = $this->retrievePrivateNetworkRequest($xRequestId, $privateNetworkId, $xTraceId, $contentType);
 
         return $this->client
@@ -1809,9 +1809,9 @@ class PrivateNetworksApi
      * @param  string|null $dataCenter The data center where your Private Network is located (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrievePrivateNetworkList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ListPrivateNetworkResponse
+     * @return \Contabo\Generated\Model\ListPrivateNetworkResponse
      */
     public function retrievePrivateNetworkList($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $instanceIds = null, $region = null, $dataCenter = null, string $contentType = self::contentTypes['retrievePrivateNetworkList'][0])
     {
@@ -1835,9 +1835,9 @@ class PrivateNetworksApi
      * @param  string|null $dataCenter The data center where your Private Network is located (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrievePrivateNetworkList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ListPrivateNetworkResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ListPrivateNetworkResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrievePrivateNetworkListWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $instanceIds = null, $region = null, $dataCenter = null, string $contentType = self::contentTypes['retrievePrivateNetworkList'][0])
     {
@@ -1868,11 +1868,11 @@ class PrivateNetworksApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ListPrivateNetworkResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ListPrivateNetworkResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ListPrivateNetworkResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ListPrivateNetworkResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1890,7 +1890,7 @@ class PrivateNetworksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ListPrivateNetworkResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ListPrivateNetworkResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1909,7 +1909,7 @@ class PrivateNetworksApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ListPrivateNetworkResponse';
+            $returnType = '\Contabo\Generated\Model\ListPrivateNetworkResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1942,7 +1942,7 @@ class PrivateNetworksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ListPrivateNetworkResponse',
+                        '\Contabo\Generated\Model\ListPrivateNetworkResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2002,7 +2002,7 @@ class PrivateNetworksApi
      */
     public function retrievePrivateNetworkListAsyncWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $instanceIds = null, $region = null, $dataCenter = null, string $contentType = self::contentTypes['retrievePrivateNetworkList'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ListPrivateNetworkResponse';
+        $returnType = '\Contabo\Generated\Model\ListPrivateNetworkResponse';
         $request = $this->retrievePrivateNetworkListRequest($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $instanceIds, $region, $dataCenter, $contentType);
 
         return $this->client
@@ -2230,9 +2230,9 @@ class PrivateNetworksApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unassignInstancePrivateNetwork'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\UnassignInstancePrivateNetworkResponse
+     * @return \Contabo\Generated\Model\UnassignInstancePrivateNetworkResponse
      */
     public function unassignInstancePrivateNetwork($xRequestId, $privateNetworkId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['unassignInstancePrivateNetwork'][0])
     {
@@ -2251,9 +2251,9 @@ class PrivateNetworksApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unassignInstancePrivateNetwork'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\UnassignInstancePrivateNetworkResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\UnassignInstancePrivateNetworkResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function unassignInstancePrivateNetworkWithHttpInfo($xRequestId, $privateNetworkId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['unassignInstancePrivateNetwork'][0])
     {
@@ -2284,11 +2284,11 @@ class PrivateNetworksApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\UnassignInstancePrivateNetworkResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\UnassignInstancePrivateNetworkResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\UnassignInstancePrivateNetworkResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\UnassignInstancePrivateNetworkResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2306,7 +2306,7 @@ class PrivateNetworksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\UnassignInstancePrivateNetworkResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\UnassignInstancePrivateNetworkResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2325,7 +2325,7 @@ class PrivateNetworksApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\UnassignInstancePrivateNetworkResponse';
+            $returnType = '\Contabo\Generated\Model\UnassignInstancePrivateNetworkResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2358,7 +2358,7 @@ class PrivateNetworksApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\UnassignInstancePrivateNetworkResponse',
+                        '\Contabo\Generated\Model\UnassignInstancePrivateNetworkResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2408,7 +2408,7 @@ class PrivateNetworksApi
      */
     public function unassignInstancePrivateNetworkAsyncWithHttpInfo($xRequestId, $privateNetworkId, $instanceId, $xTraceId = null, string $contentType = self::contentTypes['unassignInstancePrivateNetwork'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\UnassignInstancePrivateNetworkResponse';
+        $returnType = '\Contabo\Generated\Model\UnassignInstancePrivateNetworkResponse';
         $request = $this->unassignInstancePrivateNetworkRequest($xRequestId, $privateNetworkId, $instanceId, $xTraceId, $contentType);
 
         return $this->client

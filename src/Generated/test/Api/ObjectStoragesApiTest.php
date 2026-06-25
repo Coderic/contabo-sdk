@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,18 +26,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace Coderic\Contabo\Generated\Test\Api;
+namespace Contabo\Generated\Test\Api;
 
-use \Coderic\Contabo\Generated\Configuration;
-use \Coderic\Contabo\Generated\ApiException;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\Configuration;
+use \Contabo\Generated\ApiException;
+use \Contabo\Generated\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
  * ObjectStoragesApiTest Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

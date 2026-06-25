@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * RemediesAuditResponse Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -70,7 +70,7 @@ class RemediesAuditResponse implements ModelInterface, ArrayAccess, \JsonSeriali
         'username' => 'string',
         'requestId' => 'string',
         'traceId' => 'string',
-        'changes' => '\Coderic\Contabo\Generated\Model\Changes',
+        'changes' => '\Contabo\Generated\Model\Changes',
         'remedyId' => 'float'
     ];
 
@@ -822,7 +822,7 @@ class RemediesAuditResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets changes
      *
-     * @return \Coderic\Contabo\Generated\Model\Changes
+     * @return \Contabo\Generated\Model\Changes
      */
     public function getChanges()
     {
@@ -832,7 +832,7 @@ class RemediesAuditResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets changes
      *
-     * @param \Coderic\Contabo\Generated\Model\Changes $changes List of changed properties
+     * @param \Contabo\Generated\Model\Changes $changes List of changed properties
      *
      * @return self
      */

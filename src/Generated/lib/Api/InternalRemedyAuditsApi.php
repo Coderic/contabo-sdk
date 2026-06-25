@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * InternalRemedyAuditsApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -143,9 +143,9 @@ class InternalRemedyAuditsApi
      * @param  float|null $remedyId Remedy&#39;s id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveRemediesAuditsList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\RemediesAuditListResponse
+     * @return \Contabo\Generated\Model\RemediesAuditListResponse
      */
     public function retrieveRemediesAuditsList($xRequestId, $orgIds, $xTraceId = null, $page = null, $size = null, $orderBy = null, $creationStartTime = null, $creationEndTime = null, $accountId = null, $requestId = null, $foreignChangedBy = null, $changedBy = null, $remedyId = null, string $contentType = self::contentTypes['retrieveRemediesAuditsList'][0])
     {
@@ -173,9 +173,9 @@ class InternalRemedyAuditsApi
      * @param  float|null $remedyId Remedy&#39;s id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveRemediesAuditsList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\RemediesAuditListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\RemediesAuditListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveRemediesAuditsListWithHttpInfo($xRequestId, $orgIds, $xTraceId = null, $page = null, $size = null, $orderBy = null, $creationStartTime = null, $creationEndTime = null, $accountId = null, $requestId = null, $foreignChangedBy = null, $changedBy = null, $remedyId = null, string $contentType = self::contentTypes['retrieveRemediesAuditsList'][0])
     {
@@ -206,11 +206,11 @@ class InternalRemedyAuditsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\RemediesAuditListResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\RemediesAuditListResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\RemediesAuditListResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\RemediesAuditListResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -228,7 +228,7 @@ class InternalRemedyAuditsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\RemediesAuditListResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\RemediesAuditListResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -247,7 +247,7 @@ class InternalRemedyAuditsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\RemediesAuditListResponse';
+            $returnType = '\Contabo\Generated\Model\RemediesAuditListResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -280,7 +280,7 @@ class InternalRemedyAuditsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\RemediesAuditListResponse',
+                        '\Contabo\Generated\Model\RemediesAuditListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -348,7 +348,7 @@ class InternalRemedyAuditsApi
      */
     public function retrieveRemediesAuditsListAsyncWithHttpInfo($xRequestId, $orgIds, $xTraceId = null, $page = null, $size = null, $orderBy = null, $creationStartTime = null, $creationEndTime = null, $accountId = null, $requestId = null, $foreignChangedBy = null, $changedBy = null, $remedyId = null, string $contentType = self::contentTypes['retrieveRemediesAuditsList'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\RemediesAuditListResponse';
+        $returnType = '\Contabo\Generated\Model\RemediesAuditListResponse';
         $request = $this->retrieveRemediesAuditsListRequest($xRequestId, $orgIds, $xTraceId, $page, $size, $orderBy, $creationStartTime, $creationEndTime, $accountId, $requestId, $foreignChangedBy, $changedBy, $remedyId, $contentType);
 
         return $this->client

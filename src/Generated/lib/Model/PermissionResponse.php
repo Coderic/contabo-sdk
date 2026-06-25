@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * PermissionResponse Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class PermissionResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $openAPITypes = [
         'apiName' => 'string',
         'actions' => 'string[]',
-        'resources' => '\Coderic\Contabo\Generated\Model\ResourcePermissionsResponse[]'
+        'resources' => '\Contabo\Generated\Model\ResourcePermissionsResponse[]'
     ];
 
     /**
@@ -395,7 +395,7 @@ class PermissionResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets resources
      *
-     * @return \Coderic\Contabo\Generated\Model\ResourcePermissionsResponse[]|null
+     * @return \Contabo\Generated\Model\ResourcePermissionsResponse[]|null
      */
     public function getResources()
     {
@@ -405,7 +405,7 @@ class PermissionResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets resources
      *
-     * @param \Coderic\Contabo\Generated\Model\ResourcePermissionsResponse[]|null $resources resources
+     * @param \Contabo\Generated\Model\ResourcePermissionsResponse[]|null $resources resources
      *
      * @return self
      */

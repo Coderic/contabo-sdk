@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * UpgradeObjectStorageRequest Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class UpgradeObjectStorageRequest implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'autoScaling' => '\Coderic\Contabo\Generated\Model\UpgradeAutoScalingType',
+        'autoScaling' => '\Contabo\Generated\Model\UpgradeAutoScalingType',
         'totalPurchasedSpaceTB' => 'float'
     ];
 
@@ -300,7 +300,7 @@ class UpgradeObjectStorageRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets autoScaling
      *
-     * @return \Coderic\Contabo\Generated\Model\UpgradeAutoScalingType|null
+     * @return \Contabo\Generated\Model\UpgradeAutoScalingType|null
      */
     public function getAutoScaling()
     {
@@ -310,7 +310,7 @@ class UpgradeObjectStorageRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets autoScaling
      *
-     * @param \Coderic\Contabo\Generated\Model\UpgradeAutoScalingType|null $autoScaling New monthly object storage size limit for autoscaling if enabled.
+     * @param \Contabo\Generated\Model\UpgradeAutoScalingType|null $autoScaling New monthly object storage size limit for autoscaling if enabled.
      *
      * @return self
      */

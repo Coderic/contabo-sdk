@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\UsersAuditsApi
+# Contabo\Generated\UsersAuditsApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `retrieveUserAuditsList()`
 
 ```php
-retrieveUserAuditsList($xRequestId, $xTraceId, $page, $size, $orderBy, $userId, $requestId, $changedBy, $startDate, $endDate): \Coderic\Contabo\Generated\Model\ListUserAuditResponse
+retrieveUserAuditsList($xRequestId, $xTraceId, $page, $size, $orderBy, $userId, $requestId, $changedBy, $startDate, $endDate): \Contabo\Generated\Model\ListUserAuditResponse
 ```
 
 List history about your users (audit)
@@ -25,10 +25,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\UsersAuditsApi(
+$apiInstance = new Contabo\Generated\Api\UsersAuditsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -70,7 +70,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ListUserAuditResponse**](../Model/ListUserAuditResponse.md)
+[**\Contabo\Generated\Model\ListUserAuditResponse**](../Model/ListUserAuditResponse.md)
 
 ### Authorization
 

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * InternalCheckCollectionsApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -140,13 +140,13 @@ class InternalCheckCollectionsApi
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  float $checkCollectionId Check collection&#39;s id (required)
      * @param  string $orgId Org ID (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelRequest $cancelRequest cancelRequest (required)
+     * @param  \Contabo\Generated\Model\CancelRequest $cancelRequest cancelRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelCheckCollection'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse
+     * @return \Contabo\Generated\Model\CheckCollectionsGetResponse
      */
     public function cancelCheckCollection($xRequestId, $checkCollectionId, $orgId, $cancelRequest, $xTraceId = null, string $contentType = self::contentTypes['cancelCheckCollection'][0])
     {
@@ -162,13 +162,13 @@ class InternalCheckCollectionsApi
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  float $checkCollectionId Check collection&#39;s id (required)
      * @param  string $orgId Org ID (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelRequest $cancelRequest (required)
+     * @param  \Contabo\Generated\Model\CancelRequest $cancelRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelCheckCollection'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\CheckCollectionsGetResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelCheckCollectionWithHttpInfo($xRequestId, $checkCollectionId, $orgId, $cancelRequest, $xTraceId = null, string $contentType = self::contentTypes['cancelCheckCollection'][0])
     {
@@ -199,11 +199,11 @@ class InternalCheckCollectionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\CheckCollectionsGetResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\CheckCollectionsGetResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -221,7 +221,7 @@ class InternalCheckCollectionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\CheckCollectionsGetResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -240,7 +240,7 @@ class InternalCheckCollectionsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse';
+            $returnType = '\Contabo\Generated\Model\CheckCollectionsGetResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -273,7 +273,7 @@ class InternalCheckCollectionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse',
+                        '\Contabo\Generated\Model\CheckCollectionsGetResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -291,7 +291,7 @@ class InternalCheckCollectionsApi
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  float $checkCollectionId Check collection&#39;s id (required)
      * @param  string $orgId Org ID (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelRequest $cancelRequest (required)
+     * @param  \Contabo\Generated\Model\CancelRequest $cancelRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelCheckCollection'] to see the possible values for this operation
      *
@@ -316,7 +316,7 @@ class InternalCheckCollectionsApi
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  float $checkCollectionId Check collection&#39;s id (required)
      * @param  string $orgId Org ID (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelRequest $cancelRequest (required)
+     * @param  \Contabo\Generated\Model\CancelRequest $cancelRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelCheckCollection'] to see the possible values for this operation
      *
@@ -325,7 +325,7 @@ class InternalCheckCollectionsApi
      */
     public function cancelCheckCollectionAsyncWithHttpInfo($xRequestId, $checkCollectionId, $orgId, $cancelRequest, $xTraceId = null, string $contentType = self::contentTypes['cancelCheckCollection'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse';
+        $returnType = '\Contabo\Generated\Model\CheckCollectionsGetResponse';
         $request = $this->cancelCheckCollectionRequest($xRequestId, $checkCollectionId, $orgId, $cancelRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -370,7 +370,7 @@ class InternalCheckCollectionsApi
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  float $checkCollectionId Check collection&#39;s id (required)
      * @param  string $orgId Org ID (required)
-     * @param  \Coderic\Contabo\Generated\Model\CancelRequest $cancelRequest (required)
+     * @param  \Contabo\Generated\Model\CancelRequest $cancelRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelCheckCollection'] to see the possible values for this operation
      *
@@ -523,9 +523,9 @@ class InternalCheckCollectionsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCheckCollection'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse
+     * @return \Contabo\Generated\Model\CheckCollectionsGetResponse
      */
     public function getCheckCollection($xRequestId, $checkCollectionId, $orgId, $xTraceId = null, string $contentType = self::contentTypes['getCheckCollection'][0])
     {
@@ -544,9 +544,9 @@ class InternalCheckCollectionsApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCheckCollection'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\CheckCollectionsGetResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCheckCollectionWithHttpInfo($xRequestId, $checkCollectionId, $orgId, $xTraceId = null, string $contentType = self::contentTypes['getCheckCollection'][0])
     {
@@ -577,11 +577,11 @@ class InternalCheckCollectionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\CheckCollectionsGetResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\CheckCollectionsGetResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -599,7 +599,7 @@ class InternalCheckCollectionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\CheckCollectionsGetResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -618,7 +618,7 @@ class InternalCheckCollectionsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse';
+            $returnType = '\Contabo\Generated\Model\CheckCollectionsGetResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -651,7 +651,7 @@ class InternalCheckCollectionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse',
+                        '\Contabo\Generated\Model\CheckCollectionsGetResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -701,7 +701,7 @@ class InternalCheckCollectionsApi
      */
     public function getCheckCollectionAsyncWithHttpInfo($xRequestId, $checkCollectionId, $orgId, $xTraceId = null, string $contentType = self::contentTypes['getCheckCollection'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse';
+        $returnType = '\Contabo\Generated\Model\CheckCollectionsGetResponse';
         $request = $this->getCheckCollectionRequest($xRequestId, $checkCollectionId, $orgId, $xTraceId, $contentType);
 
         return $this->client
@@ -894,9 +894,9 @@ class InternalCheckCollectionsApi
      * @param  string|null $accountId Filter by account ID (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCheckCollections'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\CheckCollectionsListResponse
+     * @return \Contabo\Generated\Model\CheckCollectionsListResponse
      */
     public function listCheckCollections($xRequestId, $orgIds, $xTraceId = null, $objectType = null, $objectId = null, $checkCollectionTemplateId = null, $page = null, $size = null, $orderBy = null, $creationStartTime = null, $creationEndTime = null, $modificationStartTime = null, $modificationEndTime = null, $accountId = null, string $contentType = self::contentTypes['listCheckCollections'][0])
     {
@@ -925,9 +925,9 @@ class InternalCheckCollectionsApi
      * @param  string|null $accountId Filter by account ID (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCheckCollections'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\CheckCollectionsListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\CheckCollectionsListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCheckCollectionsWithHttpInfo($xRequestId, $orgIds, $xTraceId = null, $objectType = null, $objectId = null, $checkCollectionTemplateId = null, $page = null, $size = null, $orderBy = null, $creationStartTime = null, $creationEndTime = null, $modificationStartTime = null, $modificationEndTime = null, $accountId = null, string $contentType = self::contentTypes['listCheckCollections'][0])
     {
@@ -958,11 +958,11 @@ class InternalCheckCollectionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\CheckCollectionsListResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\CheckCollectionsListResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\CheckCollectionsListResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\CheckCollectionsListResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -980,7 +980,7 @@ class InternalCheckCollectionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\CheckCollectionsListResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\CheckCollectionsListResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -999,7 +999,7 @@ class InternalCheckCollectionsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\CheckCollectionsListResponse';
+            $returnType = '\Contabo\Generated\Model\CheckCollectionsListResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1032,7 +1032,7 @@ class InternalCheckCollectionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\CheckCollectionsListResponse',
+                        '\Contabo\Generated\Model\CheckCollectionsListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1102,7 +1102,7 @@ class InternalCheckCollectionsApi
      */
     public function listCheckCollectionsAsyncWithHttpInfo($xRequestId, $orgIds, $xTraceId = null, $objectType = null, $objectId = null, $checkCollectionTemplateId = null, $page = null, $size = null, $orderBy = null, $creationStartTime = null, $creationEndTime = null, $modificationStartTime = null, $modificationEndTime = null, $accountId = null, string $contentType = self::contentTypes['listCheckCollections'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\CheckCollectionsListResponse';
+        $returnType = '\Contabo\Generated\Model\CheckCollectionsListResponse';
         $request = $this->listCheckCollectionsRequest($xRequestId, $orgIds, $xTraceId, $objectType, $objectId, $checkCollectionTemplateId, $page, $size, $orderBy, $creationStartTime, $creationEndTime, $modificationStartTime, $modificationEndTime, $accountId, $contentType);
 
         return $this->client
@@ -1386,13 +1386,13 @@ class InternalCheckCollectionsApi
      * Start check collection
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CheckCollectionCreateRequest $checkCollectionCreateRequest checkCollectionCreateRequest (required)
+     * @param  \Contabo\Generated\Model\CheckCollectionCreateRequest $checkCollectionCreateRequest checkCollectionCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['startCheckCollection'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse
+     * @return \Contabo\Generated\Model\CheckCollectionsGetResponse
      */
     public function startCheckCollection($xRequestId, $checkCollectionCreateRequest, $xTraceId = null, string $contentType = self::contentTypes['startCheckCollection'][0])
     {
@@ -1406,13 +1406,13 @@ class InternalCheckCollectionsApi
      * Start check collection
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CheckCollectionCreateRequest $checkCollectionCreateRequest (required)
+     * @param  \Contabo\Generated\Model\CheckCollectionCreateRequest $checkCollectionCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['startCheckCollection'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\CheckCollectionsGetResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function startCheckCollectionWithHttpInfo($xRequestId, $checkCollectionCreateRequest, $xTraceId = null, string $contentType = self::contentTypes['startCheckCollection'][0])
     {
@@ -1443,11 +1443,11 @@ class InternalCheckCollectionsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\CheckCollectionsGetResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\CheckCollectionsGetResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1465,7 +1465,7 @@ class InternalCheckCollectionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\CheckCollectionsGetResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1484,7 +1484,7 @@ class InternalCheckCollectionsApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse';
+            $returnType = '\Contabo\Generated\Model\CheckCollectionsGetResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1517,7 +1517,7 @@ class InternalCheckCollectionsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse',
+                        '\Contabo\Generated\Model\CheckCollectionsGetResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1533,7 +1533,7 @@ class InternalCheckCollectionsApi
      * Start check collection
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CheckCollectionCreateRequest $checkCollectionCreateRequest (required)
+     * @param  \Contabo\Generated\Model\CheckCollectionCreateRequest $checkCollectionCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['startCheckCollection'] to see the possible values for this operation
      *
@@ -1556,7 +1556,7 @@ class InternalCheckCollectionsApi
      * Start check collection
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CheckCollectionCreateRequest $checkCollectionCreateRequest (required)
+     * @param  \Contabo\Generated\Model\CheckCollectionCreateRequest $checkCollectionCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['startCheckCollection'] to see the possible values for this operation
      *
@@ -1565,7 +1565,7 @@ class InternalCheckCollectionsApi
      */
     public function startCheckCollectionAsyncWithHttpInfo($xRequestId, $checkCollectionCreateRequest, $xTraceId = null, string $contentType = self::contentTypes['startCheckCollection'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\CheckCollectionsGetResponse';
+        $returnType = '\Contabo\Generated\Model\CheckCollectionsGetResponse';
         $request = $this->startCheckCollectionRequest($xRequestId, $checkCollectionCreateRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -1608,7 +1608,7 @@ class InternalCheckCollectionsApi
      * Create request for operation 'startCheckCollection'
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\CheckCollectionCreateRequest $checkCollectionCreateRequest (required)
+     * @param  \Contabo\Generated\Model\CheckCollectionCreateRequest $checkCollectionCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['startCheckCollection'] to see the possible values for this operation
      *

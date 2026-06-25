@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **username** | **string** | Name of the user which led to the change. |
 **requestId** | **string** | The requestId of the API call which led to the change. |
 **traceId** | **string** | The traceId of the API call which led to the change. |
-**changes** | [**\Coderic\Contabo\Generated\Model\Changes**](Changes.md) | List of changed properties |
+**changes** | [**\Contabo\Generated\Model\Changes**](Changes.md) | List of changed properties |
 **checkId** | **float** | Check&#39;s id |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

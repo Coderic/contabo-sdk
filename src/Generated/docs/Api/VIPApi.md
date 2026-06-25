@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\VIPApi
+# Contabo\Generated\VIPApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `assignIp()`
 
 ```php
-assignIp($xRequestId, $resourceId, $ip, $resourceType, $xTraceId): \Coderic\Contabo\Generated\Model\AssignVipResponse
+assignIp($xRequestId, $resourceId, $ip, $resourceType, $xTraceId): \Contabo\Generated\Model\AssignVipResponse
 ```
 
 Assign a VIP to an VPS/VDS/Bare Metal
@@ -28,10 +28,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\VIPApi(
+$apiInstance = new Contabo\Generated\Api\VIPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -63,7 +63,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\AssignVipResponse**](../Model/AssignVipResponse.md)
+[**\Contabo\Generated\Model\AssignVipResponse**](../Model/AssignVipResponse.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ try {
 ## `retrieveVip()`
 
 ```php
-retrieveVip($xRequestId, $ip, $xTraceId): \Coderic\Contabo\Generated\Model\FindVipResponse
+retrieveVip($xRequestId, $ip, $xTraceId): \Contabo\Generated\Model\FindVipResponse
 ```
 
 Get specific VIP by ip
@@ -96,10 +96,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\VIPApi(
+$apiInstance = new Contabo\Generated\Api\VIPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -127,7 +127,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\FindVipResponse**](../Model/FindVipResponse.md)
+[**\Contabo\Generated\Model\FindVipResponse**](../Model/FindVipResponse.md)
 
 ### Authorization
 
@@ -145,7 +145,7 @@ try {
 ## `retrieveVipList()`
 
 ```php
-retrieveVipList($xRequestId, $xTraceId, $page, $size, $orderBy, $resourceId, $resourceType, $resourceName, $resourceDisplayName, $ipVersion, $ips, $ip, $type, $dataCenter, $region): \Coderic\Contabo\Generated\Model\ListVipResponse
+retrieveVipList($xRequestId, $xTraceId, $page, $size, $orderBy, $resourceId, $resourceType, $resourceName, $resourceDisplayName, $ipVersion, $ips, $ip, $type, $dataCenter, $region): \Contabo\Generated\Model\ListVipResponse
 ```
 
 List VIPs
@@ -160,10 +160,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\VIPApi(
+$apiInstance = new Contabo\Generated\Api\VIPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -215,7 +215,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ListVipResponse**](../Model/ListVipResponse.md)
+[**\Contabo\Generated\Model\ListVipResponse**](../Model/ListVipResponse.md)
 
 ### Authorization
 
@@ -248,10 +248,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\VIPApi(
+$apiInstance = new Contabo\Generated\Api\VIPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

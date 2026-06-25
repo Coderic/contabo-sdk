@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\TagsApi
+# Contabo\Generated\TagsApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `createTag()`
 
 ```php
-createTag($xRequestId, $createTagRequest, $xTraceId): \Coderic\Contabo\Generated\Model\CreateTagResponse
+createTag($xRequestId, $createTagRequest, $xTraceId): \Contabo\Generated\Model\CreateTagResponse
 ```
 
 Create a new tag
@@ -29,17 +29,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\TagsApi(
+$apiInstance = new Contabo\Generated\Api\TagsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
-$createTagRequest = new \Coderic\Contabo\Generated\Model\CreateTagRequest(); // \Coderic\Contabo\Generated\Model\CreateTagRequest
+$createTagRequest = new \Contabo\Generated\Model\CreateTagRequest(); // \Contabo\Generated\Model\CreateTagRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -55,12 +55,12 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
-| **createTagRequest** | [**\Coderic\Contabo\Generated\Model\CreateTagRequest**](../Model/CreateTagRequest.md)|  | |
+| **createTagRequest** | [**\Contabo\Generated\Model\CreateTagRequest**](../Model/CreateTagRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\CreateTagResponse**](../Model/CreateTagResponse.md)
+[**\Contabo\Generated\Model\CreateTagResponse**](../Model/CreateTagResponse.md)
 
 ### Authorization
 
@@ -93,10 +93,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\TagsApi(
+$apiInstance = new Contabo\Generated\Api\TagsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -141,7 +141,7 @@ void (empty response body)
 ## `retrieveTag()`
 
 ```php
-retrieveTag($xRequestId, $tagId, $xTraceId): \Coderic\Contabo\Generated\Model\FindTagResponse
+retrieveTag($xRequestId, $tagId, $xTraceId): \Contabo\Generated\Model\FindTagResponse
 ```
 
 Get specific tag by id
@@ -156,10 +156,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\TagsApi(
+$apiInstance = new Contabo\Generated\Api\TagsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -187,7 +187,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\FindTagResponse**](../Model/FindTagResponse.md)
+[**\Contabo\Generated\Model\FindTagResponse**](../Model/FindTagResponse.md)
 
 ### Authorization
 
@@ -205,7 +205,7 @@ try {
 ## `retrieveTagList()`
 
 ```php
-retrieveTagList($xRequestId, $xTraceId, $page, $size, $orderBy, $name): \Coderic\Contabo\Generated\Model\ListTagResponse
+retrieveTagList($xRequestId, $xTraceId, $page, $size, $orderBy, $name): \Contabo\Generated\Model\ListTagResponse
 ```
 
 List tags
@@ -220,10 +220,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\TagsApi(
+$apiInstance = new Contabo\Generated\Api\TagsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -257,7 +257,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ListTagResponse**](../Model/ListTagResponse.md)
+[**\Contabo\Generated\Model\ListTagResponse**](../Model/ListTagResponse.md)
 
 ### Authorization
 
@@ -275,7 +275,7 @@ try {
 ## `updateTag()`
 
 ```php
-updateTag($xRequestId, $tagId, $updateTagRequest, $xTraceId): \Coderic\Contabo\Generated\Model\UpdateTagResponse
+updateTag($xRequestId, $tagId, $updateTagRequest, $xTraceId): \Contabo\Generated\Model\UpdateTagResponse
 ```
 
 Update specific tag by id
@@ -290,10 +290,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\TagsApi(
+$apiInstance = new Contabo\Generated\Api\TagsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -301,7 +301,7 @@ $apiInstance = new Coderic\Contabo\Generated\Api\TagsApi(
 );
 $xRequestId = 04e0f898-37b4-48bc-a794-1a57abe6aa31; // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
 $tagId = 12345; // int | The identifier of the tag
-$updateTagRequest = new \Coderic\Contabo\Generated\Model\UpdateTagRequest(); // \Coderic\Contabo\Generated\Model\UpdateTagRequest
+$updateTagRequest = new \Contabo\Generated\Model\UpdateTagRequest(); // \Contabo\Generated\Model\UpdateTagRequest
 $xTraceId = 'xTraceId_example'; // string | Identifier to trace group of requests.
 
 try {
@@ -318,12 +318,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **xRequestId** | **string**| [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. | |
 | **tagId** | **int**| The identifier of the tag | |
-| **updateTagRequest** | [**\Coderic\Contabo\Generated\Model\UpdateTagRequest**](../Model/UpdateTagRequest.md)|  | |
+| **updateTagRequest** | [**\Contabo\Generated\Model\UpdateTagRequest**](../Model/UpdateTagRequest.md)|  | |
 | **xTraceId** | **string**| Identifier to trace group of requests. | [optional] |
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\UpdateTagResponse**](../Model/UpdateTagResponse.md)
+[**\Contabo\Generated\Model\UpdateTagResponse**](../Model/UpdateTagResponse.md)
 
 ### Authorization
 

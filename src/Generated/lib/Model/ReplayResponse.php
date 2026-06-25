@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * ReplayResponse Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ReplayResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Coderic\Contabo\Generated\Model\AuditCountResponse[]'
+        'data' => '\Contabo\Generated\Model\AuditCountResponse[]'
     ];
 
     /**
@@ -296,7 +296,7 @@ class ReplayResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets data
      *
-     * @return \Coderic\Contabo\Generated\Model\AuditCountResponse[]
+     * @return \Contabo\Generated\Model\AuditCountResponse[]
      */
     public function getData()
     {
@@ -306,7 +306,7 @@ class ReplayResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets data
      *
-     * @param \Coderic\Contabo\Generated\Model\AuditCountResponse[] $data data
+     * @param \Contabo\Generated\Model\AuditCountResponse[] $data data
      *
      * @return self
      */

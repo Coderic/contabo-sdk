@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * DomainAuthCodeResponse Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,10 +61,10 @@ class DomainAuthCodeResponse implements ModelInterface, ArrayAccess, \JsonSerial
         'tenantId' => 'string',
         'customerId' => 'string',
         'domain' => 'string',
-        'domainDetails' => '\Coderic\Contabo\Generated\Model\DomainDetails',
+        'domainDetails' => '\Contabo\Generated\Model\DomainDetails',
         'status' => 'string',
         'nameservers' => 'string[]',
-        'handles' => '\Coderic\Contabo\Generated\Model\DomainHandles',
+        'handles' => '\Contabo\Generated\Model\DomainHandles',
         'registrationDate' => '\DateTime',
         'renewalDate' => '\DateTime',
         'terminationDate' => '\DateTime',
@@ -72,7 +72,7 @@ class DomainAuthCodeResponse implements ModelInterface, ArrayAccess, \JsonSerial
         'dnssecKeys' => 'string[]',
         'transferOutConfirmation' => 'bool',
         'authCode' => 'string',
-        'authCodeChanged' => '\Coderic\Contabo\Generated\Model\ChangedAuthCode'
+        'authCodeChanged' => '\Contabo\Generated\Model\ChangedAuthCode'
     ];
 
     /**
@@ -569,7 +569,7 @@ class DomainAuthCodeResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets domainDetails
      *
-     * @return \Coderic\Contabo\Generated\Model\DomainDetails
+     * @return \Contabo\Generated\Model\DomainDetails
      */
     public function getDomainDetails()
     {
@@ -579,7 +579,7 @@ class DomainAuthCodeResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets domainDetails
      *
-     * @param \Coderic\Contabo\Generated\Model\DomainDetails $domainDetails Domain Details
+     * @param \Contabo\Generated\Model\DomainDetails $domainDetails Domain Details
      *
      * @return self
      */
@@ -660,7 +660,7 @@ class DomainAuthCodeResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets handles
      *
-     * @return \Coderic\Contabo\Generated\Model\DomainHandles
+     * @return \Contabo\Generated\Model\DomainHandles
      */
     public function getHandles()
     {
@@ -670,7 +670,7 @@ class DomainAuthCodeResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets handles
      *
-     * @param \Coderic\Contabo\Generated\Model\DomainHandles $handles The handles of the domain
+     * @param \Contabo\Generated\Model\DomainHandles $handles The handles of the domain
      *
      * @return self
      */
@@ -876,7 +876,7 @@ class DomainAuthCodeResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets authCodeChanged
      *
-     * @return \Coderic\Contabo\Generated\Model\ChangedAuthCode
+     * @return \Contabo\Generated\Model\ChangedAuthCode
      */
     public function getAuthCodeChanged()
     {
@@ -886,7 +886,7 @@ class DomainAuthCodeResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets authCodeChanged
      *
-     * @param \Coderic\Contabo\Generated\Model\ChangedAuthCode $authCodeChanged Details if the auth code has been changed
+     * @param \Contabo\Generated\Model\ChangedAuthCode $authCodeChanged Details if the auth code has been changed
      *
      * @return self
      */

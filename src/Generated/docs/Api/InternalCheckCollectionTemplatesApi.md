@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\InternalCheckCollectionTemplatesApi
+# Contabo\Generated\InternalCheckCollectionTemplatesApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `getCheckCollectionTemplate()`
 
 ```php
-getCheckCollectionTemplate($xRequestId, $orgId, $checkCollectionTemplateId, $xTraceId): \Coderic\Contabo\Generated\Model\CheckCollectionTemplatesGetResponse
+getCheckCollectionTemplate($xRequestId, $orgId, $checkCollectionTemplateId, $xTraceId): \Contabo\Generated\Model\CheckCollectionTemplatesGetResponse
 ```
 
 Get check
@@ -26,10 +26,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InternalCheckCollectionTemplatesApi(
+$apiInstance = new Contabo\Generated\Api\InternalCheckCollectionTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -59,7 +59,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\CheckCollectionTemplatesGetResponse**](../Model/CheckCollectionTemplatesGetResponse.md)
+[**\Contabo\Generated\Model\CheckCollectionTemplatesGetResponse**](../Model/CheckCollectionTemplatesGetResponse.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ try {
 ## `listCheckCollectionTemplates()`
 
 ```php
-listCheckCollectionTemplates($xRequestId, $orgIds, $xTraceId, $page, $size, $orderBy, $creationStartTime, $creationEndTime, $modificationStartTime, $modificationEndTime, $accountId, $internal, $objectType): \Coderic\Contabo\Generated\Model\CheckCollectionTemplatesListResponse
+listCheckCollectionTemplates($xRequestId, $orgIds, $xTraceId, $page, $size, $orderBy, $creationStartTime, $creationEndTime, $modificationStartTime, $modificationEndTime, $accountId, $internal, $objectType): \Contabo\Generated\Model\CheckCollectionTemplatesListResponse
 ```
 
 List check collection templates
@@ -92,10 +92,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\InternalCheckCollectionTemplatesApi(
+$apiInstance = new Contabo\Generated\Api\InternalCheckCollectionTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -143,7 +143,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\CheckCollectionTemplatesListResponse**](../Model/CheckCollectionTemplatesListResponse.md)
+[**\Contabo\Generated\Model\CheckCollectionTemplatesListResponse**](../Model/CheckCollectionTemplatesListResponse.md)
 
 ### Authorization
 

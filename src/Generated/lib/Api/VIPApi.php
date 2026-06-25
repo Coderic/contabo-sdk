@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * VIPApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -144,9 +144,9 @@ class VIPApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignIp'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\AssignVipResponse
+     * @return \Contabo\Generated\Model\AssignVipResponse
      */
     public function assignIp($xRequestId, $resourceId, $ip, $resourceType, $xTraceId = null, string $contentType = self::contentTypes['assignIp'][0])
     {
@@ -166,9 +166,9 @@ class VIPApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignIp'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\AssignVipResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\AssignVipResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function assignIpWithHttpInfo($xRequestId, $resourceId, $ip, $resourceType, $xTraceId = null, string $contentType = self::contentTypes['assignIp'][0])
     {
@@ -199,11 +199,11 @@ class VIPApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\AssignVipResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\AssignVipResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\AssignVipResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\AssignVipResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -221,7 +221,7 @@ class VIPApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\AssignVipResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\AssignVipResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -240,7 +240,7 @@ class VIPApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\AssignVipResponse';
+            $returnType = '\Contabo\Generated\Model\AssignVipResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -273,7 +273,7 @@ class VIPApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\AssignVipResponse',
+                        '\Contabo\Generated\Model\AssignVipResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -325,7 +325,7 @@ class VIPApi
      */
     public function assignIpAsyncWithHttpInfo($xRequestId, $resourceId, $ip, $resourceType, $xTraceId = null, string $contentType = self::contentTypes['assignIp'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\AssignVipResponse';
+        $returnType = '\Contabo\Generated\Model\AssignVipResponse';
         $request = $this->assignIpRequest($xRequestId, $resourceId, $ip, $resourceType, $xTraceId, $contentType);
 
         return $this->client
@@ -523,9 +523,9 @@ class VIPApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveVip'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\FindVipResponse
+     * @return \Contabo\Generated\Model\FindVipResponse
      */
     public function retrieveVip($xRequestId, $ip, $xTraceId = null, string $contentType = self::contentTypes['retrieveVip'][0])
     {
@@ -543,9 +543,9 @@ class VIPApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveVip'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\FindVipResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\FindVipResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveVipWithHttpInfo($xRequestId, $ip, $xTraceId = null, string $contentType = self::contentTypes['retrieveVip'][0])
     {
@@ -576,11 +576,11 @@ class VIPApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\FindVipResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\FindVipResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\FindVipResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\FindVipResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -598,7 +598,7 @@ class VIPApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\FindVipResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\FindVipResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -617,7 +617,7 @@ class VIPApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\FindVipResponse';
+            $returnType = '\Contabo\Generated\Model\FindVipResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -650,7 +650,7 @@ class VIPApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\FindVipResponse',
+                        '\Contabo\Generated\Model\FindVipResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -698,7 +698,7 @@ class VIPApi
      */
     public function retrieveVipAsyncWithHttpInfo($xRequestId, $ip, $xTraceId = null, string $contentType = self::contentTypes['retrieveVip'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\FindVipResponse';
+        $returnType = '\Contabo\Generated\Model\FindVipResponse';
         $request = $this->retrieveVipRequest($xRequestId, $ip, $xTraceId, $contentType);
 
         return $this->client
@@ -876,9 +876,9 @@ class VIPApi
      * @param  string|null $region The region of the VIP. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveVipList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\ListVipResponse
+     * @return \Contabo\Generated\Model\ListVipResponse
      */
     public function retrieveVipList($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $resourceId = null, $resourceType = null, $resourceName = null, $resourceDisplayName = null, $ipVersion = null, $ips = null, $ip = null, $type = null, $dataCenter = null, $region = null, string $contentType = self::contentTypes['retrieveVipList'][0])
     {
@@ -908,9 +908,9 @@ class VIPApi
      * @param  string|null $region The region of the VIP. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveVipList'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\ListVipResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\ListVipResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveVipListWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $resourceId = null, $resourceType = null, $resourceName = null, $resourceDisplayName = null, $ipVersion = null, $ips = null, $ip = null, $type = null, $dataCenter = null, $region = null, string $contentType = self::contentTypes['retrieveVipList'][0])
     {
@@ -941,11 +941,11 @@ class VIPApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\ListVipResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\ListVipResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\ListVipResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\ListVipResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -963,7 +963,7 @@ class VIPApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\ListVipResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\ListVipResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -982,7 +982,7 @@ class VIPApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\ListVipResponse';
+            $returnType = '\Contabo\Generated\Model\ListVipResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1015,7 +1015,7 @@ class VIPApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\ListVipResponse',
+                        '\Contabo\Generated\Model\ListVipResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1087,7 +1087,7 @@ class VIPApi
      */
     public function retrieveVipListAsyncWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $resourceId = null, $resourceType = null, $resourceName = null, $resourceDisplayName = null, $ipVersion = null, $ips = null, $ip = null, $type = null, $dataCenter = null, $region = null, string $contentType = self::contentTypes['retrieveVipList'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\ListVipResponse';
+        $returnType = '\Contabo\Generated\Model\ListVipResponse';
         $request = $this->retrieveVipListRequest($xRequestId, $xTraceId, $page, $size, $orderBy, $resourceId, $resourceType, $resourceName, $resourceDisplayName, $ipVersion, $ips, $ip, $type, $dataCenter, $region, $contentType);
 
         return $this->client
@@ -1382,7 +1382,7 @@ class VIPApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unassignIp'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1403,7 +1403,7 @@ class VIPApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unassignIp'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

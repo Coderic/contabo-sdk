@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * CreateInstanceRequest Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -68,7 +68,7 @@ class CreateInstanceRequest implements ModelInterface, ArrayAccess, \JsonSeriali
         'period' => 'int',
         'displayName' => 'string',
         'defaultUser' => 'string',
-        'addOns' => '\Coderic\Contabo\Generated\Model\CreateInstanceAddons',
+        'addOns' => '\Contabo\Generated\Model\CreateInstanceAddons',
         'applicationId' => 'string'
     ];
 
@@ -833,7 +833,7 @@ class CreateInstanceRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets addOns
      *
-     * @return \Coderic\Contabo\Generated\Model\CreateInstanceAddons|null
+     * @return \Contabo\Generated\Model\CreateInstanceAddons|null
      */
     public function getAddOns()
     {
@@ -843,7 +843,7 @@ class CreateInstanceRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets addOns
      *
-     * @param \Coderic\Contabo\Generated\Model\CreateInstanceAddons|null $addOns Set attributes in the addons object for the corresponding ones that need to be added to the instance
+     * @param \Contabo\Generated\Model\CreateInstanceAddons|null $addOns Set attributes in the addons object for the corresponding ones that need to be added to the instance
      *
      * @return self
      */

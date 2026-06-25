@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Coderic\Contabo\Laravel;
+namespace Contabo\Laravel;
 
-use Coderic\Contabo\Auth\Credentials;
-use Coderic\Contabo\ContaboClient;
+use Contabo\Auth\Credentials;
+use Contabo\ContaboClient;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 

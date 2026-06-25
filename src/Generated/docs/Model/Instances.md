@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **displayName** | **string** | Instance display name |
 **name** | **string** | Instance name |
 **productId** | **string** | Product id |
-**privateIpConfig** | [**\Coderic\Contabo\Generated\Model\PrivateIpConfig**](PrivateIpConfig.md) |  |
-**ipConfig** | [**\Coderic\Contabo\Generated\Model\IpConfig**](IpConfig.md) |  |
+**privateIpConfig** | [**\Contabo\Generated\Model\PrivateIpConfig**](PrivateIpConfig.md) |  |
+**ipConfig** | [**\Contabo\Generated\Model\IpConfig**](IpConfig.md) |  |
 **status** | **string** | State of the instance in the Private Network |
 **errorMessage** | **string** | Message in case of an error. | [optional]
 

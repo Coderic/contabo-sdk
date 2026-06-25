@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * ListImageResponseData Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -74,7 +74,7 @@ class ListImageResponseData implements ModelInterface, ArrayAccess, \JsonSeriali
         'standardImage' => 'bool',
         'creationDate' => '\DateTime',
         'lastModifiedDate' => '\DateTime',
-        'tags' => '\Coderic\Contabo\Generated\Model\AssignedTagResponse[]'
+        'tags' => '\Contabo\Generated\Model\AssignedTagResponse[]'
     ];
 
     /**
@@ -974,7 +974,7 @@ class ListImageResponseData implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets tags
      *
-     * @return \Coderic\Contabo\Generated\Model\AssignedTagResponse[]
+     * @return \Contabo\Generated\Model\AssignedTagResponse[]
      */
     public function getTags()
     {
@@ -984,7 +984,7 @@ class ListImageResponseData implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets tags
      *
-     * @param \Coderic\Contabo\Generated\Model\AssignedTagResponse[] $tags The tags assigned to the image
+     * @param \Contabo\Generated\Model\AssignedTagResponse[] $tags The tags assigned to the image
      *
      * @return self
      */

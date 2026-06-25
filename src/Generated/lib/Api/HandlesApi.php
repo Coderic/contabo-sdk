@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Api;
+namespace Contabo\Generated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Coderic\Contabo\Generated\ApiException;
-use Coderic\Contabo\Generated\Configuration;
-use Coderic\Contabo\Generated\HeaderSelector;
-use Coderic\Contabo\Generated\ObjectSerializer;
+use Contabo\Generated\ApiException;
+use Contabo\Generated\Configuration;
+use Contabo\Generated\HeaderSelector;
+use Contabo\Generated\ObjectSerializer;
 
 /**
  * HandlesApi Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -144,13 +144,13 @@ class HandlesApi
      * Create specific handle
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\HandleCreateRequest $handleCreateRequest handleCreateRequest (required)
+     * @param  \Contabo\Generated\Model\HandleCreateRequest $handleCreateRequest handleCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHandle'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\HandleCreateResponse
+     * @return \Contabo\Generated\Model\HandleCreateResponse
      */
     public function createHandle($xRequestId, $handleCreateRequest, $xTraceId = null, string $contentType = self::contentTypes['createHandle'][0])
     {
@@ -164,13 +164,13 @@ class HandlesApi
      * Create specific handle
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\HandleCreateRequest $handleCreateRequest (required)
+     * @param  \Contabo\Generated\Model\HandleCreateRequest $handleCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHandle'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\HandleCreateResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\HandleCreateResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createHandleWithHttpInfo($xRequestId, $handleCreateRequest, $xTraceId = null, string $contentType = self::contentTypes['createHandle'][0])
     {
@@ -201,11 +201,11 @@ class HandlesApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Coderic\Contabo\Generated\Model\HandleCreateResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\HandleCreateResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\HandleCreateResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\HandleCreateResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -223,7 +223,7 @@ class HandlesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\HandleCreateResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\HandleCreateResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -242,7 +242,7 @@ class HandlesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\HandleCreateResponse';
+            $returnType = '\Contabo\Generated\Model\HandleCreateResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -275,7 +275,7 @@ class HandlesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\HandleCreateResponse',
+                        '\Contabo\Generated\Model\HandleCreateResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -291,7 +291,7 @@ class HandlesApi
      * Create specific handle
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\HandleCreateRequest $handleCreateRequest (required)
+     * @param  \Contabo\Generated\Model\HandleCreateRequest $handleCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHandle'] to see the possible values for this operation
      *
@@ -314,7 +314,7 @@ class HandlesApi
      * Create specific handle
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\HandleCreateRequest $handleCreateRequest (required)
+     * @param  \Contabo\Generated\Model\HandleCreateRequest $handleCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHandle'] to see the possible values for this operation
      *
@@ -323,7 +323,7 @@ class HandlesApi
      */
     public function createHandleAsyncWithHttpInfo($xRequestId, $handleCreateRequest, $xTraceId = null, string $contentType = self::contentTypes['createHandle'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\HandleCreateResponse';
+        $returnType = '\Contabo\Generated\Model\HandleCreateResponse';
         $request = $this->createHandleRequest($xRequestId, $handleCreateRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -366,7 +366,7 @@ class HandlesApi
      * Create request for operation 'createHandle'
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
-     * @param  \Coderic\Contabo\Generated\Model\HandleCreateRequest $handleCreateRequest (required)
+     * @param  \Contabo\Generated\Model\HandleCreateRequest $handleCreateRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHandle'] to see the possible values for this operation
      *
@@ -497,9 +497,9 @@ class HandlesApi
      * @param  string|null $lastName Filter handles by last name. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listHandles'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\HandleListResponse
+     * @return \Contabo\Generated\Model\HandleListResponse
      */
     public function listHandles($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $showDefaults = null, $search = null, $countries = null, $handleType = null, $firstName = null, $lastName = null, string $contentType = self::contentTypes['listHandles'][0])
     {
@@ -526,9 +526,9 @@ class HandlesApi
      * @param  string|null $lastName Filter handles by last name. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listHandles'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\HandleListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\HandleListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listHandlesWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $showDefaults = null, $search = null, $countries = null, $handleType = null, $firstName = null, $lastName = null, string $contentType = self::contentTypes['listHandles'][0])
     {
@@ -559,11 +559,11 @@ class HandlesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\HandleListResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\HandleListResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\HandleListResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\HandleListResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -581,7 +581,7 @@ class HandlesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\HandleListResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\HandleListResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -600,7 +600,7 @@ class HandlesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\HandleListResponse';
+            $returnType = '\Contabo\Generated\Model\HandleListResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -633,7 +633,7 @@ class HandlesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\HandleListResponse',
+                        '\Contabo\Generated\Model\HandleListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -699,7 +699,7 @@ class HandlesApi
      */
     public function listHandlesAsyncWithHttpInfo($xRequestId, $xTraceId = null, $page = null, $size = null, $orderBy = null, $name = null, $showDefaults = null, $search = null, $countries = null, $handleType = null, $firstName = null, $lastName = null, string $contentType = self::contentTypes['listHandles'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\HandleListResponse';
+        $returnType = '\Contabo\Generated\Model\HandleListResponse';
         $request = $this->listHandlesRequest($xRequestId, $xTraceId, $page, $size, $orderBy, $name, $showDefaults, $search, $countries, $handleType, $firstName, $lastName, $contentType);
 
         return $this->client
@@ -959,7 +959,7 @@ class HandlesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeHandle'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -978,7 +978,7 @@ class HandlesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeHandle'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1209,9 +1209,9 @@ class HandlesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveHandle'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\HandleFindResponse
+     * @return \Contabo\Generated\Model\HandleFindResponse
      */
     public function retrieveHandle($xRequestId, $handleId, $xTraceId = null, string $contentType = self::contentTypes['retrieveHandle'][0])
     {
@@ -1229,9 +1229,9 @@ class HandlesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveHandle'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\HandleFindResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\HandleFindResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveHandleWithHttpInfo($xRequestId, $handleId, $xTraceId = null, string $contentType = self::contentTypes['retrieveHandle'][0])
     {
@@ -1262,11 +1262,11 @@ class HandlesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\HandleFindResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\HandleFindResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\HandleFindResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\HandleFindResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1284,7 +1284,7 @@ class HandlesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\HandleFindResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\HandleFindResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1303,7 +1303,7 @@ class HandlesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\HandleFindResponse';
+            $returnType = '\Contabo\Generated\Model\HandleFindResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1336,7 +1336,7 @@ class HandlesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\HandleFindResponse',
+                        '\Contabo\Generated\Model\HandleFindResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1384,7 +1384,7 @@ class HandlesApi
      */
     public function retrieveHandleAsyncWithHttpInfo($xRequestId, $handleId, $xTraceId = null, string $contentType = self::contentTypes['retrieveHandle'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\HandleFindResponse';
+        $returnType = '\Contabo\Generated\Model\HandleFindResponse';
         $request = $this->retrieveHandleRequest($xRequestId, $handleId, $xTraceId, $contentType);
 
         return $this->client
@@ -1550,9 +1550,9 @@ class HandlesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setDefaultHandle'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\SetDefaultHandleResponse
+     * @return \Contabo\Generated\Model\SetDefaultHandleResponse
      */
     public function setDefaultHandle($xRequestId, $handleId, $xTraceId = null, string $contentType = self::contentTypes['setDefaultHandle'][0])
     {
@@ -1570,9 +1570,9 @@ class HandlesApi
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setDefaultHandle'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\SetDefaultHandleResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\SetDefaultHandleResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function setDefaultHandleWithHttpInfo($xRequestId, $handleId, $xTraceId = null, string $contentType = self::contentTypes['setDefaultHandle'][0])
     {
@@ -1603,11 +1603,11 @@ class HandlesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\SetDefaultHandleResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\SetDefaultHandleResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\SetDefaultHandleResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\SetDefaultHandleResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1625,7 +1625,7 @@ class HandlesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\SetDefaultHandleResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\SetDefaultHandleResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1644,7 +1644,7 @@ class HandlesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\SetDefaultHandleResponse';
+            $returnType = '\Contabo\Generated\Model\SetDefaultHandleResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1677,7 +1677,7 @@ class HandlesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\SetDefaultHandleResponse',
+                        '\Contabo\Generated\Model\SetDefaultHandleResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1725,7 +1725,7 @@ class HandlesApi
      */
     public function setDefaultHandleAsyncWithHttpInfo($xRequestId, $handleId, $xTraceId = null, string $contentType = self::contentTypes['setDefaultHandle'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\SetDefaultHandleResponse';
+        $returnType = '\Contabo\Generated\Model\SetDefaultHandleResponse';
         $request = $this->setDefaultHandleRequest($xRequestId, $handleId, $xTraceId, $contentType);
 
         return $this->client
@@ -1888,13 +1888,13 @@ class HandlesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $handleId The identifier of the handle (required)
-     * @param  \Coderic\Contabo\Generated\Model\HandlePatchRequest $handlePatchRequest handlePatchRequest (required)
+     * @param  \Contabo\Generated\Model\HandlePatchRequest $handlePatchRequest handlePatchRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateHandle'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Coderic\Contabo\Generated\Model\HandlePatchResponse
+     * @return \Contabo\Generated\Model\HandlePatchResponse
      */
     public function updateHandle($xRequestId, $handleId, $handlePatchRequest, $xTraceId = null, string $contentType = self::contentTypes['updateHandle'][0])
     {
@@ -1909,13 +1909,13 @@ class HandlesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $handleId The identifier of the handle (required)
-     * @param  \Coderic\Contabo\Generated\Model\HandlePatchRequest $handlePatchRequest (required)
+     * @param  \Contabo\Generated\Model\HandlePatchRequest $handlePatchRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateHandle'] to see the possible values for this operation
      *
-     * @throws \Coderic\Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Contabo\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Coderic\Contabo\Generated\Model\HandlePatchResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Contabo\Generated\Model\HandlePatchResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateHandleWithHttpInfo($xRequestId, $handleId, $handlePatchRequest, $xTraceId = null, string $contentType = self::contentTypes['updateHandle'][0])
     {
@@ -1946,11 +1946,11 @@ class HandlesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Coderic\Contabo\Generated\Model\HandlePatchResponse' === '\SplFileObject') {
+                    if ('\Contabo\Generated\Model\HandlePatchResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Coderic\Contabo\Generated\Model\HandlePatchResponse' !== 'string') {
+                        if ('\Contabo\Generated\Model\HandlePatchResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1968,7 +1968,7 @@ class HandlesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Coderic\Contabo\Generated\Model\HandlePatchResponse', []),
+                        ObjectSerializer::deserialize($content, '\Contabo\Generated\Model\HandlePatchResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1987,7 +1987,7 @@ class HandlesApi
                 );
             }
 
-            $returnType = '\Coderic\Contabo\Generated\Model\HandlePatchResponse';
+            $returnType = '\Contabo\Generated\Model\HandlePatchResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2020,7 +2020,7 @@ class HandlesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Coderic\Contabo\Generated\Model\HandlePatchResponse',
+                        '\Contabo\Generated\Model\HandlePatchResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2037,7 +2037,7 @@ class HandlesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $handleId The identifier of the handle (required)
-     * @param  \Coderic\Contabo\Generated\Model\HandlePatchRequest $handlePatchRequest (required)
+     * @param  \Contabo\Generated\Model\HandlePatchRequest $handlePatchRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateHandle'] to see the possible values for this operation
      *
@@ -2061,7 +2061,7 @@ class HandlesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $handleId The identifier of the handle (required)
-     * @param  \Coderic\Contabo\Generated\Model\HandlePatchRequest $handlePatchRequest (required)
+     * @param  \Contabo\Generated\Model\HandlePatchRequest $handlePatchRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateHandle'] to see the possible values for this operation
      *
@@ -2070,7 +2070,7 @@ class HandlesApi
      */
     public function updateHandleAsyncWithHttpInfo($xRequestId, $handleId, $handlePatchRequest, $xTraceId = null, string $contentType = self::contentTypes['updateHandle'][0])
     {
-        $returnType = '\Coderic\Contabo\Generated\Model\HandlePatchResponse';
+        $returnType = '\Contabo\Generated\Model\HandlePatchResponse';
         $request = $this->updateHandleRequest($xRequestId, $handleId, $handlePatchRequest, $xTraceId, $contentType);
 
         return $this->client
@@ -2114,7 +2114,7 @@ class HandlesApi
      *
      * @param  string $xRequestId [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually. (required)
      * @param  string $handleId The identifier of the handle (required)
-     * @param  \Coderic\Contabo\Generated\Model\HandlePatchRequest $handlePatchRequest (required)
+     * @param  \Contabo\Generated\Model\HandlePatchRequest $handlePatchRequest (required)
      * @param  string|null $xTraceId Identifier to trace group of requests. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateHandle'] to see the possible values for this operation
      *

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Coderic\Contabo\Generated\Model;
+namespace Contabo\Generated\Model;
 
 use \ArrayAccess;
-use \Coderic\Contabo\Generated\ObjectSerializer;
+use \Contabo\Generated\ObjectSerializer;
 
 /**
  * ListPrivateNetworkResponseData Class Doc Comment
  *
  * @category Class
- * @package  Coderic\Contabo\Generated
+ * @package  Contabo\Generated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -69,7 +69,7 @@ class ListPrivateNetworkResponseData implements ModelInterface, ArrayAccess, \Js
         'cidr' => 'string',
         'availableIps' => 'int',
         'createdDate' => '\DateTime',
-        'instances' => '\Coderic\Contabo\Generated\Model\Instances[]'
+        'instances' => '\Contabo\Generated\Model\Instances[]'
     ];
 
     /**
@@ -721,7 +721,7 @@ class ListPrivateNetworkResponseData implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets instances
      *
-     * @return \Coderic\Contabo\Generated\Model\Instances[]
+     * @return \Contabo\Generated\Model\Instances[]
      */
     public function getInstances()
     {
@@ -731,7 +731,7 @@ class ListPrivateNetworkResponseData implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets instances
      *
-     * @param \Coderic\Contabo\Generated\Model\Instances[] $instances instances
+     * @param \Contabo\Generated\Model\Instances[] $instances instances
      *
      * @return self
      */

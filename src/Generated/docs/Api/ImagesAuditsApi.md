@@ -1,4 +1,4 @@
-# Coderic\Contabo\Generated\ImagesAuditsApi
+# Contabo\Generated\ImagesAuditsApi
 
 All URIs are relative to https://api.contabo.com, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.contabo.com, except if the operation define
 ## `retrieveImageAuditsList()`
 
 ```php
-retrieveImageAuditsList($xRequestId, $xTraceId, $page, $size, $orderBy, $imageId, $requestId, $changedBy, $startDate, $endDate): \Coderic\Contabo\Generated\Model\ImageAuditResponse
+retrieveImageAuditsList($xRequestId, $xTraceId, $page, $size, $orderBy, $imageId, $requestId, $changedBy, $startDate, $endDate): \Contabo\Generated\Model\ImageAuditResponse
 ```
 
 List history about your custom images (audit)
@@ -25,10 +25,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Coderic\Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Contabo\Generated\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Coderic\Contabo\Generated\Api\ImagesAuditsApi(
+$apiInstance = new Contabo\Generated\Api\ImagesAuditsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -70,7 +70,7 @@ try {
 
 ### Return type
 
-[**\Coderic\Contabo\Generated\Model\ImageAuditResponse**](../Model/ImageAuditResponse.md)
+[**\Contabo\Generated\Model\ImageAuditResponse**](../Model/ImageAuditResponse.md)
 
 ### Authorization
 

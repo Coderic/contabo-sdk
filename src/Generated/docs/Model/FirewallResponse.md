@@ -10,9 +10,9 @@ Name | Type | Description | Notes
 **name** | **string** | The name of the firewall. |
 **description** | **string** | The description of the firewall. |
 **status** | **string** | Inactive status means no rules of this firewall are set for all assigned instances. |
-**instanceStatus** | [**\Coderic\Contabo\Generated\Model\InstanceStatusRepresentation[]**](InstanceStatusRepresentation.md) |  |
-**instances** | [**\Coderic\Contabo\Generated\Model\InstanceDetails[]**](InstanceDetails.md) |  |
-**rules** | [**\Coderic\Contabo\Generated\Model\Rules**](Rules.md) |  |
+**instanceStatus** | [**\Contabo\Generated\Model\InstanceStatusRepresentation[]**](InstanceStatusRepresentation.md) |  |
+**instances** | [**\Contabo\Generated\Model\InstanceDetails[]**](InstanceDetails.md) |  |
+**rules** | [**\Contabo\Generated\Model\Rules**](Rules.md) |  |
 **createdDate** | **\DateTime** | The creation date time for the firewall |
 **updatedDate** | **\DateTime** | The update date time for the firewall |
 
