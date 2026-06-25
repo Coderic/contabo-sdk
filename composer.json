@@ -1,0 +1,71 @@
+{
+    "name": "coderic/contabo-sdk",
+    "description": "SDK PHP para la API Contabo (OpenAPI v1)",
+    "keywords": [
+        "contabo",
+        "cloud",
+        "api",
+        "sdk",
+        "openapi",
+        "laravel"
+    ],
+    "homepage": "https://github.com/Coderic/contabo-sdk",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Coderic",
+            "homepage": "https://coderic.org"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^7.9",
+        "guzzlehttp/psr7": "^2.7"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.21",
+        "orchestra/testbench": "^9.0|^10.0",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Coderic\\Contabo\\Generated\\": "src/Generated/lib/",
+            "Coderic\\Contabo\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Coderic\\Contabo\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse --memory-limit=512M",
+        "format": "pint",
+        "format:check": "pint --test",
+        "sync-openapi": "bash scripts/sync-openapi.sh",
+        "generate-client": "bash scripts/generate-client.sh"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Coderic\\Contabo\\Laravel\\ContaboServiceProvider"
+            ],
+            "aliases": {
+                "Contabo": "Coderic\\Contabo\\Laravel\\Facades\\Contabo"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

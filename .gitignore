@@ -1,0 +1,13 @@
+/vendor/
+/.phpunit.cache/
+/.phpunit.result.cache/
+/phpunit.xml
+composer.lock
+.php-cs-fixer.cache
+.phpstan.cache
+.idea/
+.vscode/
+*.swp
+.DS_Store
+/openapi-generator-cli.jar
+/openapitools.json
