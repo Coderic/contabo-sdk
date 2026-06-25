@@ -1,5 +1,5 @@
 {
-    "name": "coderic/contabo-sdk",
+    "name": "contabo/contabo-sdk",
     "description": "SDK PHP para la API Contabo (OpenAPI v1)",
     "keywords": [
         "contabo",
